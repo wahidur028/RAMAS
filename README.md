@@ -30,6 +30,7 @@ decisions, and whether the changes reach the executed portfolio.
 | `EXPERIMENT_BRANCHES/RAMAS_*/`, `EXPERIMENT_BRANCHES/RAMOE_STAGE5_*/` | every run: contracts, source/clock audits, per-arm `DAILY_LEDGER.csv`, `episodes.json`, `trust_events.json`, `RUN_COMPLETE.json`, and the full per-call LLM journals under `calls/` |
 | `EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/` | the **frozen input source**: the numerical control's router-probability and expert-proposal stream, its return-clock audit, and the small numerical package (`base_source/…/src/`) whose accounting, risk projection and trust update the RAMAS engine imports. Pinned by manifest; required to run anything |
 | `data/raw/full_data_set.csv` | the daily BTC/USD dataset (sha256 `b69f17a1…`), pinned by the pipelines |
+| `docs/RAMAS_TECHNICAL_REPORT.md` | **read this first**: the technical report — architecture, data, every experiment with its results and hashes, reproduction commands, supplementary-table recipes |
 | `tools/localize_configs.py` | writes clone-local copies of the pinned configs (see *Running*) |
 | `MANIFEST.sha256` | hash of every file in this repository |
 
@@ -37,6 +38,8 @@ The archives (`*.tar.gz`, `*.zip`) referenced by some completion records are not
 included; their `.sha256` sidecars are, so identities can still be checked.
 
 ## Where the manuscript's numbers live
+
+`docs/RAMAS_TECHNICAL_REPORT.md` walks through every experiment, table and hash; the short map below points at the primary files.
 
 | result | file |
 |---|---|
