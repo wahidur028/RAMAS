@@ -3,8 +3,8 @@ message: "If you use this code or these results, please cite the accompanying ma
 title: "RAMAS: episodic memory in a bounded LLM Bitcoin allocator"
 type: software
 authors:
-  - family-names: "TODO-surname"
-    given-names: "TODO-given-name"
+  - family-names: "Rahman"
+    given-names: "Wahidur"
     email: "sm.wahidur@gm.gsit.ac.kr"
 repository-code: "https://github.com/wahidur028/RAMAS"
 license: MIT
