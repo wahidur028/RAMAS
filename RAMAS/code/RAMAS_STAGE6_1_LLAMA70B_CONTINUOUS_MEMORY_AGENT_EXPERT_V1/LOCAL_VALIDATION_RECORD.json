@@ -1,0 +1,39 @@
+{
+  "validated_at_utc": "2026-09-07T00:00:00Z",
+  "status": "PASS",
+  "python_compile": "PASS",
+  "bash_syntax": "PASS",
+  "unit_tests": {
+    "status": "PASS",
+    "tests_run": 17,
+    "failures": 0,
+    "errors": 0
+  },
+  "controlled_semantic_preflight": {
+    "status": "PASS",
+    "cases": 12,
+    "valid_rate": 1.0,
+    "expected_action_rate": 1.0,
+    "actions_observed": ["BTC", "CASH", "ABSTAIN"]
+  },
+  "validated_properties": [
+    "llama3.3:70b model lock and Qwen disabled",
+    "strict JSON and visible-memory citation contract",
+    "next-day return clock and completed-memory visibility",
+    "bounded regime-specific Llama trust",
+    "monthly trust update from completed non-abstaining evidence",
+    "verified Stage 6 2021 seed restoration contract",
+    "continuous 2021-2025 calendar contract",
+    "no memory, trust, or portfolio reset at year boundaries",
+    "pre-agent RAMoE labeled as internal control",
+    "mixed metric outcomes retained as research findings",
+    "fractional expected-shortfall tail mass",
+    "deterministic circular-block bootstrap"
+  ],
+  "not_locally_executed": [
+    "real Ollama llama3.3:70b calls",
+    "server-only corrected RAMoE source integration",
+    "server-only Stage 6 2021 seed restoration",
+    "continuous 2022-2025 economic replay"
+  ]
+}

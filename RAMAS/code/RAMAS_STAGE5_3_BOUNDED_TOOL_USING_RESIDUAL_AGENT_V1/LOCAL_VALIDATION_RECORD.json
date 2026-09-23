@@ -1,0 +1,16 @@
+{
+  "status": "PASS_MECHANICAL_ONLY",
+  "validated_at_utc": "2026-09-02T05:26:42Z",
+  "unit_tests_passed": 12,
+  "unit_tests_failed": 0,
+  "python_compile_passed": true,
+  "shell_syntax_check_passed": true,
+  "controlled_synthetic_agent_loop_passed": true,
+  "controlled_synthetic_nonzero_residual_gate_passed": true,
+  "controlled_full_server_replay_performed": false,
+  "real_ollama_preflight_performed": false,
+  "real_ollama_replay_performed": false,
+  "economic_validation_performed": false,
+  "reused_oos_opened": false,
+  "evidence_label": "LOCAL_MECHANICAL_VALIDATION_ONLY"
+}

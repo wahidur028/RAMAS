@@ -1,0 +1,1706 @@
+{
+  "accepted_interventions": 0,
+  "cases": 12,
+  "economic_claim_permitted": false,
+  "model": "qwen3-coder:30b",
+  "provider": "ollama",
+  "status": "PASS",
+  "traces": [
+    {
+      "accepted": false,
+      "automatic_evidence_ids": [
+        "inspect_current_state:77f468262f1dc5df38c6",
+        "get_verified_events:7b7c28399c623a98bdea",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "retrieve_similar_episodes:55ca3c3e9d85911ba03b"
+      ],
+      "decision": {
+        "confidence": 0.48,
+        "horizon_days": 7,
+        "hypothesis": "The current market state shows high expert disagreement, low router confidence, and high router entropy, indicating a potentially unstable transition period. The presence of a high-severity macro event further supports the need for defensive positioning.",
+        "invalidation_condition": "If the router confidence rises above 0.65 or the expert disagreement falls below 0.5, the current defensive stance may be reconsidered.",
+        "operator": "DEFENSIVE_SHRINK",
+        "strength": 0.05,
+        "target_regime": "bear"
+      },
+      "decision_error": null,
+      "decision_valid": true,
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes"
+      ],
+      "future_events_hidden": 0,
+      "operator_evidence_complete": false,
+      "plan_error": null,
+      "plan_valid": true,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "shield": {
+        "accepted": false,
+        "current_exposure": 0.3333333333333333,
+        "proposed_exposure": 0.3253333333333333,
+        "reasons": [
+          "OPERATOR_EVIDENCE_INCOMPLETE"
+        ],
+        "target_row_l1": 0.06666666666666665
+      },
+      "status": "KEEP_OR_FAIL_CLOSED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.3333333333333333,
+            "decision_time_utc": "2023-01-10T23:59:00+00:00",
+            "drawdown_90": -0.08,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "bear",
+            "probabilities": {
+              "bear": 0.48,
+              "bull": 0.22,
+              "mix": 0.3
+            },
+            "realized_volatility_z": 1.2,
+            "router_confidence": 0.48,
+            "router_entropy": 0.78,
+            "transition_day": true,
+            "trigger_reasons": [
+              "ROUTER_TRANSITION",
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:77f468262f1dc5df38c6"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-01-10T20:01:00+00:00",
+                "body": "Interface-only evidence used to test tool selection and bounded trust control.",
+                "category": "macro",
+                "content_sha256": "45b10f0cf22db02f9af6248e3ffc91cfa6586698f765e8d4ec203e19fa30370b",
+                "event_id": "synthetic-001",
+                "headline": "Synthetic point-in-time macro event 1",
+                "published_at_utc": "2023-01-10T19:59:00+00:00",
+                "severity": 3,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 3
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:7b7c28399c623a98bdea"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "context_key": "bear|EXPERT_DISAGREEMENT+HIGH_ROUTER_ENTROPY+HIGH_SEVERITY_EVENT+LOW_ROUTER_CONFIDENCE+ROUTER_TRANSITION|macro",
+            "episodes": [],
+            "lesson": null
+          },
+          "tool_name": "retrieve_similar_episodes",
+          "tool_result_id": "retrieve_similar_episodes:55ca3c3e9d85911ba03b"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 3,
+        "reasons": [
+          "ROUTER_TRANSITION",
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "automatic_evidence_ids": [
+        "inspect_current_state:e49e2b6284645f647f2e",
+        "get_verified_events:4fe5519b0489d61da349",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "retrieve_similar_episodes:8e9ed506e2661a409840"
+      ],
+      "decision": {
+        "confidence": 0.52,
+        "horizon_days": 7,
+        "hypothesis": "The current market state shows high expert disagreement and low router confidence, suggesting a potential shift in regime that warrants defensive action.",
+        "invalidation_condition": "If the router confidence rises above 0.7 or expert disagreement falls below 0.5, the defensive shrink should be reconsidered.",
+        "operator": "DEFENSIVE_SHRINK",
+        "strength": 0.05,
+        "target_regime": "bull"
+      },
+      "decision_error": null,
+      "decision_valid": true,
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes"
+      ],
+      "future_events_hidden": 0,
+      "operator_evidence_complete": false,
+      "plan_error": null,
+      "plan_valid": true,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "shield": {
+        "accepted": false,
+        "current_exposure": 0.6666666666666666,
+        "proposed_exposure": 0.6493333333333333,
+        "reasons": [
+          "OPERATOR_EVIDENCE_INCOMPLETE"
+        ],
+        "target_row_l1": 0.06666666666666665
+      },
+      "status": "KEEP_OR_FAIL_CLOSED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.6666666666666666,
+            "decision_time_utc": "2023-01-30T23:59:00+00:00",
+            "drawdown_90": -0.1,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "bull",
+            "probabilities": {
+              "bear": 0.18,
+              "bull": 0.52,
+              "mix": 0.3
+            },
+            "realized_volatility_z": 1.4,
+            "router_confidence": 0.52,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:e49e2b6284645f647f2e"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-01-30T20:01:00+00:00",
+                "body": "Interface-only evidence used to test tool selection and bounded trust control.",
+                "category": "regulation",
+                "content_sha256": "177f3a9f83aa6cb2529140f07185a1cd9382a08a2c942e2ce33d762e6e9433a0",
+                "event_id": "synthetic-002",
+                "headline": "Synthetic point-in-time regulation event 2",
+                "published_at_utc": "2023-01-30T19:59:00+00:00",
+                "severity": 4,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 4
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:4fe5519b0489d61da349"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "context_key": "bull|EXPERT_DISAGREEMENT+HIGH_ROUTER_ENTROPY+HIGH_SEVERITY_EVENT+LOW_ROUTER_CONFIDENCE|regulation",
+            "episodes": [],
+            "lesson": null
+          },
+          "tool_name": "retrieve_similar_episodes",
+          "tool_result_id": "retrieve_similar_episodes:8e9ed506e2661a409840"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 4,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "automatic_evidence_ids": [
+        "inspect_current_state:592cdc1868245511c934",
+        "get_verified_events:f104d9b2a56a886540c4",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "retrieve_similar_episodes:7be270c84e7104a45ee6"
+      ],
+      "decision": {
+        "confidence": 0.5,
+        "horizon_days": 7,
+        "hypothesis": "Market is in a mixed regime with high expert disagreement and low router confidence, but no clear directional signal from ATP expert.",
+        "invalidation_condition": "If router confidence exceeds 0.7 or expert disagreement falls below 0.5",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "mix"
+      },
+      "decision_error": null,
+      "decision_valid": true,
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes"
+      ],
+      "future_events_hidden": 0,
+      "operator_evidence_complete": true,
+      "plan_error": null,
+      "plan_valid": true,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "shield": {
+        "accepted": true,
+        "current_exposure": 0.3333333333333333,
+        "proposed_exposure": 0.3333333333333333,
+        "reasons": [],
+        "target_row_l1": 0.0
+      },
+      "status": "KEEP_OR_FAIL_CLOSED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.3333333333333333,
+            "decision_time_utc": "2023-02-19T23:59:00+00:00",
+            "drawdown_90": -0.12,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "mix",
+            "probabilities": {
+              "bear": 0.25,
+              "bull": 0.25,
+              "mix": 0.5
+            },
+            "realized_volatility_z": 1.6,
+            "router_confidence": 0.5,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:592cdc1868245511c934"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-02-19T20:01:00+00:00",
+                "body": "Interface-only evidence used to test tool selection and bounded trust control.",
+                "category": "exchange",
+                "content_sha256": "d23ea02d099690165b054264c7c25457e1cf2c5f40796207555bee785c2eb654",
+                "event_id": "synthetic-003",
+                "headline": "Synthetic point-in-time exchange event 3",
+                "published_at_utc": "2023-02-19T19:59:00+00:00",
+                "severity": 3,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 3
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:f104d9b2a56a886540c4"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "context_key": "mix|EXPERT_DISAGREEMENT+HIGH_ROUTER_ENTROPY+HIGH_SEVERITY_EVENT+LOW_ROUTER_CONFIDENCE|exchange",
+            "episodes": [],
+            "lesson": null
+          },
+          "tool_name": "retrieve_similar_episodes",
+          "tool_result_id": "retrieve_similar_episodes:7be270c84e7104a45ee6"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 3,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "automatic_evidence_ids": [
+        "inspect_current_state:49140c8d45ed9a5341f7",
+        "get_verified_events:e479631f3dfd01f18d98",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "retrieve_similar_episodes:4320b6b286bc2d6623d5"
+      ],
+      "decision": {
+        "confidence": 0.48,
+        "horizon_days": 7,
+        "hypothesis": "High router entropy, low router confidence, and expert disagreement in a bear regime suggest potential instability. A defensive shrink is warranted to reduce exposure while maintaining some position.",
+        "invalidation_condition": "If router confidence rises above 0.7 or expert disagreement falls below 0.5 in the next inspection cycle.",
+        "operator": "DEFENSIVE_SHRINK",
+        "strength": 0.1,
+        "target_regime": "bear"
+      },
+      "decision_error": null,
+      "decision_valid": true,
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes"
+      ],
+      "future_events_hidden": 0,
+      "operator_evidence_complete": false,
+      "plan_error": null,
+      "plan_valid": true,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "shield": {
+        "accepted": false,
+        "current_exposure": 0.6666666666666666,
+        "proposed_exposure": 0.6346666666666666,
+        "reasons": [
+          "OPERATOR_EVIDENCE_INCOMPLETE",
+          "TRUST_ROW_CHANGE_TOO_LARGE"
+        ],
+        "target_row_l1": 0.13333333333333336
+      },
+      "status": "KEEP_OR_FAIL_CLOSED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.6666666666666666,
+            "decision_time_utc": "2023-03-11T23:59:00+00:00",
+            "drawdown_90": -0.14,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "bear",
+            "probabilities": {
+              "bear": 0.48,
+              "bull": 0.22,
+              "mix": 0.3
+            },
+            "realized_volatility_z": 1.8,
+            "router_confidence": 0.48,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:49140c8d45ed9a5341f7"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-03-11T20:01:00+00:00",
+                "body": "Interface-only evidence used to test tool selection and bounded trust control.",
+                "category": "stablecoin",
+                "content_sha256": "85842e5b60d6ab38f2b709f453af168f29476e91ab239f5edc12302e60f88109",
+                "event_id": "synthetic-004",
+                "headline": "Synthetic point-in-time stablecoin event 4",
+                "published_at_utc": "2023-03-11T19:59:00+00:00",
+                "severity": 4,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 4
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:e479631f3dfd01f18d98"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "context_key": "bear|EXPERT_DISAGREEMENT+HIGH_ROUTER_ENTROPY+HIGH_SEVERITY_EVENT+LOW_ROUTER_CONFIDENCE|stablecoin",
+            "episodes": [],
+            "lesson": null
+          },
+          "tool_name": "retrieve_similar_episodes",
+          "tool_result_id": "retrieve_similar_episodes:4320b6b286bc2d6623d5"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 4,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "automatic_evidence_ids": [
+        "inspect_current_state:64874aa3ec74ec977dd7",
+        "get_verified_events:408313a74ecc5e37fd16",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "retrieve_similar_episodes:f9d6c878d1225cdb677b"
+      ],
+      "decision": {
+        "confidence": 0.52,
+        "horizon_days": 7,
+        "hypothesis": "The current market state shows high volatility stress, drawdown stress, and expert disagreement, indicating potential regime transition risks. The router confidence is low and entropy is high, suggesting uncertainty in the expert model predictions.",
+        "invalidation_condition": "If the router confidence exceeds 0.7 or the expert disagreement falls below 0.5, the current defensive shrink position should be re-evaluated.",
+        "operator": "DEFENSIVE_SHRINK",
+        "strength": 0.05,
+        "target_regime": "bull"
+      },
+      "decision_error": null,
+      "decision_valid": true,
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes"
+      ],
+      "future_events_hidden": 0,
+      "operator_evidence_complete": false,
+      "plan_error": null,
+      "plan_valid": true,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "shield": {
+        "accepted": false,
+        "current_exposure": 0.3333333333333333,
+        "proposed_exposure": 0.32466666666666666,
+        "reasons": [
+          "OPERATOR_EVIDENCE_INCOMPLETE"
+        ],
+        "target_row_l1": 0.06666666666666665
+      },
+      "status": "KEEP_OR_FAIL_CLOSED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.3333333333333333,
+            "decision_time_utc": "2023-03-31T23:59:00+00:00",
+            "drawdown_90": -0.16,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "bull",
+            "probabilities": {
+              "bear": 0.18,
+              "bull": 0.52,
+              "mix": 0.3
+            },
+            "realized_volatility_z": 2.0,
+            "router_confidence": 0.52,
+            "router_entropy": 0.78,
+            "transition_day": true,
+            "trigger_reasons": [
+              "ROUTER_TRANSITION",
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "VOLATILITY_STRESS",
+              "DRAWDOWN_STRESS",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:64874aa3ec74ec977dd7"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-03-31T20:01:00+00:00",
+                "body": "Interface-only evidence used to test tool selection and bounded trust control.",
+                "category": "institutional_flow",
+                "content_sha256": "e3207a2bd76cb21130e57b49b5676cffbf4c45b0eb0c65f50a066477b75c05c9",
+                "event_id": "synthetic-005",
+                "headline": "Synthetic point-in-time institutional_flow event 5",
+                "published_at_utc": "2023-03-31T19:59:00+00:00",
+                "severity": 3,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 3
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:408313a74ecc5e37fd16"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "context_key": "bull|DRAWDOWN_STRESS+EXPERT_DISAGREEMENT+HIGH_ROUTER_ENTROPY+HIGH_SEVERITY_EVENT+LOW_ROUTER_CONFIDENCE+ROUTER_TRANSITION+VOLATILITY_STRESS|institutional_flow",
+            "episodes": [],
+            "lesson": null
+          },
+          "tool_name": "retrieve_similar_episodes",
+          "tool_result_id": "retrieve_similar_episodes:f9d6c878d1225cdb677b"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 3,
+        "reasons": [
+          "ROUTER_TRANSITION",
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "VOLATILITY_STRESS",
+          "DRAWDOWN_STRESS",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "automatic_evidence_ids": [
+        "inspect_current_state:681fbc7e1e37c03fde1d",
+        "get_verified_events:bc08372d528f8b866122",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "retrieve_similar_episodes:4298957a1114db3fa3ec"
+      ],
+      "decision": {
+        "confidence": 0.5,
+        "horizon_days": 7,
+        "hypothesis": "High expert disagreement, router entropy, and volatility stress suggest mixed regime conditions warranting defensive positioning.",
+        "invalidation_condition": "If router confidence exceeds 0.7 or expert disagreement falls below 0.5 in next assessment.",
+        "operator": "DEFENSIVE_SHRINK",
+        "strength": 0.05,
+        "target_regime": "mix"
+      },
+      "decision_error": null,
+      "decision_valid": true,
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes"
+      ],
+      "future_events_hidden": 0,
+      "operator_evidence_complete": false,
+      "plan_error": null,
+      "plan_valid": true,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "shield": {
+        "accepted": false,
+        "current_exposure": 0.6666666666666666,
+        "proposed_exposure": 0.6499999999999999,
+        "reasons": [
+          "OPERATOR_EVIDENCE_INCOMPLETE"
+        ],
+        "target_row_l1": 0.06666666666666665
+      },
+      "status": "KEEP_OR_FAIL_CLOSED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.6666666666666666,
+            "decision_time_utc": "2023-04-20T23:59:00+00:00",
+            "drawdown_90": -0.08,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "mix",
+            "probabilities": {
+              "bear": 0.25,
+              "bull": 0.25,
+              "mix": 0.5
+            },
+            "realized_volatility_z": 2.2,
+            "router_confidence": 0.5,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "VOLATILITY_STRESS",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:681fbc7e1e37c03fde1d"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-04-20T20:01:00+00:00",
+                "body": "Interface-only evidence used to test tool selection and bounded trust control.",
+                "category": "onchain_stress",
+                "content_sha256": "07a5d016d462f10b12bf603b6ed22ba02defc9188285a4732c065d661abc5a3a",
+                "event_id": "synthetic-006",
+                "headline": "Synthetic point-in-time onchain_stress event 6",
+                "published_at_utc": "2023-04-20T19:59:00+00:00",
+                "severity": 4,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 4
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:bc08372d528f8b866122"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "context_key": "mix|EXPERT_DISAGREEMENT+HIGH_ROUTER_ENTROPY+HIGH_SEVERITY_EVENT+LOW_ROUTER_CONFIDENCE+VOLATILITY_STRESS|onchain_stress",
+            "episodes": [],
+            "lesson": null
+          },
+          "tool_name": "retrieve_similar_episodes",
+          "tool_result_id": "retrieve_similar_episodes:4298957a1114db3fa3ec"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 4,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "VOLATILITY_STRESS",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "automatic_evidence_ids": [
+        "inspect_current_state:d1a0b7489433732bcccf",
+        "get_verified_events:329509e3d76bdd8cad8b",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "retrieve_similar_episodes:4d0e1c957a3e6f7c30cc"
+      ],
+      "decision": {
+        "confidence": 0.48,
+        "horizon_days": 7,
+        "hypothesis": "High router entropy and expert disagreement in a bear regime suggest potential instability, warranting a defensive shrink to reduce exposure.",
+        "invalidation_condition": "If router confidence exceeds 0.6 or expert disagreement falls below 0.5 in the next decision cycle.",
+        "operator": "DEFENSIVE_SHRINK",
+        "strength": 0.05,
+        "target_regime": "bear"
+      },
+      "decision_error": null,
+      "decision_valid": true,
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes"
+      ],
+      "future_events_hidden": 0,
+      "operator_evidence_complete": false,
+      "plan_error": null,
+      "plan_valid": true,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "shield": {
+        "accepted": false,
+        "current_exposure": 0.3333333333333333,
+        "proposed_exposure": 0.3253333333333333,
+        "reasons": [
+          "OPERATOR_EVIDENCE_INCOMPLETE"
+        ],
+        "target_row_l1": 0.06666666666666665
+      },
+      "status": "KEEP_OR_FAIL_CLOSED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.3333333333333333,
+            "decision_time_utc": "2023-05-10T23:59:00+00:00",
+            "drawdown_90": -0.1,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "bear",
+            "probabilities": {
+              "bear": 0.48,
+              "bull": 0.22,
+              "mix": 0.3
+            },
+            "realized_volatility_z": 1.2,
+            "router_confidence": 0.48,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:d1a0b7489433732bcccf"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-05-10T20:01:00+00:00",
+                "body": "Interface-only evidence used to test tool selection and bounded trust control.",
+                "category": "derivatives_stress",
+                "content_sha256": "d055a37553371d567a8e52ddb37aae9db29b862be57b70ead87a365f9742d449",
+                "event_id": "synthetic-007",
+                "headline": "Synthetic point-in-time derivatives_stress event 7",
+                "published_at_utc": "2023-05-10T19:59:00+00:00",
+                "severity": 3,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 3
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:329509e3d76bdd8cad8b"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "context_key": "bear|EXPERT_DISAGREEMENT+HIGH_ROUTER_ENTROPY+HIGH_SEVERITY_EVENT+LOW_ROUTER_CONFIDENCE|derivatives_stress",
+            "episodes": [],
+            "lesson": null
+          },
+          "tool_name": "retrieve_similar_episodes",
+          "tool_result_id": "retrieve_similar_episodes:4d0e1c957a3e6f7c30cc"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 3,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "automatic_evidence_ids": [
+        "inspect_current_state:57bdf42da05f127fe952",
+        "get_verified_events:7697b42ca18a06940c48",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "retrieve_similar_episodes:332f623795987eed9676"
+      ],
+      "decision": {
+        "confidence": 0.52,
+        "horizon_days": 7,
+        "hypothesis": "The current market state shows high expert disagreement, low router confidence, and high router entropy, indicating potential instability in the bull regime. A defensive shrink is warranted to reduce exposure while maintaining a bullish stance.",
+        "invalidation_condition": "If the router confidence rises above 0.7 or the expert disagreement falls below 0.5, the current defensive position should be re-evaluated.",
+        "operator": "DEFENSIVE_SHRINK",
+        "strength": 0.05,
+        "target_regime": "bull"
+      },
+      "decision_error": null,
+      "decision_valid": true,
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes"
+      ],
+      "future_events_hidden": 0,
+      "operator_evidence_complete": false,
+      "plan_error": null,
+      "plan_valid": true,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "shield": {
+        "accepted": false,
+        "current_exposure": 0.6666666666666666,
+        "proposed_exposure": 0.6493333333333333,
+        "reasons": [
+          "OPERATOR_EVIDENCE_INCOMPLETE"
+        ],
+        "target_row_l1": 0.06666666666666665
+      },
+      "status": "KEEP_OR_FAIL_CLOSED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.6666666666666666,
+            "decision_time_utc": "2023-05-30T23:59:00+00:00",
+            "drawdown_90": -0.12,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "bull",
+            "probabilities": {
+              "bear": 0.18,
+              "bull": 0.52,
+              "mix": 0.3
+            },
+            "realized_volatility_z": 1.4,
+            "router_confidence": 0.52,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:57bdf42da05f127fe952"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-05-30T20:01:00+00:00",
+                "body": "Interface-only evidence used to test tool selection and bounded trust control.",
+                "category": "security",
+                "content_sha256": "d0f19175475099e56dcd72355a85f9349e6c1352f7933281f3232dedf02ca1b1",
+                "event_id": "synthetic-008",
+                "headline": "Synthetic point-in-time security event 8",
+                "published_at_utc": "2023-05-30T19:59:00+00:00",
+                "severity": 4,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 4
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:7697b42ca18a06940c48"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "context_key": "bull|EXPERT_DISAGREEMENT+HIGH_ROUTER_ENTROPY+HIGH_SEVERITY_EVENT+LOW_ROUTER_CONFIDENCE|security",
+            "episodes": [],
+            "lesson": null
+          },
+          "tool_name": "retrieve_similar_episodes",
+          "tool_result_id": "retrieve_similar_episodes:332f623795987eed9676"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 4,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "automatic_evidence_ids": [
+        "inspect_current_state:c0b6d303d5eccf0c91d5",
+        "get_verified_events:d4537edce799126f0f1f",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "retrieve_similar_episodes:2c4d0aac198d22b470b0"
+      ],
+      "decision": {
+        "confidence": 0.5,
+        "horizon_days": 7,
+        "hypothesis": "Current market state shows high expert disagreement and router entropy, but no clear directional signal. The mix regime is indicated by both ATP and expert signals, with low router confidence. The high severity event and transition day further support a cautious approach.",
+        "invalidation_condition": "If router confidence exceeds 0.7 or expert disagreement drops below 0.5, or if the hard_regime shifts to bull or bear.",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "mix"
+      },
+      "decision_error": null,
+      "decision_valid": true,
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes"
+      ],
+      "future_events_hidden": 0,
+      "operator_evidence_complete": true,
+      "plan_error": null,
+      "plan_valid": true,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "shield": {
+        "accepted": true,
+        "current_exposure": 0.3333333333333333,
+        "proposed_exposure": 0.3333333333333333,
+        "reasons": [],
+        "target_row_l1": 0.0
+      },
+      "status": "KEEP_OR_FAIL_CLOSED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.3333333333333333,
+            "decision_time_utc": "2023-06-19T23:59:00+00:00",
+            "drawdown_90": -0.14,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "mix",
+            "probabilities": {
+              "bear": 0.25,
+              "bull": 0.25,
+              "mix": 0.5
+            },
+            "realized_volatility_z": 1.6,
+            "router_confidence": 0.5,
+            "router_entropy": 0.78,
+            "transition_day": true,
+            "trigger_reasons": [
+              "ROUTER_TRANSITION",
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:c0b6d303d5eccf0c91d5"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-06-19T20:01:00+00:00",
+                "body": "Interface-only evidence used to test tool selection and bounded trust control.",
+                "category": "macro",
+                "content_sha256": "d425434521c6f9f098c0ff8a8fbed21581632d1f67952d56b5ea46cf5d5c2e95",
+                "event_id": "synthetic-009",
+                "headline": "Synthetic point-in-time macro event 9",
+                "published_at_utc": "2023-06-19T19:59:00+00:00",
+                "severity": 3,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 3
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:d4537edce799126f0f1f"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "context_key": "mix|EXPERT_DISAGREEMENT+HIGH_ROUTER_ENTROPY+HIGH_SEVERITY_EVENT+LOW_ROUTER_CONFIDENCE+ROUTER_TRANSITION|macro",
+            "episodes": [],
+            "lesson": null
+          },
+          "tool_name": "retrieve_similar_episodes",
+          "tool_result_id": "retrieve_similar_episodes:2c4d0aac198d22b470b0"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 3,
+        "reasons": [
+          "ROUTER_TRANSITION",
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "automatic_evidence_ids": [
+        "inspect_current_state:c7d1d1e8c2360e90094f",
+        "get_verified_events:688928126d534a0f170c",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "retrieve_similar_episodes:ef11506d45e503cfe961"
+      ],
+      "decision": {
+        "confidence": 0.48,
+        "horizon_days": 7,
+        "hypothesis": "Current market conditions indicate a high-severity event with significant expert disagreement and low router confidence, suggesting a defensive shrink is warranted to protect against potential further drawdown.",
+        "invalidation_condition": "If the router confidence exceeds 0.7 or the drawdown_90 improves to less than -0.10, the current strategy should be re-evaluated.",
+        "operator": "DEFENSIVE_SHRINK",
+        "strength": 0.1,
+        "target_regime": "bear"
+      },
+      "decision_error": null,
+      "decision_valid": true,
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes"
+      ],
+      "future_events_hidden": 0,
+      "operator_evidence_complete": false,
+      "plan_error": null,
+      "plan_valid": true,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "shield": {
+        "accepted": false,
+        "current_exposure": 0.6666666666666666,
+        "proposed_exposure": 0.6346666666666666,
+        "reasons": [
+          "OPERATOR_EVIDENCE_INCOMPLETE",
+          "TRUST_ROW_CHANGE_TOO_LARGE"
+        ],
+        "target_row_l1": 0.13333333333333336
+      },
+      "status": "KEEP_OR_FAIL_CLOSED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.6666666666666666,
+            "decision_time_utc": "2023-07-09T23:59:00+00:00",
+            "drawdown_90": -0.16,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "bear",
+            "probabilities": {
+              "bear": 0.48,
+              "bull": 0.22,
+              "mix": 0.3
+            },
+            "realized_volatility_z": 1.8,
+            "router_confidence": 0.48,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "DRAWDOWN_STRESS",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:c7d1d1e8c2360e90094f"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-07-09T20:01:00+00:00",
+                "body": "Interface-only evidence used to test tool selection and bounded trust control.",
+                "category": "exchange",
+                "content_sha256": "5f90d1547faf42a723ac13fdcb9d942241e71eabdf254b02fb49f66ada8b0be8",
+                "event_id": "synthetic-010",
+                "headline": "Synthetic point-in-time exchange event 10",
+                "published_at_utc": "2023-07-09T19:59:00+00:00",
+                "severity": 4,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 4
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:688928126d534a0f170c"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "context_key": "bear|DRAWDOWN_STRESS+EXPERT_DISAGREEMENT+HIGH_ROUTER_ENTROPY+HIGH_SEVERITY_EVENT+LOW_ROUTER_CONFIDENCE|exchange",
+            "episodes": [],
+            "lesson": null
+          },
+          "tool_name": "retrieve_similar_episodes",
+          "tool_result_id": "retrieve_similar_episodes:ef11506d45e503cfe961"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 4,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "DRAWDOWN_STRESS",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "automatic_evidence_ids": [
+        "inspect_current_state:898cbe632e966deea52d",
+        "get_verified_events:364084ceac334a75bbc8",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "retrieve_similar_episodes:1408c44a18c2a21141b8"
+      ],
+      "decision": {
+        "confidence": 0.52,
+        "horizon_days": 7,
+        "hypothesis": "The current market state shows high expert disagreement, low router confidence, and high router entropy, indicating potential instability in the bull regime. A defensive shrink is warranted to reduce exposure while maintaining a bullish stance.",
+        "invalidation_condition": "If the router confidence rises above 0.7 or the expert disagreement falls below 0.5, the current strategy should be re-evaluated.",
+        "operator": "DEFENSIVE_SHRINK",
+        "strength": 0.05,
+        "target_regime": "bull"
+      },
+      "decision_error": null,
+      "decision_valid": true,
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes"
+      ],
+      "future_events_hidden": 0,
+      "operator_evidence_complete": false,
+      "plan_error": null,
+      "plan_valid": true,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "shield": {
+        "accepted": false,
+        "current_exposure": 0.3333333333333333,
+        "proposed_exposure": 0.32466666666666666,
+        "reasons": [
+          "OPERATOR_EVIDENCE_INCOMPLETE"
+        ],
+        "target_row_l1": 0.06666666666666665
+      },
+      "status": "KEEP_OR_FAIL_CLOSED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.3333333333333333,
+            "decision_time_utc": "2023-07-29T23:59:00+00:00",
+            "drawdown_90": -0.08,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "bull",
+            "probabilities": {
+              "bear": 0.18,
+              "bull": 0.52,
+              "mix": 0.3
+            },
+            "realized_volatility_z": 2.0,
+            "router_confidence": 0.52,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "VOLATILITY_STRESS",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:898cbe632e966deea52d"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-07-29T20:01:00+00:00",
+                "body": "Interface-only evidence used to test tool selection and bounded trust control.",
+                "category": "regulation",
+                "content_sha256": "8802350ddcf29f844cbede2a647ecd99c0867377aa01a56c32483cfcaaafb1d3",
+                "event_id": "synthetic-011",
+                "headline": "Synthetic point-in-time regulation event 11",
+                "published_at_utc": "2023-07-29T19:59:00+00:00",
+                "severity": 3,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 3
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:364084ceac334a75bbc8"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "context_key": "bull|EXPERT_DISAGREEMENT+HIGH_ROUTER_ENTROPY+HIGH_SEVERITY_EVENT+LOW_ROUTER_CONFIDENCE+VOLATILITY_STRESS|regulation",
+            "episodes": [],
+            "lesson": null
+          },
+          "tool_name": "retrieve_similar_episodes",
+          "tool_result_id": "retrieve_similar_episodes:1408c44a18c2a21141b8"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 3,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "VOLATILITY_STRESS",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "automatic_evidence_ids": [
+        "inspect_current_state:ad0812327c82778da3d8",
+        "get_verified_events:935145355994ef664500",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "retrieve_similar_episodes:c31593853f752eae5b85"
+      ],
+      "decision": {
+        "confidence": 0.5,
+        "horizon_days": 7,
+        "hypothesis": "Current market state shows high expert disagreement and volatility stress, but router confidence remains moderate. The system is in a mixed regime with no clear directional bias.",
+        "invalidation_condition": "If router confidence drops below 0.3 or expert disagreement exceeds 1.2, or if volatility stress exceeds 2.5 z-scores.",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "mix"
+      },
+      "decision_error": null,
+      "decision_valid": true,
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes"
+      ],
+      "future_events_hidden": 0,
+      "operator_evidence_complete": true,
+      "plan_error": null,
+      "plan_valid": true,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "shield": {
+        "accepted": true,
+        "current_exposure": 0.6666666666666666,
+        "proposed_exposure": 0.6666666666666666,
+        "reasons": [],
+        "target_row_l1": 0.0
+      },
+      "status": "KEEP_OR_FAIL_CLOSED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.6666666666666666,
+            "decision_time_utc": "2023-08-18T23:59:00+00:00",
+            "drawdown_90": -0.1,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "mix",
+            "probabilities": {
+              "bear": 0.25,
+              "bull": 0.25,
+              "mix": 0.5
+            },
+            "realized_volatility_z": 2.2,
+            "router_confidence": 0.5,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "VOLATILITY_STRESS",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:ad0812327c82778da3d8"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-08-18T20:01:00+00:00",
+                "body": "Interface-only evidence used to test tool selection and bounded trust control.",
+                "category": "stablecoin",
+                "content_sha256": "86c8220050134a2283da57a02c31da030e8f53241425e9b3ff6c52612d95d008",
+                "event_id": "synthetic-012",
+                "headline": "Synthetic point-in-time stablecoin event 12",
+                "published_at_utc": "2023-08-18T19:59:00+00:00",
+                "severity": 4,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 4
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:935145355994ef664500"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "context_key": "mix|EXPERT_DISAGREEMENT+HIGH_ROUTER_ENTROPY+HIGH_SEVERITY_EVENT+LOW_ROUTER_CONFIDENCE+VOLATILITY_STRESS|stablecoin",
+            "episodes": [],
+            "lesson": null
+          },
+          "tool_name": "retrieve_similar_episodes",
+          "tool_result_id": "retrieve_similar_episodes:c31593853f752eae5b85"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 4,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "VOLATILITY_STRESS",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    }
+  ],
+  "valid_decisions": 12,
+  "valid_plans": 12
+}

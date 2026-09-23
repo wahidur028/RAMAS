@@ -1,0 +1,91 @@
+{
+  "experiment_id": "RAMAS_STAGE6_3_LLAMA70B_FIXED_TRUST_MEMORY_ABLATION_V1",
+  "phase": "RETROSPECTIVE_MATCHED_FIXED_TRUST_MEMORY_ABLATION",
+  "provider": {
+    "kind": "ollama",
+    "endpoint": "http://127.0.0.1:11434/api/chat",
+    "model": "llama3.3:70b",
+    "temperature": 0.0,
+    "seed": 16061,
+    "timeout_seconds": 300,
+    "maximum_retries": 0,
+    "num_ctx": 8192,
+    "num_predict": 512
+  },
+  "agent": {
+    "prompt_version": "llama70b_memory_expert_v1_frozen",
+    "actions": [
+      "BTC",
+      "CASH",
+      "ABSTAIN"
+    ],
+    "maximum_similar_episodes": 5,
+    "reason_codes": [
+      "BULLISH_ROUTER",
+      "BEARISH_ROUTER",
+      "MIXED_OR_UNCERTAIN",
+      "POSITIVE_MOMENTUM",
+      "NEGATIVE_MOMENTUM",
+      "HIGH_VOLATILITY",
+      "DRAWDOWN_RISK",
+      "TRANSITION_RISK",
+      "MEMORY_SUPPORT",
+      "MEMORY_WARNING",
+      "INSUFFICIENT_EVIDENCE"
+    ]
+  },
+  "trust": {
+    "initial_beta": 0.05,
+    "minimum_beta": 0.0,
+    "maximum_beta": 0.2,
+    "monthly_step": 0.025,
+    "minimum_completed_episodes_per_regime": 8,
+    "lookback_episodes_per_regime": 60,
+    "minimum_mean_log_advantage_to_increase": 0.0001,
+    "maximum_mean_log_advantage_to_decrease": 0.0
+  },
+  "cost_rate": 0.001,
+  "arms": [
+    "memory",
+    "no_memory"
+  ],
+  "initialization": "BOTH_FRESH_EMPTY_2021_NO_ARCHIVED_SEED",
+  "continue_across_years": true,
+  "no_yearly_economic_hard_stop": true,
+  "no_memory_disables": "RETRIEVED_EPISODES_AND_THEIR_SUMMARY_ONLY",
+  "common_legacy_trust_rule": false,
+  "legacy_control_seam_preserved_for_matched_replication": true,
+  "source_run_id": "20260907T012534Z",
+  "source_result_relative": "EXPERIMENT_BRANCHES/RAMAS_STAGE6_1_LLAMA70B_CONTINUOUS_MEMORY_AGENT_EXPERT_V1/artifacts/20260907T012534Z/continuous_2021_2025",
+  "corrected_run_relative": "EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z",
+  "expected_source_complete_sha256": "7f2caecb476d77394cc004f937e9bc774596f5b492cc6e6f52011954db4e7e93",
+  "expected_source_trace_sha256": "c645ed5014e0adf53c73fcedb9c6bdd18b234b067f2eb94c9ed4423e1f77d9b5",
+  "expected_vendor_prompt_sha256": "6b99d1922bf13d280e23c4f62bf82d3dbea2c2032f00be6208a83d8e5bb86783",
+  "expected_rows": 1608,
+  "analysis": {
+    "primary": "POST2021_MEAN_DAILY_LOG_RETURN_MEMORY_MINUS_NO_MEMORY",
+    "bootstrap_resamples": 5000,
+    "block_days": 30,
+    "seed": 16062
+  },
+  "minimum_valid_action_rate": 0.98,
+  "preflight": {
+    "minimum_valid_rate": 1.0,
+    "minimum_expected_action_rate": 0.9,
+    "required_actions": [
+      "BTC",
+      "CASH",
+      "ABSTAIN"
+    ]
+  },
+  "qwen_used": false,
+  "maximum_consecutive_invalid": 3,
+  "agent_trust_mode": "FIXED_POSITIVE",
+  "fixed_beta": 0.05,
+  "adaptive_reference_run_id": "20260908T055052711433762Z",
+  "adaptive_reference_relative": "EXPERIMENT_BRANCHES/RAMAS_STAGE6_2_LLAMA70B_MATCHED_MEMORY_ABLATION_V1/artifacts/20260908T055052711433762Z",
+  "expected_adaptive_trace_sha256": "da29884c0c44709c2cf72fa282ba69769621e9e78e1d0fcb5abb147b06dee3a3",
+  "expected_model_digest": "a6eb4748fd2990ad2952b2335a95a7f952d1a06119a0aa6a2df6cd052a93a3fa",
+  "expected_adaptive_complete_sha256": "679a8d7bd95048615de8f3740a1fa2f20162bc55f2e3072543b822c910bb2d31",
+  "scientific_scope": "LEGACY_MECHANISM_DIAGNOSTIC_NOT_REALISTIC_EXECUTION_OR_FRESH_OOS_CONFIRMATION"
+}

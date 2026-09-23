@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "validated_at_utc": "2026-09-02T00:00:00+00:00",
+  "python_compileall": "PASS",
+  "unit_tests": {
+    "status": "PASS",
+    "count": 17
+  },
+  "controlled_interface_preflight": {
+    "status": "PASS",
+    "cases": 12,
+    "valid_plans": 12,
+    "valid_decisions": 12,
+    "operator_evidence_complete": 12,
+    "safe_final_actions": 12,
+    "accepted_interventions": 3,
+    "positive_path_interventions": 3,
+    "economic_claim_permitted": false
+  },
+  "expected_local_decision": "MECHANISM_PASS_AWAIT_POINT_IN_TIME_EVENT_DATA",
+  "ollama_preflight_run_locally": false,
+  "economic_replay_run": false,
+  "economic_value_established": false,
+  "reused_oos_opened": false,
+  "notes": [
+    "Controlled-provider validation establishes code mechanics only.",
+    "The server must run the Ollama interface preflight.",
+    "A causal economic adapter remains blocked until point-in-time event evidence passes its data gate."
+  ]
+}

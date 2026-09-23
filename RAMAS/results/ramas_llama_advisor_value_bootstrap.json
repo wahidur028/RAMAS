@@ -1,0 +1,707 @@
+{
+  "experiment": "RAMAS_LLaMA_advisor_value_paired_bootstrap",
+  "read_only": true,
+  "llama_called": false,
+  "archive": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_4_COMPONENT_SUITE_V1/artifacts/20260909T114202240674964Z.tar.gz",
+  "baseline_arm": "numerical_only",
+  "cost_bps": 10,
+  "evaluation_window": {
+    "return_date_start": "2022-01-01",
+    "return_date_end": "2025-05-28",
+    "date_count": 1244
+  },
+  "bootstrap_contract": {
+    "resamples": 5000,
+    "circular_block_days": 30,
+    "primary_effect_unit": "mean daily net-return difference in bps/day",
+    "seed": 20260915
+  },
+  "baseline_validation": {
+    "advisor_values": [
+      "abstain"
+    ],
+    "memory_values": [
+      "none"
+    ],
+    "beta_values": [
+      0.0
+    ],
+    "max_core_desired_vs_desired_difference": 0.0
+  },
+  "baseline_metrics": {
+    "controller_on": {
+      "date_count": 1244,
+      "net_return_pct": 60.045985214618284,
+      "annualized_volatility_pct": 23.86643038950319,
+      "sharpe": 0.6978868233930628,
+      "mdd_pct": 38.22536565028542,
+      "es95_pct": 2.880604123208995,
+      "total_turnover": 8.132383138449232,
+      "mean_exposure_pct": 44.035369774919616
+    },
+    "controller_off": {
+      "date_count": 1244,
+      "net_return_pct": 60.4856194263814,
+      "annualized_volatility_pct": 23.881046933630156,
+      "sharpe": 0.7009358391713914,
+      "mdd_pct": 36.948170729771824,
+      "es95_pct": 2.875554807854338,
+      "total_turnover": 7.007412857361489,
+      "mean_exposure_pct": 44.24378412279052
+    }
+  },
+  "comparisons": [
+    {
+      "arm": "llama_frozen_W",
+      "classification": "advisor_on_plus_frozen_W_confound",
+      "source_member": "20260909T114202240674964Z/arms/llama_frozen_W/DAILY_LEDGER.csv",
+      "row_count": 1608,
+      "arm_config_values": {
+        "advisor": [
+          "llama"
+        ],
+        "beta": [
+          0.0,
+          0.025,
+          0.02500000000000001,
+          0.05,
+          0.05000000000000001,
+          0.07500000000000001,
+          0.1,
+          0.10000000000000003,
+          0.125,
+          0.12500000000000003,
+          0.15,
+          0.2
+        ],
+        "memory_mode": [
+          "expanding"
+        ]
+      },
+      "metrics": {
+        "controller_on": {
+          "date_count": 1244,
+          "net_return_pct": 77.38423505810734,
+          "annualized_volatility_pct": 26.781618874051233,
+          "sharpe": 0.7621441245094949,
+          "mdd_pct": 39.70287135907823,
+          "es95_pct": 3.196962945644409,
+          "total_turnover": 8.839079645142181,
+          "mean_exposure_pct": 49.59807073954984
+        },
+        "controller_off": {
+          "date_count": 1244,
+          "net_return_pct": 78.54374407807958,
+          "annualized_volatility_pct": 27.28463417414801,
+          "sharpe": 0.7600690672310241,
+          "mdd_pct": 39.79314453250977,
+          "es95_pct": 3.2565336881438403,
+          "total_turnover": 8.733975747058945,
+          "mean_exposure_pct": 50.549638263665585
+        }
+      },
+      "advisor_effect_vs_numerical_only": {
+        "controller_on": {
+          "net_return_difference_pp": 17.338249843489052,
+          "sharpe_difference": 0.06425730111643202,
+          "mdd_difference_pp": 1.4775057087928118,
+          "es95_difference_pp": 0.31635882243541413,
+          "turnover_difference": 0.7066965066929498,
+          "mean_exposure_difference_pp": 5.562700964630224,
+          "paired_bootstrap": {
+            "point_mean_daily_difference_bps": 1.0281687007388634,
+            "ci95_mean_daily_difference_bps": [
+              -0.02360057007946032,
+              2.2396188978628655
+            ],
+            "bootstrap_mean_bps": 1.0216298648608548,
+            "bootstrap_positive_fraction": 0.9714,
+            "daily_win_fraction": 0.41961414790996787,
+            "bootstrap_count": 5000,
+            "block_days": 30,
+            "seed": 20260915
+          }
+        },
+        "controller_off": {
+          "net_return_difference_pp": 18.058124651698186,
+          "sharpe_difference": 0.059133228059632725,
+          "mdd_difference_pp": 2.8449738027379468,
+          "es95_difference_pp": 0.38097888028950244,
+          "turnover_difference": 1.7265628896974565,
+          "mean_exposure_difference_pp": 6.305854140875063,
+          "paired_bootstrap": {
+            "point_mean_daily_difference_bps": 1.0949006909702843,
+            "ci95_mean_daily_difference_bps": [
+              -0.017168399710906165,
+              2.3856300170415996
+            ],
+            "bootstrap_mean_bps": 1.09185489210839,
+            "bootstrap_positive_fraction": 0.9726,
+            "daily_win_fraction": 0.4959807073954984,
+            "bootstrap_count": 5000,
+            "block_days": 30,
+            "seed": 20260916
+          }
+        }
+      }
+    },
+    {
+      "arm": "llama_hard_allocator",
+      "classification": "advisor_on_plus_allocator_confound",
+      "source_member": "20260909T114202240674964Z/arms/llama_hard_allocator/DAILY_LEDGER.csv",
+      "row_count": 1608,
+      "arm_config_values": {
+        "advisor": [
+          "llama"
+        ],
+        "beta": [
+          0.0,
+          0.025,
+          0.02500000000000001,
+          0.05,
+          0.05000000000000001,
+          0.07500000000000001,
+          0.1,
+          0.10000000000000003,
+          0.125,
+          0.12500000000000003,
+          0.15,
+          0.2
+        ],
+        "memory_mode": [
+          "expanding"
+        ]
+      },
+      "metrics": {
+        "controller_on": {
+          "date_count": 1244,
+          "net_return_pct": 67.71749163475637,
+          "annualized_volatility_pct": 24.38989027866241,
+          "sharpe": 0.7443531665773585,
+          "mdd_pct": 36.90186183008096,
+          "es95_pct": 2.922476339417367,
+          "total_turnover": 11.492783616428179,
+          "mean_exposure_pct": 44.97588424437299
+        },
+        "controller_off": {
+          "date_count": 1244,
+          "net_return_pct": 64.52817065900891,
+          "annualized_volatility_pct": 24.33424229648956,
+          "sharpe": 0.7223381300368769,
+          "mdd_pct": 36.608888130859704,
+          "es95_pct": 2.922430154903657,
+          "total_turnover": 11.528582164398951,
+          "mean_exposure_pct": 44.96096448386825
+        }
+      },
+      "advisor_effect_vs_numerical_only": {
+        "controller_on": {
+          "net_return_difference_pp": 7.671506420138087,
+          "sharpe_difference": 0.046466343184295655,
+          "mdd_difference_pp": -1.3235038202044578,
+          "es95_difference_pp": 0.041872216208372226,
+          "turnover_difference": 3.3604004779789474,
+          "mean_exposure_difference_pp": 0.940514469453376,
+          "paired_bootstrap": {
+            "point_mean_daily_difference_bps": 0.4103011009266681,
+            "ci95_mean_daily_difference_bps": [
+              -0.2057965501715385,
+              1.1255223140846964
+            ],
+            "bootstrap_mean_bps": 0.4089956040743835,
+            "bootstrap_positive_fraction": 0.8976,
+            "daily_win_fraction": 0.15514469453376206,
+            "bootstrap_count": 5000,
+            "block_days": 30,
+            "seed": 20261015
+          }
+        },
+        "controller_off": {
+          "net_return_difference_pp": 4.04255123262751,
+          "sharpe_difference": 0.021402290865485507,
+          "mdd_difference_pp": -0.33928259891212065,
+          "es95_difference_pp": 0.04687534704931906,
+          "turnover_difference": 4.521169307037463,
+          "mean_exposure_difference_pp": 0.7171803610777303,
+          "paired_bootstrap": {
+            "point_mean_daily_difference_bps": 0.2295604116619052,
+            "ci95_mean_daily_difference_bps": [
+              -0.3947859650077957,
+              0.9659316542465567
+            ],
+            "bootstrap_mean_bps": 0.22547587831676974,
+            "bootstrap_positive_fraction": 0.7292,
+            "daily_win_fraction": 0.49758842443729906,
+            "bootstrap_count": 5000,
+            "block_days": 30,
+            "seed": 20261016
+          }
+        }
+      }
+    },
+    {
+      "arm": "llama_memory_current_year",
+      "classification": "advisor_on_memory_variant",
+      "source_member": "20260909T114202240674964Z/arms/llama_memory_current_year/DAILY_LEDGER.csv",
+      "row_count": 1608,
+      "arm_config_values": {
+        "advisor": [
+          "llama"
+        ],
+        "beta": [
+          0.0,
+          0.025,
+          0.02500000000000001,
+          0.05,
+          0.05000000000000001,
+          0.07500000000000001,
+          0.1,
+          0.10000000000000003,
+          0.125,
+          0.12500000000000003,
+          0.15,
+          0.2
+        ],
+        "memory_mode": [
+          "current_year"
+        ]
+      },
+      "metrics": {
+        "controller_on": {
+          "date_count": 1244,
+          "net_return_pct": 68.44277058214878,
+          "annualized_volatility_pct": 24.3275903288022,
+          "sharpe": 0.7508453906756352,
+          "mdd_pct": 37.08659460371152,
+          "es95_pct": 2.9167740430219786,
+          "total_turnover": 11.683908863062006,
+          "mean_exposure_pct": 44.855305466237944
+        },
+        "controller_off": {
+          "date_count": 1244,
+          "net_return_pct": 66.93055513146258,
+          "annualized_volatility_pct": 24.320708912724903,
+          "sharpe": 0.740097249657021,
+          "mdd_pct": 36.612706194947386,
+          "es95_pct": 2.9138978318450435,
+          "total_turnover": 10.73112221565992,
+          "mean_exposure_pct": 44.95046615076935
+        }
+      },
+      "advisor_effect_vs_numerical_only": {
+        "controller_on": {
+          "net_return_difference_pp": 8.396785367530498,
+          "sharpe_difference": 0.05295856728257231,
+          "mdd_difference_pp": -1.1387710465739005,
+          "es95_difference_pp": 0.036169919812983675,
+          "turnover_difference": 3.551525724612775,
+          "mean_exposure_difference_pp": 0.819935691318328,
+          "paired_bootstrap": {
+            "point_mean_daily_difference_bps": 0.4408464816876791,
+            "ci95_mean_daily_difference_bps": [
+              -0.11158268381482452,
+              1.1222508411495635
+            ],
+            "bootstrap_mean_bps": 0.4449597614921515,
+            "bootstrap_positive_fraction": 0.9312,
+            "daily_win_fraction": 0.1229903536977492,
+            "bootstrap_count": 5000,
+            "block_days": 30,
+            "seed": 20261115
+          }
+        },
+        "controller_off": {
+          "net_return_difference_pp": 6.4449357050811855,
+          "sharpe_difference": 0.0391614104856296,
+          "mdd_difference_pp": -0.33546453482443894,
+          "es95_difference_pp": 0.03834302399070566,
+          "turnover_difference": 3.7237093582984304,
+          "mean_exposure_difference_pp": 0.7066820279788288,
+          "paired_bootstrap": {
+            "point_mean_daily_difference_bps": 0.34513568878884643,
+            "ci95_mean_daily_difference_bps": [
+              -0.20911184647753914,
+              1.0220425922647334
+            ],
+            "bootstrap_mean_bps": 0.34715009009169423,
+            "bootstrap_positive_fraction": 0.8672,
+            "daily_win_fraction": 0.21302250803858522,
+            "bootstrap_count": 5000,
+            "block_days": 30,
+            "seed": 20261116
+          }
+        }
+      }
+    },
+    {
+      "arm": "llama_memory_frozen2021",
+      "classification": "advisor_on_memory_variant",
+      "source_member": "20260909T114202240674964Z/arms/llama_memory_frozen2021/DAILY_LEDGER.csv",
+      "row_count": 1608,
+      "arm_config_values": {
+        "advisor": [
+          "llama"
+        ],
+        "beta": [
+          0.0,
+          0.025,
+          0.02500000000000001,
+          0.05,
+          0.05000000000000001,
+          0.07500000000000001,
+          0.1,
+          0.125,
+          0.15,
+          0.2
+        ],
+        "memory_mode": [
+          "frozen2021"
+        ]
+      },
+      "metrics": {
+        "controller_on": {
+          "date_count": 1244,
+          "net_return_pct": 69.90250845930979,
+          "annualized_volatility_pct": 24.37346107424232,
+          "sharpe": 0.7602876300585651,
+          "mdd_pct": 37.08659460371152,
+          "es95_pct": 2.9219414359426534,
+          "total_turnover": 11.615378755320357,
+          "mean_exposure_pct": 44.96382636655949
+        },
+        "controller_off": {
+          "date_count": 1244,
+          "net_return_pct": 68.505335523911,
+          "annualized_volatility_pct": 24.37094554126591,
+          "sharpe": 0.7503899171403076,
+          "mdd_pct": 36.612706194947386,
+          "es95_pct": 2.919893208582679,
+          "total_turnover": 10.691846947448827,
+          "mean_exposure_pct": 45.070233495896176
+        }
+      },
+      "advisor_effect_vs_numerical_only": {
+        "controller_on": {
+          "net_return_difference_pp": 9.856523244691502,
+          "sharpe_difference": 0.062400806665502295,
+          "mdd_difference_pp": -1.1387710465739005,
+          "es95_difference_pp": 0.04133731273365848,
+          "turnover_difference": 3.4829956168711256,
+          "mean_exposure_difference_pp": 0.9284565916398719,
+          "paired_bootstrap": {
+            "point_mean_daily_difference_bps": 0.5132850557695668,
+            "ci95_mean_daily_difference_bps": [
+              -0.07821565776200275,
+              1.2317083625886003
+            ],
+            "bootstrap_mean_bps": 0.5085821076300455,
+            "bootstrap_positive_fraction": 0.9498,
+            "daily_win_fraction": 0.12379421221864952,
+            "bootstrap_count": 5000,
+            "block_days": 30,
+            "seed": 20261215
+          }
+        },
+        "controller_off": {
+          "net_return_difference_pp": 8.019716097529603,
+          "sharpe_difference": 0.04945407796891621,
+          "mdd_difference_pp": -0.33546453482443894,
+          "es95_difference_pp": 0.04433840072834139,
+          "turnover_difference": 3.684434090087338,
+          "mean_exposure_difference_pp": 0.8264493731056533,
+          "paired_bootstrap": {
+            "point_mean_daily_difference_bps": 0.42399182275867,
+            "ci95_mean_daily_difference_bps": [
+              -0.14040694761349376,
+              1.1417595247356236
+            ],
+            "bootstrap_mean_bps": 0.4233392522166887,
+            "bootstrap_positive_fraction": 0.917,
+            "daily_win_fraction": 0.21382636655948553,
+            "bootstrap_count": 5000,
+            "block_days": 30,
+            "seed": 20261216
+          }
+        }
+      }
+    },
+    {
+      "arm": "llama_memory_pooled",
+      "classification": "advisor_on_memory_variant",
+      "source_member": "20260909T114202240674964Z/arms/llama_memory_pooled/DAILY_LEDGER.csv",
+      "row_count": 1608,
+      "arm_config_values": {
+        "advisor": [
+          "llama"
+        ],
+        "beta": [
+          0.0,
+          0.025,
+          0.02500000000000001,
+          0.05,
+          0.05000000000000001,
+          0.07500000000000001,
+          0.1,
+          0.10000000000000003,
+          0.125,
+          0.12500000000000003,
+          0.15,
+          0.2
+        ],
+        "memory_mode": [
+          "pooled"
+        ]
+      },
+      "metrics": {
+        "controller_on": {
+          "date_count": 1244,
+          "net_return_pct": 68.56324363098318,
+          "annualized_volatility_pct": 24.342973619768234,
+          "sharpe": 0.7513904477292108,
+          "mdd_pct": 37.08659460371152,
+          "es95_pct": 2.918553907410925,
+          "total_turnover": 11.292923908745044,
+          "mean_exposure_pct": 44.86736334405145
+        },
+        "controller_off": {
+          "date_count": 1244,
+          "net_return_pct": 66.83845935187873,
+          "annualized_volatility_pct": 24.339265681030405,
+          "sharpe": 0.7390576008989026,
+          "mdd_pct": 36.612706194947386,
+          "es95_pct": 2.9163604001594137,
+          "total_turnover": 10.314350870295602,
+          "mean_exposure_pct": 44.96167029419978
+        }
+      },
+      "advisor_effect_vs_numerical_only": {
+        "controller_on": {
+          "net_return_difference_pp": 8.517258416364896,
+          "sharpe_difference": 0.05350362433614797,
+          "mdd_difference_pp": -1.1387710465739005,
+          "es95_difference_pp": 0.03794978420192985,
+          "turnover_difference": 3.160540770295812,
+          "mean_exposure_difference_pp": 0.8319935691318321,
+          "paired_bootstrap": {
+            "point_mean_daily_difference_bps": 0.4476414940331226,
+            "ci95_mean_daily_difference_bps": [
+              -0.12455819286354997,
+              1.1435392338940682
+            ],
+            "bootstrap_mean_bps": 0.4553959961566482,
+            "bootstrap_positive_fraction": 0.9284,
+            "daily_win_fraction": 0.1229903536977492,
+            "bootstrap_count": 5000,
+            "block_days": 30,
+            "seed": 20261315
+          }
+        },
+        "controller_off": {
+          "net_return_difference_pp": 6.352839925497328,
+          "sharpe_difference": 0.03812176172751125,
+          "mdd_difference_pp": -0.33546453482443894,
+          "es95_difference_pp": 0.040805592305075855,
+          "turnover_difference": 3.306938012934113,
+          "mean_exposure_difference_pp": 0.7178861714092548,
+          "paired_bootstrap": {
+            "point_mean_daily_difference_bps": 0.3419678656120158,
+            "ci95_mean_daily_difference_bps": [
+              -0.23090230844005535,
+              1.0861560017581038
+            ],
+            "bootstrap_mean_bps": 0.3415545836756436,
+            "bootstrap_positive_fraction": 0.8496,
+            "daily_win_fraction": 0.21302250803858522,
+            "bootstrap_count": 5000,
+            "block_days": 30,
+            "seed": 20261316
+          }
+        }
+      }
+    },
+    {
+      "arm": "llama_no_risk",
+      "classification": "advisor_on_plus_no_risk_confound",
+      "source_member": "20260909T114202240674964Z/arms/llama_no_risk/DAILY_LEDGER.csv",
+      "row_count": 1608,
+      "arm_config_values": {
+        "advisor": [
+          "llama"
+        ],
+        "beta": [
+          0.0,
+          0.025,
+          0.02500000000000001,
+          0.05,
+          0.05000000000000001,
+          0.07500000000000001,
+          0.1,
+          0.125,
+          0.2
+        ],
+        "memory_mode": [
+          "expanding"
+        ]
+      },
+      "metrics": {
+        "controller_on": {
+          "date_count": 1244,
+          "net_return_pct": 66.3880590367428,
+          "annualized_volatility_pct": 24.264554999707514,
+          "sharpe": 0.7373245637515778,
+          "mdd_pct": 36.612706194947386,
+          "es95_pct": 2.909019978512679,
+          "total_turnover": 10.410478662614477,
+          "mean_exposure_pct": 44.9528102453995
+        },
+        "controller_off": {
+          "date_count": 1244,
+          "net_return_pct": 66.3880590367428,
+          "annualized_volatility_pct": 24.264554999707514,
+          "sharpe": 0.7373245637515778,
+          "mdd_pct": 36.612706194947386,
+          "es95_pct": 2.909019978512679,
+          "total_turnover": 10.410478662614477,
+          "mean_exposure_pct": 44.9528102453995
+        }
+      },
+      "advisor_effect_vs_numerical_only": {
+        "controller_on": {
+          "net_return_difference_pp": 6.342073822124519,
+          "sharpe_difference": 0.039437740358514994,
+          "mdd_difference_pp": -1.612659455338033,
+          "es95_difference_pp": 0.02841585530368418,
+          "turnover_difference": 2.278095524165245,
+          "mean_exposure_difference_pp": 0.9174404704798818,
+          "paired_bootstrap": {
+            "point_mean_daily_difference_bps": 0.338065746618335,
+            "ci95_mean_daily_difference_bps": [
+              -0.2636759229664319,
+              1.023414587755707
+            ],
+            "bootstrap_mean_bps": 0.33403406170111183,
+            "bootstrap_positive_fraction": 0.8498,
+            "daily_win_fraction": 0.5040192926045016,
+            "bootstrap_count": 5000,
+            "block_days": 30,
+            "seed": 20261415
+          }
+        },
+        "controller_off": {
+          "net_return_difference_pp": 5.902439610361405,
+          "sharpe_difference": 0.03638872458018649,
+          "mdd_difference_pp": -0.33546453482443894,
+          "es95_difference_pp": 0.033465170658341314,
+          "turnover_difference": 3.4030658052529876,
+          "mean_exposure_difference_pp": 0.7090261226089751,
+          "paired_bootstrap": {
+            "point_mean_daily_difference_bps": 0.31533764738400405,
+            "ci95_mean_daily_difference_bps": [
+              -0.23910315257934425,
+              1.0507312816701215
+            ],
+            "bootstrap_mean_bps": 0.31913638256416027,
+            "bootstrap_positive_fraction": 0.8342,
+            "daily_win_fraction": 0.20096463022508038,
+            "bootstrap_count": 5000,
+            "block_days": 30,
+            "seed": 20261416
+          }
+        }
+      }
+    },
+    {
+      "arm": "llama_uniform_allocator",
+      "classification": "advisor_on_plus_allocator_confound",
+      "source_member": "20260909T114202240674964Z/arms/llama_uniform_allocator/DAILY_LEDGER.csv",
+      "row_count": 1608,
+      "arm_config_values": {
+        "advisor": [
+          "llama"
+        ],
+        "beta": [
+          0.0,
+          0.025,
+          0.02500000000000001,
+          0.05,
+          0.05000000000000001,
+          0.07500000000000001,
+          0.1,
+          0.125,
+          0.15,
+          0.2
+        ],
+        "memory_mode": [
+          "expanding"
+        ]
+      },
+      "metrics": {
+        "controller_on": {
+          "date_count": 1244,
+          "net_return_pct": 68.47498642080107,
+          "annualized_volatility_pct": 24.068465160781045,
+          "sharpe": 0.7565665778734769,
+          "mdd_pct": 36.361351145319134,
+          "es95_pct": 2.8824455341099635,
+          "total_turnover": 10.352837249861002,
+          "mean_exposure_pct": 44.21221864951769
+        },
+        "controller_off": {
+          "date_count": 1244,
+          "net_return_pct": 64.01133049908681,
+          "annualized_volatility_pct": 24.17927948691545,
+          "sharpe": 0.7216153490283439,
+          "mdd_pct": 37.09357359998727,
+          "es95_pct": 2.908038934709211,
+          "total_turnover": 9.682249122934037,
+          "mean_exposure_pct": 44.35965513337683
+        }
+      },
+      "advisor_effect_vs_numerical_only": {
+        "controller_on": {
+          "net_return_difference_pp": 8.42900120618279,
+          "sharpe_difference": 0.05867975448041407,
+          "mdd_difference_pp": -1.8640145049662848,
+          "es95_difference_pp": 0.0018414109009685653,
+          "turnover_difference": 2.2204541114117706,
+          "mean_exposure_difference_pp": 0.17684887459807186,
+          "paired_bootstrap": {
+            "point_mean_daily_difference_bps": 0.42527831104642816,
+            "ci95_mean_daily_difference_bps": [
+              -0.2471021169392802,
+              1.1556696718919641
+            ],
+            "bootstrap_mean_bps": 0.43013398723713114,
+            "bootstrap_positive_fraction": 0.8872,
+            "daily_win_fraction": 0.20659163987138263,
+            "bootstrap_count": 5000,
+            "block_days": 30,
+            "seed": 20261515
+          }
+        },
+        "controller_off": {
+          "net_return_difference_pp": 3.5257110727054126,
+          "sharpe_difference": 0.02067950985695255,
+          "mdd_difference_pp": 0.14540287021544884,
+          "es95_difference_pp": 0.03248412685487301,
+          "turnover_difference": 2.674836265572548,
+          "mean_exposure_difference_pp": 0.11587101058631077,
+          "paired_bootstrap": {
+            "point_mean_daily_difference_bps": 0.19412937261846291,
+            "ci95_mean_daily_difference_bps": [
+              -0.4324057566184324,
+              0.8690492776014308
+            ],
+            "bootstrap_mean_bps": 0.18725084548041027,
+            "bootstrap_positive_fraction": 0.7088,
+            "daily_win_fraction": 0.5080385852090032,
+            "bootstrap_count": 5000,
+            "block_days": 30,
+            "seed": 20261516
+          }
+        }
+      }
+    }
+  ],
+  "interpretation_warning": "llama_memory_* arms are advisor-on memory variants. llama_frozen_W, llama_no_risk, and allocator arms include additional component changes and must not be presented as pure LLaMA-only effects."
+}

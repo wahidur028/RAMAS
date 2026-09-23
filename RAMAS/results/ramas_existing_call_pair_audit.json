@@ -1,0 +1,2172 @@
+{
+  "experiment": "RAMAS_existing_memory_no_memory_call_pair_audit",
+  "script_version": "1.0",
+  "read_only": true,
+  "note": "This audits archived RETROSPECTIVE_LLAMA70B calls. It does not replace the planned prospective state-controlled rerun.",
+  "arms": {
+    "adaptive": {
+      "authority": "adaptive",
+      "call_directory": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_2_LLAMA70B_MATCHED_MEMORY_ABLATION_V1/artifacts/20260908T055052711433762Z/calls",
+      "retrospective_only": true,
+      "evaluation_window": {
+        "start": "2022-01-01",
+        "end": "2025-05-28",
+        "expected_dates": 1244
+      },
+      "pair_counts": {
+        "all_index_pairs": 1608,
+        "window_pairs": 1243,
+        "complete_pairs": 1243,
+        "non_memory_request_matches": 1235,
+        "non_memory_request_mismatch": 8
+      },
+      "memory_retrieval": {
+        "nonempty_memory_pairs": 1243,
+        "empty_memory_pairs": 0,
+        "future_or_same_day_episode_count": 0,
+        "missing_episode_date_count": 0
+      },
+      "observable_output_change": {
+        "pairs_with_any_change": 1075,
+        "pairs_with_exactly_same_observable_output": 168,
+        "action_changes": 32,
+        "confidence_changes": 432,
+        "reason_code_changes": 512,
+        "citation_changes": 664
+      },
+      "provider_contract_example": {
+        "model": "llama3.3:70b",
+        "model_digest": "a6eb4748fd2990ad2952b2335a95a7f952d1a06119a0aa6a2df6cd052a93a3fa",
+        "num_ctx": 8192,
+        "num_predict": 512,
+        "seed": 16061,
+        "system_prompt_sha256": "6b99d1922bf13d280e23c4f62bf82d3dbea2c2032f00be6208a83d8e5bb86783",
+        "temperature": 0.0
+      },
+      "provider_contract_variants": 1,
+      "examples": [
+        {
+          "index": "000366",
+          "decision_date": "2022-01-01",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9997850102240644,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000352",
+              "episode-000364"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9997850102240644,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0032375651461278,
+            "confidence": 0.9997760425443089,
+            "decision_date": "2021-12-18",
+            "distance": 0.037405982772934616,
+            "episode_id": "episode-000352",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.0014616088511085843
+          }
+        },
+        {
+          "index": "000367",
+          "decision_date": "2022-01-02",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.998972794218538,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000366",
+              "episode-000364",
+              "episode-000352",
+              "episode-000353",
+              "episode-000365"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.998972794218538,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0089278981105198,
+            "confidence": 0.9997850102240644,
+            "decision_date": "2022-01-01",
+            "distance": 0.05015318838025487,
+            "episode_id": "episode-000366",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.004033659156814083
+          }
+        },
+        {
+          "index": "000368",
+          "decision_date": "2022-01-03",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9981288209191376,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000367",
+              "episode-000364",
+              "episode-000366",
+              "episode-000365",
+              "episode-000352"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9981288209191376,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0186338291927173,
+            "confidence": 0.998972794218538,
+            "decision_date": "2022-01-02",
+            "distance": 0.07881787313577679,
+            "episode_id": "episode-000367",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.008422795462179658
+          }
+        },
+        {
+          "index": "000369",
+          "decision_date": "2022-01-04",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9973619541984634,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000367",
+              "episode-000368",
+              "episode-000366",
+              "episode-000362"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9973619541984634,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0186338291927173,
+            "confidence": 0.998972794218538,
+            "decision_date": "2022-01-02",
+            "distance": 0.08980884715499611,
+            "episode_id": "episode-000367",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.008422795462179658
+          }
+        },
+        {
+          "index": "000370",
+          "decision_date": "2022-01-05",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9995541652800956,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000367",
+              "episode-000364",
+              "episode-000366",
+              "episode-000365",
+              "episode-000363"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9995541652800956,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0186338291927173,
+            "confidence": 0.998972794218538,
+            "decision_date": "2022-01-02",
+            "distance": 0.06733589856143299,
+            "episode_id": "episode-000367",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.008422795462179658
+          }
+        },
+        {
+          "index": "000371",
+          "decision_date": "2022-01-06",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999495274589552,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000370",
+              "episode-000365",
+              "episode-000364",
+              "episode-000367",
+              "episode-000353"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999495274589552,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0075623072866654,
+            "confidence": 0.9995541652800956,
+            "decision_date": "2022-01-05",
+            "distance": 0.04124106676973061,
+            "episode_id": "episode-000370",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.0034221780194022998
+          }
+        },
+        {
+          "index": "000372",
+          "decision_date": "2022-01-07",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999791727373168,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000371",
+              "episode-000365",
+              "episode-000370",
+              "episode-000364",
+              "episode-000353"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999791727373168,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0359835257265502,
+            "confidence": 0.9999495274589552,
+            "decision_date": "2022-01-06",
+            "distance": 0.0485515399091523,
+            "episode_id": "episode-000371",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.016326997215101825
+          }
+        },
+        {
+          "index": "000373",
+          "decision_date": "2022-01-08",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999936552623596,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000372",
+              "episode-000371",
+              "episode-000365",
+              "episode-000370",
+              "episode-000368"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999936552623596,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": 0.0030158833312874,
+            "confidence": 0.9999791727373168,
+            "decision_date": "2022-01-07",
+            "distance": 0.07533049647204629,
+            "episode_id": "episode-000372",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": -0.0013471748597051365
+          }
+        },
+        {
+          "index": "000374",
+          "decision_date": "2022-01-09",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999698718014028,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000373",
+              "episode-000372",
+              "episode-000371",
+              "episode-000370",
+              "episode-000368"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999698718014028,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": 0.0042306584757152,
+            "confidence": 0.9999936552623596,
+            "decision_date": "2022-01-08",
+            "distance": 0.026360293028514135,
+            "episode_id": "episode-000373",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": -0.0019012409708971771
+          }
+        },
+        {
+          "index": "000375",
+          "decision_date": "2022-01-10",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999628780800448,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000372",
+              "episode-000371",
+              "episode-000374",
+              "episode-000373",
+              "episode-000370"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999628780800448,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": 0.0030158833312874,
+            "confidence": 0.9999791727373168,
+            "decision_date": "2022-01-07",
+            "distance": 0.03893720440695842,
+            "episode_id": "episode-000372",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": -0.0013471748597051365
+          }
+        },
+        {
+          "index": "000376",
+          "decision_date": "2022-01-11",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999729360896792,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000370",
+              "episode-000371",
+              "episode-000372",
+              "episode-000375",
+              "episode-000364"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999729360896792,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0075623072866654,
+            "confidence": 0.9995541652800956,
+            "decision_date": "2022-01-05",
+            "distance": 0.02620516371507455,
+            "episode_id": "episode-000370",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.0034221780194022998
+          }
+        },
+        {
+          "index": "000377",
+          "decision_date": "2022-01-12",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999414808371848,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000369",
+              "episode-000203",
+              "episode-000356",
+              "episode-000355",
+              "episode-000202"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999414808371848,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0526078106694766,
+            "confidence": 0.9973619541984634,
+            "decision_date": "2022-01-04",
+            "distance": 0.1056704445208803,
+            "episode_id": "episode-000369",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.023961413756565922
+          }
+        },
+        {
+          "index": "000378",
+          "decision_date": "2022-01-13",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9996192429883864,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000377",
+              "episode-000369"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9996192429883864,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0305460012300403,
+            "confidence": 0.9999414808371848,
+            "decision_date": "2022-01-12",
+            "distance": 0.07885341665954211,
+            "episode_id": "episode-000377",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.01384772890637839
+          }
+        },
+        {
+          "index": "000379",
+          "decision_date": "2022-01-14",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999226147439932,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000377",
+              "episode-000378",
+              "episode-000355",
+              "episode-000356",
+              "episode-000369"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999226147439932,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0305460012300403,
+            "confidence": 0.9999414808371848,
+            "decision_date": "2022-01-12",
+            "distance": 0.07917073583880117,
+            "episode_id": "episode-000377",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.01384772890637839
+          }
+        },
+        {
+          "index": "000380",
+          "decision_date": "2022-01-15",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.99979419897572,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000379",
+              "episode-000377",
+              "episode-000378",
+              "episode-000369",
+              "episode-000205"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.99979419897572,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": 0.0005502248492685,
+            "confidence": 0.9999226147439932,
+            "decision_date": "2022-01-14",
+            "distance": 0.024268681842204036,
+            "episode_id": "episode-000379",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": -0.00024460163912293556
+          }
+        },
+        {
+          "index": "000381",
+          "decision_date": "2022-01-16",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.99977083353137,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000380",
+              "episode-000377",
+              "episode-000379",
+              "episode-000378",
+              "episode-000369"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.99977083353137,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0004153421351834,
+            "confidence": 0.99979419897572,
+            "decision_date": "2022-01-15",
+            "distance": 0.030191967927520044,
+            "episode_id": "episode-000380",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.00018705757650374057
+          }
+        },
+        {
+          "index": "000382",
+          "decision_date": "2022-01-17",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9994349312972088,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000377",
+              "episode-000378",
+              "episode-000379",
+              "episode-000380",
+              "episode-000381"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9994349312972088,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0305460012300403,
+            "confidence": 0.9999414808371848,
+            "decision_date": "2022-01-12",
+            "distance": 0.04842037814499529,
+            "episode_id": "episode-000377",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.01384772890637839
+          }
+        },
+        {
+          "index": "000383",
+          "decision_date": "2022-01-18",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9997068600964014,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000378",
+              "episode-000382",
+              "episode-000377",
+              "episode-000381",
+              "episode-000380"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9997068600964014,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": 0.012060620300752,
+            "confidence": 0.9996192429883864,
+            "decision_date": "2022-01-13",
+            "distance": 0.029373245174915182,
+            "episode_id": "episode-000378",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": -0.005404938995056159
+          }
+        },
+        {
+          "index": "000384",
+          "decision_date": "2022-01-19",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "confidence",
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.999467324233758,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000376",
+              "episode-000370",
+              "episode-000378",
+              "episode-000383",
+              "episode-000369"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9995,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": 0.0273276983703538,
+            "confidence": 0.9999729360896792,
+            "decision_date": "2022-01-11",
+            "distance": 0.06110276033309765,
+            "episode_id": "episode-000376",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": -0.012217185092101955
+          }
+        },
+        {
+          "index": "000385",
+          "decision_date": "2022-01-20",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.999868683113408,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000384",
+              "episode-000376",
+              "episode-000378",
+              "episode-000370",
+              "episode-000383"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.999868683113408,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0230794331754555,
+            "confidence": 0.999467324233758,
+            "decision_date": "2022-01-19",
+            "distance": 0.06117647612460303,
+            "episode_id": "episode-000384",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.010444095003355382
+          }
+        },
+        {
+          "index": "000386",
+          "decision_date": "2022-01-21",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999786064169816,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000372",
+              "episode-000373",
+              "episode-000374",
+              "episode-000375",
+              "episode-000201"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999786064169816,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": 0.0030158833312874,
+            "confidence": 0.9999791727373168,
+            "decision_date": "2022-01-07",
+            "distance": 0.14773654827134705,
+            "episode_id": "episode-000372",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": -0.0013471748597051365
+          }
+        },
+        {
+          "index": "000387",
+          "decision_date": "2022-01-22",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999996634679011,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000386",
+              "episode-000343",
+              "episode-000344",
+              "episode-000372",
+              "episode-000373"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999996634679011,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0383901522940056,
+            "confidence": 0.9999786064169816,
+            "decision_date": "2022-01-21",
+            "distance": 0.09244407520075133,
+            "episode_id": "episode-000386",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.017453576278040908
+          }
+        },
+        {
+          "index": "000388",
+          "decision_date": "2022-01-23",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.999999974971545,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000386",
+              "episode-000387"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.999999974971545,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0383901522940056,
+            "confidence": 0.9999786064169816,
+            "decision_date": "2022-01-21",
+            "distance": 0.0378334770295746,
+            "episode_id": "episode-000386",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.017453576278040908
+          }
+        },
+        {
+          "index": "000389",
+          "decision_date": "2022-01-24",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999998834408682,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000386",
+              "episode-000388",
+              "episode-000387",
+              "episode-000372",
+              "episode-000375"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999998834408682,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0383901522940056,
+            "confidence": 0.9999786064169816,
+            "decision_date": "2022-01-21",
+            "distance": 0.050207423543471415,
+            "episode_id": "episode-000386",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.017453576278040908
+          }
+        },
+        {
+          "index": "000390",
+          "decision_date": "2022-01-25",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.99999938003783,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000389",
+              "episode-000386",
+              "episode-000388",
+              "episode-000387",
+              "episode-000372"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.99999938003783,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": 0.0072043242300257,
+            "confidence": 0.9999998834408682,
+            "decision_date": "2022-01-24",
+            "distance": 0.007253632669419854,
+            "episode_id": "episode-000389",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": -0.0032338725477941343
+          }
+        }
+      ]
+    },
+    "fixed": {
+      "authority": "fixed",
+      "call_directory": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_3_LLAMA70B_FIXED_TRUST_MEMORY_ABLATION_V1/artifacts/20260909T013716356200839Z/calls",
+      "retrospective_only": true,
+      "evaluation_window": {
+        "start": "2022-01-01",
+        "end": "2025-05-28",
+        "expected_dates": 1244
+      },
+      "pair_counts": {
+        "all_index_pairs": 1608,
+        "window_pairs": 1243,
+        "complete_pairs": 1243,
+        "non_memory_request_matches": 1230,
+        "non_memory_request_mismatch": 13
+      },
+      "memory_retrieval": {
+        "nonempty_memory_pairs": 1243,
+        "empty_memory_pairs": 0,
+        "future_or_same_day_episode_count": 0,
+        "missing_episode_date_count": 0
+      },
+      "observable_output_change": {
+        "pairs_with_any_change": 1098,
+        "pairs_with_exactly_same_observable_output": 145,
+        "action_changes": 33,
+        "confidence_changes": 426,
+        "reason_code_changes": 532,
+        "citation_changes": 673
+      },
+      "provider_contract_example": {
+        "model": "llama3.3:70b",
+        "model_digest": "a6eb4748fd2990ad2952b2335a95a7f952d1a06119a0aa6a2df6cd052a93a3fa",
+        "num_ctx": 8192,
+        "num_predict": 512,
+        "seed": 16061,
+        "system_prompt_sha256": "6b99d1922bf13d280e23c4f62bf82d3dbea2c2032f00be6208a83d8e5bb86783",
+        "temperature": 0.0
+      },
+      "provider_contract_variants": 1,
+      "examples": [
+        {
+          "index": "000366",
+          "decision_date": "2022-01-01",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9997850102240644,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000352",
+              "episode-000364"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9997850102240644,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0032375651461278,
+            "confidence": 0.9997760425443089,
+            "decision_date": "2021-12-18",
+            "distance": 0.037405982772934616,
+            "episode_id": "episode-000352",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.0014616088511085843
+          }
+        },
+        {
+          "index": "000367",
+          "decision_date": "2022-01-02",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.998972794218538,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000366",
+              "episode-000364",
+              "episode-000352",
+              "episode-000353",
+              "episode-000365"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.998972794218538,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0089278981105198,
+            "confidence": 0.9997850102240644,
+            "decision_date": "2022-01-01",
+            "distance": 0.05015318838025487,
+            "episode_id": "episode-000366",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.004033659156814083
+          }
+        },
+        {
+          "index": "000368",
+          "decision_date": "2022-01-03",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9981288209191376,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000367",
+              "episode-000364",
+              "episode-000366",
+              "episode-000365",
+              "episode-000352"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9981288209191376,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0186338291927173,
+            "confidence": 0.998972794218538,
+            "decision_date": "2022-01-02",
+            "distance": 0.07881787313577679,
+            "episode_id": "episode-000367",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.008422795462179658
+          }
+        },
+        {
+          "index": "000369",
+          "decision_date": "2022-01-04",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "confidence",
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9974,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000367",
+              "episode-000368"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9973619541984634,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0186338291927173,
+            "confidence": 0.998972794218538,
+            "decision_date": "2022-01-02",
+            "distance": 0.08980884715499611,
+            "episode_id": "episode-000367",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.008422795462179658
+          }
+        },
+        {
+          "index": "000370",
+          "decision_date": "2022-01-05",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9995541652800956,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000367",
+              "episode-000364",
+              "episode-000366",
+              "episode-000365",
+              "episode-000363"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9995541652800956,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0186338291927173,
+            "confidence": 0.998972794218538,
+            "decision_date": "2022-01-02",
+            "distance": 0.06733589856143299,
+            "episode_id": "episode-000367",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.008422795462179658
+          }
+        },
+        {
+          "index": "000371",
+          "decision_date": "2022-01-06",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999495274589552,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000370",
+              "episode-000365",
+              "episode-000364",
+              "episode-000367",
+              "episode-000353"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999495274589552,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0075623072866654,
+            "confidence": 0.9995541652800956,
+            "decision_date": "2022-01-05",
+            "distance": 0.04124106676973061,
+            "episode_id": "episode-000370",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.0034221780194022998
+          }
+        },
+        {
+          "index": "000372",
+          "decision_date": "2022-01-07",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999791727373168,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000371",
+              "episode-000365",
+              "episode-000370",
+              "episode-000364",
+              "episode-000353"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999791727373168,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0359835257265502,
+            "confidence": 0.9999495274589552,
+            "decision_date": "2022-01-06",
+            "distance": 0.0485515399091523,
+            "episode_id": "episode-000371",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.016326997215101825
+          }
+        },
+        {
+          "index": "000373",
+          "decision_date": "2022-01-08",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999936552623596,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000372",
+              "episode-000371",
+              "episode-000365",
+              "episode-000370",
+              "episode-000368"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999936552623596,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": 0.0030158833312874,
+            "confidence": 0.9999791727373168,
+            "decision_date": "2022-01-07",
+            "distance": 0.07533049647204629,
+            "episode_id": "episode-000372",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": -0.0013471748597051365
+          }
+        },
+        {
+          "index": "000374",
+          "decision_date": "2022-01-09",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999698718014028,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000373",
+              "episode-000372",
+              "episode-000371",
+              "episode-000370",
+              "episode-000368"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999698718014028,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": 0.0042306584757152,
+            "confidence": 0.9999936552623596,
+            "decision_date": "2022-01-08",
+            "distance": 0.026360293028514135,
+            "episode_id": "episode-000373",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": -0.0019012409708971771
+          }
+        },
+        {
+          "index": "000375",
+          "decision_date": "2022-01-10",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999628780800448,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000372",
+              "episode-000371",
+              "episode-000374",
+              "episode-000373",
+              "episode-000370"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999628780800448,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": 0.0030158833312874,
+            "confidence": 0.9999791727373168,
+            "decision_date": "2022-01-07",
+            "distance": 0.03893720440695842,
+            "episode_id": "episode-000372",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": -0.0013471748597051365
+          }
+        },
+        {
+          "index": "000376",
+          "decision_date": "2022-01-11",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999729360896792,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000370",
+              "episode-000371",
+              "episode-000372",
+              "episode-000375",
+              "episode-000364"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999729360896792,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0075623072866654,
+            "confidence": 0.9995541652800956,
+            "decision_date": "2022-01-05",
+            "distance": 0.02620516371507455,
+            "episode_id": "episode-000370",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.0034221780194022998
+          }
+        },
+        {
+          "index": "000377",
+          "decision_date": "2022-01-12",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999414808371848,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000369",
+              "episode-000203",
+              "episode-000356",
+              "episode-000355",
+              "episode-000202"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999414808371848,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0526078106694766,
+            "confidence": 0.9974,
+            "decision_date": "2022-01-04",
+            "distance": 0.1056704445208803,
+            "episode_id": "episode-000369",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.023961413756565922
+          }
+        },
+        {
+          "index": "000378",
+          "decision_date": "2022-01-13",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9996192429883864,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000377",
+              "episode-000369"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9996192429883864,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0305460012300403,
+            "confidence": 0.9999414808371848,
+            "decision_date": "2022-01-12",
+            "distance": 0.07885341665954211,
+            "episode_id": "episode-000377",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.01384772890637839
+          }
+        },
+        {
+          "index": "000379",
+          "decision_date": "2022-01-14",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999226147439932,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000377",
+              "episode-000378"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999226147439932,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0305460012300403,
+            "confidence": 0.9999414808371848,
+            "decision_date": "2022-01-12",
+            "distance": 0.07917073583880117,
+            "episode_id": "episode-000377",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.01384772890637839
+          }
+        },
+        {
+          "index": "000380",
+          "decision_date": "2022-01-15",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.99979419897572,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000379",
+              "episode-000377",
+              "episode-000378",
+              "episode-000369",
+              "episode-000205"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.99979419897572,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": 0.0005502248492685,
+            "confidence": 0.9999226147439932,
+            "decision_date": "2022-01-14",
+            "distance": 0.024268681842204036,
+            "episode_id": "episode-000379",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": -0.00024460163912293556
+          }
+        },
+        {
+          "index": "000381",
+          "decision_date": "2022-01-16",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.99977083353137,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000380",
+              "episode-000377",
+              "episode-000379",
+              "episode-000378",
+              "episode-000369"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.99977083353137,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0004153421351834,
+            "confidence": 0.99979419897572,
+            "decision_date": "2022-01-15",
+            "distance": 0.030191967927520044,
+            "episode_id": "episode-000380",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.00018705757650374057
+          }
+        },
+        {
+          "index": "000382",
+          "decision_date": "2022-01-17",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9994349312972088,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000377",
+              "episode-000378",
+              "episode-000379",
+              "episode-000380",
+              "episode-000381"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9994349312972088,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0305460012300403,
+            "confidence": 0.9999414808371848,
+            "decision_date": "2022-01-12",
+            "distance": 0.04842037814499529,
+            "episode_id": "episode-000377",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.01384772890637839
+          }
+        },
+        {
+          "index": "000383",
+          "decision_date": "2022-01-18",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9997068600964014,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000378",
+              "episode-000382",
+              "episode-000377",
+              "episode-000381",
+              "episode-000380"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9997068600964014,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": 0.012060620300752,
+            "confidence": 0.9996192429883864,
+            "decision_date": "2022-01-13",
+            "distance": 0.029373245174915182,
+            "episode_id": "episode-000378",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": -0.005404938995056159
+          }
+        },
+        {
+          "index": "000384",
+          "decision_date": "2022-01-19",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "confidence",
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.999467324233758,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000376",
+              "episode-000370",
+              "episode-000378",
+              "episode-000383",
+              "episode-000369"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9995,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": 0.0273276983703538,
+            "confidence": 0.9999729360896792,
+            "decision_date": "2022-01-11",
+            "distance": 0.06110276033309765,
+            "episode_id": "episode-000376",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": -0.012217185092101955
+          }
+        },
+        {
+          "index": "000385",
+          "decision_date": "2022-01-20",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.999868683113408,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000384",
+              "episode-000376",
+              "episode-000378",
+              "episode-000370",
+              "episode-000383"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.999868683113408,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0230794331754555,
+            "confidence": 0.999467324233758,
+            "decision_date": "2022-01-19",
+            "distance": 0.06117647612460303,
+            "episode_id": "episode-000384",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.010444095003355382
+          }
+        },
+        {
+          "index": "000386",
+          "decision_date": "2022-01-21",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999786064169816,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000372",
+              "episode-000373",
+              "episode-000374",
+              "episode-000375",
+              "episode-000201"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999786064169816,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": 0.0030158833312874,
+            "confidence": 0.9999791727373168,
+            "decision_date": "2022-01-07",
+            "distance": 0.14773654827134705,
+            "episode_id": "episode-000372",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": -0.0013471748597051365
+          }
+        },
+        {
+          "index": "000387",
+          "decision_date": "2022-01-22",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999996634679011,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000386",
+              "episode-000343",
+              "episode-000344",
+              "episode-000372",
+              "episode-000373"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999996634679011,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0383901522940056,
+            "confidence": 0.9999786064169816,
+            "decision_date": "2022-01-21",
+            "distance": 0.09244407520075133,
+            "episode_id": "episode-000386",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.017453576278040908
+          }
+        },
+        {
+          "index": "000388",
+          "decision_date": "2022-01-23",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.999999974971545,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000386",
+              "episode-000387"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.999999974971545,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0383901522940056,
+            "confidence": 0.9999786064169816,
+            "decision_date": "2022-01-21",
+            "distance": 0.0378334770295746,
+            "episode_id": "episode-000386",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.017453576278040908
+          }
+        },
+        {
+          "index": "000389",
+          "decision_date": "2022-01-24",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999998834408682,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000386",
+              "episode-000388",
+              "episode-000387",
+              "episode-000372",
+              "episode-000375"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.9999998834408682,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": -0.0383901522940056,
+            "confidence": 0.9999786064169816,
+            "decision_date": "2022-01-21",
+            "distance": 0.050207423543471415,
+            "episode_id": "episode-000386",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": 0.017453576278040908
+          }
+        },
+        {
+          "index": "000390",
+          "decision_date": "2022-01-25",
+          "memory_episode_count": 5,
+          "changed_fields": [
+            "cited_memory_ids"
+          ],
+          "memory_output": {
+            "action": "CASH",
+            "confidence": 0.99999938003783,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": [
+              "episode-000389",
+              "episode-000386",
+              "episode-000388",
+              "episode-000387",
+              "episode-000372"
+            ]
+          },
+          "no_memory_output": {
+            "action": "CASH",
+            "confidence": 0.99999938003783,
+            "reason_codes": [
+              "HIGH_VOLATILITY",
+              "BEARISH_ROUTER"
+            ],
+            "cited_memory_ids": []
+          },
+          "first_memory_episode": {
+            "action": "CASH",
+            "asset_return": 0.0072043242300257,
+            "confidence": 0.9999998834408682,
+            "decision_date": "2022-01-24",
+            "distance": 0.007253632669419854,
+            "episode_id": "episode-000389",
+            "hard_regime": "bear",
+            "shadow_log_advantage_vs_ramoe": -0.0032338725477941343
+          }
+        }
+      ]
+    }
+  }
+}

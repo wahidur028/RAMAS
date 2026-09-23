@@ -1,0 +1,18 @@
+{
+  "decision": "CONTINUOUS_PIPELINE_COMPLETE_REQUIRES_SCIENTIFIC_INTERPRETATION",
+  "economic_result_is_not_a_software_acceptance_gate": true,
+  "existing_ramoe_trust_changed": false,
+  "external_baseline_phase_completed": false,
+  "full_horizon_economic_value_vs_pre_agent_ramoe_established": false,
+  "mixed_or_negative_years_retained_as_findings": true,
+  "next_step": "interpret yearly and full-horizon technical/economic findings, then freeze the method for external baseline and later untouched confirmation experiments",
+  "novelty_established": false,
+  "overall_economic_value_against_external_baselines_established": false,
+  "post2021_rows_used": true,
+  "post2021_scientific_label": "REUSED_OOS_DIAGNOSTIC",
+  "qwen_used": false,
+  "risk_layer_changed": false,
+  "router_changed": false,
+  "technical_pipeline_valid": true,
+  "untouched_oos_confirmation": false
+}

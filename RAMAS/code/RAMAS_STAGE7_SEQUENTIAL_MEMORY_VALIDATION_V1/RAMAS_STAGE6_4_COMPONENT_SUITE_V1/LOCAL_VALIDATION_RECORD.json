@@ -1,0 +1,87 @@
+{
+  "status": "LOCAL_VALIDATION_PASS_WITH_REAL_SERVER_INPUT_LIMIT",
+  "validated_utc": "2026-09-09",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "required_real_runtime": {
+    "python": "3.11.9",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "ollama": "0.23.0"
+  },
+  "unit_tests": {
+    "count": 31,
+    "passed": 31,
+    "failed": 0,
+    "command": "python3 -m unittest discover -s tests -v",
+    "log_sha256": "5f1d9b6f0abaff9e4dda268751748d8236e17599fabf50be9d0b5cbe49e25ba0"
+  },
+  "full_controlled_integration": {
+    "arms": 21,
+    "days_per_arm": 40,
+    "ledger_rows": 840,
+    "new_component_arms_completed": 14,
+    "controlled_model_calls": 440,
+    "economic_evidence": false,
+    "final_status_sha256": "8a01d446ae1527a9cad51d75591f74f080de88aefe07ebf5f79f61053c28ce51",
+    "complete_resume": "ALREADY_COMPLETE_NO_NEW_CALLS"
+  },
+  "real_archive_accounting": {
+    "stage62_and_stage63_verified": true,
+    "real_llama_paths": 4,
+    "passive_benchmarks": 3,
+    "holding_days": 1608,
+    "rows": 11256,
+    "new_llama_calls": 0,
+    "net_compounding_reproduced": true,
+    "final_standard_archive_export": "GENERATED_FROM_FINAL_PACKAGE_WITH_365_25_ANNUALIZATION"
+  },
+  "real_core_reconstruction": {
+    "rows": 1608,
+    "max_original_desired_error": 3.885780586188048e-16,
+    "max_terminal_W_error": 1.6653345369377348e-16,
+    "counts_as_new_portfolio_run": false
+  },
+  "limitations": [
+    "Exact raw BTC CSV is not available in this workspace; full real new-portfolio risk/inference tests require server.",
+    "Real Ollama endpoint/model was not called locally.",
+    "Synthetic risk fixture is not the real research risk model.",
+    "Forecast fit/availability and executable fill remain unverified; legacy reference/expert holdings seam preserved."
+  ],
+  "source_module_hashes": {
+    "run_suite.py": "0d5391261aca32828e5716ec0f3cf0c3067db512e1630403767a03b5787c5981",
+    "stage63lib/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stage63lib/engine.py": "24101641dea0b3e9277e90cea5036b1008853066487a7f9b4b2396a816b34b3d",
+    "stage63lib/fixed_trust.py": "bf06ec49d5f4e758be32ffa6f9c8f4e5530307abf17605739f32907c9efbc7fb",
+    "stage63lib/fixture.py": "e33d7d12f1554fbe9c4aaa2917b813a941567c27b5a673d34bb09f7b20895082",
+    "stage63lib/inputs.py": "2b5e2a7a9985a973637ef1426765a170cb563ff3f11927dc56d66c0313af78cf",
+    "stage63lib/journal.py": "9575d387616448b6586561b3bfe1549c7ee578e77efea17d9cb7358eae5271b8",
+    "stage63lib/legacy.py": "00b74bba86b95e9d16ff917348cefabe5a141903e8a089b89f4b4f2d030c2d2f",
+    "stage63lib/provider.py": "d3635e3ee2761468c21650bb753c6c6f35b14d36f9d83324d3844226bbcadbd1",
+    "stage63lib/reporting.py": "6e239d8d8054257c2a5030d15456e744366f14b7167fcf3ba07b1d132a4a2222",
+    "stage63lib/scientific_audit.py": "ef0a7af38c0108a107113c303c3a1bfed1468dcfb4c95d5f1ebb0c00867be402",
+    "suite64/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suite64/archive.py": "3e2405f12f158299dc383d262994f5a70fd9292491ac6425bdb6e87f90102ae7",
+    "suite64/core_variants.py": "11ced4be8cbfc98b8edcbeda19f1e472dd47816d264f438c8bcc318f245ba888",
+    "suite64/engine.py": "8828763ab3d99731a2087c680800fb639116aeb438f5b6e248826943757905b1",
+    "suite64/metrics.py": "e571aabcde1639a267d37f13dd136a32446c128b10e6c05473be9e8147b9885e",
+    "tests/test_core_variants.py": "09ba0e6b9a5312309e22060538cde21ac7d612de7014edf8c8c0164773dcad89",
+    "tests/test_engine.py": "b861e5032e545e36977939db9ef2e96bb1086bba71b365108755e51db4af89ef",
+    "tests/test_metrics.py": "5c13971803cbce8508a9df5807a01234ef075cb23c20265c386455aa23b68fbd",
+    "tests/test_suite_integrity.py": "9697998df3ad378f4e97cd69ea9e99ccbb502c8d5757637b54affcca1a27c7d3",
+    "vendor/stage61/run_stage6_1.py": "673a4a3aa4f62aea1ddb403b668d37af95a575124f5d4f8b4ec61ebb54fc6b85",
+    "vendor/stage61/stage6lib/__init__.py": "092258a385e1091106cf6dcb1116cf3ad5d63241e2195eae42bb7470ce6db25c",
+    "vendor/stage61/stage6lib/agent.py": "122f186feb77a5a3d4e168c4c83083850b88f7d3d302909c878a963da5dfb24f",
+    "vendor/stage61/stage6lib/contracts.py": "f50f72045e114ac2111fd24b3afd7a0a31e78ec94247f5909f91d9ee362969ed",
+    "vendor/stage61/stage6lib/memory.py": "7da39ff744a284feda2f3699b320c99a22241ad28e3835c7170582b12aef7991",
+    "vendor/stage61/stage6lib/source_adapter.py": "47f9a554f22a504d8a6c499a4d0c5c93b92339f2d9d002646e952d1e9ce807ed",
+    "vendor/stage61/stage6lib/trust.py": "a27a19a0801dcfc9df7823625430ae7eca021d80f7fbc1e492bcb74fa5ad4edc",
+    "vendor/stage61/tests/run_all.py": "f7a21215d7ba05cdd175d2b6fd0df7e77e1eab74f282e6b14af8bbf3e8b9f1da",
+    "vendor/stage61/tests/test_stage6.py": "5171c52e4a62523bcaeeae35b3e0b2700893ad16efd4a4dc73f7fd1d8cc775de"
+  },
+  "csv_publication": "Complete UTF-8 CSV payload, temporary write/fsync/byte verification, atomic replace, final row/arm count verification, completion hashes.",
+  "excluded_local_export": "Earlier pre-atomic CSV export was found truncated after completion; excluded from release; fresh archive export separately verified."
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RAMAS frozen decision state for memory ON/OFF experiment",
+  "type": "object",
+  "required": [
+    "state_id",
+    "decision_date",
+    "return_date",
+    "hard_regime",
+    "core_desired_exposure",
+    "beta_adaptive",
+    "beta_fixed",
+    "asset_simple_return",
+    "initial_pretrade_exposure",
+    "action_targets",
+    "state_view",
+    "retrieved_memory"
+  ],
+  "properties": {
+    "state_id": {"type": "string", "minLength": 1},
+    "decision_date": {"type": "string", "format": "date"},
+    "return_date": {"type": "string", "format": "date"},
+    "hard_regime": {"enum": ["bear", "bull", "mix"]},
+    "core_desired_exposure": {"type": "number", "minimum": 0, "maximum": 1},
+    "beta_adaptive": {"type": "number", "minimum": 0, "maximum": 1},
+    "beta_fixed": {"type": "number", "minimum": 0, "maximum": 1},
+    "asset_simple_return": {"type": "number"},
+    "initial_pretrade_exposure": {"type": "number", "minimum": 0, "maximum": 1},
+    "action_targets": {
+      "type": "object",
+      "required": ["BTC", "CASH", "ABSTAIN"],
+      "properties": {
+        "BTC": {"type": "number", "minimum": 0, "maximum": 1},
+        "CASH": {"type": "number", "minimum": 0, "maximum": 1},
+        "ABSTAIN": {"type": "number", "minimum": 0, "maximum": 1}
+      },
+      "additionalProperties": true
+    },
+    "state_view": {
+      "type": "object",
+      "minProperties": 1,
+      "description": "All and only pre-decision non-memory information visible to LLaMA. Do not put future-return or memory/retrieval fields here."
+    },
+    "retrieved_memory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["memory_id", "episode_date", "regime", "text"],
+        "properties": {
+          "memory_id": {"type": "string", "minLength": 1},
+          "episode_date": {"type": "string", "format": "date"},
+          "regime": {"type": "string"},
+          "outcome": {},
+          "text": {"type": "string", "minLength": 1},
+          "source_sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "source_row_sha256": {"type": ["string", "null"]},
+    "risk_inputs_hash": {"type": ["string", "null"]},
+    "controller_reference": {"type": ["object", "null"]}
+  },
+  "additionalProperties": true
+}

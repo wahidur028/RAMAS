@@ -1,0 +1,24 @@
+{
+  "api_url": "http://127.0.0.1:11434",
+  "controller_mode": "downstream_only",
+  "created_at": "2026-09-15T08:45:48+00:00",
+  "expected_calls": 4,
+  "expected_states": 1,
+  "experiment": "RAMAS_state_controlled_episodic_memory_causal_experiment",
+  "manifest": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_MEMORY_CAUSAL_EXPERIMENT/artifacts/smoke_manifest.jsonl",
+  "manifest_sha256": "5c966cbe89d7b3547a9c5bb0a2c1c6ffbd3c859a97804c46678860555c61b54c",
+  "memory_writes": false,
+  "model": "llama3.3:70b",
+  "pipeline_sha256": "683b849540b204b5957a490d3320b1fd7a8dbc9e67117fd02bdbc3c2bacf51db",
+  "pipeline_version": "1.12.3",
+  "sampling": {
+    "format": "json",
+    "num_ctx": 8192,
+    "num_predict": 256,
+    "seed": 20260915,
+    "temperature": 0,
+    "top_p": 1
+  },
+  "script_version": "1.0.0",
+  "system_prompt_sha256": "63655ee242a5ec24284ec636a4e90e83af9beea2393d0f104d20d4b0d8c2ace3"
+}

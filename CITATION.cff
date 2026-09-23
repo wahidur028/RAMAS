@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the accompanying manuscript."
+title: "RAMAS: episodic memory in a bounded LLM Bitcoin allocator"
+type: software
+authors:
+  - family-names: "TODO-surname"
+    given-names: "TODO-given-name"
+    email: "sm.wahidur@gm.gsit.ac.kr"
+repository-code: "https://github.com/wahidur028/RAMAS"
+license: MIT
+version: 1.0.0
+date-released: "2026-09-23"

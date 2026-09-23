@@ -1,0 +1,5 @@
+{
+  "economic_replay_permitted": false,
+  "reason": "POINT_IN_TIME_EVENT_LEDGER_NOT_PROVIDED",
+  "status": "BLOCKED"
+}

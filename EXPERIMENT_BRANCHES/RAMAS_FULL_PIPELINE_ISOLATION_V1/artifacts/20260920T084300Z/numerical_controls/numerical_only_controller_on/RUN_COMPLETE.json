@@ -1,0 +1,56 @@
+{
+  "artifact_sha256": {
+    "ARM_STATE.json": "3d060c6b875fe125b3665bcdb493c6ce9dadb056924d05c86c5f37262b653cbf",
+    "DAILY_LEDGER.csv": "6d2982e789ff878d27fdc976fe752f22fc44933c51d0249a89b7c32a9fc20898",
+    "PROGRESS.json": "a9956a93a57e78aa49f2828c769418c9ff715fe8da73af69f3ad9ca3a40a52f1",
+    "daily_trace.partial.csv": "90b2d2ca85fb52c267e7e4d0c94a99a9761c6d637611fb743fbf3d2cab31652d",
+    "episodes.json": "ebb43b94c8d3f26d7a65e6b34d66a774456ba21cfbf4c479365bb35373d9f095",
+    "trust_events.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "created_at": "2026-09-20T08:43:31+00:00",
+  "final_wealth": 2.0329746633353594,
+  "identity": {
+    "model": "NUMERICAL_ONLY",
+    "numerical_seed": 314159,
+    "provider_identity": {
+      "kind": "none",
+      "model_calls": 0
+    },
+    "run": {
+      "config_sha256": "58923886fb1173e27cbacaf654412fc6e0b4354b5f7d1e0f9a43208e5b1887b1",
+      "experiment_id": "RAMAS_FULL_PIPELINE_ISOLATION_V1",
+      "models": [
+        "llama3.3:70b",
+        "glm-4.7-flash",
+        "qwen3:8b"
+      ],
+      "numerical_seed": 314159,
+      "package_manifest_sha256": "8bc1a6e013191bb3d6e0916073a5aac6e4160a1b1d9c273ea86b001623c652cf",
+      "preflight_sha256": "4b1b42de682ea08ff8102cbdb48967c2746ad6cac769965dfcd4557e7cf110d3",
+      "runtime": {
+        "numpy": "1.26.4",
+        "pandas": "2.2.3",
+        "python": "3.11.9"
+      },
+      "sampling_seeds": [
+        42
+      ]
+    },
+    "sampling_seed": null
+  },
+  "new_calls": 0,
+  "reused_calls": 0,
+  "rows": 1608,
+  "spec": {
+    "advisor": "abstain",
+    "core": "original",
+    "factor_controller": "on",
+    "factor_memory": "none",
+    "fixed_beta": 0.05,
+    "memory": "none",
+    "name": "numerical_only_controller_on",
+    "risk": "standard",
+    "trust": "fixed"
+  },
+  "status": "COMPLETE"
+}

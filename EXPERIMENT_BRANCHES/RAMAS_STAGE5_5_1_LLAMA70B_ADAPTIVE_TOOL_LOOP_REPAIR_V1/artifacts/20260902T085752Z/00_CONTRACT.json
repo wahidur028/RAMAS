@@ -1,0 +1,19 @@
+{
+  "created_at_utc": "2026-09-02T09:06:32.452244+00:00",
+  "experiment_id": "RAMAS_STAGE5_5_1_LLAMA70B_ADAPTIVE_TOOL_LOOP_REPAIR_V1",
+  "frozen_claims": {
+    "daily_execution_clock_changed": false,
+    "economic_value_established": false,
+    "expert_models_changed": false,
+    "llm_arbitrary_weight_generation_permitted": false,
+    "llm_direct_exposure_prediction_permitted": false,
+    "multi_agent_enabled": false,
+    "reused_oos_opened": false,
+    "risk_layer_bypass_permitted": false,
+    "router_changed": false
+  },
+  "model": "llama3.3:70b",
+  "phase": "MECHANISM_AND_INTERFACE_DEVELOPMENT_ONLY",
+  "project_root": "/home/infonet/wahid/leader_router_fresh",
+  "provider": "ollama"
+}

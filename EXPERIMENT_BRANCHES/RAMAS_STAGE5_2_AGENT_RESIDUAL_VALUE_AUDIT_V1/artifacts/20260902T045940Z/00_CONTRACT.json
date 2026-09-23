@@ -1,0 +1,29 @@
+{
+  "completed_at_utc": "2026-09-02T04:59:41.603533+00:00",
+  "experiment_id": "RAMAS_STAGE5_2_AGENT_RESIDUAL_VALUE_AUDIT_V1",
+  "frozen_claims": {
+    "core_policy_audit_is_deployment_evidence": false,
+    "fixed_trigger_diagnostics_are_candidate_selection": false,
+    "new_llm_calls": false,
+    "return_clock_changed": false,
+    "reused_oos_opened": false,
+    "risk_layer_changed": false,
+    "router_changed": false,
+    "transaction_cost_changed": false
+  },
+  "mechanism_definition": {
+    "agent_core": "recorded requested_exposure",
+    "common_accounting": "drifted pretrade exposure plus symmetric turnover cost",
+    "safety_layer": "removed from both core policies only for mechanism isolation",
+    "static_core": {
+      "bear": 0.25,
+      "bull": 0.5,
+      "mix": 0.25
+    }
+  },
+  "phase": "EXPLORATORY_MECHANISM_AUDIT",
+  "rows": 1094,
+  "source_archive_sha256": "684290142357e65b6cebdc427ecf852bd027f5d1e6bcb2ebcddd5a911ef3c906",
+  "source_experiment_id": "RAMOE_STAGE5_1_SINGLE_LLM_AGENT_INTERFACE_REPAIR_V1",
+  "source_trace_sha256": "f776f7fa42d989cf919bb13bf748ad55c485cddb39a6c4c6daf59489c98b952c"
+}

@@ -1,0 +1,90 @@
+{
+  "experiment_id": "RAMAS_STAGE5_5_1_LLAMA70B_ADAPTIVE_TOOL_LOOP_REPAIR_V1",
+  "phase": "MECHANISM_AND_INTERFACE_DEVELOPMENT_ONLY",
+  "source_experiment_id": "RAMAS_STAGE5_5_EVENT_CONDITIONED_TRUST_AGENT_V1",
+  "research_question": "Can a Llama-70B agent use a bounded adaptive tool loop to make evidence-complete, shield-safe temporary trust interventions over a frozen regime-expert allocator?",
+  "provider": {
+    "kind": "ollama",
+    "endpoint": "http://127.0.0.1:11434/api/chat",
+    "model": "llama3.3:70b",
+    "temperature": 0.0,
+    "seed": 12031,
+    "timeout_seconds": 900,
+    "num_ctx": 16384,
+    "num_predict": 512,
+    "keep_alive": "15m"
+  },
+  "trigger": {
+    "router_confidence_strictly_below": 0.8,
+    "router_entropy_at_least": 0.75,
+    "expert_disagreement_at_least": 0.35,
+    "realized_volatility_z_at_least": 2.0,
+    "drawdown_90_at_most": -0.15,
+    "verified_event_severity_at_least": 3
+  },
+  "shield": {
+    "minimum_btc_exposure": 0.0,
+    "maximum_btc_exposure": 1.0,
+    "maximum_btc_exposure_change": 0.1,
+    "maximum_target_row_l1_change": 0.1,
+    "maximum_active_interventions": 1,
+    "allowed_strengths": [0.0, 0.05, 0.1],
+    "allowed_horizons_days": [3, 7, 14]
+  },
+  "memory": {
+    "minimum_completed_episodes_for_promotion": 5,
+    "bootstrap_block_length": 2,
+    "bootstrap_resamples": 2000,
+    "bootstrap_alpha": 0.05,
+    "bootstrap_seed": 12031,
+    "downside_penalty": 1.0,
+    "turnover_penalty": 0.001
+  },
+  "tool_loop": {
+    "maximum_decision_rounds": 2,
+    "required_evidence_by_operator": {
+      "KEEP": ["inspect_current_state"],
+      "DEFENSIVE_SHRINK": ["inspect_current_state", "get_verified_events", "inspect_expert_risk", "simulate_trust_candidates"],
+      "RISK_AWARE_REWEIGHT": ["inspect_current_state", "get_verified_events", "inspect_expert_risk", "retrieve_similar_episodes", "simulate_trust_candidates"],
+      "ROLLBACK": ["inspect_current_state", "inspect_active_intervention", "inspect_expert_risk", "simulate_trust_candidates"]
+    }
+  },
+  "interface_preflight": {
+    "synthetic_cases": 12,
+    "minimum_valid_plans": 11,
+    "minimum_valid_decisions": 11,
+    "minimum_operator_evidence_complete": 11,
+    "minimum_safe_final_actions": 11,
+    "positive_path_case_indices": [0, 4, 8],
+    "minimum_positive_path_interventions": 1,
+    "economic_claim_permitted": false
+  },
+  "data_gate": {
+    "requires_raw_point_in_time_text": true,
+    "requires_exact_available_at_utc": true,
+    "requires_content_hash": true,
+    "requires_collection_and_revision_policy": true,
+    "revised_hindsight_summaries_prohibited": true
+  },
+  "economic_development_gate": {
+    "primary_comparator": "deterministic_event_triggered_trust_controller",
+    "minimum_sharpe_improvement": 0.05,
+    "require_positive_net_growth_advantage": true,
+    "require_max_drawdown_not_worse": true,
+    "require_expected_shortfall_not_worse": true,
+    "minimum_positive_nonoverlapping_blocks": 2,
+    "require_block_bootstrap_lower_bound_positive": true,
+    "minimum_accepted_interventions": 30
+  },
+  "frozen_claims": {
+    "router_changed": false,
+    "expert_models_changed": false,
+    "daily_execution_clock_changed": false,
+    "risk_layer_bypass_permitted": false,
+    "llm_direct_exposure_prediction_permitted": false,
+    "llm_arbitrary_weight_generation_permitted": false,
+    "multi_agent_enabled": false,
+    "reused_oos_opened": false,
+    "economic_value_established": false
+  }
+}

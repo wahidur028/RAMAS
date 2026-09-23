@@ -1,0 +1,120 @@
+RAMOE_PROJECT_ROOT=/home/infonet/wahid/leader_router_fresh
+RAMOE_BASE_ARCHIVE=/home/infonet/wahid/leader_router_fresh/LEADER_TRUSTED_ROUTER_EVIDENCE_WEIGHTED_TRUST_V1_CODE.tar.gz
+RAMOE_RUN_DIR=/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z
+./LOCAL_VALIDATION_RECORD.json: OK
+./README_FIRST.md: OK
+./SCIENTIFIC_METHOD.md: OK
+./config.json: OK
+./requirements.txt: OK
+./run_corrected_clock_rerun.py: OK
+./run_server.sh: OK
+./tests/run_all.py: OK
+./tests/test_corrected_clock.py: OK
+test_already_correct_clock_is_accepted (test_corrected_clock.CorrectedClockTests.test_already_correct_clock_is_accepted) ... ok
+test_known_one_row_displacement_is_detected (test_corrected_clock.CorrectedClockTests.test_known_one_row_displacement_is_detected) ... ok
+test_raw_close_return_is_decision_to_next_day (test_corrected_clock.CorrectedClockTests.test_raw_close_return_is_decision_to_next_day) ... ok
+test_raw_dataset_contract_is_exact (test_corrected_clock.CorrectedClockTests.test_raw_dataset_contract_is_exact) ... ok
+test_risk_scenarios_do_not_use_future_returns (test_corrected_clock.CorrectedClockTests.test_risk_scenarios_do_not_use_future_returns) ... ok
+test_unrelated_return_stream_is_rejected (test_corrected_clock.CorrectedClockTests.test_unrelated_return_stream_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.030s
+
+OK
+BASE_ARCHIVE_SHA256=PASS
+ARCHITECTURE.md: OK
+LOCAL_VALIDATION_RECORD.json: OK
+README.md: OK
+REPAIR_FINDING.md: OK
+SCIENTIFIC_METHOD.md: OK
+config.json: OK
+requirements.txt: OK
+run_real_adapter.py: OK
+run_server.sh: OK
+src/__init__.py: OK
+src/accounting.py: OK
+src/core.py: OK
+src/fixture.py: OK
+src/real_data.py: OK
+src/risk.py: OK
+src/router.py: OK
+src/simulator.py: OK
+src/statistics.py: OK
+src/trust.py: OK
+tests/run_all.py: OK
+tests/test_contract.py: OK
+tests/test_real_data_adapter.py: OK
+tests/test_risk_accounting.py: OK
+tests/test_router.py: OK
+tests/test_simulator.py: OK
+tests/test_statistics.py: OK
+tests/test_trust.py: OK
+validate_pipeline.py: OK
+test_dqn_is_closed (test_contract.FrozenContractTests.test_dqn_is_closed) ... ok
+test_economic_gate_is_single_and_frozen (test_contract.FrozenContractTests.test_economic_gate_is_single_and_frozen) ... ok
+test_exact_expert_order_is_frozen (test_contract.FrozenContractTests.test_exact_expert_order_is_frozen) ... ok
+test_fixture_admission_is_not_scientific_evidence (test_contract.FrozenContractTests.test_fixture_admission_is_not_scientific_evidence) ... ok
+test_json_has_no_duplicate_keys (test_contract.FrozenContractTests.test_json_has_no_duplicate_keys) ... ok
+test_production_default_is_fail_closed (test_contract.FrozenContractTests.test_production_default_is_fail_closed) ... ok
+test_real_adapter_is_bound_to_daily_router_and_stage0 (test_contract.FrozenContractTests.test_real_adapter_is_bound_to_daily_router_and_stage0) ... ok
+test_trust_support_is_derived_from_tail_probability (test_contract.FrozenContractTests.test_trust_support_is_derived_from_tail_probability) ... ok
+test_daily_posterior_is_required (test_real_data_adapter.RealDataAdapterTests.test_daily_posterior_is_required) ... ok
+test_end_to_end_real_input_builder (test_real_data_adapter.RealDataAdapterTests.test_end_to_end_real_input_builder) ... ok
+test_future_return_changes_cannot_change_past_scenarios (test_real_data_adapter.RealDataAdapterTests.test_future_return_changes_cannot_change_past_scenarios) ... ok
+test_post_development_baseline_is_rejected (test_real_data_adapter.RealDataAdapterTests.test_post_development_baseline_is_rejected) ... ok
+test_router_target_is_baseline_decision_day (test_real_data_adapter.RealDataAdapterTests.test_router_target_is_baseline_decision_day) ... ok
+test_rule_exposures_are_bounded_and_atp_is_zero (test_real_data_adapter.RealDataAdapterTests.test_rule_exposures_are_bounded_and_atp_is_zero) ... ok
+test_stage0_hash_tampering_is_rejected (test_real_data_adapter.RealDataAdapterTests.test_stage0_hash_tampering_is_rejected) ... ok
+test_stage0_rejection_keeps_all_specialists_closed (test_real_data_adapter.RealDataAdapterTests.test_stage0_rejection_keeps_all_specialists_closed) ... ok
+test_drifted_exposure_identity (test_risk_accounting.RiskAndAccountingTests.test_drifted_exposure_identity) ... ok
+test_grid_never_exceeds_one_for_nondivisor_step (test_risk_accounting.RiskAndAccountingTests.test_grid_never_exceeds_one_for_nondivisor_step) ... ok
+test_infeasible_cvar_falls_back_to_minimum_risk (test_risk_accounting.RiskAndAccountingTests.test_infeasible_cvar_falls_back_to_minimum_risk) ... ok
+test_invalid_return_is_rejected (test_risk_accounting.RiskAndAccountingTests.test_invalid_return_is_rejected) ... ok
+test_projection_reduces_extreme_tail_risk (test_risk_accounting.RiskAndAccountingTests.test_projection_reduces_extreme_tail_risk) ... ok
+test_projection_respects_turnover (test_risk_accounting.RiskAndAccountingTests.test_projection_respects_turnover) ... ok
+test_transaction_cost_is_charged_once (test_risk_accounting.RiskAndAccountingTests.test_transaction_cost_is_charged_once) ... ok
+test_exposure_is_weighted_sum (test_router.RouterTests.test_exposure_is_weighted_sum) ... ok
+test_fail_safe_expert_cannot_be_removed (test_router.RouterTests.test_fail_safe_expert_cannot_be_removed) ... ok
+test_fallback_cannot_use_rejected_expert (test_router.RouterTests.test_fallback_cannot_use_rejected_expert) ... ok
+test_fixed_router_mapping_is_l1_nonexpansive (test_router.RouterTests.test_fixed_router_mapping_is_l1_nonexpansive) ... ok
+test_invalid_router_uses_cash_fallback (test_router.RouterTests.test_invalid_router_uses_cash_fallback) ... ok
+test_masked_trust_rows_are_stochastic (test_router.RouterTests.test_masked_trust_rows_are_stochastic) ... ok
+test_rejected_expert_gets_exact_zero (test_router.RouterTests.test_rejected_expert_gets_exact_zero) ... ok
+test_short_or_leveraged_exposure_is_rejected (test_router.RouterTests.test_short_or_leveraged_exposure_is_rejected) ... ok
+test_deterministic_replay (test_simulator.EndToEndSimulatorTests.test_deterministic_replay) ... ok
+test_future_changes_cannot_change_past_trace (test_simulator.EndToEndSimulatorTests.test_future_changes_cannot_change_past_trace) ... ok
+test_missing_router_day_falls_back_to_cash (test_simulator.EndToEndSimulatorTests.test_missing_router_day_falls_back_to_cash) ... ok
+test_monthly_updates_occur_only_after_completed_periods (test_simulator.EndToEndSimulatorTests.test_monthly_updates_occur_only_after_completed_periods) ... ok
+test_no_admission_ablation_restores_atp_weight (test_simulator.EndToEndSimulatorTests.test_no_admission_ablation_restores_atp_weight) ... ok
+test_no_trust_update_still_masks_rejected_state (test_simulator.EndToEndSimulatorTests.test_no_trust_update_still_masks_rejected_state) ... ok
+test_rejected_atp_remains_zero_for_every_day (test_simulator.EndToEndSimulatorTests.test_rejected_atp_remains_zero_for_every_day) ... ok
+test_trust_audit_records_every_regime_expert_pair (test_simulator.EndToEndSimulatorTests.test_trust_audit_records_every_regime_expert_pair) ... ok
+test_deterministic_replay (test_statistics.BlockBootstrapTests.test_deterministic_replay) ... ok
+test_negative_advantage_does_not_pass (test_statistics.BlockBootstrapTests.test_negative_advantage_does_not_pass) ... ok
+test_strong_positive_advantage_is_significant (test_statistics.BlockBootstrapTests.test_strong_positive_advantage_is_significant) ... ok
+test_effective_sample_size_detects_concentrated_mass (test_trust.TrustUpdateTests.test_effective_sample_size_detects_concentrated_mass) ... ok
+test_exact_tail_signal_mean_matches_fractional_cvar (test_trust.TrustUpdateTests.test_exact_tail_signal_mean_matches_fractional_cvar) ... ok
+test_identical_evidence_preserves_relative_trust (test_trust.TrustUpdateTests.test_identical_evidence_preserves_relative_trust) ... ok
+test_rows_remain_stochastic_and_rejected_stays_zero (test_trust.TrustUpdateTests.test_rows_remain_stochastic_and_rejected_stays_zero) ... ok
+test_supported_rows_use_weighted_tail_and_update (test_trust.TrustUpdateTests.test_supported_rows_use_weighted_tail_and_update) ... ok
+test_tail_and_turnover_penalties_reduce_harmful_expert_trust (test_trust.TrustUpdateTests.test_tail_and_turnover_penalties_reduce_harmful_expert_trust) ... ok
+test_unsupported_regime_row_is_preserved_exactly (test_trust.TrustUpdateTests.test_unsupported_regime_row_is_preserved_exactly) ... ok
+test_weighted_tail_mean_uses_regime_distribution_directly (test_trust.TrustUpdateTests.test_weighted_tail_mean_uses_regime_distribution_directly) ... ok
+
+----------------------------------------------------------------------
+Ran 50 tests in 2.671s
+
+OK
+RAMOE_RETURN_CLOCK_REPAIR_STATUS=PASS
+ROUTER_CHANGED=FALSE
+EXPERT_CHANGED=FALSE
+MODEL_TRAINING_PERFORMED=FALSE
+PRE2024_ECONOMIC_GATE_PASSED=FALSE
+REUSED_OOS_DIAGNOSTIC_GATE_PASSED=FALSE
+OUTPUT=/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/results
+RAMOE_RETURN_CLOCK_REPAIR_AND_RERUN_STATUS=PASS
+ROUTER_CHANGED=FALSE
+EXPERT_CHANGED=FALSE
+MODEL_TRAINING_PERFORMED=FALSE
+RESULT_ARCHIVE=/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z.tar.gz
+RESULT_SHA256=/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z.tar.gz.sha256

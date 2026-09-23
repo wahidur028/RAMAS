@@ -1,0 +1,43 @@
+{
+  "active_lessons": [],
+  "completed_episodes": 1094,
+  "lesson_state": {
+    "BEAR_DEFENSE": {
+      "activated_support": 20,
+      "active": false,
+      "mean_log_advantage": 0.0010519537098890143,
+      "support": 55,
+      "text": "Bear market regimes with high volatility demand defensive exposure levels. Conservative positioning (0.25) aligns with historical performance and risk controls during uncertain transitions."
+    },
+    "BULL_TREND": {
+      "activated_support": 20,
+      "active": false,
+      "mean_log_advantage": 5.85598244829373e-18,
+      "support": 42,
+      "text": "Bull market trends justify higher exposure, but high volatility and transition risks demand cautious positioning. Maintain 0.5 exposure to balance growth with drawdown control."
+    },
+    "HIGH_VOLATILITY": {
+      "activated_support": 131,
+      "active": false,
+      "mean_log_advantage": 0.0005993343668116352,
+      "support": 161,
+      "text": "High volatility periods require cautious exposure adjustments. Bull trend signals should be balanced with volatility risk to avoid significant drawdowns."
+    },
+    "MIX_CAUTION": {
+      "activated_support": 20,
+      "active": false,
+      "mean_log_advantage": 0.0019905740871322382,
+      "support": 52,
+      "text": "In mixed regimes with high volatility, conservative exposure (0.25) aligns with historical performance and risk controls, avoiding overexposure during uncertain transitions."
+    },
+    "TRANSITION_RISK": {
+      "activated_support": 140,
+      "active": false,
+      "mean_log_advantage": 0.0003816698668144467,
+      "support": 161,
+      "text": "High volatility and transition risk in mixed regimes suggest cautious exposure adjustment. Past episodes show mixed regime transitions correlate with increased drawdown risk, favoring conservative exposure levels."
+    }
+  },
+  "promoted_proposals": 5,
+  "quarantined_proposals": 500
+}

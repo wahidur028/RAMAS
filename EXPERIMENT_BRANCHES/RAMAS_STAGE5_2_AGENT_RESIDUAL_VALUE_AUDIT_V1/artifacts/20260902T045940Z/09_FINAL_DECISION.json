@@ -1,0 +1,10 @@
+{
+  "agent_incremental_value_established": false,
+  "decision": "REDESIGN_AS_TOOL_USING_RESIDUAL_AGENT_NO_OOS",
+  "memory_incremental_value_established": false,
+  "multi_agent_experiment_permitted": false,
+  "new_llm_calls_performed": false,
+  "one_bounded_single_agent_repair_permitted": true,
+  "plain_english": "The current LLM policy did not establish incremental value over the transparent regime rule. Do not repeat the same target-exposure prompt. The only defensible continuation is one bounded, tool-using residual-agent repair with a hard kill gate.",
+  "reused_oos_opened": false
+}

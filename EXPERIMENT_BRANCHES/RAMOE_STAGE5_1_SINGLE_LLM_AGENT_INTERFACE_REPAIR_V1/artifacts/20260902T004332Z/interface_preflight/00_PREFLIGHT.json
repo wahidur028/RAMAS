@@ -1,0 +1,36 @@
+{
+  "accepted_actions": 30,
+  "accepted_with_metadata_normalization": 0,
+  "accepted_without_normalization": 30,
+  "agent_skill_sha256": "223922c9109a0f41d5a099d5bf21a9d402a232e07b970246a180fcaaf59d2d90",
+  "by_regime": {
+    "bear": {
+      "accepted": 10,
+      "fail_closed": 0,
+      "sampled": 10
+    },
+    "bull": {
+      "accepted": 10,
+      "fail_closed": 0,
+      "sampled": 10
+    },
+    "mix": {
+      "accepted": 10,
+      "fail_closed": 0,
+      "sampled": 10
+    }
+  },
+  "decision": "CONTINUE_TO_FULL_DEVELOPMENT_REPLAY",
+  "economic_claim_permitted": false,
+  "experiment_id": "RAMOE_STAGE5_1_SINGLE_LLM_AGENT_INTERFACE_REPAIR_V1",
+  "fail_closed_actions": 0,
+  "minimum_accepted_actions": 29,
+  "minimum_accepted_actions_per_regime": 9,
+  "model": "qwen3-coder:30b",
+  "package_config_sha256": "18d96438b35ecbfa7d14e2c445ee1b214970a53555a9773666a54624350c08c0",
+  "provider": "ollama",
+  "sampled_actions": 30,
+  "scientific_label": "INTERFACE_PREFLIGHT_ONLY_NO_ECONOMIC_CLAIM",
+  "status": "PASS",
+  "system_prompt_sha256": "995cd4be467af6c1b6451f851d7af11acfcead16f5d033e0c019ff78cba89282"
+}

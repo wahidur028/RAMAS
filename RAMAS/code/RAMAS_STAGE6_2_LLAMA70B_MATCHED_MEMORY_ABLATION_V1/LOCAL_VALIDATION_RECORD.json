@@ -1,0 +1,28 @@
+{
+  "experiment_id": "RAMAS_STAGE6_2_LLAMA70B_MATCHED_MEMORY_ABLATION_V1",
+  "validation_date_utc": "2026-09-08",
+  "automated_tests": {
+    "count": 26,
+    "failures": 0,
+    "errors": 0,
+    "command": "python3 tests/run_all.py"
+  },
+  "controlled_replay": {
+    "rows_per_arm": 40,
+    "arms": 2,
+    "shared_semantic_cases": 12,
+    "provider": "ControlledProvider",
+    "evidence_kind": "CONTROLLED_NON_ECONOMIC",
+    "covers_year_boundary": true,
+    "risk_projection": "TEST_DOUBLE_NOT_THE_SERVER_RISK_MODULE"
+  },
+  "runtime": {
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "real_ollama_inference": "NOT_RUN_LOCALLY",
+  "complete_server_source_integration": "NOT_RUN_LOCALLY",
+  "real_economic_results": "NOT_AVAILABLE_FOR_STAGE6_2",
+  "test_scope": "Source-boundary, no-future-memory, independent-arm, cross-year continuity, journal/restart, accounting and report invariants; controlled fixtures are not market evidence."
+}

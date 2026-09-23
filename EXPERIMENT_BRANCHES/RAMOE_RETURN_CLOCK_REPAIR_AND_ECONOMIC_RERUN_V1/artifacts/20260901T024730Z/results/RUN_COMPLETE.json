@@ -1,0 +1,14 @@
+{
+  "artifact_sha256": {
+    "00_TOP_LEVEL_CONTRACT.json": "97b75735d9f7419a31f7d11f31540333f67dfec4b9fe81ed81e68c0f5754cdd0",
+    "01_OLD_VS_CORRECTED_PRE2024.csv": "5a2dd89eefdb3943dff37e0907d93a3079ab04de358b39a475e1608e577202ae"
+  },
+  "child_run_complete_sha256": {
+    "corrected_pre2024": "b8c7e379e8aaf37aaa02d302b086b04785daf578ecb7b9e421bde620a729c9dc",
+    "corrected_reused_oos": "a3ee83f5ff4d2ac0f30cb8563facfc1d50288e28a3212d2d147dd7ed03d6c357"
+  },
+  "decision": "RETURN_CLOCK_REPAIRED_ECONOMIC_RESULTS_RERUN_EXPERTS_STILL_CLOSED",
+  "oos_economic_gate_passed_diagnostic_only": false,
+  "pre2024_economic_gate_passed": false,
+  "status": "PASS"
+}

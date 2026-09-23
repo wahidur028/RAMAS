@@ -1,0 +1,8 @@
+{
+  "artifact_sha256": {
+    "00_PREFLIGHT.json": "a8c2fcd2549f1959be7a952ce06f700ce159c44c389b4b75452b76a4d4508e77",
+    "01_PREFLIGHT_CALLS.jsonl": "58ae19f602aeaeb7c56316bd49d0e32a685edce27fe52e25767086a38f1612d7"
+  },
+  "decision": "CONTINUE_TO_2021_DEVELOPMENT_PILOT",
+  "status": "PASS"
+}

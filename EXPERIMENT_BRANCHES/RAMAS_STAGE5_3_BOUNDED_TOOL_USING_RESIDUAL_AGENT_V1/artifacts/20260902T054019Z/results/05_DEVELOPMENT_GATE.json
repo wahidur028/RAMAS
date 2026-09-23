@@ -1,0 +1,36 @@
+{
+  "behavior": {
+    "llm_calls": 298,
+    "model_nonzero_proposals": 89,
+    "nonzero_residual_days": 0,
+    "tool_evidence_zeroed_days": 89
+  },
+  "checks": {
+    "daily_loss_cvar_not_worse": true,
+    "full_run_interface_valid": true,
+    "one_sided_block_bootstrap_p_below_0_05": false,
+    "positive_advantage_in_at_least_two_years": false,
+    "positive_growth_advantage": false,
+    "sharpe_improvement_at_least_0_05": false
+  },
+  "inference": {
+    "block_length_days": 30,
+    "confidence_interval_high": 0.0,
+    "confidence_interval_low": 0.0,
+    "observed_mean_log_advantage": 0.0,
+    "one_sided_p_value": 1.0,
+    "resamples": 10000,
+    "seed": 12031
+  },
+  "interface": {
+    "combined_rate": 1.0,
+    "decision_rate": 1.0,
+    "plan_rate": 1.0,
+    "triggered_days": 149,
+    "valid_decisions": 149,
+    "valid_plans": 149
+  },
+  "passed": false,
+  "positive_advantage_years": 0,
+  "primary_comparator": "transparent_controller"
+}

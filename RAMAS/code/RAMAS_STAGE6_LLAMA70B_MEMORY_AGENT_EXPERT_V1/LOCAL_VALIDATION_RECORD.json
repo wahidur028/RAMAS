@@ -1,0 +1,39 @@
+{
+  "validated_at_utc": "2026-09-03T00:00:00Z",
+  "status": "PASS",
+  "python_compile": "PASS",
+  "bash_syntax": "PASS",
+  "unit_tests": {
+    "status": "PASS",
+    "tests_run": 14,
+    "failures": 0,
+    "errors": 0
+  },
+  "controlled_semantic_preflight": {
+    "status": "PASS",
+    "cases": 12,
+    "valid_rate": 1.0,
+    "expected_action_rate": 1.0,
+    "actions_observed": ["BTC", "CASH", "ABSTAIN"]
+  },
+  "validated_properties": [
+    "llama3.3:70b model lock",
+    "Qwen disabled",
+    "strict JSON and visible-memory citation contract",
+    "ABSTAIN exact fallback to RAMAS desired exposure",
+    "bounded BTC and CASH blend",
+    "same-regime completed episodic memory retrieval",
+    "monthly bounded trust update",
+    "negative evidence decreases trust",
+    "next-decision-only visibility of completed memory",
+    "transparent deterministic comparator",
+    "fractional expected-shortfall tail mass",
+    "deterministic circular block bootstrap",
+    "post-2021 confirmation disabled"
+  ],
+  "not_locally_executed": [
+    "real Ollama llama3.3:70b calls",
+    "server-only corrected RAMAS artifact integration",
+    "2021 economic development replay"
+  ]
+}

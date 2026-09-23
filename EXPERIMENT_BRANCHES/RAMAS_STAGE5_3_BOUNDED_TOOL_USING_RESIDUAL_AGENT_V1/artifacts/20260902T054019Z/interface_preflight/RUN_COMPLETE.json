@@ -1,0 +1,11 @@
+{
+  "artifact_sha256": {
+    "00_PREFLIGHT.json": "7512fcaa30e6aee08f4abf46458be071e93bb0dde6244abd3507f1e2a59436f8",
+    "01_PREFLIGHT_TRACE.csv": "27c32100d9594a608f2abf08e43752c871dad01b5f1f5e36680bcaeaab948c53",
+    "02_PREFLIGHT_CALLS.jsonl": "2f16424d60b7cbf7033c805eba290fe6d05c68810bb1a0af3f43d565a433b4dc",
+    "03_INTEGRATION_CHECKS.json": "a01c57671d82ac2286ae29d8de510482285294c882cc3aa3f16031cd925f22f2"
+  },
+  "decision": "CONTINUE_TO_FULL_DEVELOPMENT_REPLAY",
+  "provider": "ollama",
+  "status": "PASS"
+}

@@ -1,0 +1,1 @@
+{"adaptive_beta_updates_enabled":false,"beta_final":{"bear":0.05,"bull":0.05,"mix":0.05},"events":[],"fixed_beta":0.05,"mode":"FIXED_POSITIVE","pretrade_final":0.44735820645052815,"shadow_pretrade_final":0.7982857697261275,"stale_evidence_changes":[],"terminal_wealth":2.1677890039035725}

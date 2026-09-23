@@ -1,0 +1,127 @@
+{
+  "experiment_id": "RAMAS_STAGE6_1_LLAMA70B_CONTINUOUS_MEMORY_AGENT_EXPERT_V1",
+  "phase": "RETROSPECTIVE_CONTINUOUS_PREQUENTIAL_RESEARCH",
+  "source_experiment_id": "RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1",
+  "source_artifact_relative_glob": "EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/*",
+  "raw_dataset_candidates": [
+    "/home/infonet/wahid/projects/leader_fresh/full_data_set/full_data_set.csv",
+    "/home/infonet/wahid/leader_router_fresh/full_data_set/full_data_set.csv"
+  ],
+  "expected_raw_sha256": "b69f17a1233a58c3e0c7d6289fc5bf79173aae471a31074cf17cfffbc8198e7e",
+  "source_periods": [
+    {
+      "name": "corrected_pre2024",
+      "rows": 1094,
+      "first_decision_date": "2021-01-01",
+      "last_return_date": "2023-12-31",
+      "scientific_label": "DEVELOPMENT_AND_WALK_FORWARD_EVIDENCE"
+    },
+    {
+      "name": "corrected_reused_oos",
+      "rows": 514,
+      "first_decision_date": "2023-12-31",
+      "last_return_date": "2025-05-28",
+      "scientific_label": "REUSED_OOS_DIAGNOSTIC_NOT_UNTOUCHED_CONFIRMATION"
+    }
+  ],
+  "continuous_timeline": {
+    "total_rows": 1608,
+    "first_decision_date": "2021-01-01",
+    "last_return_date": "2025-05-28",
+    "burn_in_return_year": 2021,
+    "diagnostic_return_years": [2022, 2023, 2024, 2025],
+    "year_end_action": "REPORT_AND_CONTINUE_WITHOUT_RESET",
+    "technical_failure_action": "STOP_FAIL_CLOSED",
+    "economic_underperformance_action": "RECORD_AS_FINDING_AND_CONTINUE"
+  },
+  "stage6_2021_seed": {
+    "experiment_id": "RAMAS_STAGE6_LLAMA70B_MEMORY_AGENT_EXPERT_V1",
+    "expected_rows": 364,
+    "first_decision_date": "2021-01-01",
+    "last_return_date": "2021-12-31",
+    "accepted_config_sha256": "ce47a92c518c98c9b3504c9c3e5bba2f4d9182a5a0e8ad9f73168197a13eee18",
+    "accepted_system_prompt_sha256": "6b99d1922bf13d280e23c4f62bf82d3dbea2c2032f00be6208a83d8e5bb86783"
+  },
+  "provider": {
+    "kind": "ollama",
+    "endpoint": "http://127.0.0.1:11434/api/chat",
+    "model": "llama3.3:70b",
+    "temperature": 0.0,
+    "seed": 16061,
+    "timeout_seconds": 300,
+    "maximum_retries": 0
+  },
+  "agent": {
+    "prompt_version": "llama70b_memory_expert_v1_frozen",
+    "actions": ["BTC", "CASH", "ABSTAIN"],
+    "maximum_similar_episodes": 5,
+    "reason_codes": [
+      "BULLISH_ROUTER",
+      "BEARISH_ROUTER",
+      "MIXED_OR_UNCERTAIN",
+      "POSITIVE_MOMENTUM",
+      "NEGATIVE_MOMENTUM",
+      "HIGH_VOLATILITY",
+      "DRAWDOWN_RISK",
+      "TRANSITION_RISK",
+      "MEMORY_SUPPORT",
+      "MEMORY_WARNING",
+      "INSUFFICIENT_EVIDENCE"
+    ]
+  },
+  "semantic_preflight": {
+    "minimum_valid_rate": 1.0,
+    "minimum_expected_action_rate": 0.9,
+    "required_actions": ["BTC", "CASH", "ABSTAIN"]
+  },
+  "runtime_validity": {
+    "minimum_valid_action_rate": 0.98,
+    "invalid_response_action": "ABSTAIN"
+  },
+  "trust": {
+    "initial_beta": 0.05,
+    "minimum_beta": 0.0,
+    "maximum_beta": 0.2,
+    "monthly_step": 0.025,
+    "minimum_completed_episodes_per_regime": 8,
+    "lookback_episodes_per_regime": 60,
+    "minimum_mean_log_advantage_to_increase": 0.0001,
+    "maximum_mean_log_advantage_to_decrease": 0.0
+  },
+  "bootstrap": {
+    "block_length_days": 30,
+    "resamples": 5000,
+    "seed": 16061,
+    "one_sided_alpha": 0.05
+  },
+  "research_contract": {
+    "proposed_method": "ramas_full_continuous_llama70b_memory_trust",
+    "internal_control": "pre_agent_ramoe",
+    "external_baselines_deferred_until_pipeline_validation": [
+      "buy_and_hold",
+      "cash_only",
+      "machine_learning_or_reinforcement_learning",
+      "full_llm_portfolio_manager"
+    ],
+    "no_yearly_economic_hard_stop": true,
+    "no_human_or_parameter_change_after_2022_is_opened": true,
+    "partial_or_mixed_metric_results_are_findings": true,
+    "economic_value_requires_comparators_and_uncertainty": true,
+    "novelty_requires_literature_positioning": true
+  },
+  "frozen_claims": {
+    "model": "llama3.3:70b",
+    "qwen_used": false,
+    "router_changed": false,
+    "existing_ramoe_trust_changed": false,
+    "risk_layer_changed": false,
+    "transaction_cost_changed": false,
+    "llama_is_separate_bounded_expert": true,
+    "year_boundary_resets_memory": false,
+    "year_boundary_resets_agent_trust": false,
+    "year_boundary_resets_portfolio_state": false,
+    "post2021_rows_are_reused_diagnostic": true,
+    "untouched_oos_confirmation": false,
+    "economic_value_established_before_run": false
+  }
+}

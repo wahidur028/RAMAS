@@ -1,0 +1,10 @@
+{
+  "completed_at_utc": "2026-09-01T02:47:58.172269+00:00",
+  "expert_changed": false,
+  "first_decision_date": "2021-01-01",
+  "last_return_date": "2023-12-31",
+  "model_training_performed": false,
+  "router_changed": false,
+  "rows": 1094,
+  "scientific_status": "CORRECTED_CLOCK_PRE2024_DEVELOPMENT_RERUN_ONLY"
+}

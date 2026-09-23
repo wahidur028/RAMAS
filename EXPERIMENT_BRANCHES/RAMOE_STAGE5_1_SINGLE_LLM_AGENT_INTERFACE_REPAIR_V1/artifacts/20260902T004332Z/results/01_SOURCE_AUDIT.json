@@ -1,0 +1,47 @@
+{
+  "periods": [
+    {
+      "corrected_inputs_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/results/corrected_pre2024/02_CORRECTED_INPUTS.csv",
+      "corrected_inputs_sha256": "857896787ee9e6a2b18d4457d151993334855f1f58eb4ab6a0ede4367ef8871f",
+      "current_trace_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/results/corrected_pre2024/03_TRUSTED_ROUTER_TRACE.csv",
+      "current_trace_sha256": "6ee5601739cdd9115e59c1b4b98d25b737e05ef38852bf72a1ff39958978f0cd",
+      "features": {
+        "feature_columns": [
+          "return_1",
+          "return_7",
+          "return_30",
+          "return_90",
+          "realized_vol_30",
+          "drawdown_90",
+          "router_entropy",
+          "router_confidence",
+          "router_transition_l1"
+        ],
+        "future_price_used": false,
+        "latest_price_dates_equal_decision_dates": true
+      },
+      "first_decision_date": "2021-01-01",
+      "last_return_date": "2023-12-31",
+      "period": "corrected_pre2024",
+      "risk_scenarios": {
+        "first_latest_return_date_used": "2021-01-01",
+        "future_return_used": false,
+        "last_latest_return_date_used": "2023-12-30",
+        "past_only_windows": [
+          30,
+          90,
+          252
+        ],
+        "quantile_samples": 251
+      },
+      "rows": 1094
+    }
+  ],
+  "raw_dataset": {
+    "date_max": "2025-05-31",
+    "date_min": "2015-01-01",
+    "path": "/home/infonet/wahid/projects/leader_fresh/full_data_set/full_data_set.csv",
+    "rows": 3804,
+    "sha256": "b69f17a1233a58c3e0c7d6289fc5bf79173aae471a31074cf17cfffbc8198e7e"
+  }
+}

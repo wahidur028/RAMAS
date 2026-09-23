@@ -1,0 +1,172 @@
+{
+  "archived_agent_seed_reused": false,
+  "archived_state_reconstruction": {
+    "archived_decisions_or_responses_returned_to_new_arms": false,
+    "archived_portfolio_state_reconstructed_for_audit_only": true,
+    "archived_requests_verified": 1608,
+    "archived_response_digests_verified": 1608,
+    "archived_risk_previews_reconstructed": 4824,
+    "exogenous_state_allowlist": [
+      "decision_date",
+      "target_return_date",
+      "prob_bear",
+      "prob_bull",
+      "prob_mix",
+      "hard_regime",
+      "base_ramoe_desired_exposure",
+      "return_1",
+      "return_7",
+      "return_30",
+      "return_90",
+      "realized_vol_30",
+      "drawdown_90",
+      "router_entropy",
+      "router_confidence",
+      "router_transition_l1"
+    ],
+    "maximum_accounting_absolute_difference": 1.960237527853792e-16,
+    "maximum_risk_preview_absolute_difference": 2.220446049250313e-16,
+    "maximum_state_absolute_difference": 0.0,
+    "numeric_tolerance": 1e-10
+  },
+  "base_config_sha256": "06b6516a190572d8f7edeb01404a817a931078aed9fe7f4599715cd97d12e6a3",
+  "base_manifest_files": {
+    "ARCHITECTURE.md": "3e5e6aecd0ae54c4fd5916576a207178e7a1277a80cab7dc83721d10454cb84e",
+    "LOCAL_VALIDATION_RECORD.json": "f7ee7487abe010dfb3ec4d875e5563e186defaddb9e3c078c976b4643b8c8a24",
+    "README.md": "6a5eaf4ecfc74c09a2d461fb4f18f4fcd65c7329b342f03458c716095b6da766",
+    "REPAIR_FINDING.md": "82df2f12f1e70ebd936908784ee9c25246930502fb012a19a077ad8e26d7f755",
+    "SCIENTIFIC_METHOD.md": "2e9209b3f50e90f73663712988766dc5e26d2f3833460e9ffc96549b54396f7e",
+    "config.json": "06b6516a190572d8f7edeb01404a817a931078aed9fe7f4599715cd97d12e6a3",
+    "requirements.txt": "c2824d7fcd021081b9e5479a15769173e3917280726afbc1246b0137d5818964",
+    "run_real_adapter.py": "2e4c7a4ea3bc2e8b9f01ed807164485b28106a4e77d90e5d92bee4a99488dd5a",
+    "run_server.sh": "2563c08965b6470d2e992d1bb0e3c30d5591f68b9b722192c07ac6a46f73e78b",
+    "src/__init__.py": "79dfaf24e6bfe56a75745a751eabf32e1ff51ad407d6c6f2bccf948f74494919",
+    "src/accounting.py": "18237271f352d8f83e8a89685dd53ff44b9420c2ec09f91ff72d59859e4b7510",
+    "src/core.py": "d39a682b56a04fd55acf5de14aece3024d0451ed360e109609be15ac087e6f62",
+    "src/fixture.py": "40f8098cc556dc3f8b87094745eeaf93f984862cea272bc3a28db9b9ff688353",
+    "src/real_data.py": "bdcc3675e375d3730e5d2ad37cbf8d5180503b667b04e55b69f0c13d72680a1c",
+    "src/risk.py": "e85fe886c7cf39cf4893c4ef48d1eb14f45de2d1b9a5544217057824839e2e9d",
+    "src/router.py": "877163bc471aabc6dd69a539eeadfe5a1b320647fa4c864995f904ff978fe8d0",
+    "src/simulator.py": "73f7f1f98e8e86cb54cee394c5f6adbbc1da4a1c0a1531bafe767e2ddfbc45cd",
+    "src/statistics.py": "ce98d549349e871a7ac0ed0991634f28460eec4daf4ce1a2a8f1b87d5cf1d536",
+    "src/trust.py": "443801093a0b5735af32c67884edd56fb9fad509ecb3f88678aa5d23c1b93220",
+    "tests/run_all.py": "e1dd2d35af7b7068614bea7ff7f573c23e6713a28f066264db55b9a89ac91aba",
+    "tests/test_contract.py": "8752095daa123a7f74157f366695ac5a4c1ea508e10b865e9a3d17368f89e8dc",
+    "tests/test_real_data_adapter.py": "46b1bd0b9039c0303570ad2a4b882b9ede7f86593c3973bf1e9bf94d49bcaaff",
+    "tests/test_risk_accounting.py": "e788ab535725ce2fb0c733f87ad22f55dd658969817fb6da981bf08966fed7bc",
+    "tests/test_router.py": "c73cd63c5e7337d6b31f21a84d84817fce3f905072fa18f463fc120e2adb4144",
+    "tests/test_simulator.py": "d4f87e242a20759c2a03340dc4a8bd821ab0a3996c13310046fba8d746f80591",
+    "tests/test_statistics.py": "ade084573ff416a5f4c3235ca5b1356b92a8513caf30fe0609d07b0b7be6fbed",
+    "tests/test_trust.py": "692238f852a9662898b34d68e487142766a6f9bc8f61dfa3bddae9489c457a95",
+    "validate_pipeline.py": "cd3a4cbdde52d67c9630c4ce703b87a2e120e8444cb53d49bd31ce4b137c492a"
+  },
+  "base_manifest_provenance_limit": "The original Stage 6.1 output did not independently pin the base manifest. Its present manifest is verified and recorded; all original numeric risk previews and portfolio returns are reconstructed before new model calls.",
+  "base_manifest_sha256": "cd672e46ae0874127f9495148641f19fb3c174228ffb7001b65b6903ecc40f24",
+  "corrected_period_identity_checks": {
+    "corrected_pre2024": {
+      "base_trace_sha256": "6ee5601739cdd9115e59c1b4b98d25b737e05ef38852bf72a1ff39958978f0cd",
+      "corrected_inputs_sha256": "857896787ee9e6a2b18d4457d151993334855f1f58eb4ab6a0ede4367ef8871f"
+    },
+    "corrected_reused_oos": {
+      "base_trace_sha256": "2f97938e94c358e6067f803b4a96d903527a82b24634e7ab96b23a51a5448760",
+      "corrected_inputs_sha256": "4f70865bb75700a75c8738b9279d73b5ea8c9d09c4ebdb15fa72162ac7f29764"
+    }
+  },
+  "corrected_source_run": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z",
+  "frozen_base_source": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/base_source/LEADER_TRUSTED_ROUTER_EVIDENCE_WEIGHTED_TRUST_V1",
+  "legacy_control_2024_boundary_seam": "PRESERVED_AS_COMMON_REFERENCE; NOT_REPAIRED_IN_THIS_MATCHED_TEST",
+  "maximum_raw_return_clock_difference": 1.0061396160665481e-16,
+  "new_arms_have_independent_empty_initial_memory": true,
+  "old_responses_used_for_new_decisions": false,
+  "period": {
+    "first_decision_date": "2021-01-01",
+    "last_return_date": "2025-05-28",
+    "market_features": {
+      "feature_columns": [
+        "return_1",
+        "return_7",
+        "return_30",
+        "return_90",
+        "realized_vol_30",
+        "drawdown_90",
+        "router_entropy",
+        "router_confidence",
+        "router_transition_l1"
+      ],
+      "future_price_used": false,
+      "latest_price_dates_equal_decision_dates": true
+    },
+    "periods": [
+      {
+        "base_trace_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/results/corrected_pre2024/03_TRUSTED_ROUTER_TRACE.csv",
+        "base_trace_sha256": "6ee5601739cdd9115e59c1b4b98d25b737e05ef38852bf72a1ff39958978f0cd",
+        "corrected_inputs_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/results/corrected_pre2024/02_CORRECTED_INPUTS.csv",
+        "corrected_inputs_sha256": "857896787ee9e6a2b18d4457d151993334855f1f58eb4ab6a0ede4367ef8871f",
+        "first_decision_date": "2021-01-01",
+        "last_return_date": "2023-12-31",
+        "name": "corrected_pre2024",
+        "rows": 1094,
+        "scientific_label": "DEVELOPMENT_AND_WALK_FORWARD_EVIDENCE"
+      },
+      {
+        "base_trace_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/results/corrected_reused_oos/03_TRUSTED_ROUTER_TRACE.csv",
+        "base_trace_sha256": "2f97938e94c358e6067f803b4a96d903527a82b24634e7ab96b23a51a5448760",
+        "corrected_inputs_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/results/corrected_reused_oos/02_CORRECTED_INPUTS.csv",
+        "corrected_inputs_sha256": "4f70865bb75700a75c8738b9279d73b5ea8c9d09c4ebdb15fa72162ac7f29764",
+        "first_decision_date": "2023-12-31",
+        "last_return_date": "2025-05-28",
+        "name": "corrected_reused_oos",
+        "rows": 514,
+        "scientific_label": "REUSED_OOS_DIAGNOSTIC_NOT_UNTOUCHED_CONFIRMATION"
+      }
+    ],
+    "risk_scenarios": {
+      "first_latest_return_date_used": "2021-01-01",
+      "future_return_used": false,
+      "last_latest_return_date_used": "2025-05-27",
+      "past_only_windows": [
+        30,
+        90,
+        252
+      ],
+      "quantile_samples": 251
+    },
+    "rows": 1608,
+    "strictly_continuous_calendar": true
+  },
+  "project_root": "/home/infonet/wahid/leader_router_fresh",
+  "raw_market": {
+    "date_max": "2025-05-28",
+    "date_min": "2015-01-01",
+    "full_file_rows": 3804,
+    "future_value_sent_to_llama": false,
+    "path": "/home/infonet/wahid/projects/leader_fresh/full_data_set/full_data_set.csv",
+    "post2021_market_values_parsed": true,
+    "rows_parsed_for_replay": 3801,
+    "sha256": "b69f17a1233a58c3e0c7d6289fc5bf79173aae471a31074cf17cfffbc8198e7e"
+  },
+  "source_artifact_sha256": {
+    "00_CONTRACT.json": "f78e5836b992ce0ad38a734637fa47ef464f7bd35511bbf7039dd145d7aeb7ec",
+    "01_SOURCE_AND_SEED_AUDIT.json": "2aa08e1fa0da8eea222e16af4b0cacb37cc24c4ce6c74f89be18bb029873ba42",
+    "02_SEMANTIC_PREFLIGHT.json": "96f263224e3d7641db4dbe4af16b3c5636ad0fb9d14a2f28306a1f24a847ea13",
+    "03_DAILY_TRACE.csv": "c645ed5014e0adf53c73fcedb9c6bdd18b234b067f2eb94c9ed4423e1f77d9b5",
+    "04_FULL_HORIZON_METRICS.csv": "702fd4dded29423c544fba4f6bd4109d885460948bdb56d43e0fe5a4b0ab31ed",
+    "05_YEARLY_METRICS.csv": "95855cb72dd14c95cd46ad07c13977ac3af78060a9ae4452fe5bde694d4a5594",
+    "06_PRE_AGENT_RAMOE_COMPARATIVE_FINDINGS.csv": "c42ed2a51de80ec64063219fc90ef29f5a68ef9329833ae1b90fa339b5b2b954",
+    "07_TECHNICAL_DIAGNOSTICS.json": "be7f76e6cab3d6ab8233e976de4c9814837fab35dcc30b54aca9dc359a240a9f",
+    "08_LLM_CALLS.jsonl": "0c9239418e6cd22e868c9048dedf52bec839040fd3092c71e8a8e69ece31e022",
+    "09_MEMORY_EPISODES.jsonl": "85b6b0e0577685c03d07b9eecd85f4f8268fba7078b38a942eadbf624cc400da",
+    "10_TRUST_STATE.json": "5fec524e450843dcb0d0ff09bb3b3b6eb5f00f16d2b91c31023ca28e63ac87b6",
+    "11_FINAL_RESEARCH_STATUS.json": "7d766842ad76f28901c108a3371c8a069f3ffc2cfe1fecdbde506fd0bf6e94e2",
+    "12_PLAIN_ENGLISH_REPORT.md": "09c86a92d25e5131a2be7fc798cc003b390a22e73359770ecf1dc37fd9ad4aa6"
+  },
+  "source_audit_sha256": "2aa08e1fa0da8eea222e16af4b0cacb37cc24c4ce6c74f89be18bb029873ba42",
+  "source_complete_sha256": "7f2caecb476d77394cc004f937e9bc774596f5b492cc6e6f52011954db4e7e93",
+  "source_result": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_1_LLAMA70B_CONTINUOUS_MEMORY_AGENT_EXPERT_V1/artifacts/20260907T012534Z/continuous_2021_2025",
+  "source_run_id": "20260907T012534Z",
+  "status": "VERIFIED_BEFORE_NEW_LLM_CALLS",
+  "strict_next_day_return_clock": true,
+  "system_prompt_sha256": "6b99d1922bf13d280e23c4f62bf82d3dbea2c2032f00be6208a83d8e5bb86783",
+  "upstream_router_training_provenance": "INHERITED_FROZEN_SOURCE; NOT_RETRAINED_OR_INDEPENDENTLY_REAUDITED",
+  "vendor_config_sha256": "dace37cf72659b667a917b671fcab75ddcee0307da054e5434044c2199203e34"
+}

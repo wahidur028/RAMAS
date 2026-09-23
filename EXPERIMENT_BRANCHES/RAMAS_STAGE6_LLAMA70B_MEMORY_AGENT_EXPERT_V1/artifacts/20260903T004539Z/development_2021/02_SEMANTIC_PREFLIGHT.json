@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "all_required_actions_observed": true,
+    "expected_action_rate": true,
+    "valid_rate": true
+  },
+  "config_sha256": "ce47a92c518c98c9b3504c9c3e5bba2f4d9182a5a0e8ad9f73168197a13eee18",
+  "decision": "CONTINUE_TO_2021_DEVELOPMENT_PILOT",
+  "expected_action_rate": 0.9166666666666666,
+  "model": "llama3.3:70b",
+  "observed_actions": [
+    "ABSTAIN",
+    "BTC",
+    "CASH"
+  ],
+  "provider": "ollama",
+  "status": "PASS",
+  "system_prompt_sha256": "6b99d1922bf13d280e23c4f62bf82d3dbea2c2032f00be6208a83d8e5bb86783",
+  "valid_rate": 1.0
+}

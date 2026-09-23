@@ -1,0 +1,23 @@
+{
+  "agent_skill_sha256": "3107b47087e638d4666cc78341a3fb9f51745152a46ebc27effcd33fbb3288f2",
+  "decision": "CONTINUE_TO_FULL_DEVELOPMENT_REPLAY",
+  "decision_prompt_sha256": "b210768e042a53c3daec1cd5811a983a123e98c5a463a52d22da266397e6c838",
+  "economic_claim_permitted": false,
+  "experiment_id": "RAMAS_STAGE5_3_BOUNDED_TOOL_USING_RESIDUAL_AGENT_V1",
+  "minimum_valid_decisions": 29,
+  "minimum_valid_plans": 29,
+  "model": "qwen3-coder:30b",
+  "package_config_sha256": "0daad04b78461a0e27a2d18fee2a94c80e04360f6fad10e1ae2bd56e827370b0",
+  "planner_prompt_sha256": "111a3e5b8ddeae0fe8a7c71a7f3d0efef3056acd4112500697aab8f223957a08",
+  "provider": "ollama",
+  "regime_counts": {
+    "bear": 8,
+    "bull": 8,
+    "mix": 14
+  },
+  "sampled_triggered_days": 30,
+  "scientific_label": "INTERFACE_PREFLIGHT_ONLY_NO_ECONOMIC_CLAIM",
+  "status": "PASS",
+  "valid_decisions": 30,
+  "valid_plans": 30
+}

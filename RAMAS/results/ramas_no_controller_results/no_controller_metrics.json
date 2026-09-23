@@ -1,0 +1,128 @@
+{
+  "contract": {
+    "start": "2022-01-01",
+    "end": "2025-05-28",
+    "cost": 0.001,
+    "controller_bypassed": true,
+    "executed_field": "*_desired_exposure",
+    "final_controller_exposure_used": false
+  },
+  "results": {
+    "adaptive": {
+      "archive": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_2_LLAMA70B_MATCHED_MEMORY_ABLATION_V1/artifacts/20260908T055052711433762Z.tar.gz",
+      "trace_member": "20260908T055052711433762Z/03_DAILY_TRACE.csv",
+      "arms": {
+        "memory": {
+          "rows": 1244,
+          "first_return_date": "2022-01-01",
+          "last_return_date": "2025-05-28",
+          "net_return_pct": 65.87451956711607,
+          "annualized_vol_pct": 24.355641109303246,
+          "sharpe_zero_rf": 0.7317396275010118,
+          "sortino_zero_target": 1.0858302723354152,
+          "max_drawdown_pct": 36.61270619494735,
+          "es95_daily_loss_pct": 2.922904883439931,
+          "mean_btc_exposure_pct": 44.980697344946904,
+          "total_turnover": 10.322479170399575,
+          "mean_daily_turnover_pct": 0.829781283794178,
+          "fees_pct_evaluation_opening_capital": 1.1850891007885973,
+          "fees_per_10000_evaluation_opening_capital": 118.50891007885974,
+          "net_log_return": 0.5060614103050961,
+          "source_history_rows_replayed": 1608
+        },
+        "no_memory": {
+          "rows": 1244,
+          "first_return_date": "2022-01-01",
+          "last_return_date": "2025-05-28",
+          "net_return_pct": 66.22938997995237,
+          "annualized_vol_pct": 24.378805782304354,
+          "sharpe_zero_rf": 0.7338507207657538,
+          "sortino_zero_target": 1.0890170168579945,
+          "max_drawdown_pct": 36.5766506218853,
+          "es95_daily_loss_pct": 2.9229140271292957,
+          "mean_btc_exposure_pct": 45.04562932568343,
+          "total_turnover": 10.212464723169738,
+          "mean_daily_turnover_pct": 0.8209376787113938,
+          "fees_pct_evaluation_opening_capital": 1.1604818368229946,
+          "fees_per_10000_evaluation_opening_capital": 116.04818368229945,
+          "net_log_return": 0.5081985158175517,
+          "source_history_rows_replayed": 1608
+        }
+      },
+      "memory_minus_no_memory": {
+        "rows": 0,
+        "net_return_pct": -0.3548704128363056,
+        "annualized_vol_pct": -0.023164673001108582,
+        "sharpe_zero_rf": -0.0021110932647419034,
+        "sortino_zero_target": -0.0031867445225792768,
+        "max_drawdown_pct": 0.03605557306205043,
+        "es95_daily_loss_pct": -9.14368936477672e-06,
+        "mean_btc_exposure_pct": -0.06493198073652451,
+        "total_turnover": 0.11001444722983678,
+        "mean_daily_turnover_pct": 0.008843605082784256,
+        "fees_pct_evaluation_opening_capital": 0.024607263965602755,
+        "fees_per_10000_evaluation_opening_capital": 2.4607263965602897,
+        "net_log_return": -0.002137105512455606,
+        "source_history_rows_replayed": 0
+      }
+    },
+    "fixed": {
+      "archive": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_3_LLAMA70B_FIXED_TRUST_MEMORY_ABLATION_V1/artifacts/20260909T013716356200839Z.tar.gz",
+      "trace_member": "20260909T013716356200839Z/03_DAILY_TRACE.csv",
+      "arms": {
+        "memory": {
+          "rows": 1244,
+          "first_return_date": "2022-01-01",
+          "last_return_date": "2025-05-28",
+          "net_return_pct": 64.44375448009116,
+          "annualized_vol_pct": 23.761121080743596,
+          "sharpe_zero_rf": 0.7333523874132795,
+          "sortino_zero_target": 1.0872415908767947,
+          "max_drawdown_pct": 36.08503648171894,
+          "es95_daily_loss_pct": 2.8494740824731495,
+          "mean_btc_exposure_pct": 44.299535905412284,
+          "total_turnover": 9.02299771096541,
+          "mean_daily_turnover_pct": 0.7253213594023641,
+          "fees_pct_evaluation_opening_capital": 0.9584670495043799,
+          "fees_per_10000_evaluation_opening_capital": 95.846704950438,
+          "net_log_return": 0.49739840769587224,
+          "source_history_rows_replayed": 1608
+        },
+        "no_memory": {
+          "rows": 1244,
+          "first_return_date": "2022-01-01",
+          "last_return_date": "2025-05-28",
+          "net_return_pct": 64.50303798256611,
+          "annualized_vol_pct": 23.787143289389277,
+          "sharpe_zero_rf": 0.7332557074447658,
+          "sortino_zero_target": 1.0870128254242777,
+          "max_drawdown_pct": 36.01199558651316,
+          "es95_daily_loss_pct": 2.852019820715048,
+          "mean_btc_exposure_pct": 44.360445642380384,
+          "total_turnover": 8.56045279416075,
+          "mean_daily_turnover_pct": 0.6881392921351085,
+          "fees_pct_evaluation_opening_capital": 0.9088365660251058,
+          "fees_per_10000_evaluation_opening_capital": 90.88365660251058,
+          "net_log_return": 0.49775885202592723,
+          "source_history_rows_replayed": 1608
+        }
+      },
+      "memory_minus_no_memory": {
+        "rows": 0,
+        "net_return_pct": -0.05928350247495473,
+        "annualized_vol_pct": -0.02602220864568139,
+        "sharpe_zero_rf": 9.667996851370209e-05,
+        "sortino_zero_target": 0.0002287654525170435,
+        "max_drawdown_pct": 0.07304089520577861,
+        "es95_daily_loss_pct": -0.0025457382418982988,
+        "mean_btc_exposure_pct": -0.06090973696809954,
+        "total_turnover": 0.46254491680466003,
+        "mean_daily_turnover_pct": 0.03718206726725559,
+        "fees_pct_evaluation_opening_capital": 0.04963048347927412,
+        "fees_per_10000_evaluation_opening_capital": 4.963048347927412,
+        "net_log_return": -0.00036044433005499865,
+        "source_history_rows_replayed": 0
+      }
+    }
+  }
+}

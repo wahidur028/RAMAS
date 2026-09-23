@@ -1,0 +1,46 @@
+{
+  "config_sha256": "dace37cf72659b667a917b671fcab75ddcee0307da054e5434044c2199203e34",
+  "corrected_source_run": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z",
+  "experiment_id": "RAMAS_STAGE6_1_LLAMA70B_CONTINUOUS_MEMORY_AGENT_EXPERT_V1",
+  "frozen_base_source": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/base_source/LEADER_TRUSTED_ROUTER_EVIDENCE_WEIGHTED_TRUST_V1",
+  "frozen_claims": {
+    "economic_value_established_before_run": false,
+    "existing_ramoe_trust_changed": false,
+    "llama_is_separate_bounded_expert": true,
+    "model": "llama3.3:70b",
+    "post2021_rows_are_reused_diagnostic": true,
+    "qwen_used": false,
+    "risk_layer_changed": false,
+    "router_changed": false,
+    "transaction_cost_changed": false,
+    "untouched_oos_confirmation": false,
+    "year_boundary_resets_agent_trust": false,
+    "year_boundary_resets_memory": false,
+    "year_boundary_resets_portfolio_state": false
+  },
+  "model": "llama3.3:70b",
+  "phase": "RETROSPECTIVE_CONTINUOUS_PREQUENTIAL_RESEARCH",
+  "provider": "ollama",
+  "research_contract": {
+    "economic_value_requires_comparators_and_uncertainty": true,
+    "external_baselines_deferred_until_pipeline_validation": [
+      "buy_and_hold",
+      "cash_only",
+      "machine_learning_or_reinforcement_learning",
+      "full_llm_portfolio_manager"
+    ],
+    "internal_control": "pre_agent_ramoe",
+    "no_human_or_parameter_change_after_2022_is_opened": true,
+    "no_yearly_economic_hard_stop": true,
+    "novelty_requires_literature_positioning": true,
+    "partial_or_mixed_metric_results_are_findings": true,
+    "proposed_method": "ramas_full_continuous_llama70b_memory_trust"
+  },
+  "system_prompt_sha256": "6b99d1922bf13d280e23c4f62bf82d3dbea2c2032f00be6208a83d8e5bb86783",
+  "timeline": {
+    "2015_2020": "market_and_router_history_only_no_agent_episode_trace_available",
+    "2021": "burn_in_state_carried_forward",
+    "2022_2023": "continuous_walk_forward_development_evidence",
+    "2024_2025": "continuous_reused_oos_diagnostic_not_untouched_confirmation"
+  }
+}

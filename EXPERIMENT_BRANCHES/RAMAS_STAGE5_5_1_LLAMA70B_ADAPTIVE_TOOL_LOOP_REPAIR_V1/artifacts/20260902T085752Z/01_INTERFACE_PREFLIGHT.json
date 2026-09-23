@@ -1,0 +1,2878 @@
+{
+  "accepted_interventions": 0,
+  "cases": 12,
+  "correction_cycles_used": 0,
+  "economic_claim_permitted": false,
+  "model": "llama3.3:70b",
+  "operator_evidence_complete": 12,
+  "positive_path_interventions": 0,
+  "provider": "ollama",
+  "safe_final_actions": 12,
+  "status": "FAIL",
+  "traces": [
+    {
+      "accepted": false,
+      "adaptive_tools_executed": [],
+      "automatic_evidence_ids": [
+        "inspect_current_state:03e1d9cca039495bede6",
+        "get_verified_events:d530c0600af70b3f7a60",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "retrieve_similar_episodes:dafdac81aac28208a584",
+        "simulate_trust_candidates:0643f02e426f2b796556"
+      ],
+      "case_index": 0,
+      "decision": {
+        "confidence": 0.48,
+        "horizon_days": 3,
+        "hypothesis": "high severity event and volatility stress",
+        "invalidation_condition": "expert disagreement or high router entropy",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "bear"
+      },
+      "decision_error": null,
+      "decision_round_count": 1,
+      "decision_rounds": [
+        {
+          "decision": {
+            "confidence": 0.48,
+            "horizon_days": 3,
+            "hypothesis": "high severity event and volatility stress",
+            "invalidation_condition": "expert disagreement or high router entropy",
+            "operator": "KEEP",
+            "strength": 0.0,
+            "target_regime": "bear"
+          },
+          "error": null,
+          "evidence_complete_at_decision": true,
+          "round": 1,
+          "shield_preview": {
+            "accepted": true,
+            "current_exposure": 0.3333333333333333,
+            "proposed_exposure": 0.3333333333333333,
+            "reasons": [],
+            "target_row_l1": 0.0
+          },
+          "valid": true
+        }
+      ],
+      "decision_valid": true,
+      "effective_decision": {
+        "confidence": 0.48,
+        "horizon_days": 3,
+        "hypothesis": "high severity event and volatility stress",
+        "invalidation_condition": "expert disagreement or high router entropy",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "bear"
+      },
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes",
+        "simulate_trust_candidates"
+      ],
+      "future_events_hidden": 0,
+      "initial_operator_evidence_complete": true,
+      "intervention_executed": false,
+      "operator_evidence_complete": true,
+      "plan_error": null,
+      "plan_valid": true,
+      "planned_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes",
+        "simulate_trust_candidates"
+      ],
+      "positive_path_case": true,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "revision_requested": false,
+      "safe_final_action": true,
+      "shield": {
+        "accepted": true,
+        "current_exposure": 0.3333333333333333,
+        "proposed_exposure": 0.3333333333333333,
+        "reasons": [],
+        "target_row_l1": 0.0
+      },
+      "status": "KEEP_ACCEPTED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.3333333333333333,
+            "decision_time_utc": "2023-01-10T23:59:00+00:00",
+            "drawdown_90": -0.2,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "bear",
+            "probabilities": {
+              "bear": 0.48,
+              "bull": 0.22,
+              "mix": 0.3
+            },
+            "realized_volatility_z": 3.0,
+            "router_confidence": 0.48,
+            "router_entropy": 0.78,
+            "transition_day": true,
+            "trigger_reasons": [
+              "ROUTER_TRANSITION",
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "VOLATILITY_STRESS",
+              "DRAWDOWN_STRESS",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:03e1d9cca039495bede6"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-01-10T20:01:00+00:00",
+                "body": "Contemporaneous interface evidence reports severe operational stress while market volatility and drawdown are elevated. No future return is supplied.",
+                "category": "macro",
+                "content_sha256": "0f860adc190bd9b010a91e2f82c2151544a4a2b55e20a70fa8dfef4a8281adbd",
+                "event_id": "synthetic-001",
+                "headline": "Verified severe point-in-time macro stress event 1",
+                "published_at_utc": "2023-01-10T19:59:00+00:00",
+                "severity": 5,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 5
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:d530c0600af70b3f7a60"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "context_key": "bear|DRAWDOWN_STRESS+EXPERT_DISAGREEMENT+HIGH_ROUTER_ENTROPY+HIGH_SEVERITY_EVENT+LOW_ROUTER_CONFIDENCE+ROUTER_TRANSITION+VOLATILITY_STRESS|macro",
+            "episodes": [],
+            "lesson": null
+          },
+          "tool_name": "retrieve_similar_episodes",
+          "tool_result_id": "retrieve_similar_episodes:dafdac81aac28208a584"
+        },
+        {
+          "result": {
+            "candidates": [
+              {
+                "operator": "KEEP",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.0,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.3253333333333333,
+                "strength": 0.05,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.06666666666666665
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.3173333333333333,
+                "strength": 0.1,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.13333333333333336
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.3337364980081082,
+                "strength": 0.05,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0016798528115620215
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.3341396626828831,
+                "strength": 0.1,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0033597056231239875
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.05,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.1,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0
+              }
+            ],
+            "future_return_used": false
+          },
+          "tool_name": "simulate_trust_candidates",
+          "tool_result_id": "simulate_trust_candidates:0643f02e426f2b796556"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 5,
+        "reasons": [
+          "ROUTER_TRANSITION",
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "VOLATILITY_STRESS",
+          "DRAWDOWN_STRESS",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "adaptive_tools_executed": [],
+      "automatic_evidence_ids": [
+        "inspect_current_state:e49e2b6284645f647f2e",
+        "get_verified_events:7d7e06f859beba4d9eb6",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "simulate_trust_candidates:edaa5383cb77cb96c359"
+      ],
+      "case_index": 1,
+      "decision": {
+        "confidence": 0.52,
+        "horizon_days": 3,
+        "hypothesis": "higher_is_better_past_only_score",
+        "invalidation_condition": "LOW_ROUTER_CONFIDENCE",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "bull"
+      },
+      "decision_error": null,
+      "decision_round_count": 1,
+      "decision_rounds": [
+        {
+          "decision": {
+            "confidence": 0.52,
+            "horizon_days": 3,
+            "hypothesis": "higher_is_better_past_only_score",
+            "invalidation_condition": "LOW_ROUTER_CONFIDENCE",
+            "operator": "KEEP",
+            "strength": 0.0,
+            "target_regime": "bull"
+          },
+          "error": null,
+          "evidence_complete_at_decision": true,
+          "round": 1,
+          "shield_preview": {
+            "accepted": true,
+            "current_exposure": 0.6666666666666666,
+            "proposed_exposure": 0.6666666666666666,
+            "reasons": [],
+            "target_row_l1": 0.0
+          },
+          "valid": true
+        }
+      ],
+      "decision_valid": true,
+      "effective_decision": {
+        "confidence": 0.52,
+        "horizon_days": 3,
+        "hypothesis": "higher_is_better_past_only_score",
+        "invalidation_condition": "LOW_ROUTER_CONFIDENCE",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "bull"
+      },
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "future_events_hidden": 0,
+      "initial_operator_evidence_complete": true,
+      "intervention_executed": false,
+      "operator_evidence_complete": true,
+      "plan_error": null,
+      "plan_valid": true,
+      "planned_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "positive_path_case": false,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "revision_requested": false,
+      "safe_final_action": true,
+      "shield": {
+        "accepted": true,
+        "current_exposure": 0.6666666666666666,
+        "proposed_exposure": 0.6666666666666666,
+        "reasons": [],
+        "target_row_l1": 0.0
+      },
+      "status": "KEEP_ACCEPTED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.6666666666666666,
+            "decision_time_utc": "2023-01-30T23:59:00+00:00",
+            "drawdown_90": -0.1,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "bull",
+            "probabilities": {
+              "bear": 0.18,
+              "bull": 0.52,
+              "mix": 0.3
+            },
+            "realized_volatility_z": 1.4,
+            "router_confidence": 0.52,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:e49e2b6284645f647f2e"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-01-30T20:01:00+00:00",
+                "body": "Ambiguous interface-only evidence with no future return or expected action label.",
+                "category": "regulation",
+                "content_sha256": "cec7945a3a90276efea00753fd7b21838e66f97d2bec9456314f424182cb960e",
+                "event_id": "synthetic-002",
+                "headline": "Synthetic point-in-time regulation event 2",
+                "published_at_utc": "2023-01-30T19:59:00+00:00",
+                "severity": 4,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 4
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:7d7e06f859beba4d9eb6"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "candidates": [
+              {
+                "operator": "KEEP",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.0,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.6493333333333333,
+                "strength": 0.05,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.06666666666666665
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.632,
+                "strength": 0.1,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.13333333333333336
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.6670962106867079,
+                "strength": 0.05,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0016798528115620215
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.667525754706749,
+                "strength": 0.1,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0033597056231239875
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.05,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.1,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0
+              }
+            ],
+            "future_return_used": false
+          },
+          "tool_name": "simulate_trust_candidates",
+          "tool_result_id": "simulate_trust_candidates:edaa5383cb77cb96c359"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 4,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "adaptive_tools_executed": [],
+      "automatic_evidence_ids": [
+        "inspect_current_state:592cdc1868245511c934",
+        "get_verified_events:419d469712886a54d69b",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "simulate_trust_candidates:f70c8ac5341dd1a7105d"
+      ],
+      "case_index": 2,
+      "decision": {
+        "confidence": 0.5,
+        "horizon_days": 3,
+        "hypothesis": "current_state",
+        "invalidation_condition": "LOW_ROUTER_CONFIDENCE",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "mix"
+      },
+      "decision_error": null,
+      "decision_round_count": 1,
+      "decision_rounds": [
+        {
+          "decision": {
+            "confidence": 0.5,
+            "horizon_days": 3,
+            "hypothesis": "current_state",
+            "invalidation_condition": "LOW_ROUTER_CONFIDENCE",
+            "operator": "KEEP",
+            "strength": 0.0,
+            "target_regime": "mix"
+          },
+          "error": null,
+          "evidence_complete_at_decision": true,
+          "round": 1,
+          "shield_preview": {
+            "accepted": true,
+            "current_exposure": 0.3333333333333333,
+            "proposed_exposure": 0.3333333333333333,
+            "reasons": [],
+            "target_row_l1": 0.0
+          },
+          "valid": true
+        }
+      ],
+      "decision_valid": true,
+      "effective_decision": {
+        "confidence": 0.5,
+        "horizon_days": 3,
+        "hypothesis": "current_state",
+        "invalidation_condition": "LOW_ROUTER_CONFIDENCE",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "mix"
+      },
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "future_events_hidden": 0,
+      "initial_operator_evidence_complete": true,
+      "intervention_executed": false,
+      "operator_evidence_complete": true,
+      "plan_error": null,
+      "plan_valid": true,
+      "planned_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "positive_path_case": false,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "revision_requested": false,
+      "safe_final_action": true,
+      "shield": {
+        "accepted": true,
+        "current_exposure": 0.3333333333333333,
+        "proposed_exposure": 0.3333333333333333,
+        "reasons": [],
+        "target_row_l1": 0.0
+      },
+      "status": "KEEP_ACCEPTED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.3333333333333333,
+            "decision_time_utc": "2023-02-19T23:59:00+00:00",
+            "drawdown_90": -0.12,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "mix",
+            "probabilities": {
+              "bear": 0.25,
+              "bull": 0.25,
+              "mix": 0.5
+            },
+            "realized_volatility_z": 1.6,
+            "router_confidence": 0.5,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:592cdc1868245511c934"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-02-19T20:01:00+00:00",
+                "body": "Ambiguous interface-only evidence with no future return or expected action label.",
+                "category": "exchange",
+                "content_sha256": "219be96f84c1d5fc55f37f7b5a97984ee38f696ce3c45c9ffe87aab8c814d31c",
+                "event_id": "synthetic-003",
+                "headline": "Synthetic point-in-time exchange event 3",
+                "published_at_utc": "2023-02-19T19:59:00+00:00",
+                "severity": 3,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 3
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:419d469712886a54d69b"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "candidates": [
+              {
+                "operator": "KEEP",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.0,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.32499999999999996,
+                "strength": 0.05,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.06666666666666665
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.31666666666666665,
+                "strength": 0.1,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.13333333333333336
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.3337532965362238,
+                "strength": 0.05,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0016798528115620215
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.3341732597391143,
+                "strength": 0.1,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0033597056231239875
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.05,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.1,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0
+              }
+            ],
+            "future_return_used": false
+          },
+          "tool_name": "simulate_trust_candidates",
+          "tool_result_id": "simulate_trust_candidates:f70c8ac5341dd1a7105d"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 3,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "adaptive_tools_executed": [],
+      "automatic_evidence_ids": [
+        "inspect_current_state:49140c8d45ed9a5341f7",
+        "get_verified_events:71e369c8b9bb6ab09657",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "simulate_trust_candidates:26e5fcfaac46b036134d"
+      ],
+      "case_index": 3,
+      "decision": {
+        "confidence": 0.48,
+        "horizon_days": 3,
+        "hypothesis": "LOW_ROUTER_CONFIDENCE",
+        "invalidation_condition": "HIGH_SEVERITY_EVENT",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "bear"
+      },
+      "decision_error": null,
+      "decision_round_count": 1,
+      "decision_rounds": [
+        {
+          "decision": {
+            "confidence": 0.48,
+            "horizon_days": 3,
+            "hypothesis": "LOW_ROUTER_CONFIDENCE",
+            "invalidation_condition": "HIGH_SEVERITY_EVENT",
+            "operator": "KEEP",
+            "strength": 0.0,
+            "target_regime": "bear"
+          },
+          "error": null,
+          "evidence_complete_at_decision": true,
+          "round": 1,
+          "shield_preview": {
+            "accepted": true,
+            "current_exposure": 0.6666666666666666,
+            "proposed_exposure": 0.6666666666666666,
+            "reasons": [],
+            "target_row_l1": 0.0
+          },
+          "valid": true
+        }
+      ],
+      "decision_valid": true,
+      "effective_decision": {
+        "confidence": 0.48,
+        "horizon_days": 3,
+        "hypothesis": "LOW_ROUTER_CONFIDENCE",
+        "invalidation_condition": "HIGH_SEVERITY_EVENT",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "bear"
+      },
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "future_events_hidden": 0,
+      "initial_operator_evidence_complete": true,
+      "intervention_executed": false,
+      "operator_evidence_complete": true,
+      "plan_error": null,
+      "plan_valid": true,
+      "planned_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "positive_path_case": false,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "revision_requested": false,
+      "safe_final_action": true,
+      "shield": {
+        "accepted": true,
+        "current_exposure": 0.6666666666666666,
+        "proposed_exposure": 0.6666666666666666,
+        "reasons": [],
+        "target_row_l1": 0.0
+      },
+      "status": "KEEP_ACCEPTED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.6666666666666666,
+            "decision_time_utc": "2023-03-11T23:59:00+00:00",
+            "drawdown_90": -0.14,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "bear",
+            "probabilities": {
+              "bear": 0.48,
+              "bull": 0.22,
+              "mix": 0.3
+            },
+            "realized_volatility_z": 1.8,
+            "router_confidence": 0.48,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:49140c8d45ed9a5341f7"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-03-11T20:01:00+00:00",
+                "body": "Ambiguous interface-only evidence with no future return or expected action label.",
+                "category": "stablecoin",
+                "content_sha256": "0d53217880608d139b22642d0a7a8b5036dda154fed516e7b51cc4cf63f9ede4",
+                "event_id": "synthetic-004",
+                "headline": "Synthetic point-in-time stablecoin event 4",
+                "published_at_utc": "2023-03-11T19:59:00+00:00",
+                "severity": 4,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 4
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:71e369c8b9bb6ab09657"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "candidates": [
+              {
+                "operator": "KEEP",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.0,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.6506666666666666,
+                "strength": 0.05,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.06666666666666665
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.6346666666666666,
+                "strength": 0.1,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.13333333333333336
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.6670631688390123,
+                "strength": 0.05,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0016798528115620215
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.6674596710113581,
+                "strength": 0.1,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0033597056231239875
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.05,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.1,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0
+              }
+            ],
+            "future_return_used": false
+          },
+          "tool_name": "simulate_trust_candidates",
+          "tool_result_id": "simulate_trust_candidates:26e5fcfaac46b036134d"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 4,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "adaptive_tools_executed": [],
+      "automatic_evidence_ids": [
+        "inspect_current_state:c94420674a7041fa026b",
+        "get_verified_events:5a720460c5ed2e6e52d8",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "retrieve_similar_episodes:f9d6c878d1225cdb677b",
+        "simulate_trust_candidates:43ed1ebaf409b9013981"
+      ],
+      "case_index": 4,
+      "decision": {
+        "confidence": 0.52,
+        "horizon_days": 3,
+        "hypothesis": "higher_is_better_past_only_score",
+        "invalidation_condition": "ROUTER_TRANSITION|LOW_ROUTER_CONFIDENCE|HIGH_ROUTER_ENTROPY|EXPERT_DISAGREEMENT|VOLATILITY_STRESS|DRAWDOWN_STRESS|HIGH_SEVERITY_EVENT",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "bull"
+      },
+      "decision_error": null,
+      "decision_round_count": 1,
+      "decision_rounds": [
+        {
+          "decision": {
+            "confidence": 0.52,
+            "horizon_days": 3,
+            "hypothesis": "higher_is_better_past_only_score",
+            "invalidation_condition": "ROUTER_TRANSITION|LOW_ROUTER_CONFIDENCE|HIGH_ROUTER_ENTROPY|EXPERT_DISAGREEMENT|VOLATILITY_STRESS|DRAWDOWN_STRESS|HIGH_SEVERITY_EVENT",
+            "operator": "KEEP",
+            "strength": 0.0,
+            "target_regime": "bull"
+          },
+          "error": null,
+          "evidence_complete_at_decision": true,
+          "round": 1,
+          "shield_preview": {
+            "accepted": true,
+            "current_exposure": 0.3333333333333333,
+            "proposed_exposure": 0.3333333333333333,
+            "reasons": [],
+            "target_row_l1": 0.0
+          },
+          "valid": true
+        }
+      ],
+      "decision_valid": true,
+      "effective_decision": {
+        "confidence": 0.52,
+        "horizon_days": 3,
+        "hypothesis": "higher_is_better_past_only_score",
+        "invalidation_condition": "ROUTER_TRANSITION|LOW_ROUTER_CONFIDENCE|HIGH_ROUTER_ENTROPY|EXPERT_DISAGREEMENT|VOLATILITY_STRESS|DRAWDOWN_STRESS|HIGH_SEVERITY_EVENT",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "bull"
+      },
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes",
+        "simulate_trust_candidates"
+      ],
+      "future_events_hidden": 0,
+      "initial_operator_evidence_complete": true,
+      "intervention_executed": false,
+      "operator_evidence_complete": true,
+      "plan_error": null,
+      "plan_valid": true,
+      "planned_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes",
+        "simulate_trust_candidates"
+      ],
+      "positive_path_case": true,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "revision_requested": false,
+      "safe_final_action": true,
+      "shield": {
+        "accepted": true,
+        "current_exposure": 0.3333333333333333,
+        "proposed_exposure": 0.3333333333333333,
+        "reasons": [],
+        "target_row_l1": 0.0
+      },
+      "status": "KEEP_ACCEPTED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.3333333333333333,
+            "decision_time_utc": "2023-03-31T23:59:00+00:00",
+            "drawdown_90": -0.2,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "bull",
+            "probabilities": {
+              "bear": 0.18,
+              "bull": 0.52,
+              "mix": 0.3
+            },
+            "realized_volatility_z": 3.0,
+            "router_confidence": 0.52,
+            "router_entropy": 0.78,
+            "transition_day": true,
+            "trigger_reasons": [
+              "ROUTER_TRANSITION",
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "VOLATILITY_STRESS",
+              "DRAWDOWN_STRESS",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:c94420674a7041fa026b"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-03-31T20:01:00+00:00",
+                "body": "Contemporaneous interface evidence reports severe operational stress while market volatility and drawdown are elevated. No future return is supplied.",
+                "category": "institutional_flow",
+                "content_sha256": "94ebf46d0513de7f3b46ba3b7f66d4d74f4c807277487b1633772efbeab3a62f",
+                "event_id": "synthetic-005",
+                "headline": "Verified severe point-in-time institutional_flow stress event 5",
+                "published_at_utc": "2023-03-31T19:59:00+00:00",
+                "severity": 5,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 5
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:5a720460c5ed2e6e52d8"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "context_key": "bull|DRAWDOWN_STRESS+EXPERT_DISAGREEMENT+HIGH_ROUTER_ENTROPY+HIGH_SEVERITY_EVENT+LOW_ROUTER_CONFIDENCE+ROUTER_TRANSITION+VOLATILITY_STRESS|institutional_flow",
+            "episodes": [],
+            "lesson": null
+          },
+          "tool_name": "retrieve_similar_episodes",
+          "tool_result_id": "retrieve_similar_episodes:f9d6c878d1225cdb677b"
+        },
+        {
+          "result": {
+            "candidates": [
+              {
+                "operator": "KEEP",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.0,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.32466666666666666,
+                "strength": 0.05,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.06666666666666665
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.316,
+                "strength": 0.1,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.13333333333333336
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.33377009506433947,
+                "strength": 0.05,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0016798528115620215
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.33420685679534556,
+                "strength": 0.1,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0033597056231239875
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.05,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.1,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0
+              }
+            ],
+            "future_return_used": false
+          },
+          "tool_name": "simulate_trust_candidates",
+          "tool_result_id": "simulate_trust_candidates:43ed1ebaf409b9013981"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 5,
+        "reasons": [
+          "ROUTER_TRANSITION",
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "VOLATILITY_STRESS",
+          "DRAWDOWN_STRESS",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "adaptive_tools_executed": [],
+      "automatic_evidence_ids": [
+        "inspect_current_state:0f5a7135a1bd234458f7",
+        "get_verified_events:8ebca624e70b60b0a54e",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "simulate_trust_candidates:05d711a4317f46d70d56"
+      ],
+      "case_index": 5,
+      "decision": {
+        "confidence": 0.5,
+        "horizon_days": 3,
+        "hypothesis": "current_state_is_acceptable",
+        "invalidation_condition": "high_severity_event_or_expert_disagreement",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "mix"
+      },
+      "decision_error": null,
+      "decision_round_count": 1,
+      "decision_rounds": [
+        {
+          "decision": {
+            "confidence": 0.5,
+            "horizon_days": 3,
+            "hypothesis": "current_state_is_acceptable",
+            "invalidation_condition": "high_severity_event_or_expert_disagreement",
+            "operator": "KEEP",
+            "strength": 0.0,
+            "target_regime": "mix"
+          },
+          "error": null,
+          "evidence_complete_at_decision": true,
+          "round": 1,
+          "shield_preview": {
+            "accepted": true,
+            "current_exposure": 0.6666666666666666,
+            "proposed_exposure": 0.6666666666666666,
+            "reasons": [],
+            "target_row_l1": 0.0
+          },
+          "valid": true
+        }
+      ],
+      "decision_valid": true,
+      "effective_decision": {
+        "confidence": 0.5,
+        "horizon_days": 3,
+        "hypothesis": "current_state_is_acceptable",
+        "invalidation_condition": "high_severity_event_or_expert_disagreement",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "mix"
+      },
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "future_events_hidden": 0,
+      "initial_operator_evidence_complete": true,
+      "intervention_executed": false,
+      "operator_evidence_complete": true,
+      "plan_error": null,
+      "plan_valid": true,
+      "planned_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "positive_path_case": false,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "revision_requested": false,
+      "safe_final_action": true,
+      "shield": {
+        "accepted": true,
+        "current_exposure": 0.6666666666666666,
+        "proposed_exposure": 0.6666666666666666,
+        "reasons": [],
+        "target_row_l1": 0.0
+      },
+      "status": "KEEP_ACCEPTED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.6666666666666666,
+            "decision_time_utc": "2023-04-20T23:59:00+00:00",
+            "drawdown_90": -0.1,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "mix",
+            "probabilities": {
+              "bear": 0.25,
+              "bull": 0.25,
+              "mix": 0.5
+            },
+            "realized_volatility_z": 1.4,
+            "router_confidence": 0.5,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:0f5a7135a1bd234458f7"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-04-20T20:01:00+00:00",
+                "body": "Ambiguous interface-only evidence with no future return or expected action label.",
+                "category": "onchain_stress",
+                "content_sha256": "a24455dfcc30b1e8559c601fb8662020f7ad2a57600e69a2e8e9c3ce50a651a6",
+                "event_id": "synthetic-006",
+                "headline": "Synthetic point-in-time onchain_stress event 6",
+                "published_at_utc": "2023-04-20T19:59:00+00:00",
+                "severity": 4,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 4
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:8ebca624e70b60b0a54e"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "candidates": [
+              {
+                "operator": "KEEP",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.0,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.6499999999999999,
+                "strength": 0.05,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.06666666666666665
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.6333333333333333,
+                "strength": 0.1,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.13333333333333336
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.6670796897628601,
+                "strength": 0.05,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0016798528115620215
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.6674927128590535,
+                "strength": 0.1,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0033597056231239875
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.05,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.1,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0
+              }
+            ],
+            "future_return_used": false
+          },
+          "tool_name": "simulate_trust_candidates",
+          "tool_result_id": "simulate_trust_candidates:05d711a4317f46d70d56"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 4,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "adaptive_tools_executed": [],
+      "automatic_evidence_ids": [
+        "inspect_current_state:54af0fa3739199ee08a3",
+        "get_verified_events:b4794f9a15c034f4be55",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "simulate_trust_candidates:0643f02e426f2b796556"
+      ],
+      "case_index": 6,
+      "decision": {
+        "confidence": 0.48,
+        "horizon_days": 3,
+        "hypothesis": "LOW_ROUTER_CONFIDENCE",
+        "invalidation_condition": "HIGH_SEVERITY_EVENT",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "bear"
+      },
+      "decision_error": null,
+      "decision_round_count": 1,
+      "decision_rounds": [
+        {
+          "decision": {
+            "confidence": 0.48,
+            "horizon_days": 3,
+            "hypothesis": "LOW_ROUTER_CONFIDENCE",
+            "invalidation_condition": "HIGH_SEVERITY_EVENT",
+            "operator": "KEEP",
+            "strength": 0.0,
+            "target_regime": "bear"
+          },
+          "error": null,
+          "evidence_complete_at_decision": true,
+          "round": 1,
+          "shield_preview": {
+            "accepted": true,
+            "current_exposure": 0.3333333333333333,
+            "proposed_exposure": 0.3333333333333333,
+            "reasons": [],
+            "target_row_l1": 0.0
+          },
+          "valid": true
+        }
+      ],
+      "decision_valid": true,
+      "effective_decision": {
+        "confidence": 0.48,
+        "horizon_days": 3,
+        "hypothesis": "LOW_ROUTER_CONFIDENCE",
+        "invalidation_condition": "HIGH_SEVERITY_EVENT",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "bear"
+      },
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "future_events_hidden": 0,
+      "initial_operator_evidence_complete": true,
+      "intervention_executed": false,
+      "operator_evidence_complete": true,
+      "plan_error": null,
+      "plan_valid": true,
+      "planned_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "positive_path_case": false,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "revision_requested": false,
+      "safe_final_action": true,
+      "shield": {
+        "accepted": true,
+        "current_exposure": 0.3333333333333333,
+        "proposed_exposure": 0.3333333333333333,
+        "reasons": [],
+        "target_row_l1": 0.0
+      },
+      "status": "KEEP_ACCEPTED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.3333333333333333,
+            "decision_time_utc": "2023-05-10T23:59:00+00:00",
+            "drawdown_90": -0.12,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "bear",
+            "probabilities": {
+              "bear": 0.48,
+              "bull": 0.22,
+              "mix": 0.3
+            },
+            "realized_volatility_z": 1.6,
+            "router_confidence": 0.48,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:54af0fa3739199ee08a3"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-05-10T20:01:00+00:00",
+                "body": "Ambiguous interface-only evidence with no future return or expected action label.",
+                "category": "derivatives_stress",
+                "content_sha256": "c4a7df77460c1602c272b450a85915d213e12f2db0f9949023475027cff5180f",
+                "event_id": "synthetic-007",
+                "headline": "Synthetic point-in-time derivatives_stress event 7",
+                "published_at_utc": "2023-05-10T19:59:00+00:00",
+                "severity": 3,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 3
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:b4794f9a15c034f4be55"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "candidates": [
+              {
+                "operator": "KEEP",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.0,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.3253333333333333,
+                "strength": 0.05,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.06666666666666665
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.3173333333333333,
+                "strength": 0.1,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.13333333333333336
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.3337364980081082,
+                "strength": 0.05,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0016798528115620215
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.3341396626828831,
+                "strength": 0.1,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0033597056231239875
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.05,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.1,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0
+              }
+            ],
+            "future_return_used": false
+          },
+          "tool_name": "simulate_trust_candidates",
+          "tool_result_id": "simulate_trust_candidates:0643f02e426f2b796556"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 3,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "adaptive_tools_executed": [],
+      "automatic_evidence_ids": [
+        "inspect_current_state:178e769f4c689ea2aad1",
+        "get_verified_events:65d21e5b7314beb1d0e3",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "retrieve_similar_episodes:332f623795987eed9676",
+        "simulate_trust_candidates:edaa5383cb77cb96c359"
+      ],
+      "case_index": 7,
+      "decision": {
+        "confidence": 0.52,
+        "horizon_days": 3,
+        "hypothesis": "higher_is_better_past_only_score",
+        "invalidation_condition": "transition_day",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "bull"
+      },
+      "decision_error": null,
+      "decision_round_count": 1,
+      "decision_rounds": [
+        {
+          "decision": {
+            "confidence": 0.52,
+            "horizon_days": 3,
+            "hypothesis": "higher_is_better_past_only_score",
+            "invalidation_condition": "transition_day",
+            "operator": "KEEP",
+            "strength": 0.0,
+            "target_regime": "bull"
+          },
+          "error": null,
+          "evidence_complete_at_decision": true,
+          "round": 1,
+          "shield_preview": {
+            "accepted": true,
+            "current_exposure": 0.6666666666666666,
+            "proposed_exposure": 0.6666666666666666,
+            "reasons": [],
+            "target_row_l1": 0.0
+          },
+          "valid": true
+        }
+      ],
+      "decision_valid": true,
+      "effective_decision": {
+        "confidence": 0.52,
+        "horizon_days": 3,
+        "hypothesis": "higher_is_better_past_only_score",
+        "invalidation_condition": "transition_day",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "bull"
+      },
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes",
+        "simulate_trust_candidates"
+      ],
+      "future_events_hidden": 0,
+      "initial_operator_evidence_complete": true,
+      "intervention_executed": false,
+      "operator_evidence_complete": true,
+      "plan_error": null,
+      "plan_valid": true,
+      "planned_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "retrieve_similar_episodes",
+        "simulate_trust_candidates"
+      ],
+      "positive_path_case": false,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "revision_requested": false,
+      "safe_final_action": true,
+      "shield": {
+        "accepted": true,
+        "current_exposure": 0.6666666666666666,
+        "proposed_exposure": 0.6666666666666666,
+        "reasons": [],
+        "target_row_l1": 0.0
+      },
+      "status": "KEEP_ACCEPTED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.6666666666666666,
+            "decision_time_utc": "2023-05-30T23:59:00+00:00",
+            "drawdown_90": -0.14,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "bull",
+            "probabilities": {
+              "bear": 0.18,
+              "bull": 0.52,
+              "mix": 0.3
+            },
+            "realized_volatility_z": 1.8,
+            "router_confidence": 0.52,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:178e769f4c689ea2aad1"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-05-30T20:01:00+00:00",
+                "body": "Ambiguous interface-only evidence with no future return or expected action label.",
+                "category": "security",
+                "content_sha256": "fa0f8031f1b193c899a4f6c3044614c1a9c3c87140468ae11ad67fe3850e87f3",
+                "event_id": "synthetic-008",
+                "headline": "Synthetic point-in-time security event 8",
+                "published_at_utc": "2023-05-30T19:59:00+00:00",
+                "severity": 4,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 4
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:65d21e5b7314beb1d0e3"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "context_key": "bull|EXPERT_DISAGREEMENT+HIGH_ROUTER_ENTROPY+HIGH_SEVERITY_EVENT+LOW_ROUTER_CONFIDENCE|security",
+            "episodes": [],
+            "lesson": null
+          },
+          "tool_name": "retrieve_similar_episodes",
+          "tool_result_id": "retrieve_similar_episodes:332f623795987eed9676"
+        },
+        {
+          "result": {
+            "candidates": [
+              {
+                "operator": "KEEP",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.0,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.6493333333333333,
+                "strength": 0.05,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.06666666666666665
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.632,
+                "strength": 0.1,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.13333333333333336
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.6670962106867079,
+                "strength": 0.05,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0016798528115620215
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.667525754706749,
+                "strength": 0.1,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0033597056231239875
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.05,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.1,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0
+              }
+            ],
+            "future_return_used": false
+          },
+          "tool_name": "simulate_trust_candidates",
+          "tool_result_id": "simulate_trust_candidates:edaa5383cb77cb96c359"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 4,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "adaptive_tools_executed": [],
+      "automatic_evidence_ids": [
+        "inspect_current_state:2acf81e105f8fd0a2757",
+        "get_verified_events:73c6a49424d5a03f01a7",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "simulate_trust_candidates:f70c8ac5341dd1a7105d"
+      ],
+      "case_index": 8,
+      "decision": {
+        "confidence": 0.5,
+        "horizon_days": 3,
+        "hypothesis": "current state is acceptable",
+        "invalidation_condition": "expert disagreement or high severity event",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "mix"
+      },
+      "decision_error": null,
+      "decision_round_count": 1,
+      "decision_rounds": [
+        {
+          "decision": {
+            "confidence": 0.5,
+            "horizon_days": 3,
+            "hypothesis": "current state is acceptable",
+            "invalidation_condition": "expert disagreement or high severity event",
+            "operator": "KEEP",
+            "strength": 0.0,
+            "target_regime": "mix"
+          },
+          "error": null,
+          "evidence_complete_at_decision": true,
+          "round": 1,
+          "shield_preview": {
+            "accepted": true,
+            "current_exposure": 0.3333333333333333,
+            "proposed_exposure": 0.3333333333333333,
+            "reasons": [],
+            "target_row_l1": 0.0
+          },
+          "valid": true
+        }
+      ],
+      "decision_valid": true,
+      "effective_decision": {
+        "confidence": 0.5,
+        "horizon_days": 3,
+        "hypothesis": "current state is acceptable",
+        "invalidation_condition": "expert disagreement or high severity event",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "mix"
+      },
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "future_events_hidden": 0,
+      "initial_operator_evidence_complete": true,
+      "intervention_executed": false,
+      "operator_evidence_complete": true,
+      "plan_error": null,
+      "plan_valid": true,
+      "planned_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "positive_path_case": true,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "revision_requested": false,
+      "safe_final_action": true,
+      "shield": {
+        "accepted": true,
+        "current_exposure": 0.3333333333333333,
+        "proposed_exposure": 0.3333333333333333,
+        "reasons": [],
+        "target_row_l1": 0.0
+      },
+      "status": "KEEP_ACCEPTED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.3333333333333333,
+            "decision_time_utc": "2023-06-19T23:59:00+00:00",
+            "drawdown_90": -0.2,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "mix",
+            "probabilities": {
+              "bear": 0.25,
+              "bull": 0.25,
+              "mix": 0.5
+            },
+            "realized_volatility_z": 3.0,
+            "router_confidence": 0.5,
+            "router_entropy": 0.78,
+            "transition_day": true,
+            "trigger_reasons": [
+              "ROUTER_TRANSITION",
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "VOLATILITY_STRESS",
+              "DRAWDOWN_STRESS",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:2acf81e105f8fd0a2757"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-06-19T20:01:00+00:00",
+                "body": "Contemporaneous interface evidence reports severe operational stress while market volatility and drawdown are elevated. No future return is supplied.",
+                "category": "macro",
+                "content_sha256": "9cd87155d0146ee71c9b1f65954f6a2dba892767b5277d55bc674c374ed061f0",
+                "event_id": "synthetic-009",
+                "headline": "Verified severe point-in-time macro stress event 9",
+                "published_at_utc": "2023-06-19T19:59:00+00:00",
+                "severity": 5,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 5
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:73c6a49424d5a03f01a7"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "candidates": [
+              {
+                "operator": "KEEP",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.0,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.32499999999999996,
+                "strength": 0.05,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.06666666666666665
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.31666666666666665,
+                "strength": 0.1,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.13333333333333336
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.3337532965362238,
+                "strength": 0.05,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0016798528115620215
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.3341732597391143,
+                "strength": 0.1,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0033597056231239875
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.05,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.1,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0
+              }
+            ],
+            "future_return_used": false
+          },
+          "tool_name": "simulate_trust_candidates",
+          "tool_result_id": "simulate_trust_candidates:f70c8ac5341dd1a7105d"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 5,
+        "reasons": [
+          "ROUTER_TRANSITION",
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "VOLATILITY_STRESS",
+          "DRAWDOWN_STRESS",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "adaptive_tools_executed": [],
+      "automatic_evidence_ids": [
+        "inspect_current_state:6e2989244d8c6eb8fe09",
+        "get_verified_events:15b17be10744b5d0a221",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "simulate_trust_candidates:26e5fcfaac46b036134d"
+      ],
+      "case_index": 9,
+      "decision": {
+        "confidence": 0.48,
+        "horizon_days": 3,
+        "hypothesis": "LOW_ROUTER_CONFIDENCE",
+        "invalidation_condition": "HIGH_SEVERITY_EVENT",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "bear"
+      },
+      "decision_error": null,
+      "decision_round_count": 1,
+      "decision_rounds": [
+        {
+          "decision": {
+            "confidence": 0.48,
+            "horizon_days": 3,
+            "hypothesis": "LOW_ROUTER_CONFIDENCE",
+            "invalidation_condition": "HIGH_SEVERITY_EVENT",
+            "operator": "KEEP",
+            "strength": 0.0,
+            "target_regime": "bear"
+          },
+          "error": null,
+          "evidence_complete_at_decision": true,
+          "round": 1,
+          "shield_preview": {
+            "accepted": true,
+            "current_exposure": 0.6666666666666666,
+            "proposed_exposure": 0.6666666666666666,
+            "reasons": [],
+            "target_row_l1": 0.0
+          },
+          "valid": true
+        }
+      ],
+      "decision_valid": true,
+      "effective_decision": {
+        "confidence": 0.48,
+        "horizon_days": 3,
+        "hypothesis": "LOW_ROUTER_CONFIDENCE",
+        "invalidation_condition": "HIGH_SEVERITY_EVENT",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "bear"
+      },
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "future_events_hidden": 0,
+      "initial_operator_evidence_complete": true,
+      "intervention_executed": false,
+      "operator_evidence_complete": true,
+      "plan_error": null,
+      "plan_valid": true,
+      "planned_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "positive_path_case": false,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "revision_requested": false,
+      "safe_final_action": true,
+      "shield": {
+        "accepted": true,
+        "current_exposure": 0.6666666666666666,
+        "proposed_exposure": 0.6666666666666666,
+        "reasons": [],
+        "target_row_l1": 0.0
+      },
+      "status": "KEEP_ACCEPTED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.6666666666666666,
+            "decision_time_utc": "2023-07-09T23:59:00+00:00",
+            "drawdown_90": -0.1,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "bear",
+            "probabilities": {
+              "bear": 0.48,
+              "bull": 0.22,
+              "mix": 0.3
+            },
+            "realized_volatility_z": 1.4,
+            "router_confidence": 0.48,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:6e2989244d8c6eb8fe09"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-07-09T20:01:00+00:00",
+                "body": "Ambiguous interface-only evidence with no future return or expected action label.",
+                "category": "exchange",
+                "content_sha256": "f80a902967c3ad20f08a9fa62b52e2970ef89af3f800f484e4a7eeffda4b893e",
+                "event_id": "synthetic-010",
+                "headline": "Synthetic point-in-time exchange event 10",
+                "published_at_utc": "2023-07-09T19:59:00+00:00",
+                "severity": 4,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 4
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:15b17be10744b5d0a221"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "candidates": [
+              {
+                "operator": "KEEP",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.0,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.6506666666666666,
+                "strength": 0.05,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.06666666666666665
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.6346666666666666,
+                "strength": 0.1,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.13333333333333336
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.6670631688390123,
+                "strength": 0.05,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0016798528115620215
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.6674596710113581,
+                "strength": 0.1,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0033597056231239875
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.05,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.1,
+                "target_regime": "bear",
+                "target_row_l1_change": 0.0
+              }
+            ],
+            "future_return_used": false
+          },
+          "tool_name": "simulate_trust_candidates",
+          "tool_result_id": "simulate_trust_candidates:26e5fcfaac46b036134d"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 4,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "adaptive_tools_executed": [],
+      "automatic_evidence_ids": [
+        "inspect_current_state:7c62f8565c466f02b94f",
+        "get_verified_events:fefebdca89c1dd02a68f",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "simulate_trust_candidates:43ed1ebaf409b9013981"
+      ],
+      "case_index": 10,
+      "decision": {
+        "confidence": 0.52,
+        "horizon_days": 3,
+        "hypothesis": "higher_is_better_past_only_score",
+        "invalidation_condition": "LOW_ROUTER_CONFIDENCE",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "bull"
+      },
+      "decision_error": null,
+      "decision_round_count": 1,
+      "decision_rounds": [
+        {
+          "decision": {
+            "confidence": 0.52,
+            "horizon_days": 3,
+            "hypothesis": "higher_is_better_past_only_score",
+            "invalidation_condition": "LOW_ROUTER_CONFIDENCE",
+            "operator": "KEEP",
+            "strength": 0.0,
+            "target_regime": "bull"
+          },
+          "error": null,
+          "evidence_complete_at_decision": true,
+          "round": 1,
+          "shield_preview": {
+            "accepted": true,
+            "current_exposure": 0.3333333333333333,
+            "proposed_exposure": 0.3333333333333333,
+            "reasons": [],
+            "target_row_l1": 0.0
+          },
+          "valid": true
+        }
+      ],
+      "decision_valid": true,
+      "effective_decision": {
+        "confidence": 0.52,
+        "horizon_days": 3,
+        "hypothesis": "higher_is_better_past_only_score",
+        "invalidation_condition": "LOW_ROUTER_CONFIDENCE",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "bull"
+      },
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "future_events_hidden": 0,
+      "initial_operator_evidence_complete": true,
+      "intervention_executed": false,
+      "operator_evidence_complete": true,
+      "plan_error": null,
+      "plan_valid": true,
+      "planned_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "positive_path_case": false,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "revision_requested": false,
+      "safe_final_action": true,
+      "shield": {
+        "accepted": true,
+        "current_exposure": 0.3333333333333333,
+        "proposed_exposure": 0.3333333333333333,
+        "reasons": [],
+        "target_row_l1": 0.0
+      },
+      "status": "KEEP_ACCEPTED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.3333333333333333,
+            "decision_time_utc": "2023-07-29T23:59:00+00:00",
+            "drawdown_90": -0.12,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "bull",
+            "probabilities": {
+              "bear": 0.18,
+              "bull": 0.52,
+              "mix": 0.3
+            },
+            "realized_volatility_z": 1.6,
+            "router_confidence": 0.52,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:7c62f8565c466f02b94f"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-07-29T20:01:00+00:00",
+                "body": "Ambiguous interface-only evidence with no future return or expected action label.",
+                "category": "regulation",
+                "content_sha256": "2bbecb431971328885f4584653f92493e2d597e534913a6819125e6a5729f761",
+                "event_id": "synthetic-011",
+                "headline": "Synthetic point-in-time regulation event 11",
+                "published_at_utc": "2023-07-29T19:59:00+00:00",
+                "severity": 3,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 3
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:fefebdca89c1dd02a68f"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "candidates": [
+              {
+                "operator": "KEEP",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.0,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.32466666666666666,
+                "strength": 0.05,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.06666666666666665
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.316,
+                "strength": 0.1,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.13333333333333336
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.33377009506433947,
+                "strength": 0.05,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0016798528115620215
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.33420685679534556,
+                "strength": 0.1,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0033597056231239875
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.05,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.3333333333333333,
+                "strength": 0.1,
+                "target_regime": "bull",
+                "target_row_l1_change": 0.0
+              }
+            ],
+            "future_return_used": false
+          },
+          "tool_name": "simulate_trust_candidates",
+          "tool_result_id": "simulate_trust_candidates:43ed1ebaf409b9013981"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 3,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    },
+    {
+      "accepted": false,
+      "adaptive_tools_executed": [],
+      "automatic_evidence_ids": [
+        "inspect_current_state:dbf3a75f2dd322322eda",
+        "get_verified_events:aae1dd69d59991fb37f1",
+        "inspect_expert_risk:af56446f9f4a15a5e2ed",
+        "simulate_trust_candidates:05d711a4317f46d70d56"
+      ],
+      "case_index": 11,
+      "decision": {
+        "confidence": 0.5,
+        "horizon_days": 3,
+        "hypothesis": "current state is acceptable",
+        "invalidation_condition": "LOW_ROUTER_CONFIDENCE or HIGH_ROUTER_ENTROPY or EXPERT_DISAGREEMENT or HIGH_SEVERITY_EVENT",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "mix"
+      },
+      "decision_error": null,
+      "decision_round_count": 1,
+      "decision_rounds": [
+        {
+          "decision": {
+            "confidence": 0.5,
+            "horizon_days": 3,
+            "hypothesis": "current state is acceptable",
+            "invalidation_condition": "LOW_ROUTER_CONFIDENCE or HIGH_ROUTER_ENTROPY or EXPERT_DISAGREEMENT or HIGH_SEVERITY_EVENT",
+            "operator": "KEEP",
+            "strength": 0.0,
+            "target_regime": "mix"
+          },
+          "error": null,
+          "evidence_complete_at_decision": true,
+          "round": 1,
+          "shield_preview": {
+            "accepted": true,
+            "current_exposure": 0.6666666666666666,
+            "proposed_exposure": 0.6666666666666666,
+            "reasons": [],
+            "target_row_l1": 0.0
+          },
+          "valid": true
+        }
+      ],
+      "decision_valid": true,
+      "effective_decision": {
+        "confidence": 0.5,
+        "horizon_days": 3,
+        "hypothesis": "current state is acceptable",
+        "invalidation_condition": "LOW_ROUTER_CONFIDENCE or HIGH_ROUTER_ENTROPY or EXPERT_DISAGREEMENT or HIGH_SEVERITY_EVENT",
+        "operator": "KEEP",
+        "strength": 0.0,
+        "target_regime": "mix"
+      },
+      "executed_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "future_events_hidden": 0,
+      "initial_operator_evidence_complete": true,
+      "intervention_executed": false,
+      "operator_evidence_complete": true,
+      "plan_error": null,
+      "plan_valid": true,
+      "planned_tools": [
+        "inspect_current_state",
+        "get_verified_events",
+        "inspect_expert_risk",
+        "simulate_trust_candidates"
+      ],
+      "positive_path_case": false,
+      "proposed_trust": {
+        "bear": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "bull": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        },
+        "mix": {
+          "atp": 0.3333333333333333,
+          "buy_hold": 0.3333333333333333,
+          "cash": 0.3333333333333333
+        }
+      },
+      "provider": "ollama",
+      "revision_requested": false,
+      "safe_final_action": true,
+      "shield": {
+        "accepted": true,
+        "current_exposure": 0.6666666666666666,
+        "proposed_exposure": 0.6666666666666666,
+        "reasons": [],
+        "target_row_l1": 0.0
+      },
+      "status": "KEEP_ACCEPTED",
+      "tool_results": [
+        {
+          "result": {
+            "current_btc_exposure": 0.6666666666666666,
+            "decision_time_utc": "2023-08-18T23:59:00+00:00",
+            "drawdown_90": -0.14,
+            "expert_exposure_disagreement": 1.0,
+            "hard_regime": "mix",
+            "probabilities": {
+              "bear": 0.25,
+              "bull": 0.25,
+              "mix": 0.5
+            },
+            "realized_volatility_z": 1.8,
+            "router_confidence": 0.5,
+            "router_entropy": 0.78,
+            "transition_day": false,
+            "trigger_reasons": [
+              "LOW_ROUTER_CONFIDENCE",
+              "HIGH_ROUTER_ENTROPY",
+              "EXPERT_DISAGREEMENT",
+              "HIGH_SEVERITY_EVENT"
+            ]
+          },
+          "tool_name": "inspect_current_state",
+          "tool_result_id": "inspect_current_state:dbf3a75f2dd322322eda"
+        },
+        {
+          "result": {
+            "all_available_by_decision_time": true,
+            "event_count": 1,
+            "events": [
+              {
+                "available_at_utc": "2023-08-18T20:01:00+00:00",
+                "body": "Ambiguous interface-only evidence with no future return or expected action label.",
+                "category": "stablecoin",
+                "content_sha256": "4e8966d38d1abc380ed22eca09c8010a056174d5eda8ef333bcecdf8eeb730ce",
+                "event_id": "synthetic-012",
+                "headline": "Synthetic point-in-time stablecoin event 12",
+                "published_at_utc": "2023-08-18T19:59:00+00:00",
+                "severity": 4,
+                "source": "mechanical-preflight"
+              }
+            ],
+            "maximum_severity": 4
+          },
+          "tool_name": "get_verified_events",
+          "tool_result_id": "get_verified_events:aae1dd69d59991fb37f1"
+        },
+        {
+          "result": {
+            "interpretation": "higher_is_better_past_only_score",
+            "risk_adjusted_scores": {
+              "atp": 0.15,
+              "buy_hold": 0.2,
+              "cash": 0.1
+            }
+          },
+          "tool_name": "inspect_expert_risk",
+          "tool_result_id": "inspect_expert_risk:af56446f9f4a15a5e2ed"
+        },
+        {
+          "result": {
+            "candidates": [
+              {
+                "operator": "KEEP",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.0,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.6499999999999999,
+                "strength": 0.05,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.06666666666666665
+              },
+              {
+                "operator": "DEFENSIVE_SHRINK",
+                "proposed_btc_exposure": 0.6333333333333333,
+                "strength": 0.1,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.13333333333333336
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.6670796897628601,
+                "strength": 0.05,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0016798528115620215
+              },
+              {
+                "operator": "RISK_AWARE_REWEIGHT",
+                "proposed_btc_exposure": 0.6674927128590535,
+                "strength": 0.1,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0033597056231239875
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.05,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0
+              },
+              {
+                "operator": "ROLLBACK",
+                "proposed_btc_exposure": 0.6666666666666666,
+                "strength": 0.1,
+                "target_regime": "mix",
+                "target_row_l1_change": 0.0
+              }
+            ],
+            "future_return_used": false
+          },
+          "tool_name": "simulate_trust_candidates",
+          "tool_result_id": "simulate_trust_candidates:05d711a4317f46d70d56"
+        }
+      ],
+      "trigger": {
+        "expert_disagreement": 1.0,
+        "maximum_event_severity": 4,
+        "reasons": [
+          "LOW_ROUTER_CONFIDENCE",
+          "HIGH_ROUTER_ENTROPY",
+          "EXPERT_DISAGREEMENT",
+          "HIGH_SEVERITY_EVENT"
+        ],
+        "triggered": true
+      }
+    }
+  ],
+  "valid_decisions": 12,
+  "valid_plans": 12
+}

@@ -1,0 +1,83 @@
+{
+  "oos_source": {
+    "candidate_audit": [
+      {
+        "canonical_stream_sha256": "299b16dcb60d1f13a460bc00509467e4dca65e8ae4fd6fb28cc4c33049098230",
+        "path": "/home/infonet/wahid/leader_router_fresh/P1-R01__selected_logreg_reused_oos_comparison__20260727T075110Z/11_oos_daily_allocations_returns.csv",
+        "sha256": "54668575c2e85b97b92d314aae5a66d8aa0c7191db6fdcc75c555ca9e0cede30",
+        "status": "PASS"
+      },
+      {
+        "canonical_stream_sha256": "299b16dcb60d1f13a460bc00509467e4dca65e8ae4fd6fb28cc4c33049098230",
+        "path": "/home/infonet/wahid/leader_router_fresh/LOCKED_RELEASES/P2-F04_LOCKED__20260803T055105Z/inputs/baselines/11_oos_daily_allocations_returns.csv",
+        "sha256": "54668575c2e85b97b92d314aae5a66d8aa0c7191db6fdcc75c555ca9e0cede30",
+        "status": "PASS"
+      },
+      {
+        "canonical_stream_sha256": "299b16dcb60d1f13a460bc00509467e4dca65e8ae4fd6fb28cc4c33049098230",
+        "path": "/home/infonet/wahid/leader_router_fresh/P2_F06_COMPLETE_TRANSFER_BUILDER_V2_2/P2_F06_COMPLETE_TRANSFER__20260814T073020Z/P2_F06_COMPLETE_SOURCE_EVIDENCE__20260814T073020Z/02_P2F04_LOCK/inputs/baselines/11_oos_daily_allocations_returns.csv",
+        "sha256": "54668575c2e85b97b92d314aae5a66d8aa0c7191db6fdcc75c555ca9e0cede30",
+        "status": "PASS"
+      },
+      {
+        "canonical_stream_sha256": "299b16dcb60d1f13a460bc00509467e4dca65e8ae4fd6fb28cc4c33049098230",
+        "path": "/home/infonet/wahid/leader_router_fresh/RAMoE_RELEASE_AUDIT/RAMoE_CHECKPOINT_A__20260812T051900Z/frozen_evidence/frozen_two_child_comparator/inputs/baselines/11_oos_daily_allocations_returns.csv",
+        "sha256": "54668575c2e85b97b92d314aae5a66d8aa0c7191db6fdcc75c555ca9e0cede30",
+        "status": "PASS"
+      },
+      {
+        "canonical_stream_sha256": "299b16dcb60d1f13a460bc00509467e4dca65e8ae4fd6fb28cc4c33049098230",
+        "path": "/home/infonet/wahid/leader_router_fresh/RAMoE_RELEASE_AUDIT/RAMoE_CHECKPOINT_A__20260812T052355Z/frozen_evidence/frozen_two_child_comparator/inputs/baselines/11_oos_daily_allocations_returns.csv",
+        "sha256": "54668575c2e85b97b92d314aae5a66d8aa0c7191db6fdcc75c555ca9e0cede30",
+        "status": "PASS"
+      }
+    ],
+    "canonical_stream_sha256": "299b16dcb60d1f13a460bc00509467e4dca65e8ae4fd6fb28cc4c33049098230",
+    "selected_path": "/home/infonet/wahid/leader_router_fresh/P1-R01__selected_logreg_reused_oos_comparison__20260727T075110Z/11_oos_daily_allocations_returns.csv",
+    "selected_sha256": "54668575c2e85b97b92d314aae5a66d8aa0c7191db6fdcc75c555ca9e0cede30"
+  },
+  "raw_dataset": {
+    "candidate_audit": [
+      {
+        "exists": false,
+        "path": "/home/infonet/wahid/leader_fresh/full_data_set/full_data_set.csv",
+        "reason": "file does not exist",
+        "status": "FAIL"
+      },
+      {
+        "date_max": "2025-05-31",
+        "date_min": "2015-01-01",
+        "exists": true,
+        "path": "/home/infonet/wahid/projects/leader_fresh/full_data_set/full_data_set.csv",
+        "rows": 3804,
+        "sha256": "b69f17a1233a58c3e0c7d6289fc5bf79173aae471a31074cf17cfffbc8198e7e",
+        "status": "PASS"
+      }
+    ],
+    "date_max": "2025-05-31",
+    "date_min": "2015-01-01",
+    "exists": true,
+    "path": "/home/infonet/wahid/projects/leader_fresh/full_data_set/full_data_set.csv",
+    "rows": 3804,
+    "sha256": "b69f17a1233a58c3e0c7d6289fc5bf79173aae471a31074cf17cfffbc8198e7e",
+    "status": "PASS"
+  },
+  "return_clock": {
+    "canonical_raw_close_return_used_for_economic_rerun": true,
+    "declared_one_row_later_vs_canonical_previous_row_correlation": -0.0821947662533836,
+    "declared_return_used_for_economic_rerun": false,
+    "declared_vs_canonical_same_clock_correlation": 0.9999999999999998,
+    "status": "DECLARED_RETURN_ALREADY_CANONICAL"
+  },
+  "risk_scenarios": {
+    "first_decision_latest_return_date_used": "2023-12-31",
+    "future_return_used": false,
+    "last_decision_latest_return_date_used": "2025-05-27",
+    "quantile_samples": 251,
+    "windows": [
+      30,
+      90,
+      252
+    ]
+  }
+}

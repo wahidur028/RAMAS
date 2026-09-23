@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "project_root": "/home/infonet/wahid/leader_router_fresh",
+  "model": "llama3.3:70b",
+  "expected_model_digest": "a6eb4748fd2990ad2952b2335a95a7f952d1a06119a0aa6a2df6cd052a93a3fa",
+  "evaluation_start": "2022-01-01",
+  "evaluation_end": "2025-05-28",
+  "cost_rate": 0.001,
+  "runs": [
+    {
+      "stage": "6.1",
+      "run_id": "20260907T012534Z",
+      "format": "single_trace",
+      "path": "EXPERIMENT_BRANCHES/RAMAS_STAGE6_1_LLAMA70B_CONTINUOUS_MEMORY_AGENT_EXPERT_V1/artifacts/20260907T012534Z/continuous_2021_2025/03_DAILY_TRACE.csv",
+      "sampling_seed": 16061,
+      "prompt_variant": "frozen_llama_role",
+      "arms": [
+        {"arm": "stage61_continuous", "trust": "adaptive", "memory": "expanding", "controller": "on",
+         "core": "original", "net_return": "full_net_return", "exposure": "full_final_exposure",
+         "pretrade": null, "action": "action", "beta": "llama_beta"}
+      ]
+    },
+    {
+      "stage": "6.2",
+      "run_id": "20260908T055052711433762Z",
+      "format": "paired_trace",
+      "path": "EXPERIMENT_BRANCHES/RAMAS_STAGE6_2_LLAMA70B_MATCHED_MEMORY_ABLATION_V1/artifacts/20260908T055052711433762Z/03_DAILY_TRACE.csv",
+      "sampling_seed": 16061,
+      "prompt_variant": "frozen_llama_role",
+      "arms": [
+        {"arm": "adaptive_memory", "prefix": "memory", "trust": "adaptive", "memory": "expanding", "controller": "on", "core": "original"},
+        {"arm": "adaptive_no_memory", "prefix": "no_memory", "trust": "adaptive", "memory": "none", "controller": "on", "core": "original"}
+      ]
+    },
+    {
+      "stage": "6.3",
+      "run_id": "20260909T013716356200839Z",
+      "format": "paired_trace",
+      "path": "EXPERIMENT_BRANCHES/RAMAS_STAGE6_3_LLAMA70B_FIXED_TRUST_MEMORY_ABLATION_V1/artifacts/20260909T013716356200839Z/03_DAILY_TRACE.csv",
+      "sampling_seed": 16061,
+      "prompt_variant": "frozen_llama_role",
+      "arms": [
+        {"arm": "fixed_memory", "prefix": "memory", "trust": "fixed", "memory": "expanding", "controller": "on", "core": "original"},
+        {"arm": "fixed_no_memory", "prefix": "no_memory", "trust": "fixed", "memory": "none", "controller": "on", "core": "original"}
+      ]
+    },
+    {
+      "stage": "6.4",
+      "run_id": "20260909T114202240674964Z",
+      "format": "arm_ledgers",
+      "path": "EXPERIMENT_BRANCHES/RAMAS_STAGE6_4_COMPONENT_SUITE_V1/artifacts/20260909T114202240674964Z/arms",
+      "sampling_seed": 16061,
+      "prompt_variant": "frozen_llama_role",
+      "only_llama": true,
+      "arm_config": {
+        "llama_hard_allocator":        {"trust": "adaptive", "memory": "expanding",   "controller": "on",  "core": "hard_allocator"},
+        "llama_uniform_allocator":     {"trust": "adaptive", "memory": "expanding",   "controller": "on",  "core": "uniform_allocator"},
+        "llama_frozen_W":              {"trust": "adaptive", "memory": "expanding",   "controller": "on",  "core": "frozen_W"},
+        "llama_no_risk":               {"trust": "adaptive", "memory": "expanding",   "controller": "off", "core": "original"},
+        "llama_memory_frozen2021":     {"trust": "adaptive", "memory": "frozen2021",  "controller": "on",  "core": "original"},
+        "llama_memory_current_year":   {"trust": "adaptive", "memory": "current_year","controller": "on",  "core": "original"},
+        "llama_memory_pooled":         {"trust": "adaptive", "memory": "pooled",      "controller": "on",  "core": "original"}
+      }
+    },
+    {
+      "stage": "7",
+      "run_id": "20260911T053155161422662Z",
+      "format": "arm_ledgers_nested",
+      "path": "EXPERIMENT_BRANCHES/RAMAS_STAGE7_SEQUENTIAL_MEMORY_VALIDATION_V1/artifacts/20260911T053155161422662Z",
+      "subdirs": ["closed_loop", "state_controlled"],
+      "sampling_seed": 16061,
+      "prompt_variant": "frozen_llama_role",
+      "arm_config": {
+        "closed_loop_memory":           {"trust": "fixed", "memory": "expanding", "controller": "on", "core": "original"},
+        "closed_loop_no_memory":        {"trust": "fixed", "memory": "none",      "controller": "on", "core": "original"},
+        "state_controlled_memory":      {"trust": "fixed", "memory": "expanding", "controller": "on", "core": "original", "note": "state-controlled replay"},
+        "state_controlled_no_memory":   {"trust": "fixed", "memory": "none",      "controller": "on", "core": "original", "note": "state-controlled replay"}
+      }
+    },
+    {
+      "stage": "ISO",
+      "run_id": "20260920T084300Z",
+      "format": "arm_ledgers",
+      "path": "EXPERIMENT_BRANCHES/RAMAS_FULL_PIPELINE_ISOLATION_V1/artifacts/20260920T084300Z/cells/llama3.3_70b__seed_42/arms",
+      "sampling_seed": 42,
+      "prompt_variant": "model_neutralized_frozen_v1",
+      "arm_config": {
+        "llm_adaptive_memory_controller_on":     {"trust": "adaptive", "memory": "expanding", "controller": "on",  "core": "original"},
+        "llm_adaptive_memory_controller_off":    {"trust": "adaptive", "memory": "expanding", "controller": "off", "core": "original"},
+        "llm_adaptive_no_memory_controller_on":  {"trust": "adaptive", "memory": "none",      "controller": "on",  "core": "original"},
+        "llm_adaptive_no_memory_controller_off": {"trust": "adaptive", "memory": "none",      "controller": "off", "core": "original"},
+        "llm_fixed_memory_controller_on":        {"trust": "fixed",    "memory": "expanding", "controller": "on",  "core": "original"},
+        "llm_fixed_memory_controller_off":       {"trust": "fixed",    "memory": "expanding", "controller": "off", "core": "original"},
+        "llm_fixed_no_memory_controller_on":     {"trust": "fixed",    "memory": "none",      "controller": "on",  "core": "original"},
+        "llm_fixed_no_memory_controller_off":    {"trust": "fixed",    "memory": "none",      "controller": "off", "core": "original"}
+      }
+    }
+  ],
+  "duplicate_arms_excluded_from_averaging": {
+    "note": "Stage 6.4 re-publishes the Stage 6.2 and 6.3 arms under new names. They are the same trajectories and must not be counted twice.",
+    "6.4:adaptive_memory": "6.2:adaptive_memory",
+    "6.4:adaptive_no_memory": "6.2:adaptive_no_memory",
+    "6.4:fixed_memory": "6.3:fixed_memory",
+    "6.4:fixed_no_memory": "6.3:fixed_no_memory"
+  }
+}

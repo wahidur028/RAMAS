@@ -1,0 +1,1288 @@
+{
+  "arms": [
+    {
+      "advisor": "llama",
+      "core": "original",
+      "fixed_beta": 0.05,
+      "label": "counterfactual",
+      "label_authority": 1.0,
+      "memory": "expanding",
+      "name": "corrected_memory",
+      "per_action": 2,
+      "regime_filter": "none",
+      "retrieval": "balanced",
+      "risk": "standard",
+      "trust": "fixed"
+    },
+    {
+      "advisor": "llama",
+      "core": "original",
+      "fixed_beta": 0.05,
+      "label": "counterfactual",
+      "label_authority": 1.0,
+      "memory": "none",
+      "name": "corrected_no_memory",
+      "per_action": 2,
+      "regime_filter": "none",
+      "retrieval": "balanced",
+      "risk": "standard",
+      "trust": "fixed"
+    }
+  ],
+  "claim_boundaries": {
+    "corrected_label_validated_as_improving_decisions": false,
+    "feasible_information_to_fill_clock_resolved": false,
+    "fresh_out_of_sample": false,
+    "router_temporal_validity_resolved": false
+  },
+  "config_sha256": "bb43811e1dcfdfcb92123ec5cc4e53d7869980906c9faebba414b2904ce8fbec",
+  "core_audit": {
+    "W_resets_at_2024_source_boundary": false,
+    "W_update_dependencies": [
+      "completed_original_q",
+      "independent_policy_returns",
+      "independent_policy_turnover"
+    ],
+    "W_update_depends_on_Llama_or_final_portfolio": false,
+    "frozen_W": "Use initial admitted W throughout; original q and actual proposals unchanged",
+    "hard_allocator": "Replace q only in q@W@e with one-hot(argmax(q)); historical W stream unchanged",
+    "hard_tie_break": "numpy.argmax: first tied index in recorded regime order",
+    "historical_policy_holdings_reset_at_source_boundary": true,
+    "inactive_policy_proposals_preserved": true,
+    "inactive_policy_weighted_exposures_exactly_zero": true,
+    "initial_admitted_W": [
+      [
+        0.5,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.5,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.5,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "masked_policy_zero_effect_is_structural_not_economic_rejection": true,
+    "maximum_original_desired_error": 3.3306690738754696e-16,
+    "new_portfolio_holdings_must_continue_across_source_boundary": true,
+    "numerical_manifest_sha256": "cd672e46ae0874127f9495148641f19fb3c174228ffb7001b65b6903ecc40f24",
+    "numerical_source": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/base_source/LEADER_TRUSTED_ROUTER_EVIDENCE_WEIGHTED_TRUST_V1",
+    "periods": [
+      {
+        "initial_policy_holdings": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "name": "corrected_pre2024",
+        "rows": 1094,
+        "terminal_W_maximum_error": 1.1102230246251565e-16,
+        "terminal_W_sha256": "3c96a5bceb898dbc319c0fd5f7db03dfdb7191d65aa50a1fc4f59a93c37bcba0",
+        "trust_carried_from_previous_period": false,
+        "trust_updates": [
+          {
+            "completed_return_month": "2021-01",
+            "effective_sample_size": [
+              0.0,
+              29.999886463605787,
+              2.5993319566595825
+            ],
+            "posterior_mass": [
+              3.912536358058091e-08,
+              29.982035338045232,
+              0.017964622829404156
+            ],
+            "supported_regimes": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2021-02",
+            "effective_sample_size": [
+              0.0,
+              27.99639175827393,
+              2.712054797014555
+            ],
+            "posterior_mass": [
+              5.369535962692308e-07,
+              27.896286641689986,
+              0.10371282135641179
+            ],
+            "supported_regimes": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2021-03",
+            "effective_sample_size": [
+              0.0,
+              30.99545201584555,
+              5.19186072682479
+            ],
+            "posterior_mass": [
+              8.583968367427995e-07,
+              30.832485811148516,
+              0.167513330454639
+            ],
+            "supported_regimes": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2021-04",
+            "effective_sample_size": [
+              3.6624022702466337,
+              19.41211011769972,
+              14.922833099606931
+            ],
+            "posterior_mass": [
+              0.21591118390094152,
+              17.32811511200002,
+              12.455973704099035
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2021-05",
+            "effective_sample_size": [
+              19.295489921994395,
+              6.3329570879320665,
+              13.149331725490269
+            ],
+            "posterior_mass": [
+              18.58058528528344,
+              0.011882065429444822,
+              12.407532649287113
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2021-06",
+            "effective_sample_size": [
+              29.999999999994543,
+              0.0,
+              8.421735114635691
+            ],
+            "posterior_mass": [
+              29.999992002663745,
+              1.573952148494677e-18,
+              7.99733625462575e-06
+            ],
+            "supported_regimes": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2021-07",
+            "effective_sample_size": [
+              30.41753081721919,
+              2.148618721860552,
+              3.8455954999262154
+            ],
+            "posterior_mass": [
+              29.465557132893547,
+              1.6589066955169139e-06,
+              1.534441208199755
+            ],
+            "supported_regimes": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2021-08",
+            "effective_sample_size": [
+              5.115983336077007,
+              6.152329564241229,
+              28.19635463716727
+            ],
+            "posterior_mass": [
+              3.2702303997992295,
+              2.51505056172343,
+              25.214719038477334
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "completed_return_month": "2021-09",
+            "effective_sample_size": [
+              10.474472966111405,
+              3.9835492560996775,
+              22.474741269615578
+            ],
+            "posterior_mass": [
+              8.929571951288658,
+              0.5921043427764507,
+              20.478323705934883
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "completed_return_month": "2021-10",
+            "effective_sample_size": [
+              6.857511697254909,
+              18.564219552208638,
+              12.33980468829367
+            ],
+            "posterior_mass": [
+              5.172916804659724,
+              17.13545398956397,
+              8.691629205776298
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2021-11",
+            "effective_sample_size": [
+              3.6693439074139538,
+              16.816244957820032,
+              17.800253817494976
+            ],
+            "posterior_mass": [
+              0.28117130780915395,
+              14.534169270920303,
+              15.184659421270538
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2021-12",
+            "effective_sample_size": [
+              27.52456404325727,
+              3.92963630715551,
+              5.347830590930724
+            ],
+            "posterior_mass": [
+              26.67269747401882,
+              0.0014428402365883751,
+              4.325859685744583
+            ],
+            "supported_regimes": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2022-01",
+            "effective_sample_size": [
+              30.999989839670462,
+              0.0,
+              6.841274915603128
+            ],
+            "posterior_mass": [
+              30.990558651274718,
+              9.343583428536612e-11,
+              0.00944134863184978
+            ],
+            "supported_regimes": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2022-02",
+            "effective_sample_size": [
+              27.996285609840672,
+              0.0,
+              9.435899058982447
+            ],
+            "posterior_mass": [
+              27.77193723223902,
+              1.287984328667833e-08,
+              0.2280627548811314
+            ],
+            "supported_regimes": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2022-03",
+            "effective_sample_size": [
+              25.220841758383255,
+              1.726464226660972,
+              9.099067704162728
+            ],
+            "posterior_mass": [
+              23.69080690174677,
+              0.0016237269839737914,
+              7.307569371269253
+            ],
+            "supported_regimes": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2022-04",
+            "effective_sample_size": [
+              17.834967113344824,
+              3.578088373923007,
+              22.779692008791038
+            ],
+            "posterior_mass": [
+              12.187942758187413,
+              0.06549798526023344,
+              17.74655925655235
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2022-05",
+            "effective_sample_size": [
+              30.89664117659304,
+              1.4515016061333261,
+              2.5924338625145698
+            ],
+            "posterior_mass": [
+              30.467654442313897,
+              1.292149970617687e-06,
+              0.5323442655361331
+            ],
+            "supported_regimes": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2022-06",
+            "effective_sample_size": [
+              29.999995412496123,
+              0.0,
+              4.905696251053181
+            ],
+            "posterior_mass": [
+              29.994813951757564,
+              3.821536235124502e-12,
+              0.005186048238605843
+            ],
+            "supported_regimes": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2022-07",
+            "effective_sample_size": [
+              30.999999073492635,
+              0.0,
+              5.312012484927067
+            ],
+            "posterior_mass": [
+              30.99756311153247,
+              3.969691398998946e-13,
+              0.002436888467130863
+            ],
+            "supported_regimes": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2022-08",
+            "effective_sample_size": [
+              30.790227650068196,
+              0.0,
+              4.589641072486307
+            ],
+            "posterior_mass": [
+              29.968808436916387,
+              5.77038113344429e-08,
+              1.0311915053798002
+            ],
+            "supported_regimes": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2022-09",
+            "effective_sample_size": [
+              29.99994756620318,
+              0.0,
+              7.616669102393555
+            ],
+            "posterior_mass": [
+              29.97688190478139,
+              3.3437935730202633e-10,
+              0.023118094884227634
+            ],
+            "supported_regimes": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2022-10",
+            "effective_sample_size": [
+              25.140328019653296,
+              3.0556065213326384,
+              11.488213896287306
+            ],
+            "posterior_mass": [
+              22.620572455855548,
+              0.0007360545581964614,
+              8.37869148958625
+            ],
+            "supported_regimes": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2022-11",
+            "effective_sample_size": [
+              21.987731899193506,
+              4.037701550986282,
+              9.41459797309287
+            ],
+            "posterior_mass": [
+              21.30404476600836,
+              0.013062093903978238,
+              8.682893140087659
+            ],
+            "supported_regimes": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2022-12",
+            "effective_sample_size": [
+              28.30050863632108,
+              2.95275163790429,
+              14.832573787644622
+            ],
+            "posterior_mass": [
+              23.923112104637557,
+              9.964675278196407e-05,
+              7.076788248609657
+            ],
+            "supported_regimes": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2023-01",
+            "effective_sample_size": [
+              3.2519898673108933,
+              16.810179044095005,
+              14.72352603699023
+            ],
+            "posterior_mass": [
+              1.4921160651834287,
+              16.266793866951634,
+              13.241090067864937
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2023-02",
+            "effective_sample_size": [
+              5.418027599313941,
+              26.17901441143647,
+              9.75739694600199
+            ],
+            "posterior_mass": [
+              0.0003079867491660239,
+              23.47258703934453,
+              4.527104973906301
+            ],
+            "supported_regimes": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2023-03",
+            "effective_sample_size": [
+              2.4583264340430904,
+              18.663864677610423,
+              22.55455848518884
+            ],
+            "posterior_mass": [
+              0.3717016512677922,
+              13.425853196994089,
+              17.202445151738118
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2023-04",
+            "effective_sample_size": [
+              4.114057635116486,
+              28.311009374354278,
+              7.574651238789235
+            ],
+            "posterior_mass": [
+              0.00010227263639529639,
+              26.27078590978618,
+              3.7291118175774254
+            ],
+            "supported_regimes": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2023-05",
+            "effective_sample_size": [
+              8.948317955320448,
+              8.928415411576307,
+              27.976171268875063
+            ],
+            "posterior_mass": [
+              0.13950183069835836,
+              5.381433427062036,
+              25.479064742239604
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "completed_return_month": "2023-06",
+            "effective_sample_size": [
+              7.348462452574471,
+              8.27841036724514,
+              27.46172557538453
+            ],
+            "posterior_mass": [
+              0.06217068944248162,
+              4.749726254142302,
+              25.188103056415216
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "completed_return_month": "2023-07",
+            "effective_sample_size": [
+              6.927143614213688,
+              21.88740069671085,
+              15.65606349416714
+            ],
+            "posterior_mass": [
+              0.0011962540143924424,
+              18.76793513663346,
+              12.230868609352141
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2023-08",
+            "effective_sample_size": [
+              9.814520823944788,
+              11.072610311382151,
+              30.58377755140542
+            ],
+            "posterior_mass": [
+              2.494009340964044,
+              0.9491367164681065,
+              27.556853942567848
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "completed_return_month": "2023-09",
+            "effective_sample_size": [
+              9.374397719717763,
+              8.352354974677946,
+              29.633905661054385
+            ],
+            "posterior_mass": [
+              2.112059907878464,
+              0.06879702609089518,
+              27.819143066030637
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "completed_return_month": "2023-10",
+            "effective_sample_size": [
+              6.228430634158413,
+              17.30941592921873,
+              21.25787706397293
+            ],
+            "posterior_mass": [
+              0.008558037333786607,
+              13.3997348413286,
+              17.59170712133761
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2023-11",
+            "effective_sample_size": [
+              0.0,
+              29.999989394297025,
+              8.762696041546837
+            ],
+            "posterior_mass": [
+              1.6712727154888548e-09,
+              29.98854661724783,
+              0.01145338108089071
+            ],
+            "supported_regimes": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2023-12",
+            "effective_sample_size": [
+              0.0,
+              30.999997938736264,
+              7.643205778524434
+            ],
+            "posterior_mass": [
+              5.592814060631239e-10,
+              30.995427910553573,
+              0.0045720888871444805
+            ],
+            "supported_regimes": [
+              false,
+              true,
+              false
+            ]
+          }
+        ]
+      },
+      {
+        "initial_policy_holdings": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "name": "corrected_reused_oos",
+        "rows": 514,
+        "terminal_W_maximum_error": 2.220446049250313e-16,
+        "terminal_W_sha256": "daf0a401cd2aec85cacf394cad27b7a4d7b6f14cda33970151b6168d11cf6677",
+        "trust_carried_from_previous_period": true,
+        "trust_updates": [
+          {
+            "completed_return_month": "2024-01",
+            "effective_sample_size": [
+              5.451004018235317,
+              19.980095242988938,
+              16.114489790127045
+            ],
+            "posterior_mass": [
+              0.014467031128359294,
+              17.490097353076983,
+              13.495435615794642
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2024-02",
+            "effective_sample_size": [
+              5.855674021160909,
+              22.465654041229026,
+              8.673904461884812
+            ],
+            "posterior_mass": [
+              0.005376123519139608,
+              21.445383609843148,
+              7.54924026663771
+            ],
+            "supported_regimes": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2024-03",
+            "effective_sample_size": [
+              0.0,
+              30.999990030245414,
+              5.942943856515464
+            ],
+            "posterior_mass": [
+              2.232598667735885e-09,
+              30.991440685647877,
+              0.008559312119528798
+            ],
+            "supported_regimes": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2024-04",
+            "effective_sample_size": [
+              7.470958637299714,
+              18.254892760210204,
+              17.822279239001283
+            ],
+            "posterior_mass": [
+              0.003965693812110265,
+              15.22625582299151,
+              14.769778483196372
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2024-05",
+            "effective_sample_size": [
+              7.25134443832341,
+              11.301947529155026,
+              30.919973820414388
+            ],
+            "posterior_mass": [
+              0.18842075807681402,
+              1.217805282686588,
+              29.593773959236586
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "completed_return_month": "2024-06",
+            "effective_sample_size": [
+              6.115388705714426,
+              8.68873140363454,
+              29.469323092981107
+            ],
+            "posterior_mass": [
+              0.23550208833295427,
+              2.4203149583417463,
+              27.34418295332529
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "completed_return_month": "2024-07",
+            "effective_sample_size": [
+              10.744724831950002,
+              6.059771275542899,
+              26.287363324124602
+            ],
+            "posterior_mass": [
+              7.2145596984907865,
+              1.9283019664532461,
+              21.857138335055954
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "completed_return_month": "2024-08",
+            "effective_sample_size": [
+              20.691947199713745,
+              1.7347626165148824,
+              27.28001962731922
+            ],
+            "posterior_mass": [
+              10.686487252905712,
+              0.042513653933749264,
+              20.27099909316054
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "completed_return_month": "2024-09",
+            "effective_sample_size": [
+              8.928699974386289,
+              4.6754323068742645,
+              28.84653922386855
+            ],
+            "posterior_mass": [
+              2.878521156883892,
+              1.7255211757907891,
+              25.395957667325305
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "completed_return_month": "2024-10",
+            "effective_sample_size": [
+              11.824975625826864,
+              18.084846289209658,
+              25.250551410297465
+            ],
+            "posterior_mass": [
+              0.004432724708790071,
+              11.188590289528097,
+              19.806976985763104
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2024-11",
+            "effective_sample_size": [
+              4.076795242787731,
+              28.598569638026323,
+              5.7030060754192995
+            ],
+            "posterior_mass": [
+              0.00010479277816184277,
+              27.094213018633397,
+              2.9056821885884374
+            ],
+            "supported_regimes": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2024-12",
+            "effective_sample_size": [
+              2.420814139302536,
+              30.811671339111797,
+              3.053034086504778
+            ],
+            "posterior_mass": [
+              4.147321966103678e-06,
+              30.219126433193647,
+              0.7808694194843787
+            ],
+            "supported_regimes": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2025-01",
+            "effective_sample_size": [
+              6.619731600536475,
+              28.369088946674704,
+              13.722391626755991
+            ],
+            "posterior_mass": [
+              0.00027014932544763376,
+              24.38275372385675,
+              6.616976126817802
+            ],
+            "supported_regimes": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2025-02",
+            "effective_sample_size": [
+              2.6464416444665604,
+              4.337892015209563,
+              26.179033969848508
+            ],
+            "posterior_mass": [
+              1.6147366008148776,
+              2.0452081413753094,
+              24.3400552578098
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "completed_return_month": "2025-03",
+            "effective_sample_size": [
+              29.156633542440296,
+              3.445031818989562,
+              18.11396435616344
+            ],
+            "posterior_mass": [
+              23.880945629489172,
+              0.00012844577259532851,
+              7.118925924738231
+            ],
+            "supported_regimes": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "completed_return_month": "2025-04",
+            "effective_sample_size": [
+              14.518731744628711,
+              4.749930759797808,
+              26.67741946696124
+            ],
+            "posterior_mass": [
+              7.752014009351263,
+              1.6268965616239162,
+              20.621089429024824
+            ],
+            "supported_regimes": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "completed_return_month": "2025-05",
+            "effective_sample_size": [
+              3.313007220106992,
+              26.60915993471329,
+              7.338937579631423
+            ],
+            "posterior_mass": [
+              0.0005038830849643886,
+              24.642476692664737,
+              3.357019424250301
+            ],
+            "supported_regimes": [
+              false,
+              true,
+              false
+            ]
+          }
+        ]
+      }
+    ],
+    "policy_registry": [
+      "cash",
+      "buy_and_hold",
+      "trend",
+      "volatility_target",
+      "drawdown_control",
+      "specialist_atp"
+    ],
+    "production_admission_mask": [
+      true,
+      true,
+      false,
+      false,
+      false,
+      false
+    ],
+    "q_used_in_W_updates_prompts_retrieval": "ORIGINAL_UNCHANGED",
+    "regime_order": [
+      "bear",
+      "bull",
+      "mix"
+    ],
+    "scope": "ALLOCATION_COMPONENT_INTERVENTION_WITH_COMMON_HISTORICAL_POLICY_WEIGHT_STREAM",
+    "status": "EXACT_FROZEN_CORE_RECONSTRUCTED",
+    "uniform_allocator": "Replace q only in q@W@e with [1/3,1/3,1/3]; historical W stream unchanged"
+  },
+  "corrections_declared": {
+    "credit_label": "counterfactual advantage of the taken action over the unchanged core, projected from the arm's own pre-trade holdings",
+    "everything_else": "UNCHANGED_FROM_STAGE64",
+    "retrieval": "k nearest completed episodes per action instead of k nearest overall"
+  },
+  "created_at": "2026-09-21T04:41:09+00:00",
+  "experiment_id": "RAMAS_STAGE8_CORRECTED_MEMORY_V1",
+  "full_rows": 1608,
+  "runtime": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "python": "3.11.9"
+  },
+  "source_input_audit": {
+    "archived_agent_seed_reused": false,
+    "archived_state_reconstruction": {
+      "archived_decisions_or_responses_returned_to_new_arms": false,
+      "archived_portfolio_state_reconstructed_for_audit_only": true,
+      "archived_requests_verified": 1608,
+      "archived_response_digests_verified": 1608,
+      "archived_risk_previews_reconstructed": 4824,
+      "exogenous_state_allowlist": [
+        "decision_date",
+        "target_return_date",
+        "prob_bear",
+        "prob_bull",
+        "prob_mix",
+        "hard_regime",
+        "base_ramoe_desired_exposure",
+        "return_1",
+        "return_7",
+        "return_30",
+        "return_90",
+        "realized_vol_30",
+        "drawdown_90",
+        "router_entropy",
+        "router_confidence",
+        "router_transition_l1"
+      ],
+      "maximum_accounting_absolute_difference": 1.960237527853792e-16,
+      "maximum_risk_preview_absolute_difference": 2.220446049250313e-16,
+      "maximum_state_absolute_difference": 0.0,
+      "numeric_tolerance": 1e-10
+    },
+    "base_config_sha256": "06b6516a190572d8f7edeb01404a817a931078aed9fe7f4599715cd97d12e6a3",
+    "base_manifest_files": {
+      "ARCHITECTURE.md": "3e5e6aecd0ae54c4fd5916576a207178e7a1277a80cab7dc83721d10454cb84e",
+      "LOCAL_VALIDATION_RECORD.json": "f7ee7487abe010dfb3ec4d875e5563e186defaddb9e3c078c976b4643b8c8a24",
+      "README.md": "6a5eaf4ecfc74c09a2d461fb4f18f4fcd65c7329b342f03458c716095b6da766",
+      "REPAIR_FINDING.md": "82df2f12f1e70ebd936908784ee9c25246930502fb012a19a077ad8e26d7f755",
+      "SCIENTIFIC_METHOD.md": "2e9209b3f50e90f73663712988766dc5e26d2f3833460e9ffc96549b54396f7e",
+      "config.json": "06b6516a190572d8f7edeb01404a817a931078aed9fe7f4599715cd97d12e6a3",
+      "requirements.txt": "c2824d7fcd021081b9e5479a15769173e3917280726afbc1246b0137d5818964",
+      "run_real_adapter.py": "2e4c7a4ea3bc2e8b9f01ed807164485b28106a4e77d90e5d92bee4a99488dd5a",
+      "run_server.sh": "2563c08965b6470d2e992d1bb0e3c30d5591f68b9b722192c07ac6a46f73e78b",
+      "src/__init__.py": "79dfaf24e6bfe56a75745a751eabf32e1ff51ad407d6c6f2bccf948f74494919",
+      "src/accounting.py": "18237271f352d8f83e8a89685dd53ff44b9420c2ec09f91ff72d59859e4b7510",
+      "src/core.py": "d39a682b56a04fd55acf5de14aece3024d0451ed360e109609be15ac087e6f62",
+      "src/fixture.py": "40f8098cc556dc3f8b87094745eeaf93f984862cea272bc3a28db9b9ff688353",
+      "src/real_data.py": "bdcc3675e375d3730e5d2ad37cbf8d5180503b667b04e55b69f0c13d72680a1c",
+      "src/risk.py": "e85fe886c7cf39cf4893c4ef48d1eb14f45de2d1b9a5544217057824839e2e9d",
+      "src/router.py": "877163bc471aabc6dd69a539eeadfe5a1b320647fa4c864995f904ff978fe8d0",
+      "src/simulator.py": "73f7f1f98e8e86cb54cee394c5f6adbbc1da4a1c0a1531bafe767e2ddfbc45cd",
+      "src/statistics.py": "ce98d549349e871a7ac0ed0991634f28460eec4daf4ce1a2a8f1b87d5cf1d536",
+      "src/trust.py": "443801093a0b5735af32c67884edd56fb9fad509ecb3f88678aa5d23c1b93220",
+      "tests/run_all.py": "e1dd2d35af7b7068614bea7ff7f573c23e6713a28f066264db55b9a89ac91aba",
+      "tests/test_contract.py": "8752095daa123a7f74157f366695ac5a4c1ea508e10b865e9a3d17368f89e8dc",
+      "tests/test_real_data_adapter.py": "46b1bd0b9039c0303570ad2a4b882b9ede7f86593c3973bf1e9bf94d49bcaaff",
+      "tests/test_risk_accounting.py": "e788ab535725ce2fb0c733f87ad22f55dd658969817fb6da981bf08966fed7bc",
+      "tests/test_router.py": "c73cd63c5e7337d6b31f21a84d84817fce3f905072fa18f463fc120e2adb4144",
+      "tests/test_simulator.py": "d4f87e242a20759c2a03340dc4a8bd821ab0a3996c13310046fba8d746f80591",
+      "tests/test_statistics.py": "ade084573ff416a5f4c3235ca5b1356b92a8513caf30fe0609d07b0b7be6fbed",
+      "tests/test_trust.py": "692238f852a9662898b34d68e487142766a6f9bc8f61dfa3bddae9489c457a95",
+      "validate_pipeline.py": "cd3a4cbdde52d67c9630c4ce703b87a2e120e8444cb53d49bd31ce4b137c492a"
+    },
+    "base_manifest_provenance_limit": "The original Stage 6.1 output did not independently pin the base manifest. Its present manifest is verified and recorded; all original numeric risk previews and portfolio returns are reconstructed before new model calls.",
+    "base_manifest_sha256": "cd672e46ae0874127f9495148641f19fb3c174228ffb7001b65b6903ecc40f24",
+    "corrected_period_identity_checks": {
+      "corrected_pre2024": {
+        "base_trace_sha256": "6ee5601739cdd9115e59c1b4b98d25b737e05ef38852bf72a1ff39958978f0cd",
+        "corrected_inputs_sha256": "857896787ee9e6a2b18d4457d151993334855f1f58eb4ab6a0ede4367ef8871f"
+      },
+      "corrected_reused_oos": {
+        "base_trace_sha256": "2f97938e94c358e6067f803b4a96d903527a82b24634e7ab96b23a51a5448760",
+        "corrected_inputs_sha256": "4f70865bb75700a75c8738b9279d73b5ea8c9d09c4ebdb15fa72162ac7f29764"
+      }
+    },
+    "corrected_source_run": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z",
+    "frozen_base_source": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/base_source/LEADER_TRUSTED_ROUTER_EVIDENCE_WEIGHTED_TRUST_V1",
+    "legacy_control_2024_boundary_seam": "PRESERVED_AS_COMMON_REFERENCE; NOT_REPAIRED_IN_THIS_MATCHED_TEST",
+    "maximum_raw_return_clock_difference": 1.0061396160665481e-16,
+    "new_arms_have_independent_empty_initial_memory": true,
+    "old_responses_used_for_new_decisions": false,
+    "period": {
+      "first_decision_date": "2021-01-01",
+      "last_return_date": "2025-05-28",
+      "market_features": {
+        "feature_columns": [
+          "return_1",
+          "return_7",
+          "return_30",
+          "return_90",
+          "realized_vol_30",
+          "drawdown_90",
+          "router_entropy",
+          "router_confidence",
+          "router_transition_l1"
+        ],
+        "future_price_used": false,
+        "latest_price_dates_equal_decision_dates": true
+      },
+      "periods": [
+        {
+          "base_trace_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/results/corrected_pre2024/03_TRUSTED_ROUTER_TRACE.csv",
+          "base_trace_sha256": "6ee5601739cdd9115e59c1b4b98d25b737e05ef38852bf72a1ff39958978f0cd",
+          "corrected_inputs_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/results/corrected_pre2024/02_CORRECTED_INPUTS.csv",
+          "corrected_inputs_sha256": "857896787ee9e6a2b18d4457d151993334855f1f58eb4ab6a0ede4367ef8871f",
+          "first_decision_date": "2021-01-01",
+          "last_return_date": "2023-12-31",
+          "name": "corrected_pre2024",
+          "rows": 1094,
+          "scientific_label": "DEVELOPMENT_AND_WALK_FORWARD_EVIDENCE"
+        },
+        {
+          "base_trace_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/results/corrected_reused_oos/03_TRUSTED_ROUTER_TRACE.csv",
+          "base_trace_sha256": "2f97938e94c358e6067f803b4a96d903527a82b24634e7ab96b23a51a5448760",
+          "corrected_inputs_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/results/corrected_reused_oos/02_CORRECTED_INPUTS.csv",
+          "corrected_inputs_sha256": "4f70865bb75700a75c8738b9279d73b5ea8c9d09c4ebdb15fa72162ac7f29764",
+          "first_decision_date": "2023-12-31",
+          "last_return_date": "2025-05-28",
+          "name": "corrected_reused_oos",
+          "rows": 514,
+          "scientific_label": "REUSED_OOS_DIAGNOSTIC_NOT_UNTOUCHED_CONFIRMATION"
+        }
+      ],
+      "risk_scenarios": {
+        "first_latest_return_date_used": "2021-01-01",
+        "future_return_used": false,
+        "last_latest_return_date_used": "2025-05-27",
+        "past_only_windows": [
+          30,
+          90,
+          252
+        ],
+        "quantile_samples": 251
+      },
+      "rows": 1608,
+      "strictly_continuous_calendar": true
+    },
+    "project_root": "/home/infonet/wahid/leader_router_fresh",
+    "raw_market": {
+      "date_max": "2025-05-28",
+      "date_min": "2015-01-01",
+      "full_file_rows": 3804,
+      "future_value_sent_to_llama": false,
+      "path": "/home/infonet/wahid/projects/leader_fresh/full_data_set/full_data_set.csv",
+      "post2021_market_values_parsed": true,
+      "rows_parsed_for_replay": 3801,
+      "sha256": "b69f17a1233a58c3e0c7d6289fc5bf79173aae471a31074cf17cfffbc8198e7e"
+    },
+    "source_artifact_sha256": {
+      "00_CONTRACT.json": "f78e5836b992ce0ad38a734637fa47ef464f7bd35511bbf7039dd145d7aeb7ec",
+      "01_SOURCE_AND_SEED_AUDIT.json": "2aa08e1fa0da8eea222e16af4b0cacb37cc24c4ce6c74f89be18bb029873ba42",
+      "02_SEMANTIC_PREFLIGHT.json": "96f263224e3d7641db4dbe4af16b3c5636ad0fb9d14a2f28306a1f24a847ea13",
+      "03_DAILY_TRACE.csv": "c645ed5014e0adf53c73fcedb9c6bdd18b234b067f2eb94c9ed4423e1f77d9b5",
+      "04_FULL_HORIZON_METRICS.csv": "702fd4dded29423c544fba4f6bd4109d885460948bdb56d43e0fe5a4b0ab31ed",
+      "05_YEARLY_METRICS.csv": "95855cb72dd14c95cd46ad07c13977ac3af78060a9ae4452fe5bde694d4a5594",
+      "06_PRE_AGENT_RAMOE_COMPARATIVE_FINDINGS.csv": "c42ed2a51de80ec64063219fc90ef29f5a68ef9329833ae1b90fa339b5b2b954",
+      "07_TECHNICAL_DIAGNOSTICS.json": "be7f76e6cab3d6ab8233e976de4c9814837fab35dcc30b54aca9dc359a240a9f",
+      "08_LLM_CALLS.jsonl": "0c9239418e6cd22e868c9048dedf52bec839040fd3092c71e8a8e69ece31e022",
+      "09_MEMORY_EPISODES.jsonl": "85b6b0e0577685c03d07b9eecd85f4f8268fba7078b38a942eadbf624cc400da",
+      "10_TRUST_STATE.json": "5fec524e450843dcb0d0ff09bb3b3b6eb5f00f16d2b91c31023ca28e63ac87b6",
+      "11_FINAL_RESEARCH_STATUS.json": "7d766842ad76f28901c108a3371c8a069f3ffc2cfe1fecdbde506fd0bf6e94e2",
+      "12_PLAIN_ENGLISH_REPORT.md": "09c86a92d25e5131a2be7fc798cc003b390a22e73359770ecf1dc37fd9ad4aa6"
+    },
+    "source_audit_sha256": "2aa08e1fa0da8eea222e16af4b0cacb37cc24c4ce6c74f89be18bb029873ba42",
+    "source_complete_sha256": "7f2caecb476d77394cc004f937e9bc774596f5b492cc6e6f52011954db4e7e93",
+    "source_result": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_1_LLAMA70B_CONTINUOUS_MEMORY_AGENT_EXPERT_V1/artifacts/20260907T012534Z/continuous_2021_2025",
+    "source_run_id": "20260907T012534Z",
+    "status": "VERIFIED_BEFORE_NEW_LLM_CALLS",
+    "strict_next_day_return_clock": true,
+    "system_prompt_sha256": "6b99d1922bf13d280e23c4f62bf82d3dbea2c2032f00be6208a83d8e5bb86783",
+    "upstream_router_training_provenance": "INHERITED_FROZEN_SOURCE; NOT_RETRAINED_OR_INDEPENDENTLY_REAUDITED",
+    "vendor_config_sha256": "dace37cf72659b667a917b671fcab75ddcee0307da054e5434044c2199203e34"
+  },
+  "stage64_manifest_sha256": "6a03c967673f6f2e98fd8134910a9a8231d0b9fb578bc1aa2615c9c18bf9da0b",
+  "stage64_root": "/home/infonet/wahid/leader_router_fresh/RAMAS_STAGE6_4_COMPONENT_SUITE_V1",
+  "status": "PASS_NO_MODEL_INFERENCE"
+}

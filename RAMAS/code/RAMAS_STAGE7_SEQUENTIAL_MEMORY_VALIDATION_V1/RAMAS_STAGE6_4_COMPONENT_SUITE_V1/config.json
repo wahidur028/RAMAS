@@ -1,0 +1,156 @@
+{
+  "experiment_id": "RAMAS_STAGE6_4_COMPONENT_SUITE_V1",
+  "scientific_scope": "LEGACY_MECHANISM_DIAGNOSTIC_NOT_REALISTIC_EXECUTION_OR_FRESH_OOS_CONFIRMATION",
+  "cost_rate": 0.001,
+  "cash_daily_return": 0.0,
+  "variants": [
+    {
+      "name": "rule_fixed",
+      "advisor": "rule",
+      "trust": "fixed",
+      "memory": "none",
+      "core": "original",
+      "risk": "standard",
+      "fixed_beta": 0.05
+    },
+    {
+      "name": "rule_adaptive",
+      "advisor": "rule",
+      "trust": "adaptive",
+      "memory": "none",
+      "core": "original",
+      "risk": "standard",
+      "fixed_beta": 0.05
+    },
+    {
+      "name": "numerical_only",
+      "advisor": "abstain",
+      "trust": "fixed",
+      "memory": "none",
+      "core": "original",
+      "risk": "standard",
+      "fixed_beta": 0.05
+    },
+    {
+      "name": "numerical_hard_allocator",
+      "advisor": "abstain",
+      "trust": "fixed",
+      "memory": "none",
+      "core": "hard_allocator",
+      "risk": "standard",
+      "fixed_beta": 0.05
+    },
+    {
+      "name": "numerical_uniform_allocator",
+      "advisor": "abstain",
+      "trust": "fixed",
+      "memory": "none",
+      "core": "uniform_allocator",
+      "risk": "standard",
+      "fixed_beta": 0.05
+    },
+    {
+      "name": "numerical_frozen_W",
+      "advisor": "abstain",
+      "trust": "fixed",
+      "memory": "none",
+      "core": "frozen_W",
+      "risk": "standard",
+      "fixed_beta": 0.05
+    },
+    {
+      "name": "numerical_no_risk",
+      "advisor": "abstain",
+      "trust": "fixed",
+      "memory": "none",
+      "core": "original",
+      "risk": "none",
+      "fixed_beta": 0.05
+    },
+    {
+      "name": "llama_hard_allocator",
+      "advisor": "llama",
+      "trust": "adaptive",
+      "memory": "expanding",
+      "core": "hard_allocator",
+      "risk": "standard",
+      "fixed_beta": 0.05
+    },
+    {
+      "name": "llama_uniform_allocator",
+      "advisor": "llama",
+      "trust": "adaptive",
+      "memory": "expanding",
+      "core": "uniform_allocator",
+      "risk": "standard",
+      "fixed_beta": 0.05
+    },
+    {
+      "name": "llama_frozen_W",
+      "advisor": "llama",
+      "trust": "adaptive",
+      "memory": "expanding",
+      "core": "frozen_W",
+      "risk": "standard",
+      "fixed_beta": 0.05
+    },
+    {
+      "name": "llama_no_risk",
+      "advisor": "llama",
+      "trust": "adaptive",
+      "memory": "expanding",
+      "core": "original",
+      "risk": "none",
+      "fixed_beta": 0.05
+    },
+    {
+      "name": "llama_memory_frozen2021",
+      "advisor": "llama",
+      "trust": "adaptive",
+      "memory": "frozen2021",
+      "core": "original",
+      "risk": "standard",
+      "fixed_beta": 0.05
+    },
+    {
+      "name": "llama_memory_current_year",
+      "advisor": "llama",
+      "trust": "adaptive",
+      "memory": "current_year",
+      "core": "original",
+      "risk": "standard",
+      "fixed_beta": 0.05
+    },
+    {
+      "name": "llama_memory_pooled",
+      "advisor": "llama",
+      "trust": "adaptive",
+      "memory": "pooled",
+      "core": "original",
+      "risk": "standard",
+      "fixed_beta": 0.05
+    }
+  ],
+  "primary_contrast": [
+    "fixed_memory",
+    "rule_fixed"
+  ],
+  "analysis": {
+    "primary": "POST2021_MEAN_DAILY_NET_LOG_RETURN_FIXED_MEMORY_MINUS_RULE_FIXED",
+    "bootstrap_resamples": 5000,
+    "block_days": 30,
+    "seed": 16062
+  },
+  "source_config": "source_config.json",
+  "fixed_reference_relative": "EXPERIMENT_BRANCHES/RAMAS_STAGE6_3_LLAMA70B_FIXED_TRUST_MEMORY_ABLATION_V1/artifacts/20260909T013716356200839Z",
+  "expected_fixed_trace_sha256": "91c5560294c3ca161f6196452dc7021a028b71a330503e9abba25ee4116af134",
+  "expected_fixed_complete_sha256": "b1e5ac3b898de5b3616ffab76746ef6deee72da2e8015177d69168f0d9cb6cd0",
+  "modes": [
+    "archive",
+    "numeric",
+    "full"
+  ],
+  "default_mode": "full",
+  "q_intervention_scope": "ALLOCATION_ONLY_COMMON_ARCHIVED_W_PROMPT_Q_UNCHANGED",
+  "archived_exact_request_cache": false
+}

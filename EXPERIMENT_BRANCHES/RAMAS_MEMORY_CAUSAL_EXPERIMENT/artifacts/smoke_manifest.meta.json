@@ -1,0 +1,31 @@
+{
+  "authority_modes": [
+    "adaptive",
+    "fixed"
+  ],
+  "causal_contract": {
+    "authority_pair": "adaptive/fixed rows must have identical prompt_sha256 for each memory condition",
+    "controller": "downstream replay; no controller state is changed by this runner",
+    "future_data": "return_date and asset_simple_return are reference metadata and never rendered in prompt",
+    "memory_writes": "forbidden; retrieved memories are read-only frozen inputs",
+    "within_state_memory_pair": "same visible_state_sha256; only retrieved episode block differs"
+  },
+  "created_at": "2026-09-15T08:45:47+00:00",
+  "expected_calls": 4,
+  "expected_states": 1,
+  "experiment": "RAMAS_state_controlled_episodic_memory_causal_experiment",
+  "manifest": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_MEMORY_CAUSAL_EXPERIMENT/artifacts/smoke_manifest.jsonl",
+  "manifest_sha256": "5c966cbe89d7b3547a9c5bb0a2c1c6ffbd3c859a97804c46678860555c61b54c",
+  "memory_conditions": [
+    "off",
+    "on"
+  ],
+  "memory_snapshot_sha256": null,
+  "model": "llama3.3:70b",
+  "pipeline_sha256": "683b849540b204b5957a490d3320b1fd7a8dbc9e67117fd02bdbc3c2bacf51db",
+  "pipeline_version": "1.12.3",
+  "script_version": "1.0.0",
+  "state_source": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_MEMORY_CAUSAL_EXPERIMENT/tools/ramas_state_snapshot_example.jsonl",
+  "state_source_sha256": "24f6f3ea6b7cbb2f13b393a5ffee76561dba9acdd23fd609143f2e027df62363",
+  "system_prompt_sha256": "63655ee242a5ec24284ec636a4e90e83af9beea2393d0f104d20d4b0d8c2ace3"
+}

@@ -1,0 +1,13 @@
+{
+  "base_config_sha256": "06b6516a190572d8f7edeb01404a817a931078aed9fe7f4599715cd97d12e6a3",
+  "base_dir": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/base_source/LEADER_TRUSTED_ROUTER_EVIDENCE_WEIGHTED_TRUST_V1",
+  "completed_at_utc": "2026-09-01T02:47:58.232577+00:00",
+  "experiment_id": "RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1",
+  "expert_changed": false,
+  "model_training_performed": false,
+  "package_config_sha256": "182b9a1f024d46babec497730aae14dd36ec71b5d1fc92c443ee41d772d8a5b4",
+  "project_root": "/home/infonet/wahid/leader_router_fresh",
+  "raw_dataset_path": "/home/infonet/wahid/projects/leader_fresh/full_data_set/full_data_set.csv",
+  "raw_dataset_sha256": "b69f17a1233a58c3e0c7d6289fc5bf79173aae471a31074cf17cfffbc8198e7e",
+  "router_changed": false
+}

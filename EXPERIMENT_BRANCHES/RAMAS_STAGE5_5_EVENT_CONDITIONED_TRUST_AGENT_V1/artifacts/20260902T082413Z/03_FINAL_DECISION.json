@@ -1,0 +1,11 @@
+{
+  "decision": "MECHANISM_PASS_AWAIT_POINT_IN_TIME_EVENT_DATA",
+  "economic_replay_run": false,
+  "economic_value_established": false,
+  "interface_preflight_passed": true,
+  "mechanism_tests_separate_from_economic_value": true,
+  "point_in_time_event_data_gate_passed": false,
+  "reused_oos_opened": false,
+  "risk_layer_bypass_permitted": false,
+  "router_changed": false
+}

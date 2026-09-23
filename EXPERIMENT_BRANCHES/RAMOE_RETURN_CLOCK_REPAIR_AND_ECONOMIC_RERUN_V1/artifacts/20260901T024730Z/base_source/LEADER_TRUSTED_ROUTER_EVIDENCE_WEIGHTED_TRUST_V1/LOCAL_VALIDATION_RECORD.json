@@ -1,0 +1,54 @@
+{
+  "experiment_id": "LEADER_TRUSTED_ROUTER_EVIDENCE_WEIGHTED_TRUST_V1",
+  "validation_date_utc": "2026-08-31",
+  "environment": {
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "code_validation": {
+    "python_compilation": "PASS",
+    "bash_syntax": "PASS",
+    "unit_tests_passed": 50,
+    "unit_tests_failed": 0,
+    "weighted_conditional_cvar_bounded_tested": true,
+    "posterior_mass_support_tested": true,
+    "effective_sample_support_tested": true,
+    "unsupported_row_exact_preservation_tested": true,
+    "dependent_block_bootstrap_tested": true,
+    "causal_clock_tested": true,
+    "stage0_admission_binding_tested": true,
+    "rejected_weight_exactly_zero": true
+  },
+  "mechanical_fixture_validation": {
+    "status": "PASS",
+    "independent_runs": 2,
+    "substantive_artifacts_identical": "7/7",
+    "deterministic_trust_audit": true,
+    "causal_future_invariance": true
+  },
+  "uploaded_real_input_trust_only_diagnostic": {
+    "scope": "risk_projection_disabled because server scenario cube was not present in the uploaded evidence",
+    "source_server_evidence_sha256": "fce89a6bed55e8d14be2712d13a056973d1926b2afafdca330fe50302f3166c7",
+    "source_real_router_inputs_sha256": "b639489ae7e766576152d0525912f9f6e8b9b4f69c9e4397b347b66e1b659cf4",
+    "rows": 1094,
+    "supported_regime_month_updates": 27,
+    "skipped_regime_month_updates": 81,
+    "maximum_repaired_tail_component": 0.14236221426848183,
+    "maximum_observed_daily_loss": 0.1556636495553839,
+    "router_terminal_growth": 0.4359575093509822,
+    "matched_exposure_terminal_growth": 0.38127232014986645,
+    "router_maximum_drawdown": 0.4617328401452758,
+    "matched_exposure_maximum_drawdown": 0.4596250695640708,
+    "one_sided_block_bootstrap_p_value": 0.14228577142285773,
+    "economic_gate_passed": false
+  },
+  "scientific_boundary": {
+    "full_server_risk_scenario_replay_completed_locally": false,
+    "specialist_training_performed": false,
+    "dqn_training_performed": false,
+    "stage0_rejection_overridden": false,
+    "economic_success_claimed": false
+  }
+}

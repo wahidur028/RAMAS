@@ -1,0 +1,1666 @@
+{
+  "adaptive_memory_call": {
+    "count": 1608,
+    "sample_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_2_LLAMA70B_MATCHED_MEMORY_ABLATION_V1/artifacts/20260908T055052711433762Z/calls/000001-memory.json",
+    "sample_shape": {
+      "identity": {
+        "config_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "64f8a64c2d40e2253ba2ed4c5b63be1952b4f6e074113d272b83673a5f579240"
+        },
+        "evidence_kind": {
+          "type": "string",
+          "length": 22,
+          "head": "RETROSPECTIVE_LLAMA70B"
+        },
+        "experiment_id": {
+          "type": "string",
+          "length": 50,
+          "head": "RAMAS_STAGE6_2_LLAMA70B_MATCHED_MEMORY_ABLATION_V1"
+        },
+        "numpy": {
+          "type": "string",
+          "length": 6,
+          "head": "1.26.4"
+        },
+        "package_manifest_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "d8ee5ef548621ccb32ace9c5eaac5cbf6579f3393cadd3b1ed26ea82e297449c"
+        },
+        "pandas": {
+          "type": "string",
+          "length": 5,
+          "head": "2.2.3"
+        },
+        "provider_identity": {
+          "details": {
+            "families": {
+              "type": "list",
+              "length": 1,
+              "first_item": {
+                "type": "str"
+              }
+            },
+            "family": {
+              "type": "string",
+              "length": 5,
+              "head": "llama"
+            },
+            "format": {
+              "type": "string",
+              "length": 4,
+              "head": "gguf"
+            },
+            "parameter_size": {
+              "type": "string",
+              "length": 5,
+              "head": "70.6B"
+            },
+            "parent_model": {
+              "type": "string",
+              "length": 0,
+              "head": ""
+            },
+            "quantization_level": {
+              "type": "string",
+              "length": 6,
+              "head": "Q4_K_M"
+            }
+          },
+          "model": {
+            "type": "string",
+            "length": 12,
+            "head": "llama3.3:70b"
+          },
+          "model_digest": {
+            "type": "string",
+            "length": 64,
+            "head": "a6eb4748fd2990ad2952b2335a95a7f952d1a06119a0aa6a2df6cd052a93a3fa"
+          },
+          "ollama_version": {
+            "type": "string",
+            "length": 6,
+            "head": "0.23.0"
+          },
+          "options": {
+            "num_ctx": {
+              "type": "int",
+              "value": 8192
+            },
+            "num_predict": {
+              "type": "int",
+              "value": 512
+            },
+            "seed": {
+              "type": "int",
+              "value": 16061
+            },
+            "temperature": {
+              "type": "float",
+              "value": 0.0
+            }
+          },
+          "serving_metadata_sha256": {
+            "type": "string",
+            "length": 64,
+            "head": "f731e05070648c6ae023793c866a34064f5d09cd34cd40b37529d50cca9e8d8d"
+          }
+        },
+        "python": {
+          "type": "string",
+          "length": 6,
+          "head": "3.11.9"
+        },
+        "source_audit_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "4d43ba772eced5ef441b78ce813372c8ee2260c6c34e3c25fcc245280bf191a6"
+        },
+        "system_prompt_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "6b99d1922bf13d280e23c4f62bf82d3dbea2c2032f00be6208a83d8e5bb86783"
+        }
+      },
+      "latency_seconds": {
+        "type": "float",
+        "value": 6.057807644829154
+      },
+      "provider_response": {
+        "created_at": {
+          "type": "string",
+          "length": 30,
+          "head": "2026-09-08T05:52:22.064443732Z"
+        },
+        "done": {
+          "type": "bool",
+          "value": true
+        },
+        "done_reason": {
+          "type": "string",
+          "length": 4,
+          "head": "stop"
+        },
+        "eval_count": {
+          "type": "int",
+          "value": 45
+        },
+        "eval_duration": {
+          "type": "int",
+          "value": 3339042205
+        },
+        "load_duration": {
+          "type": "int",
+          "value": 208587957
+        },
+        "message": {
+          "content": {
+            "type": "string",
+            "length": 130,
+            "head": "{\"action\": \"BTC\", \"confidence\": 0.9999999999994936, \"reason_codes\": [\"HIGH_VOLATILITY\", \"BULLISH_ROUTER\"], \"cited_memory_ids\": []}"
+          },
+          "role": {
+            "type": "string",
+            "length": 9,
+            "head": "assistant"
+          }
+        },
+        "model": {
+          "type": "string",
+          "length": 12,
+          "head": "llama3.3:70b"
+        },
+        "prompt_eval_count": {
+          "type": "int",
+          "value": 880
+        },
+        "prompt_eval_duration": {
+          "type": "int",
+          "value": 1681834118
+        },
+        "total_duration": {
+          "type": "int",
+          "value": 6055965057
+        }
+      },
+      "raw_response": {
+        "type": "string",
+        "length": 130,
+        "head": "{\"action\": \"BTC\", \"confidence\": 0.9999999999994936, \"reason_codes\": [\"HIGH_VOLATILITY\", \"BULLISH_ROUTER\"], \"cited_memory_ids\": []}"
+      },
+      "record_sha256": {
+        "type": "string",
+        "length": 64,
+        "head": "4ccf24c2eae350ea7b5e853ea830c78350252df919cd2aea3f2bec220f3aaa99"
+      },
+      "request": {
+        "constraints": {
+          "allowed_actions": {
+            "type": "list",
+            "length": 3,
+            "first_item": {
+              "type": "string",
+              "length": 3,
+              "head": "BTC"
+            }
+          },
+          "invalid_or_failed_response": {
+            "type": "string",
+            "length": 26,
+            "head": "ABSTAIN_TO_PRE_AGENT_RAMOE"
+          },
+          "leverage": {
+            "type": "bool",
+            "value": false
+          },
+          "shorting": {
+            "type": "bool",
+            "value": false
+          }
+        },
+        "memory": {
+          "similar_completed_episodes": {
+            "type": "list",
+            "length": 0
+          },
+          "summary": {
+            "type": "string",
+            "length": 29,
+            "head": "NO_COMPLETED_SIMILAR_EPISODES"
+          }
+        },
+        "objective": {
+          "type": "string",
+          "length": 80,
+          "head": "add incremental risk-adjusted value over the pre-agent RAMoE control after costs"
+        },
+        "safe_exposure_previews": {
+          "ABSTAIN": {
+            "ambiguity_cvar": {
+              "type": "float",
+              "value": 0.021029895938006405
+            },
+            "blended_desired_exposure": {
+              "type": "float",
+              "value": 0.5
+            },
+            "risk_limited_exposure": {
+              "type": "float",
+              "value": 0.35000000000000003
+            },
+            "turnover": {
+              "type": "float",
+              "value": 0.35000000000000003
+            }
+          },
+          "BTC": {
+            "ambiguity_cvar": {
+              "type": "float",
+              "value": 0.021029895938006405
+            },
+            "blended_desired_exposure": {
+              "type": "float",
+              "value": 0.525
+            },
+            "risk_limited_exposure": {
+              "type": "float",
+              "value": 0.35000000000000003
+            },
+            "turnover": {
+              "type": "float",
+              "value": 0.35000000000000003
+            }
+          },
+          "CASH": {
+            "ambiguity_cvar": {
+              "type": "float",
+              "value": 0.021029895938006405
+            },
+            "blended_desired_exposure": {
+              "type": "float",
+              "value": 0.475
+            },
+            "risk_limited_exposure": {
+              "type": "float",
+              "value": 0.35000000000000003
+            },
+            "turnover": {
+              "type": "float",
+              "value": 0.35000000000000003
+            }
+          }
+        },
+        "state": {
+          "base_ramoe_desired_exposure": {
+            "type": "float",
+            "value": 0.5
+          },
+          "decision_date": {
+            "type": "string",
+            "length": 10,
+            "head": "2021-01-01"
+          },
+          "drawdown_90": {
+            "type": "float",
+            "value": 0.0
+          },
+          "hard_regime": {
+            "type": "string",
+            "length": 4,
+            "head": "bull"
+          },
+          "llama_trust_beta": {
+            "type": "float",
+            "value": 0.05
+          },
+          "pretrade_exposure": {
+            "type": "float",
+            "value": 0.0
+          },
+          "prob_bear": {
+            "type": "float",
+            "value": 1.3822076509313222e-26
+          },
+          "prob_bull": {
+            "type": "float",
+            "value": 0.9999999999994936
+          },
+          "prob_mix": {
+            "type": "float",
+            "value": 5.062576835710512e-13
+          },
+          "realized_vol_30": {
+            "type": "float",
+            "value": 0.6240848493099234
+          },
+          "return_1": {
+            "type": "float",
+            "value": 0.014179913918768605
+          },
+          "return_30": {
+            "type": "float",
+            "value": 0.5276656190813163
+          },
+          "return_7": {
+            "type": "float",
+            "value": 0.1891606182360186
+          },
+          "return_90": {
+            "type": "float",
+            "value": 1.784459702964663
+          },
+          "router_confidence": {
+            "type": "float",
+            "value": 0.9999999999994936
+          },
+          "router_entropy": {
+            "type": "float",
+            "value": 1.3507407504563366e-11
+          },
+          "router_transition_l1": {
+            "type": "float",
+            "value": 0.0
+          },
+          "target_return_date": {
+            "type": "string",
+            "length": 10,
+            "head": "2021-01-02"
+          }
+        },
+        "task_type": {
+          "type": "string",
+          "length": 31,
+          "head": "historical_development_decision"
+        }
+      },
+      "request_sha256": {
+        "type": "string",
+        "length": 64,
+        "head": "2be31190bfa84c9ef0031736bd8dc7764cfc51ea404251cce77dd708e0507cf5"
+      },
+      "response_sha256": {
+        "type": "string",
+        "length": 64,
+        "head": "8f63ed91236235d9d2dd03dfdbb6fa2d0d144c2a774d3fbd6c7a275339931513"
+      }
+    }
+  },
+  "adaptive_no_memory_call": {
+    "count": 1608,
+    "sample_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_2_LLAMA70B_MATCHED_MEMORY_ABLATION_V1/artifacts/20260908T055052711433762Z/calls/000001-no_memory.json",
+    "sample_shape": {
+      "identity": {
+        "config_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "64f8a64c2d40e2253ba2ed4c5b63be1952b4f6e074113d272b83673a5f579240"
+        },
+        "evidence_kind": {
+          "type": "string",
+          "length": 22,
+          "head": "RETROSPECTIVE_LLAMA70B"
+        },
+        "experiment_id": {
+          "type": "string",
+          "length": 50,
+          "head": "RAMAS_STAGE6_2_LLAMA70B_MATCHED_MEMORY_ABLATION_V1"
+        },
+        "numpy": {
+          "type": "string",
+          "length": 6,
+          "head": "1.26.4"
+        },
+        "package_manifest_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "d8ee5ef548621ccb32ace9c5eaac5cbf6579f3393cadd3b1ed26ea82e297449c"
+        },
+        "pandas": {
+          "type": "string",
+          "length": 5,
+          "head": "2.2.3"
+        },
+        "provider_identity": {
+          "details": {
+            "families": {
+              "type": "list",
+              "length": 1,
+              "first_item": {
+                "type": "str"
+              }
+            },
+            "family": {
+              "type": "string",
+              "length": 5,
+              "head": "llama"
+            },
+            "format": {
+              "type": "string",
+              "length": 4,
+              "head": "gguf"
+            },
+            "parameter_size": {
+              "type": "string",
+              "length": 5,
+              "head": "70.6B"
+            },
+            "parent_model": {
+              "type": "string",
+              "length": 0,
+              "head": ""
+            },
+            "quantization_level": {
+              "type": "string",
+              "length": 6,
+              "head": "Q4_K_M"
+            }
+          },
+          "model": {
+            "type": "string",
+            "length": 12,
+            "head": "llama3.3:70b"
+          },
+          "model_digest": {
+            "type": "string",
+            "length": 64,
+            "head": "a6eb4748fd2990ad2952b2335a95a7f952d1a06119a0aa6a2df6cd052a93a3fa"
+          },
+          "ollama_version": {
+            "type": "string",
+            "length": 6,
+            "head": "0.23.0"
+          },
+          "options": {
+            "num_ctx": {
+              "type": "int",
+              "value": 8192
+            },
+            "num_predict": {
+              "type": "int",
+              "value": 512
+            },
+            "seed": {
+              "type": "int",
+              "value": 16061
+            },
+            "temperature": {
+              "type": "float",
+              "value": 0.0
+            }
+          },
+          "serving_metadata_sha256": {
+            "type": "string",
+            "length": 64,
+            "head": "f731e05070648c6ae023793c866a34064f5d09cd34cd40b37529d50cca9e8d8d"
+          }
+        },
+        "python": {
+          "type": "string",
+          "length": 6,
+          "head": "3.11.9"
+        },
+        "source_audit_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "4d43ba772eced5ef441b78ce813372c8ee2260c6c34e3c25fcc245280bf191a6"
+        },
+        "system_prompt_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "6b99d1922bf13d280e23c4f62bf82d3dbea2c2032f00be6208a83d8e5bb86783"
+        }
+      },
+      "latency_seconds": {
+        "type": "float",
+        "value": 4.419797861948609
+      },
+      "provider_response": {
+        "created_at": {
+          "type": "string",
+          "length": 30,
+          "head": "2026-09-08T05:52:26.769156397Z"
+        },
+        "done": {
+          "type": "bool",
+          "value": true
+        },
+        "done_reason": {
+          "type": "string",
+          "length": 4,
+          "head": "stop"
+        },
+        "eval_count": {
+          "type": "int",
+          "value": 45
+        },
+        "eval_duration": {
+          "type": "int",
+          "value": 3335400815
+        },
+        "load_duration": {
+          "type": "int",
+          "value": 200764235
+        },
+        "message": {
+          "content": {
+            "type": "string",
+            "length": 130,
+            "head": "{\"action\": \"BTC\", \"confidence\": 0.9999999999994936, \"reason_codes\": [\"HIGH_VOLATILITY\", \"BULLISH_ROUTER\"], \"cited_memory_ids\": []}"
+          },
+          "role": {
+            "type": "string",
+            "length": 9,
+            "head": "assistant"
+          }
+        },
+        "model": {
+          "type": "string",
+          "length": 12,
+          "head": "llama3.3:70b"
+        },
+        "prompt_eval_count": {
+          "type": "int",
+          "value": 880
+        },
+        "prompt_eval_duration": {
+          "type": "int",
+          "value": 75680765
+        },
+        "total_duration": {
+          "type": "int",
+          "value": 4418006272
+        }
+      },
+      "raw_response": {
+        "type": "string",
+        "length": 130,
+        "head": "{\"action\": \"BTC\", \"confidence\": 0.9999999999994936, \"reason_codes\": [\"HIGH_VOLATILITY\", \"BULLISH_ROUTER\"], \"cited_memory_ids\": []}"
+      },
+      "record_sha256": {
+        "type": "string",
+        "length": 64,
+        "head": "ff89fcf68b1e4875a9ebe9ecb79a64cddee09b2ad12e7fc644a106d322c8b5f1"
+      },
+      "request": {
+        "constraints": {
+          "allowed_actions": {
+            "type": "list",
+            "length": 3,
+            "first_item": {
+              "type": "string",
+              "length": 3,
+              "head": "BTC"
+            }
+          },
+          "invalid_or_failed_response": {
+            "type": "string",
+            "length": 26,
+            "head": "ABSTAIN_TO_PRE_AGENT_RAMOE"
+          },
+          "leverage": {
+            "type": "bool",
+            "value": false
+          },
+          "shorting": {
+            "type": "bool",
+            "value": false
+          }
+        },
+        "memory": {
+          "similar_completed_episodes": {
+            "type": "list",
+            "length": 0
+          },
+          "summary": {
+            "type": "string",
+            "length": 29,
+            "head": "NO_COMPLETED_SIMILAR_EPISODES"
+          }
+        },
+        "objective": {
+          "type": "string",
+          "length": 80,
+          "head": "add incremental risk-adjusted value over the pre-agent RAMoE control after costs"
+        },
+        "safe_exposure_previews": {
+          "ABSTAIN": {
+            "ambiguity_cvar": {
+              "type": "float",
+              "value": 0.021029895938006405
+            },
+            "blended_desired_exposure": {
+              "type": "float",
+              "value": 0.5
+            },
+            "risk_limited_exposure": {
+              "type": "float",
+              "value": 0.35000000000000003
+            },
+            "turnover": {
+              "type": "float",
+              "value": 0.35000000000000003
+            }
+          },
+          "BTC": {
+            "ambiguity_cvar": {
+              "type": "float",
+              "value": 0.021029895938006405
+            },
+            "blended_desired_exposure": {
+              "type": "float",
+              "value": 0.525
+            },
+            "risk_limited_exposure": {
+              "type": "float",
+              "value": 0.35000000000000003
+            },
+            "turnover": {
+              "type": "float",
+              "value": 0.35000000000000003
+            }
+          },
+          "CASH": {
+            "ambiguity_cvar": {
+              "type": "float",
+              "value": 0.021029895938006405
+            },
+            "blended_desired_exposure": {
+              "type": "float",
+              "value": 0.475
+            },
+            "risk_limited_exposure": {
+              "type": "float",
+              "value": 0.35000000000000003
+            },
+            "turnover": {
+              "type": "float",
+              "value": 0.35000000000000003
+            }
+          }
+        },
+        "state": {
+          "base_ramoe_desired_exposure": {
+            "type": "float",
+            "value": 0.5
+          },
+          "decision_date": {
+            "type": "string",
+            "length": 10,
+            "head": "2021-01-01"
+          },
+          "drawdown_90": {
+            "type": "float",
+            "value": 0.0
+          },
+          "hard_regime": {
+            "type": "string",
+            "length": 4,
+            "head": "bull"
+          },
+          "llama_trust_beta": {
+            "type": "float",
+            "value": 0.05
+          },
+          "pretrade_exposure": {
+            "type": "float",
+            "value": 0.0
+          },
+          "prob_bear": {
+            "type": "float",
+            "value": 1.3822076509313222e-26
+          },
+          "prob_bull": {
+            "type": "float",
+            "value": 0.9999999999994936
+          },
+          "prob_mix": {
+            "type": "float",
+            "value": 5.062576835710512e-13
+          },
+          "realized_vol_30": {
+            "type": "float",
+            "value": 0.6240848493099234
+          },
+          "return_1": {
+            "type": "float",
+            "value": 0.014179913918768605
+          },
+          "return_30": {
+            "type": "float",
+            "value": 0.5276656190813163
+          },
+          "return_7": {
+            "type": "float",
+            "value": 0.1891606182360186
+          },
+          "return_90": {
+            "type": "float",
+            "value": 1.784459702964663
+          },
+          "router_confidence": {
+            "type": "float",
+            "value": 0.9999999999994936
+          },
+          "router_entropy": {
+            "type": "float",
+            "value": 1.3507407504563366e-11
+          },
+          "router_transition_l1": {
+            "type": "float",
+            "value": 0.0
+          },
+          "target_return_date": {
+            "type": "string",
+            "length": 10,
+            "head": "2021-01-02"
+          }
+        },
+        "task_type": {
+          "type": "string",
+          "length": 31,
+          "head": "historical_development_decision"
+        }
+      },
+      "request_sha256": {
+        "type": "string",
+        "length": 64,
+        "head": "2be31190bfa84c9ef0031736bd8dc7764cfc51ea404251cce77dd708e0507cf5"
+      },
+      "response_sha256": {
+        "type": "string",
+        "length": 64,
+        "head": "8f63ed91236235d9d2dd03dfdbb6fa2d0d144c2a774d3fbd6c7a275339931513"
+      }
+    }
+  },
+  "fixed_memory_call": {
+    "count": 1608,
+    "sample_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_3_LLAMA70B_FIXED_TRUST_MEMORY_ABLATION_V1/artifacts/20260909T013716356200839Z/calls/000001-memory.json",
+    "sample_shape": {
+      "identity": {
+        "config_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "8c44ec99fbee5287ba3fec9bb28ea69e87953aa8471ef38e22495de1c34625de"
+        },
+        "evidence_kind": {
+          "type": "string",
+          "length": 22,
+          "head": "RETROSPECTIVE_LLAMA70B"
+        },
+        "experiment_id": {
+          "type": "string",
+          "length": 54,
+          "head": "RAMAS_STAGE6_3_LLAMA70B_FIXED_TRUST_MEMORY_ABLATION_V1"
+        },
+        "numpy": {
+          "type": "string",
+          "length": 6,
+          "head": "1.26.4"
+        },
+        "package_manifest_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "19dc62f58ce21c555f504e2e2a8de02f1286131e808c56eb462196b732b96d28"
+        },
+        "pandas": {
+          "type": "string",
+          "length": 5,
+          "head": "2.2.3"
+        },
+        "provider_identity": {
+          "details": {
+            "families": {
+              "type": "list",
+              "length": 1,
+              "first_item": {
+                "type": "str"
+              }
+            },
+            "family": {
+              "type": "string",
+              "length": 5,
+              "head": "llama"
+            },
+            "format": {
+              "type": "string",
+              "length": 4,
+              "head": "gguf"
+            },
+            "parameter_size": {
+              "type": "string",
+              "length": 5,
+              "head": "70.6B"
+            },
+            "parent_model": {
+              "type": "string",
+              "length": 0,
+              "head": ""
+            },
+            "quantization_level": {
+              "type": "string",
+              "length": 6,
+              "head": "Q4_K_M"
+            }
+          },
+          "model": {
+            "type": "string",
+            "length": 12,
+            "head": "llama3.3:70b"
+          },
+          "model_digest": {
+            "type": "string",
+            "length": 64,
+            "head": "a6eb4748fd2990ad2952b2335a95a7f952d1a06119a0aa6a2df6cd052a93a3fa"
+          },
+          "ollama_version": {
+            "type": "string",
+            "length": 6,
+            "head": "0.23.0"
+          },
+          "options": {
+            "num_ctx": {
+              "type": "int",
+              "value": 8192
+            },
+            "num_predict": {
+              "type": "int",
+              "value": 512
+            },
+            "seed": {
+              "type": "int",
+              "value": 16061
+            },
+            "temperature": {
+              "type": "float",
+              "value": 0.0
+            }
+          },
+          "serving_metadata_sha256": {
+            "type": "string",
+            "length": 64,
+            "head": "f731e05070648c6ae023793c866a34064f5d09cd34cd40b37529d50cca9e8d8d"
+          }
+        },
+        "python": {
+          "type": "string",
+          "length": 6,
+          "head": "3.11.9"
+        },
+        "scientific_audit_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "26d2d199e1cb251a5014a0522e19c14f0a854df1238363a4b286399933f7d9a6"
+        },
+        "source_audit_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "4d43ba772eced5ef441b78ce813372c8ee2260c6c34e3c25fcc245280bf191a6"
+        },
+        "system_prompt_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "6b99d1922bf13d280e23c4f62bf82d3dbea2c2032f00be6208a83d8e5bb86783"
+        }
+      },
+      "latency_seconds": {
+        "type": "float",
+        "value": 6.021847676485777
+      },
+      "provider_response": {
+        "created_at": {
+          "type": "string",
+          "length": 30,
+          "head": "2026-09-09T01:38:46.769545043Z"
+        },
+        "done": {
+          "type": "bool",
+          "value": true
+        },
+        "done_reason": {
+          "type": "string",
+          "length": 4,
+          "head": "stop"
+        },
+        "eval_count": {
+          "type": "int",
+          "value": 45
+        },
+        "eval_duration": {
+          "type": "int",
+          "value": 3335318837
+        },
+        "load_duration": {
+          "type": "int",
+          "value": 184405708
+        },
+        "message": {
+          "content": {
+            "type": "string",
+            "length": 130,
+            "head": "{\"action\": \"BTC\", \"confidence\": 0.9999999999994936, \"reason_codes\": [\"HIGH_VOLATILITY\", \"BULLISH_ROUTER\"], \"cited_memory_ids\": []}"
+          },
+          "role": {
+            "type": "string",
+            "length": 9,
+            "head": "assistant"
+          }
+        },
+        "model": {
+          "type": "string",
+          "length": 12,
+          "head": "llama3.3:70b"
+        },
+        "prompt_eval_count": {
+          "type": "int",
+          "value": 880
+        },
+        "prompt_eval_duration": {
+          "type": "int",
+          "value": 1671635496
+        },
+        "total_duration": {
+          "type": "int",
+          "value": 6020254889
+        }
+      },
+      "raw_response": {
+        "type": "string",
+        "length": 130,
+        "head": "{\"action\": \"BTC\", \"confidence\": 0.9999999999994936, \"reason_codes\": [\"HIGH_VOLATILITY\", \"BULLISH_ROUTER\"], \"cited_memory_ids\": []}"
+      },
+      "record_sha256": {
+        "type": "string",
+        "length": 64,
+        "head": "265f9db3cef0f86a48aa2511e83a63f11b048fff9e1ab55709537dc61425c832"
+      },
+      "request": {
+        "constraints": {
+          "allowed_actions": {
+            "type": "list",
+            "length": 3,
+            "first_item": {
+              "type": "string",
+              "length": 3,
+              "head": "BTC"
+            }
+          },
+          "invalid_or_failed_response": {
+            "type": "string",
+            "length": 26,
+            "head": "ABSTAIN_TO_PRE_AGENT_RAMOE"
+          },
+          "leverage": {
+            "type": "bool",
+            "value": false
+          },
+          "shorting": {
+            "type": "bool",
+            "value": false
+          }
+        },
+        "memory": {
+          "similar_completed_episodes": {
+            "type": "list",
+            "length": 0
+          },
+          "summary": {
+            "type": "string",
+            "length": 29,
+            "head": "NO_COMPLETED_SIMILAR_EPISODES"
+          }
+        },
+        "objective": {
+          "type": "string",
+          "length": 80,
+          "head": "add incremental risk-adjusted value over the pre-agent RAMoE control after costs"
+        },
+        "safe_exposure_previews": {
+          "ABSTAIN": {
+            "ambiguity_cvar": {
+              "type": "float",
+              "value": 0.021029895938006405
+            },
+            "blended_desired_exposure": {
+              "type": "float",
+              "value": 0.5
+            },
+            "risk_limited_exposure": {
+              "type": "float",
+              "value": 0.35000000000000003
+            },
+            "turnover": {
+              "type": "float",
+              "value": 0.35000000000000003
+            }
+          },
+          "BTC": {
+            "ambiguity_cvar": {
+              "type": "float",
+              "value": 0.021029895938006405
+            },
+            "blended_desired_exposure": {
+              "type": "float",
+              "value": 0.525
+            },
+            "risk_limited_exposure": {
+              "type": "float",
+              "value": 0.35000000000000003
+            },
+            "turnover": {
+              "type": "float",
+              "value": 0.35000000000000003
+            }
+          },
+          "CASH": {
+            "ambiguity_cvar": {
+              "type": "float",
+              "value": 0.021029895938006405
+            },
+            "blended_desired_exposure": {
+              "type": "float",
+              "value": 0.475
+            },
+            "risk_limited_exposure": {
+              "type": "float",
+              "value": 0.35000000000000003
+            },
+            "turnover": {
+              "type": "float",
+              "value": 0.35000000000000003
+            }
+          }
+        },
+        "state": {
+          "base_ramoe_desired_exposure": {
+            "type": "float",
+            "value": 0.5
+          },
+          "decision_date": {
+            "type": "string",
+            "length": 10,
+            "head": "2021-01-01"
+          },
+          "drawdown_90": {
+            "type": "float",
+            "value": 0.0
+          },
+          "hard_regime": {
+            "type": "string",
+            "length": 4,
+            "head": "bull"
+          },
+          "llama_trust_beta": {
+            "type": "float",
+            "value": 0.05
+          },
+          "pretrade_exposure": {
+            "type": "float",
+            "value": 0.0
+          },
+          "prob_bear": {
+            "type": "float",
+            "value": 1.3822076509313222e-26
+          },
+          "prob_bull": {
+            "type": "float",
+            "value": 0.9999999999994936
+          },
+          "prob_mix": {
+            "type": "float",
+            "value": 5.062576835710512e-13
+          },
+          "realized_vol_30": {
+            "type": "float",
+            "value": 0.6240848493099234
+          },
+          "return_1": {
+            "type": "float",
+            "value": 0.014179913918768605
+          },
+          "return_30": {
+            "type": "float",
+            "value": 0.5276656190813163
+          },
+          "return_7": {
+            "type": "float",
+            "value": 0.1891606182360186
+          },
+          "return_90": {
+            "type": "float",
+            "value": 1.784459702964663
+          },
+          "router_confidence": {
+            "type": "float",
+            "value": 0.9999999999994936
+          },
+          "router_entropy": {
+            "type": "float",
+            "value": 1.3507407504563366e-11
+          },
+          "router_transition_l1": {
+            "type": "float",
+            "value": 0.0
+          },
+          "target_return_date": {
+            "type": "string",
+            "length": 10,
+            "head": "2021-01-02"
+          }
+        },
+        "task_type": {
+          "type": "string",
+          "length": 31,
+          "head": "historical_development_decision"
+        }
+      },
+      "request_sha256": {
+        "type": "string",
+        "length": 64,
+        "head": "2be31190bfa84c9ef0031736bd8dc7764cfc51ea404251cce77dd708e0507cf5"
+      },
+      "response_sha256": {
+        "type": "string",
+        "length": 64,
+        "head": "8f63ed91236235d9d2dd03dfdbb6fa2d0d144c2a774d3fbd6c7a275339931513"
+      }
+    }
+  },
+  "fixed_no_memory_call": {
+    "count": 1608,
+    "sample_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_3_LLAMA70B_FIXED_TRUST_MEMORY_ABLATION_V1/artifacts/20260909T013716356200839Z/calls/000001-no_memory.json",
+    "sample_shape": {
+      "identity": {
+        "config_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "8c44ec99fbee5287ba3fec9bb28ea69e87953aa8471ef38e22495de1c34625de"
+        },
+        "evidence_kind": {
+          "type": "string",
+          "length": 22,
+          "head": "RETROSPECTIVE_LLAMA70B"
+        },
+        "experiment_id": {
+          "type": "string",
+          "length": 54,
+          "head": "RAMAS_STAGE6_3_LLAMA70B_FIXED_TRUST_MEMORY_ABLATION_V1"
+        },
+        "numpy": {
+          "type": "string",
+          "length": 6,
+          "head": "1.26.4"
+        },
+        "package_manifest_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "19dc62f58ce21c555f504e2e2a8de02f1286131e808c56eb462196b732b96d28"
+        },
+        "pandas": {
+          "type": "string",
+          "length": 5,
+          "head": "2.2.3"
+        },
+        "provider_identity": {
+          "details": {
+            "families": {
+              "type": "list",
+              "length": 1,
+              "first_item": {
+                "type": "str"
+              }
+            },
+            "family": {
+              "type": "string",
+              "length": 5,
+              "head": "llama"
+            },
+            "format": {
+              "type": "string",
+              "length": 4,
+              "head": "gguf"
+            },
+            "parameter_size": {
+              "type": "string",
+              "length": 5,
+              "head": "70.6B"
+            },
+            "parent_model": {
+              "type": "string",
+              "length": 0,
+              "head": ""
+            },
+            "quantization_level": {
+              "type": "string",
+              "length": 6,
+              "head": "Q4_K_M"
+            }
+          },
+          "model": {
+            "type": "string",
+            "length": 12,
+            "head": "llama3.3:70b"
+          },
+          "model_digest": {
+            "type": "string",
+            "length": 64,
+            "head": "a6eb4748fd2990ad2952b2335a95a7f952d1a06119a0aa6a2df6cd052a93a3fa"
+          },
+          "ollama_version": {
+            "type": "string",
+            "length": 6,
+            "head": "0.23.0"
+          },
+          "options": {
+            "num_ctx": {
+              "type": "int",
+              "value": 8192
+            },
+            "num_predict": {
+              "type": "int",
+              "value": 512
+            },
+            "seed": {
+              "type": "int",
+              "value": 16061
+            },
+            "temperature": {
+              "type": "float",
+              "value": 0.0
+            }
+          },
+          "serving_metadata_sha256": {
+            "type": "string",
+            "length": 64,
+            "head": "f731e05070648c6ae023793c866a34064f5d09cd34cd40b37529d50cca9e8d8d"
+          }
+        },
+        "python": {
+          "type": "string",
+          "length": 6,
+          "head": "3.11.9"
+        },
+        "scientific_audit_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "26d2d199e1cb251a5014a0522e19c14f0a854df1238363a4b286399933f7d9a6"
+        },
+        "source_audit_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "4d43ba772eced5ef441b78ce813372c8ee2260c6c34e3c25fcc245280bf191a6"
+        },
+        "system_prompt_sha256": {
+          "type": "string",
+          "length": 64,
+          "head": "6b99d1922bf13d280e23c4f62bf82d3dbea2c2032f00be6208a83d8e5bb86783"
+        }
+      },
+      "latency_seconds": {
+        "type": "float",
+        "value": 4.442323766648769
+      },
+      "provider_response": {
+        "created_at": {
+          "type": "string",
+          "length": 29,
+          "head": "2026-09-09T01:38:51.55523248Z"
+        },
+        "done": {
+          "type": "bool",
+          "value": true
+        },
+        "done_reason": {
+          "type": "string",
+          "length": 4,
+          "head": "stop"
+        },
+        "eval_count": {
+          "type": "int",
+          "value": 45
+        },
+        "eval_duration": {
+          "type": "int",
+          "value": 3330811776
+        },
+        "load_duration": {
+          "type": "int",
+          "value": 205699749
+        },
+        "message": {
+          "content": {
+            "type": "string",
+            "length": 130,
+            "head": "{\"action\": \"BTC\", \"confidence\": 0.9999999999994936, \"reason_codes\": [\"HIGH_VOLATILITY\", \"BULLISH_ROUTER\"], \"cited_memory_ids\": []}"
+          },
+          "role": {
+            "type": "string",
+            "length": 9,
+            "head": "assistant"
+          }
+        },
+        "model": {
+          "type": "string",
+          "length": 12,
+          "head": "llama3.3:70b"
+        },
+        "prompt_eval_count": {
+          "type": "int",
+          "value": 880
+        },
+        "prompt_eval_duration": {
+          "type": "int",
+          "value": 76038418
+        },
+        "total_duration": {
+          "type": "int",
+          "value": 4440413111
+        }
+      },
+      "raw_response": {
+        "type": "string",
+        "length": 130,
+        "head": "{\"action\": \"BTC\", \"confidence\": 0.9999999999994936, \"reason_codes\": [\"HIGH_VOLATILITY\", \"BULLISH_ROUTER\"], \"cited_memory_ids\": []}"
+      },
+      "record_sha256": {
+        "type": "string",
+        "length": 64,
+        "head": "8f2218a8d3d1d5ea2122884c4baa865eaf6141b2565a00e9e0102d7c78247cca"
+      },
+      "request": {
+        "constraints": {
+          "allowed_actions": {
+            "type": "list",
+            "length": 3,
+            "first_item": {
+              "type": "string",
+              "length": 3,
+              "head": "BTC"
+            }
+          },
+          "invalid_or_failed_response": {
+            "type": "string",
+            "length": 26,
+            "head": "ABSTAIN_TO_PRE_AGENT_RAMOE"
+          },
+          "leverage": {
+            "type": "bool",
+            "value": false
+          },
+          "shorting": {
+            "type": "bool",
+            "value": false
+          }
+        },
+        "memory": {
+          "similar_completed_episodes": {
+            "type": "list",
+            "length": 0
+          },
+          "summary": {
+            "type": "string",
+            "length": 29,
+            "head": "NO_COMPLETED_SIMILAR_EPISODES"
+          }
+        },
+        "objective": {
+          "type": "string",
+          "length": 80,
+          "head": "add incremental risk-adjusted value over the pre-agent RAMoE control after costs"
+        },
+        "safe_exposure_previews": {
+          "ABSTAIN": {
+            "ambiguity_cvar": {
+              "type": "float",
+              "value": 0.021029895938006405
+            },
+            "blended_desired_exposure": {
+              "type": "float",
+              "value": 0.5
+            },
+            "risk_limited_exposure": {
+              "type": "float",
+              "value": 0.35000000000000003
+            },
+            "turnover": {
+              "type": "float",
+              "value": 0.35000000000000003
+            }
+          },
+          "BTC": {
+            "ambiguity_cvar": {
+              "type": "float",
+              "value": 0.021029895938006405
+            },
+            "blended_desired_exposure": {
+              "type": "float",
+              "value": 0.525
+            },
+            "risk_limited_exposure": {
+              "type": "float",
+              "value": 0.35000000000000003
+            },
+            "turnover": {
+              "type": "float",
+              "value": 0.35000000000000003
+            }
+          },
+          "CASH": {
+            "ambiguity_cvar": {
+              "type": "float",
+              "value": 0.021029895938006405
+            },
+            "blended_desired_exposure": {
+              "type": "float",
+              "value": 0.475
+            },
+            "risk_limited_exposure": {
+              "type": "float",
+              "value": 0.35000000000000003
+            },
+            "turnover": {
+              "type": "float",
+              "value": 0.35000000000000003
+            }
+          }
+        },
+        "state": {
+          "base_ramoe_desired_exposure": {
+            "type": "float",
+            "value": 0.5
+          },
+          "decision_date": {
+            "type": "string",
+            "length": 10,
+            "head": "2021-01-01"
+          },
+          "drawdown_90": {
+            "type": "float",
+            "value": 0.0
+          },
+          "hard_regime": {
+            "type": "string",
+            "length": 4,
+            "head": "bull"
+          },
+          "llama_trust_beta": {
+            "type": "float",
+            "value": 0.05
+          },
+          "pretrade_exposure": {
+            "type": "float",
+            "value": 0.0
+          },
+          "prob_bear": {
+            "type": "float",
+            "value": 1.3822076509313222e-26
+          },
+          "prob_bull": {
+            "type": "float",
+            "value": 0.9999999999994936
+          },
+          "prob_mix": {
+            "type": "float",
+            "value": 5.062576835710512e-13
+          },
+          "realized_vol_30": {
+            "type": "float",
+            "value": 0.6240848493099234
+          },
+          "return_1": {
+            "type": "float",
+            "value": 0.014179913918768605
+          },
+          "return_30": {
+            "type": "float",
+            "value": 0.5276656190813163
+          },
+          "return_7": {
+            "type": "float",
+            "value": 0.1891606182360186
+          },
+          "return_90": {
+            "type": "float",
+            "value": 1.784459702964663
+          },
+          "router_confidence": {
+            "type": "float",
+            "value": 0.9999999999994936
+          },
+          "router_entropy": {
+            "type": "float",
+            "value": 1.3507407504563366e-11
+          },
+          "router_transition_l1": {
+            "type": "float",
+            "value": 0.0
+          },
+          "target_return_date": {
+            "type": "string",
+            "length": 10,
+            "head": "2021-01-02"
+          }
+        },
+        "task_type": {
+          "type": "string",
+          "length": 31,
+          "head": "historical_development_decision"
+        }
+      },
+      "request_sha256": {
+        "type": "string",
+        "length": 64,
+        "head": "2be31190bfa84c9ef0031736bd8dc7764cfc51ea404251cce77dd708e0507cf5"
+      },
+      "response_sha256": {
+        "type": "string",
+        "length": 64,
+        "head": "8f63ed91236235d9d2dd03dfdbb6fa2d0d144c2a774d3fbd6c7a275339931513"
+      }
+    }
+  },
+  "adaptive_episodes": {
+    "count": 1,
+    "sample_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_2_LLAMA70B_MATCHED_MEMORY_ABLATION_V1/artifacts/20260908T055052711433762Z/episodes/memory.jsonl",
+    "first_record_shape": {
+      "action": {
+        "type": "string",
+        "length": 3,
+        "head": "BTC"
+      },
+      "asset_return": {
+        "type": "float",
+        "value": 0.0965057782894354
+      },
+      "confidence": {
+        "type": "float",
+        "value": 0.9999999999994936
+      },
+      "decision_date": {
+        "type": "string",
+        "length": 10,
+        "head": "2021-01-01"
+      },
+      "episode_id": {
+        "type": "string",
+        "length": 14,
+        "head": "episode-000001"
+      },
+      "hard_regime": {
+        "type": "string",
+        "length": 4,
+        "head": "bull"
+      },
+      "return_date": {
+        "type": "string",
+        "length": 10,
+        "head": "2021-01-02"
+      },
+      "shadow_log_advantage_vs_ramoe": {
+        "type": "float",
+        "value": 0.0
+      },
+      "state_vector": {
+        "type": "list",
+        "length": 9,
+        "first_item": {
+          "type": "float",
+          "value": 1.3822076509313222e-26
+        }
+      }
+    }
+  },
+  "fixed_episodes": {
+    "count": 1,
+    "sample_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_3_LLAMA70B_FIXED_TRUST_MEMORY_ABLATION_V1/artifacts/20260909T013716356200839Z/episodes/memory.jsonl",
+    "first_record_shape": {
+      "action": {
+        "type": "string",
+        "length": 3,
+        "head": "BTC"
+      },
+      "asset_return": {
+        "type": "float",
+        "value": 0.0965057782894354
+      },
+      "confidence": {
+        "type": "float",
+        "value": 0.9999999999994936
+      },
+      "decision_date": {
+        "type": "string",
+        "length": 10,
+        "head": "2021-01-01"
+      },
+      "episode_id": {
+        "type": "string",
+        "length": 14,
+        "head": "episode-000001"
+      },
+      "hard_regime": {
+        "type": "string",
+        "length": 4,
+        "head": "bull"
+      },
+      "return_date": {
+        "type": "string",
+        "length": 10,
+        "head": "2021-01-02"
+      },
+      "shadow_log_advantage_vs_ramoe": {
+        "type": "float",
+        "value": 0.0
+      },
+      "state_vector": {
+        "type": "list",
+        "length": 9,
+        "first_item": {
+          "type": "float",
+          "value": 1.3822076509313222e-26
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "experiment_id": "RAMAS_FULL_PIPELINE_ISOLATION_V1",
+  "scientific_scope": "RETROSPECTIVE_REUSED_HISTORY_MECHANISM_DIAGNOSTIC",
+  "project_root": "/home/infonet/wahid/leader_router_fresh",
+  "stage64_code_root": "/home/infonet/wahid/leader_router_fresh/RAMAS_STAGE6_4_COMPONENT_SUITE_V1",
+  "full_dataset": "/home/infonet/wahid/projects/leader_fresh/full_data_set/full_data_set.csv",
+  "expected_stage64_manifest_sha256": "6a03c967673f6f2e98fd8134910a9a8231d0b9fb578bc1aa2615c9c18bf9da0b",
+  "expected_stage64_archive_sha256": "52698118cbe19749250156a3b6aaa30caa06b75cef60c77e0a6908f99b2a67c3",
+  "expected_pipeline_version": "1.12.3",
+  "expected_pipeline_sha256": "683b849540b204b5957a490d3320b1fd7a8dbc9e67117fd02bdbc3c2bacf51db",
+  "expected_full_rows": 1608,
+  "evaluation_start": "2022-01-01",
+  "evaluation_end": "2025-05-28",
+  "expected_evaluation_rows": 1244,
+  "cost_rate": 0.001,
+  "models": [
+    {
+      "name": "llama3.3:70b",
+      "api_url": "http://127.0.0.1:11434",
+      "enabled": true,
+      "expected_digest": null
+    },
+    {
+      "name": "qwen3-coder:30b",
+      "api_url": "http://127.0.0.1:11434",
+      "enabled": true,
+      "expected_digest": null
+    },
+    {
+      "name": "glm-4.7-flash",
+      "api_url": "http://127.0.0.1:11434",
+      "enabled": true,
+      "expected_digest": null
+    },
+    {
+      "name": "qwen3:8b",
+      "api_url": "http://127.0.0.1:11434",
+      "enabled": true,
+      "expected_digest": null
+    }
+  ],
+  "sampling": {
+    "system_prompt_mode": "model_neutralized_frozen_v1",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "sampling_seeds": [42, 2024, 3407, 7777],
+    "num_ctx": 8192,
+    "num_predict": 512,
+    "timeout_seconds": 900,
+    "identity_check_every_calls": 100
+  },
+  "numerical_seed": 314159,
+  "bootstrap": {
+    "seed": 20260919,
+    "resamples": 5000,
+    "block_days": 30
+  },
+  "probe": {
+    "prompt_count": 3,
+    "repeats_per_seed": 2
+  },
+  "execution": {
+    "checkpoint_every": 25,
+    "minimum_valid_action_rate": 1.0,
+    "fail_on_any_invalid_output": true
+  },
+  "claim_boundaries": {
+    "fresh_out_of_sample": false,
+    "router_temporal_validity_resolved": false,
+    "feasible_information_to_fill_clock_resolved": false,
+    "causal_memory_effect_from_closed_loop_factorial": false
+  }
+}

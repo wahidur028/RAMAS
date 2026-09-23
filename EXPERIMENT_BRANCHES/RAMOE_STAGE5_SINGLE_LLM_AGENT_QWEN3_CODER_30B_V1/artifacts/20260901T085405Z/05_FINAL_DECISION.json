@@ -1,0 +1,9 @@
+{
+  "decision": "REVISE_AGENT_DEVELOPMENT_GATE_FAILED",
+  "economic_claim_permitted": true,
+  "pre2024_development_gate_passed": false,
+  "provider": "ollama",
+  "reused_oos_diagnostic_gate_passed": null,
+  "reused_oos_diagnostic_run": false,
+  "untouched_confirmation_available": false
+}

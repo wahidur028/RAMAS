@@ -1,0 +1,10 @@
+{
+  "completed_at_utc": "2026-09-01T02:47:58.210111+00:00",
+  "expert_changed": false,
+  "first_decision_date": "2023-12-31",
+  "last_return_date": "2025-05-28",
+  "model_training_performed": false,
+  "router_changed": false,
+  "rows": 514,
+  "scientific_status": "REUSED_OOS_CORRECTED_CLOCK_DIAGNOSTIC_ONLY"
+}

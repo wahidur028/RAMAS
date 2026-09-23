@@ -1,0 +1,32 @@
+{
+  "monetary_inference_cost_included_in_returns": false,
+  "latency_caveat": "Observed per-call service time; not an exchange execution delay model.",
+  "arms": {
+    "memory": {
+      "expected_trading_calls": 1608,
+      "journal_calls_found": 1608,
+      "prompt_usage_records": 1608,
+      "output_usage_records": 1608,
+      "prompt_tokens_observed": 2267738,
+      "output_tokens_observed": 91681,
+      "usage_complete": true,
+      "latency_records": 1608,
+      "latency_total_seconds": 13365.271391462535,
+      "latency_median_seconds": 7.794045662507415,
+      "latency_p95_seconds": 10.51550897397101
+    },
+    "no_memory": {
+      "expected_trading_calls": 1608,
+      "journal_calls_found": 1608,
+      "prompt_usage_records": 1608,
+      "output_usage_records": 1608,
+      "prompt_tokens_observed": 1440327,
+      "output_tokens_observed": 69150,
+      "usage_complete": true,
+      "latency_records": 1608,
+      "latency_total_seconds": 9441.811982300133,
+      "latency_median_seconds": 6.0149348033592105,
+      "latency_p95_seconds": 6.258136088959873
+    }
+  }
+}

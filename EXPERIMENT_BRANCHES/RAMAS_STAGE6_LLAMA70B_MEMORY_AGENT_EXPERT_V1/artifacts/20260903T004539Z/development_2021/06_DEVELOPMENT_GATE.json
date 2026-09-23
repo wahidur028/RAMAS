@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "daily_cvar_not_worse": true,
+    "growth_above_deterministic_controller": false,
+    "maximum_drawdown_not_worse": true,
+    "minimum_distinct_actions": true,
+    "minimum_non_abstain_actions": true,
+    "minimum_valid_action_rate": true,
+    "positive_bootstrap_lower_bound": false,
+    "sharpe_improvement_vs_ramoe": false,
+    "terminal_growth_above_ramoe": true
+  },
+  "distinct_actions": [
+    "ABSTAIN",
+    "BTC",
+    "CASH"
+  ],
+  "inference_vs_ramoe": {
+    "block_length_days": 30,
+    "lower_one_sided_confidence_bound": -8.17548009602009e-18,
+    "observed_mean_log_advantage": 4.1426927946931554e-05,
+    "one_sided_p_value": 0.27874425114977003,
+    "resamples": 5000,
+    "seed": 16061
+  },
+  "non_abstain_actions": 183,
+  "passed": false,
+  "scientific_scope": "2021_DEVELOPMENT_PILOT_ONLY",
+  "valid_action_rate": 1.0
+}

@@ -1,0 +1,28 @@
+{
+  "completed_memory_episodes": 1608,
+  "effective_intervention_rate": 0.17599502487562188,
+  "effective_interventions": 283,
+  "interpretation_rule": "Annual and metric-specific wins/losses are research findings. Economic underperformance does not stop or erase the continuous architecture.",
+  "non_abstain_actions": 876,
+  "novelty_established_by_this_run": false,
+  "observed_return_year_counts": {
+    "2021": 364,
+    "2022": 365,
+    "2023": 365,
+    "2024": 366,
+    "2025": 148
+  },
+  "technical_checks": {
+    "all_expected_rows_present": true,
+    "expected_year_counts": true,
+    "invalid_responses_fail_closed": true,
+    "memory_has_one_completed_episode_per_row": true,
+    "minimum_valid_action_rate": true,
+    "next_day_clock": true,
+    "no_year_boundary_reset_declared": true,
+    "qwen_not_used": true
+  },
+  "technical_status": "PASS",
+  "untouched_oos_confirmation": false,
+  "valid_action_rate": 1.0
+}

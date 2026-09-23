@@ -1,0 +1,97 @@
+{
+  "experiment_id": "RAMAS_STAGE6_LLAMA70B_MEMORY_AGENT_EXPERT_V1",
+  "phase": "EXPLORATORY_DEVELOPMENT",
+  "source_experiment_id": "RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1",
+  "source_artifact_relative_glob": "EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/*",
+  "raw_dataset_candidates": [
+    "/home/infonet/wahid/projects/leader_fresh/full_data_set/full_data_set.csv",
+    "/home/infonet/wahid/leader_router_fresh/full_data_set/full_data_set.csv"
+  ],
+  "expected_raw_sha256": "b69f17a1233a58c3e0c7d6289fc5bf79173aae471a31074cf17cfffbc8198e7e",
+  "source_period": {
+    "name": "corrected_pre2024",
+    "rows": 1094,
+    "first_decision_date": "2021-01-01",
+    "last_return_date": "2023-12-31",
+    "scientific_label": "DEVELOPMENT_EVIDENCE_ONLY"
+  },
+  "development_window": {
+    "rows": 364,
+    "raw_market_rows_through_cutoff": 2557,
+    "first_decision_date": "2021-01-01",
+    "last_return_date": "2021-12-31",
+    "reason": "Earliest overlap currently available between causal out-of-fold router probabilities and the corrected RAMAS base trace. The 2015-2017 market history remains router warm-up; historical RAMAS base traces before 2021 are not available in the frozen source."
+  },
+  "provider": {
+    "kind": "ollama",
+    "endpoint": "http://127.0.0.1:11434/api/chat",
+    "model": "llama3.3:70b",
+    "temperature": 0.0,
+    "seed": 16061,
+    "timeout_seconds": 300,
+    "maximum_retries": 0
+  },
+  "agent": {
+    "prompt_version": "llama70b_memory_expert_v1",
+    "actions": ["BTC", "CASH", "ABSTAIN"],
+    "maximum_similar_episodes": 5,
+    "reason_codes": [
+      "BULLISH_ROUTER",
+      "BEARISH_ROUTER",
+      "MIXED_OR_UNCERTAIN",
+      "POSITIVE_MOMENTUM",
+      "NEGATIVE_MOMENTUM",
+      "HIGH_VOLATILITY",
+      "DRAWDOWN_RISK",
+      "TRANSITION_RISK",
+      "MEMORY_SUPPORT",
+      "MEMORY_WARNING",
+      "INSUFFICIENT_EVIDENCE"
+    ]
+  },
+  "semantic_preflight": {
+    "minimum_valid_rate": 1.0,
+    "minimum_expected_action_rate": 0.9,
+    "required_actions": ["BTC", "CASH", "ABSTAIN"]
+  },
+  "trust": {
+    "initial_beta": 0.05,
+    "minimum_beta": 0.0,
+    "maximum_beta": 0.2,
+    "monthly_step": 0.025,
+    "minimum_completed_episodes_per_regime": 8,
+    "lookback_episodes_per_regime": 60,
+    "minimum_mean_log_advantage_to_increase": 0.0001,
+    "maximum_mean_log_advantage_to_decrease": 0.0
+  },
+  "bootstrap": {
+    "block_length_days": 30,
+    "resamples": 5000,
+    "seed": 16061,
+    "one_sided_alpha": 0.05
+  },
+  "development_gate": {
+    "minimum_valid_action_rate": 0.98,
+    "minimum_non_abstain_actions": 30,
+    "minimum_distinct_actions": 2,
+    "minimum_sharpe_improvement_vs_ramoe": 0.05,
+    "require_terminal_growth_above_ramoe": true,
+    "require_maximum_drawdown_not_worse": true,
+    "require_daily_cvar_not_worse": true,
+    "require_positive_bootstrap_lower_bound": true,
+    "require_growth_above_deterministic_controller": true
+  },
+  "frozen_claims": {
+    "model": "llama3.3:70b",
+    "qwen_used": false,
+    "router_changed": false,
+    "existing_ramoe_trust_changed": false,
+    "risk_layer_changed": false,
+    "transaction_cost_changed": false,
+    "llama_is_separate_bounded_expert": true,
+    "post2021_market_values_used": false,
+    "post2021_portfolio_rows_used": false,
+    "post2021_confirmation_run": false,
+    "economic_value_established": false
+  }
+}

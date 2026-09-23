@@ -1,0 +1,12 @@
+{
+  "decision": "REVISE_STAGE6_2021_DEVELOPMENT_GATE_FAILED_NO_POST2021",
+  "development_gate_passed": false,
+  "economic_value_established": false,
+  "existing_ramoe_trust_changed": false,
+  "next_step": "inspect failed checks and revise only on development data",
+  "post2021_confirmation_run": false,
+  "post2021_rows_used": false,
+  "qwen_used": false,
+  "risk_layer_changed": false,
+  "router_changed": false
+}

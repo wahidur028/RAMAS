@@ -1,0 +1,28 @@
+{
+  "contrasts": [
+    {
+      "arm_a": "corrected_memory",
+      "arm_b": "corrected_no_memory",
+      "block_length": 30,
+      "bootstrap_method": "PAIRED_CIRCULAR_MOVING_BLOCK_PERCENTILE_CI",
+      "ci95_lower_bps": -0.08519742280870188,
+      "ci95_upper_bps": 0.05122478666085158,
+      "coverage_note": "UNADJUSTED_95_PERCENT_CI; MULTIPLE_SECONDARY_PAIRS_EXPLORATORY",
+      "endpoint": "MEAN_DAILY_NET_LOG_RETURN_DIFFERENCE_BPS_A_MINUS_B",
+      "first_return_date": "2022-01-01",
+      "identical_recorded_net_returns": false,
+      "interpretation": "INCONCLUSIVE_NOT_EQUIVALENCE",
+      "last_return_date": "2025-05-28",
+      "learning_resimulated": false,
+      "mean_daily_net_log_difference_bps": -0.012314484389797313,
+      "n_resamples": 5000,
+      "net_compounded_return_gap_percentage_points": -0.2569393796103103,
+      "paired_days": 1244,
+      "relative_terminal_wealth_gain_a_over_b": -0.0015307490647533673,
+      "scope_note": "RECORDED_PATH_UNCERTAINTY; NOT MODEL_SEED_UNCERTAINTY_OR_FRESH_OUT_OF_SAMPLE_CONFIRMATION",
+      "seed": 16062
+    }
+  ],
+  "intervals": "POINTWISE_95_PERCENT_NOT_MULTIPLICITY_ADJUSTED",
+  "primary": "corrected_memory_minus_corrected_no_memory"
+}

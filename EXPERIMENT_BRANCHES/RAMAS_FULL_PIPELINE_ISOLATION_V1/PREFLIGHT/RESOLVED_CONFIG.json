@@ -1,0 +1,79 @@
+{
+  "bootstrap": {
+    "block_days": 30,
+    "resamples": 5000,
+    "seed": 20260919
+  },
+  "claim_boundaries": {
+    "causal_memory_effect_from_closed_loop_factorial": false,
+    "feasible_information_to_fill_clock_resolved": false,
+    "fresh_out_of_sample": false,
+    "router_temporal_validity_resolved": false
+  },
+  "cost_rate": 0.001,
+  "evaluation_end": "2025-05-28",
+  "evaluation_start": "2022-01-01",
+  "execution": {
+    "checkpoint_every": 25,
+    "fail_on_any_invalid_output": true,
+    "minimum_valid_action_rate": 1.0
+  },
+  "expected_evaluation_rows": 1244,
+  "expected_full_rows": 1608,
+  "expected_pipeline_sha256": "683b849540b204b5957a490d3320b1fd7a8dbc9e67117fd02bdbc3c2bacf51db",
+  "expected_pipeline_version": "1.12.3",
+  "expected_stage64_archive_sha256": "52698118cbe19749250156a3b6aaa30caa06b75cef60c77e0a6908f99b2a67c3",
+  "expected_stage64_manifest_sha256": "6a03c967673f6f2e98fd8134910a9a8231d0b9fb578bc1aa2615c9c18bf9da0b",
+  "experiment_id": "RAMAS_FULL_PIPELINE_ISOLATION_V1",
+  "full_dataset": "/home/infonet/wahid/projects/leader_fresh/full_data_set/full_data_set.csv",
+  "models": [
+    {
+      "api_url": "http://127.0.0.1:11434",
+      "enabled": true,
+      "expected_digest": "a6eb4748fd2990ad2952b2335a95a7f952d1a06119a0aa6a2df6cd052a93a3fa",
+      "name": "llama3.3:70b"
+    },
+    {
+      "api_url": "http://127.0.0.1:11434",
+      "enabled": true,
+      "expected_digest": "06c1097efce0431c2045fe7b2e5108366e43bee1b4603a7aded8f21689e90bca",
+      "name": "qwen3-coder:30b"
+    },
+    {
+      "api_url": "http://127.0.0.1:11434",
+      "enabled": true,
+      "expected_digest": "d1a8a26252f18b34301218d22abd2620a65b85ba4b78987842eb157e01321222",
+      "name": "glm-4.7-flash"
+    },
+    {
+      "api_url": "http://127.0.0.1:11434",
+      "enabled": true,
+      "expected_digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+      "name": "qwen3:8b"
+    }
+  ],
+  "numerical_seed": 314159,
+  "probe": {
+    "prompt_count": 3,
+    "repeats_per_seed": 2
+  },
+  "project_root": "/home/infonet/wahid/leader_router_fresh",
+  "sampling": {
+    "identity_check_every_calls": 100,
+    "num_ctx": 8192,
+    "num_predict": 512,
+    "sampling_seeds": [
+      42,
+      2024,
+      3407,
+      7777
+    ],
+    "system_prompt_mode": "model_neutralized_frozen_v1",
+    "temperature": 0.0,
+    "timeout_seconds": 900,
+    "top_p": 1.0
+  },
+  "schema_version": "1.0.0",
+  "scientific_scope": "RETROSPECTIVE_REUSED_HISTORY_MECHANISM_DIAGNOSTIC",
+  "stage64_code_root": "/home/infonet/wahid/leader_router_fresh/RAMAS_STAGE6_4_COMPONENT_SUITE_V1"
+}

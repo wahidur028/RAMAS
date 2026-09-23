@@ -1,0 +1,16 @@
+{
+  "cases": 30,
+  "decision": "LLAMA70B_SEMANTIC_INTERFACE_FAILED",
+  "economic_claim_permitted": false,
+  "eligible_case_accepted": false,
+  "expected_action_agreement_rate": 1.0,
+  "full_replay_performed": false,
+  "model": "llama3.3:70b",
+  "nonzero_full_citation_rate": 0.0,
+  "nonzero_response_count": 1,
+  "oos_opened": false,
+  "semantic_accept_rate": 0.9666666666666667,
+  "status": "PASS",
+  "total_latency_seconds": 2846.5744076985866,
+  "valid_json_contract_rate": 1.0
+}

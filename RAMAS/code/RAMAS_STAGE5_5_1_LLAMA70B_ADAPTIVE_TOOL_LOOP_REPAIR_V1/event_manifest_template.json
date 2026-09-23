@@ -1,0 +1,11 @@
+{
+  "dataset_id": "REPLACE_WITH_VERSIONED_DATASET_ID",
+  "event_csv_sha256": "REPLACE_WITH_EVENT_CSV_SHA256",
+  "collection_method": "REPLACE_WITH_COLLECTION_METHOD",
+  "revision_policy": "REPLACE_WITH_REVISION_POLICY",
+  "raw_text_preserved": true,
+  "point_in_time_availability_verified": false,
+  "coverage_start_utc": "2021-01-01T00:00:00+00:00",
+  "coverage_end_utc": "2023-12-31T23:59:59+00:00"
+}
+

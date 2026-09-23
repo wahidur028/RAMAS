@@ -1,0 +1,16 @@
+{
+  "case_count": 30,
+  "experiment_id": "RAMAS_STAGE5_4_LLAMA70B_SEMANTIC_INTERFACE_DIAGNOSTIC_V1",
+  "full_replay_performed": false,
+  "model": "llama3.3:70b",
+  "oos_opened": false,
+  "scientific_label": "MODEL_INTERFACE_DIAGNOSTIC_ONLY_NO_ECONOMIC_CLAIM",
+  "seed": 12031,
+  "selection": {
+    "eligible_nonzero_cases": 1,
+    "qwen_abstention_cases": 10,
+    "qwen_ineligible_nonzero_cases": 19
+  },
+  "source_calls": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE5_3_BOUNDED_TOOL_USING_RESIDUAL_AGENT_V1/artifacts/20260902T054019Z/results/06_AGENT_CALLS.jsonl",
+  "source_calls_sha256": "50209a1e8b461b059fad9699fcbd9bb42890e97e9aa9d4627ffb8490bfcb8d06"
+}

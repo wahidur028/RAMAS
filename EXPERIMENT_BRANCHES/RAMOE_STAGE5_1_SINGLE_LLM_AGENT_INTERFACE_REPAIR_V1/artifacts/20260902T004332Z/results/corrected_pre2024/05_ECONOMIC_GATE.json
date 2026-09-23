@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "incremental_value_over_current_ramoe": true,
+    "maximum_drawdown_not_worse_than_matched_passive": true,
+    "minimum_agent_action_acceptance_rate": true,
+    "minimum_positive_calendar_years": true,
+    "one_sided_block_bootstrap_p_below_0_05": false,
+    "positive_growth_advantage_vs_matched_passive": true,
+    "positive_total_return": true,
+    "sharpe_improves_by_predeclared_margin": true,
+    "worst_daily_losses_not_worse_than_matched_passive": false
+  },
+  "inference": {
+    "block_length_days": 30,
+    "confidence_interval_high": 0.00030069064600096577,
+    "confidence_interval_low": -0.00010860341896628567,
+    "observed_mean_log_advantage": 9.84770685078068e-05,
+    "one_sided_p_value": 0.16668333166683333,
+    "resamples": 10000,
+    "seed": 12031
+  },
+  "interface": {
+    "acceptance_rate": 1.0,
+    "accepted_actions": 1094,
+    "fail_closed_actions": 0,
+    "minimum_acceptance_rate": 0.99,
+    "passed": true
+  },
+  "minimum_positive_calendar_years": 2,
+  "passed": false,
+  "positive_calendar_years": 2
+}

@@ -1,0 +1,29 @@
+{
+  "config_sha256": "ce47a92c518c98c9b3504c9c3e5bba2f4d9182a5a0e8ad9f73168197a13eee18",
+  "corrected_source_run": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z",
+  "experiment_id": "RAMAS_STAGE6_LLAMA70B_MEMORY_AGENT_EXPERT_V1",
+  "frozen_base_source": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/base_source/LEADER_TRUSTED_ROUTER_EVIDENCE_WEIGHTED_TRUST_V1",
+  "frozen_claims": {
+    "economic_value_established": false,
+    "existing_ramoe_trust_changed": false,
+    "llama_is_separate_bounded_expert": true,
+    "model": "llama3.3:70b",
+    "post2021_confirmation_run": false,
+    "post2021_market_values_used": false,
+    "post2021_portfolio_rows_used": false,
+    "qwen_used": false,
+    "risk_layer_changed": false,
+    "router_changed": false,
+    "transaction_cost_changed": false
+  },
+  "model": "llama3.3:70b",
+  "phase": "EXPLORATORY_DEVELOPMENT",
+  "provider": "ollama",
+  "system_prompt_sha256": "6b99d1922bf13d280e23c4f62bf82d3dbea2c2032f00be6208a83d8e5bb86783",
+  "timeline": {
+    "2015_2017": "router_warmup_history_only",
+    "2018_2020": "requires_historical_RAMAS_base_trace_before_agent_training_claim",
+    "2021": "current_development_pilot",
+    "2022_2025": "not_used_by_this_package"
+  }
+}

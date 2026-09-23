@@ -1,0 +1,33 @@
+{
+  "experiment_id": "RAMAS_STAGE5_2_AGENT_RESIDUAL_VALUE_AUDIT_V1",
+  "source_experiment_id": "RAMOE_STAGE5_1_SINGLE_LLM_AGENT_INTERFACE_REPAIR_V1",
+  "accounting": {
+    "annualization_days": 365.25,
+    "transaction_cost_rate": 0.001,
+    "turnover_rule": "ABS_TARGET_MINUS_DRIFTED_PRETRADE_EXPOSURE"
+  },
+  "distilled_static_mapping": {
+    "bear": 0.25,
+    "bull": 0.5,
+    "mix": 0.25
+  },
+  "inference": {
+    "block_length_days": 30,
+    "resamples": 10000,
+    "seed": 12031
+  },
+  "agent_value_gate": {
+    "alpha": 0.05,
+    "minimum_sharpe_improvement": 0.05,
+    "minimum_positive_advantage_years": 2,
+    "minimum_agent_deviation_rows": 30,
+    "require_cvar_not_worse": true
+  },
+  "prohibited": {
+    "new_llm_calls": true,
+    "reused_oos_access": true,
+    "posthoc_trigger_selection": true,
+    "multi_agent_experiment": true,
+    "gate_relaxation": true
+  }
+}

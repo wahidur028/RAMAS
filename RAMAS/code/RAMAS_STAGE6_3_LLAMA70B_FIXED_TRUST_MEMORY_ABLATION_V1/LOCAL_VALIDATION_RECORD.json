@@ -1,0 +1,55 @@
+{
+  "experiment": "RAMAS_STAGE6_3_LLAMA70B_FIXED_TRUST_MEMORY_ABLATION_V1",
+  "validation_date_utc": "2026-09-09",
+  "unit_tests": {
+    "run": 52,
+    "failures": 0,
+    "errors": 0,
+    "command": "python tests/run_all.py"
+  },
+  "local_runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "controlled_end_to_end": {
+    "days_per_arm": 40,
+    "semantic_cases": 12,
+    "saved_controlled_calls": 92,
+    "finished_resume_new_calls": 0,
+    "evidence_kind": "CONTROLLED_NON_ECONOMIC"
+  },
+  "coverage": [
+    "fixed beta across regimes/months/years/losses",
+    "separate arm holdings, wealth and completed ledgers",
+    "future/current/unseen memory exclusion",
+    "crash/resume exact reconstruction",
+    "daily/monthly/yearly metrics and compounding",
+    "static50 drift/costs and B&H one-time entry",
+    "fractional CVaR and paired bootstrap",
+    "source/provider mismatch before inference",
+    "known reference seam preservation and unexpected-seam rejection"
+  ],
+  "vendored_files_identical": 17,
+  "parent_stage62_manifest_still_valid": true,
+  "shell_syntax_valid": true,
+  "archived_source_integration": {
+    "pinned_artifacts": 3244,
+    "exogenous_states": 3216,
+    "days": 1608,
+    "unexpected_discontinuities": 0,
+    "known_reference_seams": 1,
+    "scope": "Reconstructed archived requests and numeric risk placeholders; not a raw-price loader or causal-scenario validation"
+  },
+  "new_real_llama_calls": 0,
+  "live_server_execution_performed": false,
+  "full_raw_price_integration_performed": false,
+  "scientific_status": "LEGACY_MECHANISM_DIAGNOSTIC_WITH_OPEN_TIMING",
+  "economic_evidence_from_local_tests": false,
+  "limitations": [
+    "original forecast training/availability and target-to-holding horizon unresolved",
+    "realistic close/inference/fill schedule unverified",
+    "known 2024-01-01 imported reference seam preserved",
+    "post2021 remains reused historical diagnostic"
+  ]
+}

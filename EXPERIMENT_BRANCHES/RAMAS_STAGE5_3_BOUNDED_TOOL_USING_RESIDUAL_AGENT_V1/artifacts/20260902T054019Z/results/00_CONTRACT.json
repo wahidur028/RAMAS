@@ -1,0 +1,51 @@
+{
+  "agent_skill_sha256": "3107b47087e638d4666cc78341a3fb9f51745152a46ebc27effcd33fbb3288f2",
+  "base_config_sha256": "06b6516a190572d8f7edeb01404a817a931078aed9fe7f4599715cd97d12e6a3",
+  "base_source": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/base_source/LEADER_TRUSTED_ROUTER_EVIDENCE_WEIGHTED_TRUST_V1",
+  "completed_at_utc": "2026-09-02T05:56:11.797474+00:00",
+  "corrected_source_run": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z",
+  "experiment_id": "RAMAS_STAGE5_3_BOUNDED_TOOL_USING_RESIDUAL_AGENT_V1",
+  "frozen_claims": {
+    "dqn_enabled": false,
+    "existing_experts_weighted": false,
+    "hourly_data_used": false,
+    "monthly_trust_updates_enabled": false,
+    "multi_agent_enabled": false,
+    "multimodal_data_used": false,
+    "pre2024_is_independent_confirmation": false,
+    "return_clock_changed": false,
+    "reused_oos_opened": false,
+    "risk_layer_changed": false,
+    "router_changed": false,
+    "transaction_cost_changed": false
+  },
+  "model": "qwen3-coder:30b",
+  "package_config_sha256": "0daad04b78461a0e27a2d18fee2a94c80e04360f6fad10e1ae2bd56e827370b0",
+  "phase": "EXPLORATORY_DEVELOPMENT_ONLY",
+  "preflight": {
+    "path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE5_3_BOUNDED_TOOL_USING_RESIDUAL_AGENT_V1/artifacts/20260902T054019Z/interface_preflight/00_PREFLIGHT.json",
+    "sha256": "7512fcaa30e6aee08f4abf46458be071e93bb0dde6244abd3507f1e2a59436f8",
+    "valid_decisions": 30,
+    "valid_plans": 30
+  },
+  "provider": "ollama",
+  "transparent_controller": {
+    "allowed_residuals": [
+      -0.25,
+      0.0,
+      0.25
+    ],
+    "mapping": {
+      "bear": 0.25,
+      "bull": 0.5,
+      "mix": 0.25
+    },
+    "maximum_desired_exposure": 0.75,
+    "minimum_desired_exposure": 0.0
+  },
+  "trigger": {
+    "router_confidence_strictly_below": 0.8,
+    "rule": "TRANSITION_OR_LOW_ROUTER_CONFIDENCE",
+    "transition_day": true
+  }
+}

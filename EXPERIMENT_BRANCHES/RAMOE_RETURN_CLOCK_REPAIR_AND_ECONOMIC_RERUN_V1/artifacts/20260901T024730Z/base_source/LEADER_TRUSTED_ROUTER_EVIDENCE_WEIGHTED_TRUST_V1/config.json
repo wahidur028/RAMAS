@@ -1,0 +1,135 @@
+{
+  "experiment_id": "LEADER_TRUSTED_ROUTER_EVIDENCE_WEIGHTED_TRUST_V1",
+  "phase": "EVIDENCE_WEIGHTED_TRUST_REPAIR_VALIDATION",
+  "development_end": "2023-12-31",
+  "regime_names": ["bear", "bull", "mix"],
+  "expert_names": [
+    "cash",
+    "buy_and_hold",
+    "trend",
+    "volatility_target",
+    "drawdown_control",
+    "specialist_atp"
+  ],
+  "always_admitted_experts": ["cash", "buy_and_hold"],
+  "production_default_admission": {
+    "cash": true,
+    "buy_and_hold": true,
+    "trend": false,
+    "volatility_target": false,
+    "drawdown_control": false,
+    "specialist_atp": false
+  },
+  "mechanical_fixture_admission": {
+    "cash": true,
+    "buy_and_hold": true,
+    "trend": true,
+    "volatility_target": true,
+    "drawdown_control": true,
+    "specialist_atp": false
+  },
+  "fallback_expert_weights": {
+    "cash": 1.0,
+    "buy_and_hold": 0.0,
+    "trend": 0.0,
+    "volatility_target": 0.0,
+    "drawdown_control": 0.0,
+    "specialist_atp": 0.0
+  },
+  "baseline": {
+    "candidates": [
+      "EXPERIMENT_BRANCHES/LEADER_OPTIMIZED_UNCERTAINTY_ROUTER_V2/artifacts/LEADER_BTCUSD_OPTIMIZED_UNCERTAINTY_ROUTER_V2_2/data_preparation/01A_DEVELOPMENT_CAUSAL_FEATURES.csv",
+      "v2_2_server_evidence/EXPERIMENT_BRANCHES/LEADER_OPTIMIZED_UNCERTAINTY_ROUTER_V2/artifacts/LEADER_BTCUSD_OPTIMIZED_UNCERTAINTY_ROUTER_V2_2/data_preparation/01A_DEVELOPMENT_CAUSAL_FEATURES.csv"
+    ],
+    "required_rule_features": [
+      "momentum_30",
+      "momentum_90",
+      "realized_vol_30",
+      "drawdown_90"
+    ]
+  },
+  "router": {
+    "prediction_candidates": [
+      "EXPERIMENT_BRANCHES/LEADER_INTRADAY_RAMOE_FULL_PIPELINE_V1/artifacts/LEADER_BTCUSD_INTRADAY_RAMOE_V1/router/preoos_router/10_EXPANDING_PREOOS_ROUTER_PREDICTIONS.csv",
+      "recovered_inputs/LEADER/extracted/EXPERIMENT_BRANCHES/LEADER_INTRADAY_RAMOE_FULL_PIPELINE_V1/artifacts/LEADER_BTCUSD_INTRADAY_RAMOE_V1/router/preoos_router/10_EXPANDING_PREOOS_ROUTER_PREDICTIONS.csv"
+    ],
+    "preferred_model": "logreg_balanced_fixed",
+    "posterior_columns": ["daily_prob_bear", "daily_prob_bull", "daily_prob_mix"],
+    "execution_clock": "router decision d-1 -> router target/baseline decision d -> baseline target return d+1"
+  },
+  "stage0": {
+    "artifact_roots": [
+      "EXPERIMENT_BRANCHES/LEADER_TRUSTED_RAMOE_STAGE0_V1_3_FINAL_CROSS_MARKET_GATE/artifacts"
+    ],
+    "decision_file": "06_SCIENTIFIC_DECISION.json",
+    "modality_audit_file": "01_MODALITY_AUDIT.csv",
+    "expected_decision": "FINAL_STAGE1_FAIL_CLOSE_SPECIALIST_ATP_CURRENT_INFORMATION_SET",
+    "expected_stage0_modalities_passed": 4,
+    "expected_information_modalities_passed": 0
+  },
+  "modality_files": {
+    "derivatives_carry": "data_sources/LEADER_TRUSTED_RAMOE_MULTIMODAL_V1/derivatives_daily.csv",
+    "trade_flow_liquidity": "data_sources/LEADER_TRUSTED_RAMOE_MULTIMODAL_V1/order_flow_liquidity_daily.csv",
+    "options_implied_risk": "data_sources/LEADER_TRUSTED_RAMOE_MULTIMODAL_V1/options_daily.csv",
+    "onchain": "data_sources/LEADER_TRUSTED_RAMOE_MULTIMODAL_V1/onchain_daily.csv",
+    "cross_market": "data_sources/LEADER_TRUSTED_RAMOE_MULTIMODAL_V1/cross_market_extended_daily.csv"
+  },
+  "rule_experts": {
+    "volatility_target_daily": 0.012,
+    "drawdown_mild_threshold": -0.10,
+    "drawdown_severe_threshold": -0.20,
+    "drawdown_mild_exposure": 0.50,
+    "drawdown_severe_exposure": 0.20
+  },
+  "risk_scenarios": {
+    "past_only_windows": [30, 90, 252],
+    "quantile_samples": 251,
+    "minimum_history": 252
+  },
+  "minimum_replay_rows": 730,
+  "transaction_cost_bps": 10.0,
+  "cvar_alpha": 0.95,
+  "cvar_limit": 0.045,
+  "ambiguity_quantile": 0.9,
+  "maximum_daily_turnover": 0.35,
+  "exposure_grid_step": 0.05,
+  "trust_update_frequency": "completed_return_month",
+  "trust_eta": 0.5,
+  "trust_tail_penalty": 1.0,
+  "trust_turnover_penalty": 0.1,
+  "trust_tail_estimator": "exact_regime_posterior_weighted_upper_tail_mean",
+  "trust_minimum_posterior_mass": 20.0,
+  "trust_minimum_effective_sample_size": 20.0,
+  "trust_support_derivation": "ceil(1/(1-cvar_alpha))",
+  "economic_gate": {
+    "primary_comparator": "constant_matched_mean_exposure",
+    "block_length_days": 30,
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 12029,
+    "one_sided_alpha": 0.05,
+    "minimum_positive_years": 2,
+    "require_maximum_drawdown_not_worse": true,
+    "require_daily_cvar_not_worse": true
+  },
+  "claims": {
+    "dqn_closed": true,
+    "dqn_training_permitted": false,
+    "specialist_training_performed": false,
+    "stage0_decision_may_be_overridden": false,
+    "unadmitted_experts_may_receive_weight": false,
+    "intraday_increment_established": false,
+    "daily_router_posterior_required": true,
+    "real_replay_is_final_confirmation": false,
+    "mechanical_pass_is_economic_validation": false,
+    "fixture_admissions_are_scientific_evidence": false,
+    "final_evaluation_period_selected": false,
+    "unsupported_regime_trust_may_update": false,
+    "trust_thresholds_selected_by_return_search": false
+  },
+  "fixture": {
+    "seed": 12029,
+    "rows": 180,
+    "scenario_models": 5,
+    "scenario_samples": 120
+  }
+}

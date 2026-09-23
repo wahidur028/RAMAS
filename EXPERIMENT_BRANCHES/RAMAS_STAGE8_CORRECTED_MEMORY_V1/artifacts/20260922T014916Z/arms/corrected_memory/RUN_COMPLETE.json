@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-09-22T05:05:55+00:00",
+  "final_wealth": 2.143107337643275,
+  "identity": {
+    "config_sha256": "bb43811e1dcfdfcb92123ec5cc4e53d7869980906c9faebba414b2904ce8fbec",
+    "experiment_id": "RAMAS_STAGE8_CORRECTED_MEMORY_V1",
+    "provider_identity": {
+      "details": {
+        "families": [
+          "llama"
+        ],
+        "family": "llama",
+        "format": "gguf",
+        "parameter_size": "70.6B",
+        "parent_model": "",
+        "quantization_level": "Q4_K_M"
+      },
+      "model": "llama3.3:70b",
+      "model_digest": "a6eb4748fd2990ad2952b2335a95a7f952d1a06119a0aa6a2df6cd052a93a3fa",
+      "ollama_version": "0.23.0",
+      "options": {
+        "num_ctx": 8192,
+        "num_predict": 512,
+        "seed": 16061,
+        "temperature": 0.0
+      },
+      "serving_metadata_sha256": "f731e05070648c6ae023793c866a34064f5d09cd34cd40b37529d50cca9e8d8d"
+    },
+    "runtime": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.3",
+      "python": "3.11.9"
+    },
+    "stage64_manifest_sha256": "6a03c967673f6f2e98fd8134910a9a8231d0b9fb578bc1aa2615c9c18bf9da0b"
+  },
+  "new_calls": 1608,
+  "reused_calls": 0,
+  "rows": 1608,
+  "spec": {
+    "advisor": "llama",
+    "core": "original",
+    "fixed_beta": 0.05,
+    "label": "counterfactual",
+    "label_authority": 1.0,
+    "memory": "expanding",
+    "name": "corrected_memory",
+    "per_action": 2,
+    "regime_filter": "none",
+    "retrieval": "balanced",
+    "risk": "standard",
+    "trust": "fixed"
+  },
+  "status": "COMPLETE"
+}

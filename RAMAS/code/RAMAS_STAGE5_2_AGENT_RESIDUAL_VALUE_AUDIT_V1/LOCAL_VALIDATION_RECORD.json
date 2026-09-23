@@ -1,0 +1,39 @@
+{
+  "validated_at_utc": "2026-09-02T04:52:44Z",
+  "validation_scope": "LOCAL_CODE_AND_UPLOADED_STAGE5_1_RESULT",
+  "python_tests": {
+    "passed": 6,
+    "failed": 0,
+    "status": "PASS"
+  },
+  "source_result": {
+    "archive_sha256": "684290142357e65b6cebdc427ecf852bd027f5d1e6bcb2ebcddd5a911ef3c906",
+    "trace_sha256": "f776f7fa42d989cf919bb13bf748ad55c485cddb39a6c4c6daf59489c98b952c",
+    "internal_artifacts_checked": 17,
+    "internal_hashes_passed": 17,
+    "rows": 1094
+  },
+  "accounting_reconstruction": {
+    "maximum_net_return_error": 0.0,
+    "maximum_pretrade_exposure_error": 0.0,
+    "status": "PASS"
+  },
+  "observed_audit_result": {
+    "decision": "REDESIGN_AS_TOOL_USING_RESIDUAL_AGENT_NO_OOS",
+    "recorded_agent_deployed_growth": 0.416998524116694,
+    "recorded_agent_core_growth": 0.49697853383228496,
+    "distilled_static_core_growth": 0.5848116236536418,
+    "agent_minus_static_core_growth": -0.08783308982135685,
+    "agent_core_sharpe": 0.7209733889464347,
+    "static_core_sharpe": 0.806642013958476,
+    "one_sided_block_bootstrap_p_value": 0.8201179882011799,
+    "static_mapping_fidelity": 0.9323583180987203,
+    "agent_deviation_rows": 74,
+    "active_lessons_at_end": 0,
+    "agent_incremental_value_established": false,
+    "memory_incremental_value_established": false,
+    "new_llm_calls": 0,
+    "reused_oos_opened": false
+  },
+  "status": "PASS"
+}

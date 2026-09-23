@@ -1,0 +1,103 @@
+{
+  "experiment_id": "RAMAS_STAGE5_3_BOUNDED_TOOL_USING_RESIDUAL_AGENT_V1",
+  "phase": "EXPLORATORY_DEVELOPMENT_ONLY",
+  "source_experiment_id": "RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1",
+  "source_audit_experiment_id": "RAMAS_STAGE5_2_AGENT_RESIDUAL_VALUE_AUDIT_V1",
+  "expected_period": {
+    "name": "corrected_pre2024",
+    "rows": 1094,
+    "first_decision_date": "2021-01-01",
+    "last_return_date": "2023-12-31",
+    "scientific_label": "DEVELOPMENT_EVIDENCE_ONLY"
+  },
+  "source_artifact_relative_glob": "EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/*",
+  "raw_dataset_candidates": [
+    "/home/infonet/wahid/projects/leader_fresh/full_data_set/full_data_set.csv",
+    "/home/infonet/wahid/leader_router_fresh/full_data_set/full_data_set.csv"
+  ],
+  "expected_raw_sha256": "b69f17a1233a58c3e0c7d6289fc5bf79173aae471a31074cf17cfffbc8198e7e",
+  "provider": {
+    "kind": "ollama",
+    "endpoint": "http://127.0.0.1:11434/api/chat",
+    "model": "qwen3-coder:30b",
+    "temperature": 0.0,
+    "seed": 12031,
+    "timeout_seconds": 180,
+    "maximum_retries": 0
+  },
+  "transparent_controller": {
+    "mapping": {
+      "bear": 0.25,
+      "bull": 0.5,
+      "mix": 0.25
+    },
+    "allowed_residuals": [-0.25, 0.0, 0.25],
+    "minimum_desired_exposure": 0.0,
+    "maximum_desired_exposure": 0.75
+  },
+  "trigger": {
+    "router_confidence_strictly_below": 0.8,
+    "transition_day": true,
+    "rule": "TRANSITION_OR_LOW_ROUTER_CONFIDENCE"
+  },
+  "agent": {
+    "prompt_version": "bounded_tool_residual_v1",
+    "required_tools_for_nonzero_residual": [
+      "retrieve_mature_incidents",
+      "compare_allowed_actions",
+      "inspect_current_risk",
+      "inspect_evidence_ledger"
+    ],
+    "maximum_mature_incidents": 30,
+    "minimum_incidents_for_nonzero_residual": 12,
+    "require_positive_mean_tool_advantage": true,
+    "require_tool_cvar_not_worse": true,
+    "require_two_positive_chronological_blocks": true,
+    "fallback_residual": 0.0
+  },
+  "memory": {
+    "minimum_matching_incidents_for_promotion": 30,
+    "bootstrap_block_length_days": 10,
+    "bootstrap_resamples": 2000,
+    "bootstrap_seed": 12031,
+    "bootstrap_alpha": 0.05,
+    "rollback_additional_incidents": 20,
+    "tail_probability": 0.05,
+    "minimum_new_incidents_between_reviews": 5
+  },
+  "interface_preflight": {
+    "sample_triggered_days": 30,
+    "minimum_valid_plans": 29,
+    "minimum_valid_decisions": 29,
+    "minimum_full_run_interface_rate": 0.99,
+    "scientific_label": "INTERFACE_PREFLIGHT_ONLY_NO_ECONOMIC_CLAIM"
+  },
+  "bootstrap": {
+    "block_length_days": 30,
+    "resamples": 10000,
+    "seed": 12031,
+    "one_sided_alpha": 0.05
+  },
+  "economic_gate": {
+    "primary_comparator": "transparent_controller",
+    "minimum_sharpe_improvement": 0.05,
+    "minimum_positive_advantage_years": 2,
+    "require_positive_growth_advantage": true,
+    "require_block_bootstrap_significance": true,
+    "require_daily_cvar_not_worse": true
+  },
+  "frozen_claims": {
+    "router_changed": false,
+    "return_clock_changed": false,
+    "risk_layer_changed": false,
+    "transaction_cost_changed": false,
+    "existing_experts_weighted": false,
+    "monthly_trust_updates_enabled": false,
+    "dqn_enabled": false,
+    "hourly_data_used": false,
+    "multimodal_data_used": false,
+    "multi_agent_enabled": false,
+    "reused_oos_opened": false,
+    "pre2024_is_independent_confirmation": false
+  }
+}

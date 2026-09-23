@@ -1,0 +1,46 @@
+{
+  "raw_dataset": {
+    "candidate_audit": [
+      {
+        "exists": false,
+        "path": "/home/infonet/wahid/leader_fresh/full_data_set/full_data_set.csv",
+        "reason": "file does not exist",
+        "status": "FAIL"
+      },
+      {
+        "date_max": "2025-05-31",
+        "date_min": "2015-01-01",
+        "exists": true,
+        "path": "/home/infonet/wahid/projects/leader_fresh/full_data_set/full_data_set.csv",
+        "rows": 3804,
+        "sha256": "b69f17a1233a58c3e0c7d6289fc5bf79173aae471a31074cf17cfffbc8198e7e",
+        "status": "PASS"
+      }
+    ],
+    "date_max": "2025-05-31",
+    "date_min": "2015-01-01",
+    "exists": true,
+    "path": "/home/infonet/wahid/projects/leader_fresh/full_data_set/full_data_set.csv",
+    "rows": 3804,
+    "sha256": "b69f17a1233a58c3e0c7d6289fc5bf79173aae471a31074cf17cfffbc8198e7e",
+    "status": "PASS"
+  },
+  "return_clock": {
+    "canonical_raw_close_return_used_for_economic_rerun": true,
+    "declared_one_row_later_vs_canonical_previous_row_correlation": 0.9993460461151911,
+    "declared_return_used_for_economic_rerun": false,
+    "declared_vs_canonical_same_clock_correlation": -0.03237346318758472,
+    "status": "KNOWN_ONE_ROW_DISPLACEMENT_DETECTED_AND_REPLACED"
+  },
+  "risk_scenarios": {
+    "first_decision_latest_return_date_used": "2021-01-01",
+    "future_return_used": false,
+    "last_decision_latest_return_date_used": "2023-12-30",
+    "quantile_samples": 251,
+    "windows": [
+      30,
+      90,
+      252
+    ]
+  }
+}

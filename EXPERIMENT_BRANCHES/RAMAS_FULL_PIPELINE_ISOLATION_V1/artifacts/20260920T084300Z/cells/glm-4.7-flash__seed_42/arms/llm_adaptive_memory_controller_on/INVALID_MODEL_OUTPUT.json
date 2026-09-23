@@ -1,0 +1,27 @@
+{
+  "created_at": "2026-09-21T11:15:08+00:00",
+  "error": "response is not JSON: Expecting value: line 1 column 1 (char 0)",
+  "error_type": "ContractError",
+  "model": "glm-4.7-flash",
+  "provider_response": {
+    "created_at": "2026-09-21T11:15:08.964807883Z",
+    "done": true,
+    "done_reason": "length",
+    "eval_count": 512,
+    "eval_duration": 7273675017,
+    "load_duration": 10897278716,
+    "message": {
+      "content": "",
+      "role": "assistant",
+      "thinking": "1.  **Analyze the Request:**\n    *   **Role:** Bounded language-model expert in a risk-controlled Bitcoin allocation system.\n    *   **Task:** Choose one signal: BTC, CASH, or ABSTAIN.\n    *   **Constraints:** No leverage, no shorting. Use only provided evidence.\n    *   **Task Type:** `historical_development_decision`.\n    *   **Input Data:**\n        *   `prob_bear`: ~1.38e-26 (Extremely low).\n        *   `prob_bull`: ~0.9999999999994936 (Extremely high).\n        *   `router_confidence`: ~0.9999999999994936 (Extremely high).\n        *   `router_entropy`: ~1.35e-11 (Extremely low).\n        *   `drawdown_90`: 0.0 (No drawdown).\n        *   `hard_regime`: \"bull\".\n        *   `realized_vol_30`: 0.624 (Moderate).\n        *   `return_1`: 0.014 (Positive).\n        *   `return_7`: 0.189 (Positive).\n        *   `return_30`: 0.527 (Positive).\n        *   `return_90`: 1.784 (Positive).\n        *   `safe_exposure_previews`: BTC has slightly higher blended desired exposure (0.525) vs ABSTAIN (0.5) vs CASH (0.475).\n        *   `similar_completed_episodes`: Empty.\n        *   `objective`: Add incremental risk-adjusted value.\n\n2.  **Evaluate Rules for `historical_development_decision`:**\n    *   Weigh full router probabilities, causal OHLCV-derived features, transition risk, safe exposure previews, and only completed memory episodes.\n    *   Favor ABSTAIN when evidence conflicts.\n    *   Do not treat a remembered episode as a rule merely because it is similar.\n\n3.  **Evaluate Evidence:**\n    *   **Router Probabilities:** The router is overwhelmingly bullish (`prob_bull` > 0.99, `router_confidence` > 0.99, `router_entropy` near zero). This strongly suggests BTC.\n    *   **Causal Features:**\n        *   `drawdown_90` is 0.0 (Safe).\n        *   `realized_vol_30"
+    },
+    "model": "glm-4.7-flash",
+    "prompt_eval_count": 947,
+    "prompt_eval_duration": 601144554,
+    "total_duration": 19358638150
+  },
+  "raw_response": "",
+  "request_sha256": "69e7a30f04ce433213eb4b7ac4024744082ff442176140299ce10f617f92732d",
+  "seed": 42,
+  "status": "INVALID_MODEL_OUTPUT_STOP_BEFORE_SCORING"
+}

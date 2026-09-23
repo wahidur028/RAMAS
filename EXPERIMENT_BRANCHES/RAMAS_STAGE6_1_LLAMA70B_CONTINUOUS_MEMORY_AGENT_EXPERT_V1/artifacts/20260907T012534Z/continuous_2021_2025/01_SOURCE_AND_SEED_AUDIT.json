@@ -1,0 +1,75 @@
+{
+  "period": {
+    "first_decision_date": "2021-01-01",
+    "last_return_date": "2025-05-28",
+    "market_features": {
+      "feature_columns": [
+        "return_1",
+        "return_7",
+        "return_30",
+        "return_90",
+        "realized_vol_30",
+        "drawdown_90",
+        "router_entropy",
+        "router_confidence",
+        "router_transition_l1"
+      ],
+      "future_price_used": false,
+      "latest_price_dates_equal_decision_dates": true
+    },
+    "periods": [
+      {
+        "base_trace_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/results/corrected_pre2024/03_TRUSTED_ROUTER_TRACE.csv",
+        "base_trace_sha256": "6ee5601739cdd9115e59c1b4b98d25b737e05ef38852bf72a1ff39958978f0cd",
+        "corrected_inputs_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/results/corrected_pre2024/02_CORRECTED_INPUTS.csv",
+        "corrected_inputs_sha256": "857896787ee9e6a2b18d4457d151993334855f1f58eb4ab6a0ede4367ef8871f",
+        "first_decision_date": "2021-01-01",
+        "last_return_date": "2023-12-31",
+        "name": "corrected_pre2024",
+        "rows": 1094,
+        "scientific_label": "DEVELOPMENT_AND_WALK_FORWARD_EVIDENCE"
+      },
+      {
+        "base_trace_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/results/corrected_reused_oos/03_TRUSTED_ROUTER_TRACE.csv",
+        "base_trace_sha256": "2f97938e94c358e6067f803b4a96d903527a82b24634e7ab96b23a51a5448760",
+        "corrected_inputs_path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMOE_RETURN_CLOCK_REPAIR_AND_ECONOMIC_RERUN_V1/artifacts/20260901T024730Z/results/corrected_reused_oos/02_CORRECTED_INPUTS.csv",
+        "corrected_inputs_sha256": "4f70865bb75700a75c8738b9279d73b5ea8c9d09c4ebdb15fa72162ac7f29764",
+        "first_decision_date": "2023-12-31",
+        "last_return_date": "2025-05-28",
+        "name": "corrected_reused_oos",
+        "rows": 514,
+        "scientific_label": "REUSED_OOS_DIAGNOSTIC_NOT_UNTOUCHED_CONFIRMATION"
+      }
+    ],
+    "risk_scenarios": {
+      "first_latest_return_date_used": "2021-01-01",
+      "future_return_used": false,
+      "last_latest_return_date_used": "2025-05-27",
+      "past_only_windows": [
+        30,
+        90,
+        252
+      ],
+      "quantile_samples": 251
+    },
+    "rows": 1608,
+    "strictly_continuous_calendar": true
+  },
+  "raw_market": {
+    "date_max": "2025-05-28",
+    "date_min": "2015-01-01",
+    "full_file_rows": 3804,
+    "future_value_sent_to_llama": false,
+    "path": "/home/infonet/wahid/projects/leader_fresh/full_data_set/full_data_set.csv",
+    "post2021_market_values_parsed": true,
+    "rows_parsed_for_replay": 3801,
+    "sha256": "b69f17a1233a58c3e0c7d6289fc5bf79173aae471a31074cf17cfffbc8198e7e"
+  },
+  "seed": {
+    "llama_calls_avoided": 364,
+    "mode": "RESUMED_FROM_VERIFIED_STAGE6_2021",
+    "path": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_LLAMA70B_MEMORY_AGENT_EXPERT_V1/artifacts/20260903T004539Z/development_2021",
+    "rows_reused": 364,
+    "state_boundary": "2021-12-31 completed return -> 2022-01-01 return decision"
+  }
+}

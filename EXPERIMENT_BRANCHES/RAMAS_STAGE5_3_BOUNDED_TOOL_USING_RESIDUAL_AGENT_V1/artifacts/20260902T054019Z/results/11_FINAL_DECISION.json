@@ -1,0 +1,9 @@
+{
+  "agent_interface_valid": true,
+  "decision": "STOP_AGENT_ECONOMIC_BRANCH_DEVELOPMENT_GATE_FAILED",
+  "development_gate_passed": false,
+  "economic_claim_permitted": true,
+  "multi_agent_permitted": false,
+  "provider": "ollama",
+  "reused_oos_opened": false
+}

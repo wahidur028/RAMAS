@@ -1,0 +1,114 @@
+{
+  "endpoint": "INDEPENDENT_REPLICATION_OF_IDENTICAL_CONFIGURATION",
+  "interpretation": "An action flip is the largest possible change in the advisor's output. Where the executed exposure is unchanged, the blend at beta=0.05 and the CVaR exposure grid absorbed the advice entirely.",
+  "pairs": [
+    {
+      "action_differs_days": 2,
+      "action_flips_absorbed_by_execution": 2,
+      "daily_net_returns_bit_identical": true,
+      "days": 1608,
+      "executed_exposure_differs_days": 0,
+      "flip_detail": [
+        {
+          "left_action": "ABSTAIN",
+          "left_exposure": 0.45,
+          "return_date": "2024-11-02",
+          "right_action": "BTC",
+          "right_exposure": 0.45
+        },
+        {
+          "left_action": "CASH",
+          "left_exposure": 0.4,
+          "return_date": "2025-03-29",
+          "right_action": "ABSTAIN",
+          "right_exposure": 0.4
+        }
+      ],
+      "left": "6.3:fixed_no_memory",
+      "net_return_differs_days": 0,
+      "right": "7:closed_loop_no_memory"
+    },
+    {
+      "action_differs_days": 22,
+      "action_flips_absorbed_by_execution": 14,
+      "daily_net_returns_bit_identical": false,
+      "days": 1608,
+      "executed_exposure_differs_days": 8,
+      "flip_detail": [
+        {
+          "left_action": "BTC",
+          "left_exposure": 0.5,
+          "return_date": "2021-01-21",
+          "right_action": "ABSTAIN",
+          "right_exposure": 0.5
+        },
+        {
+          "left_action": "BTC",
+          "left_exposure": 0.5,
+          "return_date": "2021-02-19",
+          "right_action": "ABSTAIN",
+          "right_exposure": 0.5
+        },
+        {
+          "left_action": "ABSTAIN",
+          "left_exposure": 0.5,
+          "return_date": "2021-03-03",
+          "right_action": "BTC",
+          "right_exposure": 0.5
+        },
+        {
+          "left_action": "ABSTAIN",
+          "left_exposure": 0.5,
+          "return_date": "2021-03-07",
+          "right_action": "BTC",
+          "right_exposure": 0.5
+        },
+        {
+          "left_action": "ABSTAIN",
+          "left_exposure": 0.5,
+          "return_date": "2021-03-08",
+          "right_action": "BTC",
+          "right_exposure": 0.5
+        },
+        {
+          "left_action": "BTC",
+          "left_exposure": 0.5,
+          "return_date": "2021-03-10",
+          "right_action": "ABSTAIN",
+          "right_exposure": 0.5
+        },
+        {
+          "left_action": "ABSTAIN",
+          "left_exposure": 0.45,
+          "return_date": "2021-04-17",
+          "right_action": "BTC",
+          "right_exposure": 0.5
+        },
+        {
+          "left_action": "ABSTAIN",
+          "left_exposure": 0.45,
+          "return_date": "2021-11-10",
+          "right_action": "BTC",
+          "right_exposure": 0.5
+        },
+        {
+          "left_action": "BTC",
+          "left_exposure": 0.5,
+          "return_date": "2021-11-11",
+          "right_action": "ABSTAIN",
+          "right_exposure": 0.45
+        },
+        {
+          "left_action": "BTC",
+          "left_exposure": 0.5,
+          "return_date": "2021-11-12",
+          "right_action": "ABSTAIN",
+          "right_exposure": 0.45
+        }
+      ],
+      "left": "6.3:fixed_memory",
+      "net_return_differs_days": 14,
+      "right": "7:closed_loop_memory"
+    }
+  ]
+}

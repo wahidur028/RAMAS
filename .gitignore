@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.pending
+*.tmp
+*.lock
+*.local.json

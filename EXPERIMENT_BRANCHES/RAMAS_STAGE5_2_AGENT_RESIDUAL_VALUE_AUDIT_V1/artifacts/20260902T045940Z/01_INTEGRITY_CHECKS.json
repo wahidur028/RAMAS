@@ -1,0 +1,23 @@
+{
+  "checks": {
+    "allowed_action_grid": true,
+    "decision_dates_unique": true,
+    "deployed_accounting_reconstruction": true,
+    "deployed_pretrade_reconstruction": true,
+    "next_day_clock": true,
+    "reused_oos_not_run": true,
+    "source_experiment_matches": true,
+    "source_internal_hash_manifest": true
+  },
+  "maximum_pretrade_reconstruction_error": 0.0,
+  "maximum_return_reconstruction_error": 0.0,
+  "source_manifest": {
+    "checked_files": 17,
+    "mismatches": [],
+    "passed": true,
+    "present": true,
+    "source_decision": "REVISE_AGENT_DEVELOPMENT_GATE_FAILED",
+    "source_status": "PASS"
+  },
+  "status": "PASS"
+}

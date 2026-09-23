@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "corrected_returns_finite": true,
+    "corrected_scenarios_finite": true,
+    "deterministic_terminal_trust": true,
+    "deterministic_trace": true,
+    "exposure_bounded": true,
+    "rejected_weights_exactly_zero": true,
+    "return_dates_after_decisions": true,
+    "turnover_bounded": true,
+    "weights_sum_to_one": true
+  },
+  "status": "PASS"
+}

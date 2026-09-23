@@ -1,0 +1,93 @@
+{
+  "status": "SECONDARY_REUSED_OOS_DIAGNOSTIC",
+  "primary": false,
+  "contrast": "(ADAPTIVE_MEMORY - ADAPTIVE_NO_MEMORY) - (FIXED_MEMORY - FIXED_NO_MEMORY)",
+  "unit": "mean daily log return",
+  "scope": "POST2021",
+  "continuous_learning_demonstrated": false,
+  "economic_stop_gate": false,
+  "interpretation": "Supplementary four-cell comparison conditional on archived adaptive and fresh fixed-trust realized paths; not four simultaneous randomized trials or a learner resimulation.",
+  "paired_days": 1244,
+  "mean_daily_log_interaction": -3.8598352818493905e-06,
+  "mean_daily_log_interaction_bps": -0.03859835281849391,
+  "two_sided_percentile95": [
+    -1.8458641020480567e-05,
+    8.970299444885196e-06
+  ],
+  "two_sided_percentile95_bps": [
+    -0.18458641020480568,
+    0.08970299444885195
+  ],
+  "mean_daily_log_memory_gap_adaptive": -1.681578175226616e-07,
+  "mean_daily_log_memory_gap_fixed": 3.6916774643267283e-06,
+  "block_days": 30,
+  "bootstrap_resamples": 5000,
+  "seed": 16062,
+  "all_four_cells_share_sampled_indices": true,
+  "cell_metrics": {
+    "ADAPTIVE_MEMORY": {
+      "days": 1244,
+      "arithmetic_mean_daily": 0.0004968742839138438,
+      "geometric_mean_daily": 0.0004158321798336236,
+      "daily_volatility": 0.012743100892798677,
+      "annualized_volatility": 0.24353996199385422,
+      "sharpe_zero_cash_rate": 0.7451891291832886,
+      "daily_loss_cvar95": 0.029232989664381957,
+      "positive_day_fraction": 0.4967845659163987,
+      "log_growth_contribution": 0.5171877075180983,
+      "cumulative_return": 0.6773039413233752,
+      "annualized_geometric_return": 0.16398694496199698,
+      "maximum_drawdown_loss": 0.37086594603711553
+    },
+    "ADAPTIVE_NO_MEMORY": {
+      "days": 1244,
+      "arithmetic_mean_daily": 0.0004971781854257295,
+      "geometric_mean_daily": 0.0004160004075907225,
+      "daily_volatility": 0.012753744703702738,
+      "annualized_volatility": 0.24374338134404624,
+      "sharpe_zero_cash_rate": 0.7450226185646676,
+      "daily_loss_cvar95": 0.02923323770984289,
+      "positive_day_fraction": 0.4967845659163987,
+      "log_growth_contribution": 0.5173968958430964,
+      "cumulative_return": 0.6776548504271374,
+      "annualized_geometric_return": 0.16405843881997992,
+      "maximum_drawdown_loss": 0.37086594603711553
+    },
+    "FIXED_MEMORY": {
+      "days": 1244,
+      "arithmetic_mean_daily": 0.0004983234209823708,
+      "geometric_mean_daily": 0.00042010851061877706,
+      "daily_volatility": 0.012519096413490107,
+      "annualized_volatility": 0.23925889706027187,
+      "sharpe_zero_cash_rate": 0.7607350520718984,
+      "daily_loss_cvar95": 0.028572428482208312,
+      "positive_day_fraction": 0.4967845659163987,
+      "log_growth_contribution": 0.5225052404437646,
+      "cumulative_return": 0.6862468162010182,
+      "annualized_geometric_return": 0.1658056706985457,
+      "maximum_drawdown_loss": 0.36253333512241326
+    },
+    "FIXED_NO_MEMORY": {
+      "days": 1244,
+      "arithmetic_mean_daily": 0.0004948455767482954,
+      "geometric_mean_daily": 0.00041641528906642455,
+      "daily_volatility": 0.012536200506285842,
+      "annualized_volatility": 0.2395857821837952,
+      "sharpe_zero_cash_rate": 0.7543951283747743,
+      "daily_loss_cvar95": 0.028619108658465748,
+      "positive_day_fraction": 0.4967845659163987,
+      "log_growth_contribution": 0.5179127936781419,
+      "cumulative_return": 0.6785205722252268,
+      "annualized_geometric_return": 0.16423477491759023,
+      "maximum_drawdown_loss": 0.36253333512241326
+    }
+  },
+  "reference_run_id": "20260908T055052711433762Z",
+  "reference_trace_sha256": "da29884c0c44709c2cf72fa282ba69769621e9e78e1d0fcb5abb147b06dee3a3",
+  "interface_failures": {
+    "adaptive_memory": 0,
+    "adaptive_no_memory": 0,
+    "fixed_memory": 0,
+    "fixed_no_memory": 0
+  }
+}

@@ -1,0 +1,15 @@
+Replaying archived arm llama_memory_current_year in legacy mode (no model calls)...
+STAGE8_ARM=llama_memory_current_year PROGRESS=1/1608 VALID=1 NEW_CALLS=0 REUSED_CALLS=1
+ERROR: ReplayMismatch: Rebuilt payload differs from the archived request at 000004-llama_memory_current_year. archived=622c3db215d9 rebuilt=f5fa2695c776
+Traceback (most recent call last):
+  File "/home/infonet/wahid/leader_router_fresh/RAMAS_STAGE8_CORRECTED_MEMORY_V1/RAMAS_CORRECTED_MEMORY.py", line 422, in main
+    args.function(args)
+  File "/home/infonet/wahid/leader_router_fresh/RAMAS_STAGE8_CORRECTED_MEMORY_V1/RAMAS_CORRECTED_MEMORY.py", line 177, in command_validate
+    rows, arm = modules["engine"].run_arm(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infonet/wahid/leader_router_fresh/RAMAS_STAGE8_CORRECTED_MEMORY_V1/corrected_memory/engine.py", line 151, in run_arm
+    raw, outer, latency = journal.complete(f"{i+1:06d}-{arm.name}", payload)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infonet/wahid/leader_router_fresh/RAMAS_STAGE8_CORRECTED_MEMORY_V1/corrected_memory/replay.py", line 52, in complete
+    raise ReplayMismatch(
+corrected_memory.replay.ReplayMismatch: Rebuilt payload differs from the archived request at 000004-llama_memory_current_year. archived=622c3db215d9 rebuilt=f5fa2695c776

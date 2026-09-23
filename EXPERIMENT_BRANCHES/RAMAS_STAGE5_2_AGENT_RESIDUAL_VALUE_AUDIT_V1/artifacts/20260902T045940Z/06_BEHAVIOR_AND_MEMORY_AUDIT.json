@@ -1,0 +1,44 @@
+{
+  "action_counts": {
+    "0.00": 60,
+    "0.25": 719,
+    "0.50": 313,
+    "0.75": 2
+  },
+  "active_lesson_rows": 105,
+  "active_lesson_rows_that_changed_static_action": 0,
+  "active_lessons_at_end": 0,
+  "actual_transition_rows": 54,
+  "agent_deviation_better_rows": 35,
+  "agent_deviation_mean_log_advantage": -0.0007608509992242591,
+  "agent_deviation_rows": 74,
+  "confidence_log_advantage_correlation": -0.0008506980921725899,
+  "maximum_repeated_lesson_text_count": 42,
+  "memory_citation_rate": 0.9990859232175503,
+  "memory_citation_rows": 1093,
+  "memory_event_counts": {
+    "LESSON_PROMOTED": 5,
+    "LESSON_QUARANTINED": 505,
+    "LESSON_ROLLED_BACK": 5
+  },
+  "quarantined_proposals": 505,
+  "reason_code_counts": {
+    "BEAR_DEFENSE": 513,
+    "BULL_TREND": 347,
+    "HIGH_VOLATILITY": 1094,
+    "MEMORY_ANALOGY": 1082,
+    "MIX_CAUTION": 234,
+    "TRANSITION_RISK": 975
+  },
+  "rows": 1094,
+  "static_mapping": {
+    "bear": 0.25,
+    "bull": 0.5,
+    "mix": 0.25
+  },
+  "static_mapping_exact_rows": 1020,
+  "static_mapping_fidelity": 0.9323583180987203,
+  "transition_reason_precision": 0.048205128205128206,
+  "transition_reason_rows": 975,
+  "unique_quarantined_lesson_texts": 202
+}

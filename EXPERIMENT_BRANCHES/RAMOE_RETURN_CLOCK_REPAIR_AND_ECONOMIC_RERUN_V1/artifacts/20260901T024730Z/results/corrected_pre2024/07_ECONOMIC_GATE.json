@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "daily_cvar_not_worse": false,
+    "maximum_drawdown_not_worse": false,
+    "minimum_positive_years": false,
+    "one_sided_block_bootstrap_p_below_alpha": false,
+    "positive_full_period_growth_advantage": false
+  },
+  "economic_gate_passed": false,
+  "inference": {
+    "block_length_days": 30,
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 12029,
+    "confidence_interval_high": 2.4590144809410594e-05,
+    "confidence_interval_low": -0.00012110232027416179,
+    "observed_mean_log_advantage": -4.380871859106132e-05,
+    "one_sided_p_value": 0.8785121487851215
+  }
+}

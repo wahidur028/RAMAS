@@ -1,0 +1,1126 @@
+{
+  "experiment": "RAMAS_pure_LLaMA_advisor_memory_controller_ablation",
+  "script_version": "v3_corrected_controller_off_reconstruction",
+  "read_only": true,
+  "llama_calls": 0,
+  "definition": {
+    "N": "numerical-only: advisor=ABSTAIN, beta=0, memory=none",
+    "L": "LLaMA advisor with no retrieved memory",
+    "LM": "LLaMA advisor with retrieved memory",
+    "pure_llama_effect": "L - N",
+    "incremental_memory_effect": "LM - L",
+    "total_advisor_path_effect": "LM - N"
+  },
+  "inputs": {
+    "numerical_core_json": "/home/infonet/wahid/leader_router_fresh/ramas_numerical_core_controller_ablation.json",
+    "adaptive_archive": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_2_LLAMA70B_MATCHED_MEMORY_ABLATION_V1/artifacts/20260908T055052711433762Z.tar.gz",
+    "fixed_archive": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_3_LLAMA70B_FIXED_TRUST_MEMORY_ABLATION_V1/artifacts/20260909T013716356200839Z.tar.gz",
+    "cost_bps": 10
+  },
+  "evaluation_window": {
+    "return_date_start": "2022-01-01",
+    "return_date_end": "2025-05-28",
+    "date_count": 1244
+  },
+  "bootstrap_contract": {
+    "resamples": 5000,
+    "circular_block_days": 30,
+    "primary_effect": "paired mean daily net-return difference in bps/day",
+    "secondary_effects": [
+      "net return percentage points",
+      "annualized volatility percentage points",
+      "Sharpe difference",
+      "maximum drawdown percentage points",
+      "ES95 percentage points",
+      "total turnover difference",
+      "mean exposure percentage points"
+    ],
+    "seed": 20260915
+  },
+  "numerical_only_validation": {
+    "advisor": "ABSTAIN",
+    "memory": "none",
+    "beta": 0.0,
+    "source_validation": {
+      "advisor_values": [
+        "abstain"
+      ],
+      "memory_values": [
+        "none"
+      ],
+      "beta_values": [
+        0.0
+      ],
+      "max_core_desired_vs_desired_difference": 0.0
+    }
+  },
+  "sources": {
+    "adaptive": {
+      "archive": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_2_LLAMA70B_MATCHED_MEMORY_ABLATION_V1/artifacts/20260908T055052711433762Z.tar.gz",
+      "trace_member": "20260908T055052711433762Z/03_DAILY_TRACE.csv",
+      "date_count": 1244,
+      "start_return_date": "2022-01-01",
+      "end_return_date": "2025-05-28",
+      "trace_audits": {
+        "memory": {
+          "prefix": "memory",
+          "max_shadow_exposure_vs_executed_difference": 0.55,
+          "max_shadow_return_vs_executed_difference": 0.06564832956661304,
+          "max_shadow_pretrade_vs_executed_difference": 0.5614312144046955,
+          "valid_fraction": 1.0,
+          "error_count": 0
+        },
+        "no_memory": {
+          "prefix": "no_memory",
+          "max_shadow_exposure_vs_executed_difference": 0.55,
+          "max_shadow_return_vs_executed_difference": 0.06564832956661304,
+          "max_shadow_pretrade_vs_executed_difference": 0.5614312144046955,
+          "valid_fraction": 1.0,
+          "error_count": 0
+        }
+      },
+      "numerical_core_alignment": {
+        "available": false,
+        "max_no_memory_core_target_difference": null,
+        "max_memory_core_target_difference": null
+      },
+      "comparisons": {
+        "llama_no_memory_vs_numerical_only": {
+          "interpretation": "pure_llama_advisor_effect",
+          "controller_on": {
+            "comparison": "llama_no_memory_vs_numerical_only",
+            "baseline_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 60.045985214618284,
+              "annualized_volatility_pct": 23.86643038950319,
+              "sharpe": 0.6978868233930628,
+              "mdd_pct": 38.22536565028542,
+              "es95_pct": 2.880604123208995,
+              "total_turnover": 8.132383138449232,
+              "mean_exposure_pct": 44.035369774919616
+            },
+            "treatment_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 67.76548504271429,
+              "annualized_volatility_pct": 24.374338134404624,
+              "sharpe": 0.7450226185646676,
+              "mdd_pct": 37.08659460371152,
+              "es95_pct": 2.923323770984291,
+              "total_turnover": 11.375047849137362,
+              "mean_exposure_pct": 44.93971061093248
+            },
+            "effect": {
+              "point_difference": {
+                "net_return_pct": 7.719499828096005,
+                "annualized_volatility_pct": 0.5079077449014342,
+                "sharpe": 0.04713579517160471,
+                "mdd_pct": -1.1387710465739005,
+                "es95_pct": 0.04271964777529602,
+                "total_turnover": 3.24266471068813,
+                "mean_exposure_pct": 0.9043408360128637
+              },
+              "ci95_difference": {
+                "net_return_pct": [
+                  -3.321807688254543,
+                  39.45761803321855
+                ],
+                "annualized_volatility_pct": [
+                  -0.028840877969994325,
+                  1.0752772572472298
+                ],
+                "sharpe": [
+                  -0.03989550530441207,
+                  0.13658469399946402
+                ],
+                "mdd_pct": [
+                  -2.9250007431279355,
+                  1.6944983204555317
+                ],
+                "es95_pct": [
+                  -0.03508164136717427,
+                  0.12069157551605182
+                ],
+                "total_turnover": [
+                  1.3337951159326373,
+                  5.642180866017401
+                ],
+                "mean_exposure_pct": [
+                  0.11254019292604767,
+                  1.7443729903536962
+                ]
+              },
+              "point_mean_daily_net_return_difference_bps": 0.4115991601403764,
+              "ci95_mean_daily_net_return_difference_bps": [
+                -0.17072254981015322,
+                1.1350263899753381
+              ],
+              "daily_win_fraction": 0.1270096463022508,
+              "bootstrap_positive_fraction": 0.9082,
+              "bootstrap_count": 5000,
+              "circular_block_days": 30,
+              "seed": 20260915
+            },
+            "action_diagnostics": {
+              "decision_count": 1244,
+              "target_change_fraction": 0.39228295819935693,
+              "mean_absolute_target_change": 0.01733659092341742,
+              "mean_target_change": 0.008018452028929028,
+              "positive_target_change_fraction": 0.1872990353697749,
+              "negative_target_change_fraction": 0.204983922829582
+            }
+          },
+          "controller_off": {
+            "comparison": "llama_no_memory_vs_numerical_only",
+            "baseline_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 60.4856194263814,
+              "annualized_volatility_pct": 23.881046933630156,
+              "sharpe": 0.7009358391713914,
+              "mdd_pct": 36.948170729771824,
+              "es95_pct": 2.875554807854338,
+              "total_turnover": 7.007412857361489,
+              "mean_exposure_pct": 44.24378412279052
+            },
+            "treatment_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 66.22546908107535,
+              "annualized_volatility_pct": 24.378762380146423,
+              "sharpe": 0.7338231782693871,
+              "mdd_pct": 36.57665062188523,
+              "es95_pct": 2.9229140271292957,
+              "total_turnover": 10.23605190339186,
+              "mean_exposure_pct": 45.04562932568342
+            },
+            "effect": {
+              "point_difference": {
+                "net_return_pct": 5.739849654693948,
+                "annualized_volatility_pct": 0.497715446516267,
+                "sharpe": 0.032887339097995794,
+                "mdd_pct": -0.37152010788659595,
+                "es95_pct": 0.0473592192749579,
+                "total_turnover": 3.2286390460303718,
+                "mean_exposure_pct": 0.8018452028928991
+              },
+              "ci95_difference": {
+                "net_return_pct": [
+                  -4.835360544302239,
+                  38.30746822527139
+                ],
+                "annualized_volatility_pct": [
+                  -0.06965728602286649,
+                  1.1534072531642527
+                ],
+                "sharpe": [
+                  -0.0499978419343271,
+                  0.11495153064384002
+                ],
+                "mdd_pct": [
+                  -1.5780884401503184,
+                  1.8163626527448098
+                ],
+                "es95_pct": [
+                  -0.01572336521624109,
+                  0.12821196638397758
+                ],
+                "total_turnover": [
+                  1.1949907494435685,
+                  5.709134757873025
+                ],
+                "mean_exposure_pct": [
+                  -0.003988890398908571,
+                  1.7102877054840842
+                ]
+              },
+              "point_mean_daily_net_return_difference_bps": 0.3150223735408027,
+              "ci95_mean_daily_net_return_difference_bps": [
+                -0.25985018242233354,
+                1.051499623627242
+              ],
+              "daily_win_fraction": 0.2170418006430868,
+              "bootstrap_positive_fraction": 0.8234,
+              "bootstrap_count": 5000,
+              "circular_block_days": 30,
+              "seed": 20260916
+            },
+            "action_diagnostics": {
+              "decision_count": 1244,
+              "target_change_fraction": 0.39228295819935693,
+              "mean_absolute_target_change": 0.01733659092341742,
+              "mean_target_change": 0.008018452028929028,
+              "positive_target_change_fraction": 0.1872990353697749,
+              "negative_target_change_fraction": 0.204983922829582
+            }
+          }
+        },
+        "llama_memory_vs_numerical_only": {
+          "interpretation": "total_llama_plus_memory_effect",
+          "controller_on": {
+            "comparison": "llama_memory_vs_numerical_only",
+            "baseline_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 60.045985214618284,
+              "annualized_volatility_pct": 23.86643038950319,
+              "sharpe": 0.6978868233930628,
+              "mdd_pct": 38.22536565028542,
+              "es95_pct": 2.880604123208995,
+              "total_turnover": 8.132383138449232,
+              "mean_exposure_pct": 44.035369774919616
+            },
+            "treatment_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 67.73039413233786,
+              "annualized_volatility_pct": 24.35399619938542,
+              "sharpe": 0.7451891291832886,
+              "mdd_pct": 37.08659460371152,
+              "es95_pct": 2.923298966438197,
+              "total_turnover": 11.380187421674519,
+              "mean_exposure_pct": 44.883440514469456
+            },
+            "effect": {
+              "point_difference": {
+                "net_return_pct": 7.68440891771958,
+                "annualized_volatility_pct": 0.48756580988223064,
+                "sharpe": 0.04730230579022576,
+                "mdd_pct": -1.1387710465739005,
+                "es95_pct": 0.04269484322920203,
+                "total_turnover": 3.247804283225287,
+                "mean_exposure_pct": 0.8480707395498399
+              },
+              "ci95_difference": {
+                "net_return_pct": [
+                  -3.252553878400834,
+                  38.69383074853585
+                ],
+                "annualized_volatility_pct": [
+                  -0.03999161874255162,
+                  1.0465684769468184
+                ],
+                "sharpe": [
+                  -0.03968859227849971,
+                  0.13325573935717341
+                ],
+                "mdd_pct": [
+                  -2.8879079762972673,
+                  1.7123454770899682
+                ],
+                "es95_pct": [
+                  -0.035653115068365625,
+                  0.11927415798182586
+                ],
+                "total_turnover": [
+                  1.3250519779171948,
+                  5.733955996565418
+                ],
+                "mean_exposure_pct": [
+                  0.08028536977491964,
+                  1.655948553054657
+                ]
+              },
+              "point_mean_daily_net_return_difference_bps": 0.40856014502152044,
+              "ci95_mean_daily_net_return_difference_bps": [
+                -0.16260842913680895,
+                1.1080773748274673
+              ],
+              "daily_win_fraction": 0.1229903536977492,
+              "bootstrap_positive_fraction": 0.9076,
+              "bootstrap_count": 5000,
+              "circular_block_days": 30,
+              "seed": 20260915
+            },
+            "action_diagnostics": {
+              "decision_count": 1244,
+              "target_change_fraction": 0.3890675241157556,
+              "mean_absolute_target_change": 0.01676148641918777,
+              "mean_target_change": 0.007369132221563698,
+              "positive_target_change_fraction": 0.18086816720257234,
+              "negative_target_change_fraction": 0.20819935691318328
+            }
+          },
+          "controller_off": {
+            "comparison": "llama_memory_vs_numerical_only",
+            "baseline_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 60.4856194263814,
+              "annualized_volatility_pct": 23.881046933630156,
+              "sharpe": 0.7009358391713914,
+              "mdd_pct": 36.948170729771824,
+              "es95_pct": 2.875554807854338,
+              "total_turnover": 7.007412857361489,
+              "mean_exposure_pct": 44.24378412279052
+            },
+            "treatment_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 65.87060703866695,
+              "annualized_volatility_pct": 24.35559766045211,
+              "sharpe": 0.7317120564496927,
+              "mdd_pct": 36.612706194947414,
+              "es95_pct": 2.922904883439931,
+              "total_turnover": 10.346066350621694,
+              "mean_exposure_pct": 44.98069734494689
+            },
+            "effect": {
+              "point_difference": {
+                "net_return_pct": 5.384987612285549,
+                "annualized_volatility_pct": 0.47455072682195265,
+                "sharpe": 0.030776217278301377,
+                "mdd_pct": -0.3354645348244105,
+                "es95_pct": 0.04735007558559312,
+                "total_turnover": 3.338653493260205,
+                "mean_exposure_pct": 0.7369132221563675
+              },
+              "ci95_difference": {
+                "net_return_pct": [
+                  -4.774903507117311,
+                  36.820065861926835
+                ],
+                "annualized_volatility_pct": [
+                  -0.08684075904156482,
+                  1.1225946259605777
+                ],
+                "sharpe": [
+                  -0.049317912330567384,
+                  0.11009634537058538
+                ],
+                "mdd_pct": [
+                  -1.4935112623360787,
+                  1.8575413802196235
+                ],
+                "es95_pct": [
+                  -0.016370078475011873,
+                  0.1273708953778423
+                ],
+                "total_turnover": [
+                  1.2346663871662371,
+                  5.910103334954942
+                ],
+                "mean_exposure_pct": [
+                  -0.04163215452746271,
+                  1.6042273422636832
+                ]
+              },
+              "point_mean_daily_net_return_difference_bps": 0.29629097261472925,
+              "ci95_mean_daily_net_return_difference_bps": [
+                -0.2675275515933826,
+                1.0071576412410876
+              ],
+              "daily_win_fraction": 0.21463022508038584,
+              "bootstrap_positive_fraction": 0.8164,
+              "bootstrap_count": 5000,
+              "circular_block_days": 30,
+              "seed": 20260916
+            },
+            "action_diagnostics": {
+              "decision_count": 1244,
+              "target_change_fraction": 0.3890675241157556,
+              "mean_absolute_target_change": 0.01676148641918777,
+              "mean_target_change": 0.007369132221563698,
+              "positive_target_change_fraction": 0.18086816720257234,
+              "negative_target_change_fraction": 0.20819935691318328
+            }
+          }
+        },
+        "llama_memory_vs_llama_no_memory": {
+          "interpretation": "incremental_memory_effect",
+          "controller_on": {
+            "comparison": "llama_memory_vs_llama_no_memory",
+            "baseline_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 67.76548504271429,
+              "annualized_volatility_pct": 24.374338134404624,
+              "sharpe": 0.7450226185646676,
+              "mdd_pct": 37.08659460371152,
+              "es95_pct": 2.923323770984291,
+              "total_turnover": 11.375047849137362,
+              "mean_exposure_pct": 44.93971061093248
+            },
+            "treatment_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 67.73039413233786,
+              "annualized_volatility_pct": 24.35399619938542,
+              "sharpe": 0.7451891291832886,
+              "mdd_pct": 37.08659460371152,
+              "es95_pct": 2.923298966438197,
+              "total_turnover": 11.380187421674519,
+              "mean_exposure_pct": 44.883440514469456
+            },
+            "effect": {
+              "point_difference": {
+                "net_return_pct": -0.0350909103764252,
+                "annualized_volatility_pct": -0.02034193501920356,
+                "sharpe": 0.00016651061862105188,
+                "mdd_pct": 0.0,
+                "es95_pct": -2.480454609399274e-05,
+                "total_turnover": 0.005139572537157022,
+                "mean_exposure_pct": -0.05627009646302383
+              },
+              "ci95_difference": {
+                "net_return_pct": [
+                  -3.5572369199123526,
+                  2.816734570438708
+                ],
+                "annualized_volatility_pct": [
+                  -0.04779335321470794,
+                  -0.001376821815548104
+                ],
+                "sharpe": [
+                  -0.01829570216868358,
+                  0.016391737356959066
+                ],
+                "mdd_pct": [
+                  -0.3379175522027205,
+                  0.4537063206425332
+                ],
+                "es95_pct": [
+                  -0.008232248422700749,
+                  0.0
+                ],
+                "total_turnover": [
+                  -0.7372653205288925,
+                  0.9091203817582925
+                ],
+                "mean_exposure_pct": [
+                  -0.12057877813504803,
+                  -0.008038585209007465
+                ]
+              },
+              "point_mean_daily_net_return_difference_bps": -0.0030390151188559324,
+              "ci95_mean_daily_net_return_difference_bps": [
+                -0.13102368374098025,
+                0.10011962307505755
+              ],
+              "daily_win_fraction": 0.005627009646302251,
+              "bootstrap_positive_fraction": 0.5008,
+              "bootstrap_count": 5000,
+              "circular_block_days": 30,
+              "seed": 20260915
+            },
+            "action_diagnostics": {
+              "decision_count": 1244,
+              "target_change_fraction": 0.00964630225080386,
+              "mean_absolute_target_change": 0.0006493198073653288,
+              "mean_target_change": -0.0006493198073653288,
+              "positive_target_change_fraction": 0.0,
+              "negative_target_change_fraction": 0.00964630225080386
+            }
+          },
+          "controller_off": {
+            "comparison": "llama_memory_vs_llama_no_memory",
+            "baseline_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 66.22546908107535,
+              "annualized_volatility_pct": 24.378762380146423,
+              "sharpe": 0.7338231782693871,
+              "mdd_pct": 36.57665062188523,
+              "es95_pct": 2.9229140271292957,
+              "total_turnover": 10.23605190339186,
+              "mean_exposure_pct": 45.04562932568342
+            },
+            "treatment_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 65.87060703866695,
+              "annualized_volatility_pct": 24.35559766045211,
+              "sharpe": 0.7317120564496927,
+              "mdd_pct": 36.612706194947414,
+              "es95_pct": 2.922904883439931,
+              "total_turnover": 10.346066350621694,
+              "mean_exposure_pct": 44.98069734494689
+            },
+            "effect": {
+              "point_difference": {
+                "net_return_pct": -0.35486204240839925,
+                "annualized_volatility_pct": -0.02316471969431433,
+                "sharpe": -0.002111121819694417,
+                "mdd_pct": 0.03605557306218543,
+                "es95_pct": -9.14368936477672e-06,
+                "total_turnover": 0.11001444722983322,
+                "mean_exposure_pct": -0.06493198073653161
+              },
+              "ci95_difference": {
+                "net_return_pct": [
+                  -4.412663727969416,
+                  2.530375641958536
+                ],
+                "annualized_volatility_pct": [
+                  -0.0538761699888056,
+                  -0.002083027456072009
+                ],
+                "sharpe": [
+                  -0.02277663019877887,
+                  0.016116319149535856
+                ],
+                "mdd_pct": [
+                  -0.3448095384896949,
+                  0.5420081024867726
+                ],
+                "es95_pct": [
+                  -0.008039799584541818,
+                  0.0
+                ],
+                "total_turnover": [
+                  -0.7117444307757788,
+                  1.1354826283887032
+                ],
+                "mean_exposure_pct": [
+                  -0.13346506239917916,
+                  -0.01298374617200373
+                ]
+              },
+              "point_mean_daily_net_return_difference_bps": -0.018731400926073463,
+              "ci95_mean_daily_net_return_difference_bps": [
+                -0.16183141217571842,
+                0.09910614965729096
+              ],
+              "daily_win_fraction": 0.008038585209003215,
+              "bootstrap_positive_fraction": 0.4174,
+              "bootstrap_count": 5000,
+              "circular_block_days": 30,
+              "seed": 20260916
+            },
+            "action_diagnostics": {
+              "decision_count": 1244,
+              "target_change_fraction": 0.00964630225080386,
+              "mean_absolute_target_change": 0.0006493198073653288,
+              "mean_target_change": -0.0006493198073653288,
+              "positive_target_change_fraction": 0.0,
+              "negative_target_change_fraction": 0.00964630225080386
+            }
+          }
+        }
+      }
+    },
+    "fixed": {
+      "archive": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_3_LLAMA70B_FIXED_TRUST_MEMORY_ABLATION_V1/artifacts/20260909T013716356200839Z.tar.gz",
+      "trace_member": "20260909T013716356200839Z/03_DAILY_TRACE.csv",
+      "date_count": 1244,
+      "start_return_date": "2022-01-01",
+      "end_return_date": "2025-05-28",
+      "trace_audits": {
+        "memory": {
+          "prefix": "memory",
+          "max_shadow_exposure_vs_executed_difference": 0.5,
+          "max_shadow_return_vs_executed_difference": 0.06564832956661304,
+          "max_shadow_pretrade_vs_executed_difference": 0.5196912902636233,
+          "valid_fraction": 1.0,
+          "error_count": 0
+        },
+        "no_memory": {
+          "prefix": "no_memory",
+          "max_shadow_exposure_vs_executed_difference": 0.5,
+          "max_shadow_return_vs_executed_difference": 0.06564832956661304,
+          "max_shadow_pretrade_vs_executed_difference": 0.5196912902636233,
+          "valid_fraction": 1.0,
+          "error_count": 0
+        }
+      },
+      "numerical_core_alignment": {
+        "available": true,
+        "max_no_memory_core_target_difference": 3.3306690738754696e-16,
+        "max_memory_core_target_difference": 3.3306690738754696e-16
+      },
+      "comparisons": {
+        "llama_no_memory_vs_numerical_only": {
+          "interpretation": "pure_llama_advisor_effect",
+          "controller_on": {
+            "comparison": "llama_no_memory_vs_numerical_only",
+            "baseline_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 60.045985214618284,
+              "annualized_volatility_pct": 23.86643038950319,
+              "sharpe": 0.6978868233930628,
+              "mdd_pct": 38.22536565028542,
+              "es95_pct": 2.880604123208995,
+              "total_turnover": 8.132383138449232,
+              "mean_exposure_pct": 44.035369774919616
+            },
+            "treatment_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 67.85205722252286,
+              "annualized_volatility_pct": 23.958578218379518,
+              "sharpe": 0.7543951283747743,
+              "mdd_pct": 36.25333351224136,
+              "es95_pct": 2.861910865846575,
+              "total_turnover": 10.406163859997358,
+              "mean_exposure_pct": 44.50964630225081
+            },
+            "effect": {
+              "point_difference": {
+                "net_return_pct": 7.806072007904575,
+                "annualized_volatility_pct": 0.09214782887632822,
+                "sharpe": 0.056508304981711444,
+                "mdd_pct": -1.9720321380440566,
+                "es95_pct": -0.018693257362420113,
+                "total_turnover": 2.2737807215481265,
+                "mean_exposure_pct": 0.47427652733119174
+              },
+              "ci95_difference": {
+                "net_return_pct": [
+                  -2.035370815600315,
+                  30.631966720275646
+                ],
+                "annualized_volatility_pct": [
+                  -0.44009585875766494,
+                  0.6013405387781378
+                ],
+                "sharpe": [
+                  -0.022555819075591017,
+                  0.13446474851038187
+                ],
+                "mdd_pct": [
+                  -3.5080012116139465,
+                  1.2086612423432763
+                ],
+                "es95_pct": [
+                  -0.12157699033717698,
+                  0.06947140715009326
+                ],
+                "total_turnover": [
+                  1.0543564560480152,
+                  3.5865159804751614
+                ],
+                "mean_exposure_pct": [
+                  -0.2331189710610886,
+                  1.1737339228295824
+                ]
+              },
+              "point_mean_daily_net_return_difference_bps": 0.3882730733660359,
+              "ci95_mean_daily_net_return_difference_bps": [
+                -0.1013405218292007,
+                0.9443990306790747
+              ],
+              "daily_win_fraction": 0.16559485530546625,
+              "bootstrap_positive_fraction": 0.9322,
+              "bootstrap_count": 5000,
+              "circular_block_days": 30,
+              "seed": 20261915
+            },
+            "action_diagnostics": {
+              "decision_count": 1244,
+              "target_change_fraction": 0.5715434083601286,
+              "mean_absolute_target_change": 0.013772422812069873,
+              "mean_target_change": 0.0011666151958983724,
+              "positive_target_change_fraction": 0.2717041800643087,
+              "negative_target_change_fraction": 0.29983922829581994
+            }
+          },
+          "controller_off": {
+            "comparison": "llama_no_memory_vs_numerical_only",
+            "baseline_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 60.4856194263814,
+              "annualized_volatility_pct": 23.881046933630156,
+              "sharpe": 0.7009358391713914,
+              "mdd_pct": 36.948170729771824,
+              "es95_pct": 2.875554807854338,
+              "total_turnover": 7.007412857361489,
+              "mean_exposure_pct": 44.24378412279052
+            },
+            "treatment_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 64.50297899617294,
+              "annualized_volatility_pct": 23.787142647518046,
+              "sharpe": 0.7332552781052308,
+              "mdd_pct": 36.01199558651315,
+              "es95_pct": 2.852019820715048,
+              "total_turnover": 8.5608113660942,
+              "mean_exposure_pct": 44.360445642380355
+            },
+            "effect": {
+              "point_difference": {
+                "net_return_pct": 4.0173595697915445,
+                "annualized_volatility_pct": -0.09390428611211021,
+                "sharpe": 0.032319438933839484,
+                "mdd_pct": -0.9361751432586729,
+                "es95_pct": -0.02353498713929003,
+                "total_turnover": 1.5533985087327107,
+                "mean_exposure_pct": 0.11666151958983306
+              },
+              "ci95_difference": {
+                "net_return_pct": [
+                  -1.7477419737173951,
+                  18.589916755723813
+                ],
+                "annualized_volatility_pct": [
+                  -0.43780658050056315,
+                  0.2728195384436216
+                ],
+                "sharpe": [
+                  -0.015360714170319133,
+                  0.07624259328909094
+                ],
+                "mdd_pct": [
+                  -1.7784051097326012,
+                  0.7768626237313531
+                ],
+                "es95_pct": [
+                  -0.07785350966821888,
+                  0.030958721191826084
+                ],
+                "total_turnover": [
+                  0.953099268061342,
+                  2.2064413420093256
+                ],
+                "mean_exposure_pct": [
+                  -0.368544214919325,
+                  0.6060339968875262
+                ]
+              },
+              "point_mean_daily_net_return_difference_bps": 0.19246166314009638,
+              "ci95_mean_daily_net_return_difference_bps": [
+                -0.10366128836366979,
+                0.5132883657988264
+              ],
+              "daily_win_fraction": 0.30064308681672025,
+              "bootstrap_positive_fraction": 0.8878,
+              "bootstrap_count": 5000,
+              "circular_block_days": 30,
+              "seed": 20261916
+            },
+            "action_diagnostics": {
+              "decision_count": 1244,
+              "target_change_fraction": 0.5715434083601286,
+              "mean_absolute_target_change": 0.013772422812069873,
+              "mean_target_change": 0.0011666151958983724,
+              "positive_target_change_fraction": 0.2717041800643087,
+              "negative_target_change_fraction": 0.29983922829581994
+            }
+          }
+        },
+        "llama_memory_vs_numerical_only": {
+          "interpretation": "total_llama_plus_memory_effect",
+          "controller_on": {
+            "comparison": "llama_memory_vs_numerical_only",
+            "baseline_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 60.045985214618284,
+              "annualized_volatility_pct": 23.86643038950319,
+              "sharpe": 0.6978868233930628,
+              "mdd_pct": 38.22536565028542,
+              "es95_pct": 2.880604123208995,
+              "total_turnover": 8.132383138449232,
+              "mean_exposure_pct": 44.035369774919616
+            },
+            "treatment_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 68.62468162010143,
+              "annualized_volatility_pct": 23.92588970602719,
+              "sharpe": 0.7607350520718984,
+              "mdd_pct": 36.25333351224136,
+              "es95_pct": 2.857242848220831,
+              "total_turnover": 11.094296837936227,
+              "mean_exposure_pct": 44.45739549839228
+            },
+            "effect": {
+              "point_difference": {
+                "net_return_pct": 8.578696405483143,
+                "annualized_volatility_pct": 0.059459316523998496,
+                "sharpe": 0.06284822867883555,
+                "mdd_pct": -1.9720321380440566,
+                "es95_pct": -0.02336127498816376,
+                "total_turnover": 2.9619136994869955,
+                "mean_exposure_pct": 0.42202572347266454
+              },
+              "ci95_difference": {
+                "net_return_pct": [
+                  -1.1401250965930778,
+                  32.32516706442197
+                ],
+                "annualized_volatility_pct": [
+                  -0.4590839266677344,
+                  0.548386336681095
+                ],
+                "sharpe": [
+                  -0.014473059244265389,
+                  0.1382982658596241
+                ],
+                "mdd_pct": [
+                  -3.6110275212826672,
+                  1.029751882424586
+                ],
+                "es95_pct": [
+                  -0.12345782780607063,
+                  0.06201004376047644
+                ],
+                "total_turnover": [
+                  1.5430161267129292,
+                  4.501124596783395
+                ],
+                "mean_exposure_pct": [
+                  -0.26537379421222373,
+                  1.10128617363344
+                ]
+              },
+              "point_mean_daily_net_return_difference_bps": 0.4230515157067891,
+              "ci95_mean_daily_net_return_difference_bps": [
+                -0.05732856468048287,
+                0.9670201480620971
+              ],
+              "daily_win_fraction": 0.16237942122186494,
+              "bootstrap_positive_fraction": 0.9562,
+              "bootstrap_count": 5000,
+              "circular_block_days": 30,
+              "seed": 20261915
+            },
+            "action_diagnostics": {
+              "decision_count": 1244,
+              "target_change_fraction": 0.5594855305466238,
+              "mean_absolute_target_change": 0.013409426597508971,
+              "mean_target_change": 0.0005575178262172734,
+              "positive_target_change_fraction": 0.2540192926045016,
+              "negative_target_change_fraction": 0.3054662379421222
+            }
+          },
+          "controller_off": {
+            "comparison": "llama_memory_vs_numerical_only",
+            "baseline_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 60.4856194263814,
+              "annualized_volatility_pct": 23.881046933630156,
+              "sharpe": 0.7009358391713914,
+              "mdd_pct": 36.948170729771824,
+              "es95_pct": 2.875554807854338,
+              "total_turnover": 7.007412857361489,
+              "mean_exposure_pct": 44.24378412279052
+            },
+            "treatment_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 64.44369551495541,
+              "annualized_volatility_pct": 23.76112043814872,
+              "sharpe": 0.7333519576284951,
+              "mdd_pct": 36.085036481718866,
+              "es95_pct": 2.8494740824731495,
+              "total_turnover": 9.02335628289886,
+              "mean_exposure_pct": 44.29953590541225
+            },
+            "effect": {
+              "point_difference": {
+                "net_return_pct": 3.9580760885740105,
+                "annualized_volatility_pct": -0.11992649548143675,
+                "sharpe": 0.03241611845710379,
+                "mdd_pct": -0.8631342480529582,
+                "es95_pct": -0.02608072538118833,
+                "total_turnover": 2.0159434255373707,
+                "mean_exposure_pct": 0.05575178262172642
+              },
+              "ci95_difference": {
+                "net_return_pct": [
+                  -1.507126472196873,
+                  18.389082618162014
+                ],
+                "annualized_volatility_pct": [
+                  -0.4574363964824686,
+                  0.23396275096291938
+                ],
+                "sharpe": [
+                  -0.014157581040689714,
+                  0.07462264690141558
+                ],
+                "mdd_pct": [
+                  -1.7812332084521794,
+                  0.743083624824135
+                ],
+                "es95_pct": [
+                  -0.07855686259013735,
+                  0.02615278590390356
+                ],
+                "total_turnover": [
+                  1.2913427480398665,
+                  2.8064391301216554
+                ],
+                "mean_exposure_pct": [
+                  -0.41770734905145956,
+                  0.5280727651049371
+                ]
+              },
+              "point_mean_daily_net_return_difference_bps": 0.18786653416765858,
+              "ci95_mean_daily_net_return_difference_bps": [
+                -0.09738157363232114,
+                0.4967927363010158
+              ],
+              "daily_win_fraction": 0.2966237942122186,
+              "bootstrap_positive_fraction": 0.8914,
+              "bootstrap_count": 5000,
+              "circular_block_days": 30,
+              "seed": 20261916
+            },
+            "action_diagnostics": {
+              "decision_count": 1244,
+              "target_change_fraction": 0.5594855305466238,
+              "mean_absolute_target_change": 0.013409426597508971,
+              "mean_target_change": 0.0005575178262172734,
+              "positive_target_change_fraction": 0.2540192926045016,
+              "negative_target_change_fraction": 0.3054662379421222
+            }
+          }
+        },
+        "llama_memory_vs_llama_no_memory": {
+          "interpretation": "incremental_memory_effect",
+          "controller_on": {
+            "comparison": "llama_memory_vs_llama_no_memory",
+            "baseline_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 67.85205722252286,
+              "annualized_volatility_pct": 23.958578218379518,
+              "sharpe": 0.7543951283747743,
+              "mdd_pct": 36.25333351224136,
+              "es95_pct": 2.861910865846575,
+              "total_turnover": 10.406163859997358,
+              "mean_exposure_pct": 44.50964630225081
+            },
+            "treatment_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 68.62468162010143,
+              "annualized_volatility_pct": 23.92588970602719,
+              "sharpe": 0.7607350520718984,
+              "mdd_pct": 36.25333351224136,
+              "es95_pct": 2.857242848220831,
+              "total_turnover": 11.094296837936227,
+              "mean_exposure_pct": 44.45739549839228
+            },
+            "effect": {
+              "point_difference": {
+                "net_return_pct": 0.7726243975785678,
+                "annualized_volatility_pct": -0.032688512352329724,
+                "sharpe": 0.006339923697124106,
+                "mdd_pct": 0.0,
+                "es95_pct": -0.004668017625743648,
+                "total_turnover": 0.688132977938869,
+                "mean_exposure_pct": -0.052250803858527206
+              },
+              "ci95_difference": {
+                "net_return_pct": [
+                  -0.8914167965827718,
+                  3.5501343966247085
+                ],
+                "annualized_volatility_pct": [
+                  -0.06455225147223986,
+                  -0.006621014557962652
+                ],
+                "sharpe": [
+                  -0.004906766237220205,
+                  0.01959112462918704
+                ],
+                "mdd_pct": [
+                  -0.4965417672703585,
+                  0.1381256861958247
+                ],
+                "es95_pct": [
+                  -0.014081094278759032,
+                  7.704140152808847e-05
+                ],
+                "total_turnover": [
+                  -0.003321376955042598,
+                  1.5916903890097067
+                ],
+                "mean_exposure_pct": [
+                  -0.09646302250803984,
+                  -0.01607717041800072
+                ]
+              },
+              "point_mean_daily_net_return_difference_bps": 0.03477844234075321,
+              "ci95_mean_daily_net_return_difference_bps": [
+                -0.03741239508055044,
+                0.11824473984309077
+              ],
+              "daily_win_fraction": 0.00964630225080386,
+              "bootstrap_positive_fraction": 0.8078,
+              "bootstrap_count": 5000,
+              "circular_block_days": 30,
+              "seed": 20261915
+            },
+            "action_diagnostics": {
+              "decision_count": 1244,
+              "target_change_fraction": 0.02652733118971061,
+              "mean_absolute_target_change": 0.0006998460786465232,
+              "mean_target_change": -0.0006090973696810988,
+              "positive_target_change_fraction": 0.001607717041800643,
+              "negative_target_change_fraction": 0.02491961414790997
+            }
+          },
+          "controller_off": {
+            "comparison": "llama_memory_vs_llama_no_memory",
+            "baseline_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 64.50297899617294,
+              "annualized_volatility_pct": 23.787142647518046,
+              "sharpe": 0.7332552781052308,
+              "mdd_pct": 36.01199558651315,
+              "es95_pct": 2.852019820715048,
+              "total_turnover": 8.5608113660942,
+              "mean_exposure_pct": 44.360445642380355
+            },
+            "treatment_metrics": {
+              "date_count": 1244,
+              "net_return_pct": 64.44369551495541,
+              "annualized_volatility_pct": 23.76112043814872,
+              "sharpe": 0.7333519576284951,
+              "mdd_pct": 36.085036481718866,
+              "es95_pct": 2.8494740824731495,
+              "total_turnover": 9.02335628289886,
+              "mean_exposure_pct": 44.29953590541225
+            },
+            "effect": {
+              "point_difference": {
+                "net_return_pct": -0.05928348121753402,
+                "annualized_volatility_pct": -0.026022209369326532,
+                "sharpe": 9.667952326430918e-05,
+                "mdd_pct": 0.07304089520571466,
+                "es95_pct": -0.0025457382418982988,
+                "total_turnover": 0.46254491680466003,
+                "mean_exposure_pct": -0.06090973696810664
+              },
+              "ci95_difference": {
+                "net_return_pct": [
+                  -1.6370238357844449,
+                  1.4004354717173355
+                ],
+                "annualized_volatility_pct": [
+                  -0.04689733446527562,
+                  -0.008432232081859609
+                ],
+                "sharpe": [
+                  -0.008776533666384603,
+                  0.00891474050045131
+                ],
+                "mdd_pct": [
+                  -0.23233941544066974,
+                  0.2169326474247453
+                ],
+                "es95_pct": [
+                  -0.007764227345656949,
+                  0.0001270014220504656
+                ],
+                "total_turnover": [
+                  0.046986665531886684,
+                  0.9709633898548056
+                ],
+                "mean_exposure_pct": [
+                  -0.10134477970926295,
+                  -0.026479561418361594
+                ]
+              },
+              "point_mean_daily_net_return_difference_bps": -0.0045951289724378225,
+              "ci95_mean_daily_net_return_difference_bps": [
+                -0.060234403320586175,
+                0.050818895379861145
+              ],
+              "daily_win_fraction": 0.021704180064308683,
+              "bootstrap_positive_fraction": 0.4458,
+              "bootstrap_count": 5000,
+              "circular_block_days": 30,
+              "seed": 20261916
+            },
+            "action_diagnostics": {
+              "decision_count": 1244,
+              "target_change_fraction": 0.02652733118971061,
+              "mean_absolute_target_change": 0.0006998460786465232,
+              "mean_target_change": -0.0006090973696810988,
+              "positive_target_change_fraction": 0.001607717041800643,
+              "negative_target_change_fraction": 0.02491961414790997
+            }
+          }
+        }
+      }
+    }
+  },
+  "interpretation_warning": "The pure advisor effect is the no-memory LLaMA path minus numerical_only. The memory increment is memory LLaMA minus no-memory LLaMA. Do not report LLaMA value from the memory path alone. Controller-OFF returns are recomputed from desired exposure and the locked 10-bps turnover cost."
+}

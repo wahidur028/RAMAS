@@ -1,0 +1,24 @@
+{
+  "archived_arm": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_4_COMPONENT_SUITE_V1/artifacts/20260909T114202240674964Z/arms/llama_memory_current_year",
+  "archived_calls_matched_by_request_digest": 1608,
+  "columns_compared": 52,
+  "created_at": "2026-09-21T04:43:11+00:00",
+  "mismatched_columns": {},
+  "model_calls_made": 0,
+  "rows": 1608,
+  "spec": {
+    "advisor": "llama",
+    "core": "original",
+    "fixed_beta": 0.05,
+    "label": "legacy",
+    "memory": "current_year",
+    "name": "llama_memory_current_year",
+    "retrieval": "legacy",
+    "risk": "standard",
+    "trust": "adaptive"
+  },
+  "status": "PASS_ENGINE_REPRODUCES_ARCHIVED_ARM",
+  "terminal_wealth_absolute_difference": 0.0,
+  "terminal_wealth_archived": 2.174904923218857,
+  "terminal_wealth_rebuilt": 2.174904923218857
+}

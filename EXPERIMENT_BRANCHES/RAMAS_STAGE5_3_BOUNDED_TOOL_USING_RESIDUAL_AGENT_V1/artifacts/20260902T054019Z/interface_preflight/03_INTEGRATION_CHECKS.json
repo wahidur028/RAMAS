@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "desired_exposure_bounded": true,
+    "final_exposure_bounded": true,
+    "frozen_risk_parameters_inherited": true,
+    "nontrigger_rows_have_zero_residual": true,
+    "nonzero_residuals_have_tool_support": true,
+    "provider_failures_zero_residual": true,
+    "residuals_on_frozen_grid": true,
+    "return_clock_next_day": true,
+    "returns_finite": true,
+    "row_count_matches": true,
+    "turnover_bounded": true
+  },
+  "status": "PASS"
+}

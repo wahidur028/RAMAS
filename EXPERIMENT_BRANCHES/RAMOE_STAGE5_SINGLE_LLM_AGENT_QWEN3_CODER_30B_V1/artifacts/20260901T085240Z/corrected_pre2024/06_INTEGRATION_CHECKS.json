@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "all_agent_requests_exclude_target_return": true,
+    "final_exposure_bounded": true,
+    "provider_failures_fail_closed": true,
+    "return_clock_next_day": true,
+    "returns_finite": true,
+    "risk_parameters_inherited": true,
+    "row_count_matches": true,
+    "turnover_bounded": true
+  },
+  "status": "PASS"
+}

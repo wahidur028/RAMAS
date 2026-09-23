@@ -1,0 +1,36 @@
+{
+  "agent_minus_static": {
+    "daily_loss_cvar_95": -0.00012810936873783318,
+    "maximum_drawdown": -0.0002765941176673392,
+    "sharpe": -0.08566862501204131,
+    "terminal_growth": -0.08783308982135685
+  },
+  "checks": {
+    "daily_loss_cvar_not_worse": true,
+    "minimum_agent_deviation_rows": true,
+    "minimum_positive_advantage_years": true,
+    "one_sided_block_bootstrap_p_below_alpha": false,
+    "positive_growth_advantage": false,
+    "sharpe_improvement_margin": false
+  },
+  "inference": {
+    "block_length_days": 30,
+    "confidence_interval_high": 4.353048974820075e-05,
+    "confidence_interval_low": -0.00018164119673152467,
+    "observed_mean_log_advantage": -5.211771934087826e-05,
+    "one_sided_p_value": 0.8201179882011799,
+    "resamples": 10000,
+    "seed": 12031
+  },
+  "memory_gate": {
+    "checks": {
+      "active_lesson_survived": false,
+      "active_lessons_changed_actions": false,
+      "more_promotions_than_rollbacks": false
+    },
+    "passed": false
+  },
+  "passed": false,
+  "positive_advantage_years": 2,
+  "scope": "CORE_POLICY_MECHANISM_ONLY_NOT_DEPLOYMENT_CLAIM"
+}

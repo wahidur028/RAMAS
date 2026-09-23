@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "headline_return": "NET_COMPOUNDED_RETURN_AFTER_TRADING_COSTS",
+  "units": "Returns, volatility, drawdown, ES and exposure are decimal fractions; bps and percentage-point columns explicitly named.",
+  "net_simple_formula": "(1 - cost_fraction) * (1 + exposure * asset_simple_return) - 1",
+  "net_log_formula": "log1p(net_return_after_trading_costs)",
+  "cumulative_identity": "expm1(sum(net_log_return)) = product(1 + net_return) - 1",
+  "cost_rate": 0.001,
+  "cash_interest_rate": 0.0,
+  "risk_free_rate": 0.0,
+  "annualization_days": 365.25,
+  "sample_volatility_ddof": 1,
+  "cagr_minimum_calendar_days": 365,
+  "sortino_denominator": "sqrt(mean(min(net_simple_return, 0)^2)); uses ALL days, no ddof correction",
+  "es95": "Signed loss; exact fractional-weight worst 5% daily simple-return tail; can be negative if tail gains",
+  "undefined_ratios": "null/blank; cash Sharpe, Sortino and Calmar are undefined, not zero",
+  "regime_scope": "Conditional, noncontiguous daily selections. No CAGR, annualized volatility/Sharpe/Sortino, drawdown, Calmar or tradable compounded portfolio return.",
+  "period_boundaries": "Reporting interval high-water mark includes wealth=1 before first return; portfolios, trust and memory are NOT reset.",
+  "cost_sum_warning": "Sum of daily cost fractions is descriptive turnover cost, not compounded terminal-wealth drag. Cost amounts per initial unit use actual full-run wealth.",
+  "bootstrap": "Recorded-path paired circular blocks; not resimulation of learning or seed robustness; unadjusted exploratory CIs."
+}

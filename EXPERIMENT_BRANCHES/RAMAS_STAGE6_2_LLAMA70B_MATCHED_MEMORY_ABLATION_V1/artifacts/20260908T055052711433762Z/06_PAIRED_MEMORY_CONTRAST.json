@@ -1,0 +1,31 @@
+{
+  "comparison": "MEMORY minus NO_MEMORY",
+  "scope": "POST2021",
+  "burn_in_year": 2021,
+  "evidence_kind": "RETROSPECTIVE_LLAMA70B",
+  "data_label": "REUSED_OOS_DIAGNOSTIC",
+  "economic_stop_gate": false,
+  "continuous_learning_demonstrated": false,
+  "invalid_decisions_retained_in_return_paths": true,
+  "memory_invalid_fallback_days_full": 0,
+  "no_memory_invalid_fallback_days_full": 0,
+  "memory_invalid_fallback_days_post2021": 0,
+  "no_memory_invalid_fallback_days_post2021": 0,
+  "paired_days": 1244,
+  "mean_daily_log_return_difference": -1.681578175226616e-07,
+  "mean_daily_log_return_difference_bps": -0.001681578175226616,
+  "two_sided_percentile95": [
+    -1.264838980325364e-05,
+    9.917126448282734e-06
+  ],
+  "two_sided_percentile95_bps": [
+    -0.1264838980325364,
+    0.09917126448282734
+  ],
+  "block_days": 30,
+  "bootstrap_resamples": 5000,
+  "seed": 16062,
+  "directional_flag": "INCONCLUSIVE",
+  "interval_interpretation": "Retrospective path-conditional paired circular-block percentiles; not a learner resimulation or calibrated p-value",
+  "evidence_flag": "INCONCLUSIVE"
+}

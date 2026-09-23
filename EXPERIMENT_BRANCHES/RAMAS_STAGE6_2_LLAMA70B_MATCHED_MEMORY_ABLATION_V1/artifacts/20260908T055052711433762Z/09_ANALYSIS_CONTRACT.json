@@ -1,0 +1,37 @@
+{
+  "analysis_id": "RAMAS_STAGE6_2_MATCHED_MEMORY_ABLATION_ANALYSIS_V1",
+  "primary": "Post-2021 mean daily log return, MEMORY minus independently generated NO_MEMORY",
+  "first_return_date": "2021-01-02",
+  "last_return_date": "2025-05-28",
+  "total_days": 1608,
+  "burn_in_days": 364,
+  "post2021_days": 1244,
+  "evidence_kind": "RETROSPECTIVE_LLAMA70B",
+  "post2021_label": "REUSED_OOS_DIAGNOSTIC",
+  "cash_interest": 0,
+  "cost_rate": 0.001,
+  "annualization_days": 365.25,
+  "buy_and_hold_cost": "One entry at the original first date; no cost reset at annual, post-2021, or regime report boundaries; no terminal sale assumed",
+  "static45": "Secondary 45% BTC/55% cash daily rebalanced exposure control, fixed before this matched rerun but selected from earlier Stage6.1 diagnostics; not independently discovered on untouched data",
+  "regime_label": "Router forecast available at decision time, not ex-post true market condition",
+  "regime_metrics": "Statistics on masked original daily returns; geometric daily growth and additive log growth; no concatenated regime drawdown or standalone regime-strategy cumulative return",
+  "cash_sharpe": "Undefined when return volatility is zero",
+  "cvar95": "Signed losses averaged over exactly 5% of observations using fractional tail mass; not clipped to zero",
+  "trading_cost_convention": "Symmetric drifted-pretrade turnover, multiplicative wealth deduction; model inference and other operating costs excluded",
+  "partial_years": [
+    2021,
+    2025
+  ],
+  "bootstrap": {
+    "block_days": 30,
+    "resamples": 5000,
+    "seed": 16062,
+    "interval": "Two-sided 95% paired circular-block percentile, conditional on realized paths; no adaptive learner resimulation or calibrated p-value"
+  },
+  "interpretation": "A directional primary contrast is evidence about this specific memory-enabled system on this reused path. It does not prove monotonic learning, optimized decisions, causality independent of all inference randomness, or future profitability. Other metrics are descriptive and are not all required to improve.",
+  "memory_ablation_scope": "NO_MEMORY disables episode retrieval and its summary. It still owns an updating trust ledger and portfolio state. This tests the added value of episodic retrieval, not the absence of every learning or adaptation mechanism.",
+  "interface_failures": "All realized invalid/fallback days remain in both paths. Any such failure, including during 2021 warm-up, overrides the economic evidence flag with INTERFACE_FAILURES_REQUIRE_INTERPRETATION while preserving raw estimates and counts. Transport failures pause the runtime for resume rather than creating fabricated realized-return days.",
+  "projection_diagnostics": "Action disagreement with equal final exposure can arise from trust blending or the unchanged risk projection. Per-arm desired-versus-final exposure counts quantify projection changes when those fields are present; this is not causal attribution to one specific shield constraint.",
+  "regime_partition_verified": true,
+  "policy_changes_in_reporting": false
+}

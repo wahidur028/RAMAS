@@ -1,0 +1,26 @@
+{
+  "archived_arm": "/home/infonet/wahid/leader_router_fresh/EXPERIMENT_BRANCHES/RAMAS_STAGE6_4_COMPONENT_SUITE_V1/artifacts/20260909T114202240674964Z/arms/llama_memory_current_year",
+  "created_at": "2026-09-21T04:41:01+00:00",
+  "credit_label_validity": {
+    "legacy_label_corr_with_same_day_return": -0.36004942505134974,
+    "legacy_label_positive_fraction": 0.4944029850746269,
+    "note": "A label that measures decision quality should correlate positively with the return when the taken action increased exposure. A negative correlation indicates the label is dominated by the holdings gap against the reference."
+  },
+  "memory_signal_predictiveness": {
+    "corr_with_informed_return": -0.03400036822492275,
+    "days_with_nonzero_signal": 1009,
+    "directional_agreement_rate": 0.4786917740336967
+  },
+  "retrieval_collapse": {
+    "days_by_distinct_retrieved_actions": {
+      "0": 10,
+      "1": 1381,
+      "2": 217,
+      "3": 0
+    },
+    "days_total": 1608,
+    "fraction_with_action_contrast": 0.13495024875621892,
+    "interpretation": "A contrast between candidate actions is only expressible on days where at least two distinct actions are retrieved."
+  },
+  "status": "COMPLETE_NO_MODEL_CALLS"
+}
