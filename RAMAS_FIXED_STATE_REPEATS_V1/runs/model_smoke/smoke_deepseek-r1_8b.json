@@ -1,0 +1,122 @@
+{
+  "at": "2026-09-24T05:34:17.315698Z",
+  "calls": [
+    {
+      "condition": "exposed",
+      "decision": {
+        "action": "CASH",
+        "cited_memory_ids": [
+          "episode-000409"
+        ],
+        "confidence": 0.9976142822242416,
+        "reason_codes": [
+          "HIGH_VOLATILITY",
+          "NEGATIVE_MOMENTUM"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 5.514495395123959,
+      "output_tokens": 68,
+      "prompt_tokens": 1937,
+      "raw_content": "{\"action\": \"CASH\", \"confidence\": 0.9976142822242416, \"reason_codes\": [\"HIGH_VOLATILITY\", \"NEGATIVE_MOMENTUM\"], \"cited_memory_ids\": [\"episode-000409\"]}",
+      "started_at": "2026-09-24T05:34:17.517834Z",
+      "state_index": 47,
+      "thinking_present": false,
+      "valid": true
+    },
+    {
+      "condition": "hidden",
+      "decision": {
+        "action": "ABSTAIN",
+        "cited_memory_ids": [],
+        "confidence": 0.99,
+        "reason_codes": [
+          "HIGH_VOLATILITY",
+          "NEGATIVE_MOMENTUM",
+          "HIGH_VOLATILITY"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 1.7550187166780233,
+      "output_tokens": 60,
+      "prompt_tokens": 1162,
+      "raw_content": "{\n  \"action\": \"ABSTAIN\",\n  \"confidence\": 0.99,\n  \"reason_codes\": [\"HIGH_VOLATILITY\", \"NEGATIVE_MOMENTUM\", \"HIGH_VOLATILITY\"],\n  \"cited_memory_ids\": []\n}",
+      "started_at": "2026-09-24T05:34:23.033078Z",
+      "state_index": 47,
+      "thinking_present": false,
+      "valid": true
+    },
+    {
+      "condition": "exposed",
+      "decision": {
+        "action": "ABSTAIN",
+        "cited_memory_ids": [],
+        "confidence": 0.9999999999999999,
+        "reason_codes": [
+          "HIGH_VOLATILITY",
+          "NEGATIVE_MOMENTUM",
+          "HIGH_VOLATILITY"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 2.067544436082244,
+      "output_tokens": 69,
+      "prompt_tokens": 1940,
+      "raw_content": "{\"action\": \"ABSTAIN\", \"confidence\": 0.9999999999999999, \"reason_codes\": [\"HIGH_VOLATILITY\", \"NEGATIVE_MOMENTUM\", \"HIGH_VOLATILITY\"], \"cited_memory_ids\": []}",
+      "started_at": "2026-09-24T05:34:24.788898Z",
+      "state_index": 166,
+      "thinking_present": false,
+      "valid": true
+    },
+    {
+      "condition": "hidden",
+      "decision": {
+        "action": "ABSTAIN",
+        "cited_memory_ids": [],
+        "confidence": 0.99,
+        "reason_codes": [
+          "BEARISH_ROUTER",
+          "NEGATIVE_MOMENTUM",
+          "HIGH_VOLATILITY"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 1.5217007957398891,
+      "output_tokens": 58,
+      "prompt_tokens": 1165,
+      "raw_content": "{\n  \"action\": \"ABSTAIN\",\n  \"confidence\": 0.99,\n  \"reason_codes\": [\"BEARISH_ROUTER\", \"NEGATIVE_MOMENTUM\", \"HIGH_VOLATILITY\"],\n  \"cited_memory_ids\": []\n}",
+      "started_at": "2026-09-24T05:34:26.857192Z",
+      "state_index": 166,
+      "thinking_present": false,
+      "valid": true
+    }
+  ],
+  "identity": {
+    "capabilities": [
+      "completion",
+      "thinking"
+    ],
+    "details": {
+      "families": [
+        "qwen3"
+      ],
+      "family": "qwen3",
+      "format": "gguf",
+      "parameter_size": "8.2B",
+      "parent_model": "",
+      "quantization_level": "Q4_K_M"
+    },
+    "digest": "6995872bfe4c521a67b32da386cd21d5c6e819b6e0d62f79f64ec83be99f5763",
+    "modelfile_sha256": "34911aad1383cd14621ecab57c93e53bc2473e2425afc8ddfc7d3a0c3babffe3",
+    "observed": "deepseek-r1:8b",
+    "requested": "deepseek-r1:8b",
+    "serving_metadata_sha256": "e920a548eb88dced8d3ed3c6e84aa80abd9d5a332546eed580c91b84cbe5de18",
+    "template_sha256": "c5ad996bda6eed4df6e3b605a9869647624851ac248209d22fd5e2c0cc1121d3"
+  },
+  "model": "deepseek-r1:8b",
+  "think": false
+}

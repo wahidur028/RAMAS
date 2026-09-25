@@ -1,0 +1,8 @@
+[2026-09-25T01:41:21Z] extension pilot for qwen3-coder:30b,gemma4:latest -> runs/extension_pilot_2models
+[2026-09-25T01:43:39Z] extension pilot exited rc=0
+[2026-09-25T01:43:39Z] extension run starting -> runs/extension (log: runs/extension/server.log)
+[2026-09-25T11:20:46Z] extension run exited rc=0
+[2026-09-25T11:20:49Z] extension analysis written
+{"export": "/home/infonet/wahid/leader_router_fresh/RAMAS_FIXED_STATE_REPEATS_V1/runs/extension_results.zip", "sha256": "3d0c20a575057c9bb8f6f7d182cf06809612d1aff5f40038b71aea697d8225ac"}
+[2026-09-25T11:20:53Z] extension exported
+[2026-09-25T11:20:53Z] extension chain end

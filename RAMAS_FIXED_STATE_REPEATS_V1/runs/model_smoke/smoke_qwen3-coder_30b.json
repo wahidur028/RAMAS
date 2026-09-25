@@ -1,0 +1,133 @@
+{
+  "at": "2026-09-24T05:34:45.193565Z",
+  "calls": [
+    {
+      "condition": "exposed",
+      "decision": {
+        "action": "CASH",
+        "cited_memory_ids": [
+          "episode-000411",
+          "episode-000409",
+          "episode-000410",
+          "episode-000408",
+          "episode-000407"
+        ],
+        "confidence": 0.9697094051762086,
+        "reason_codes": [
+          "DRAWDOWN_RISK",
+          "HIGH_VOLATILITY",
+          "BEARISH_ROUTER"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 20.683930341154337,
+      "output_tokens": 132,
+      "prompt_tokens": 1944,
+      "raw_content": "{\n  \"action\": \"CASH\",\n  \"confidence\": 0.9697094051762086,\n  \"reason_codes\": [\n    \"DRAWDOWN_RISK\",\n    \"HIGH_VOLATILITY\",\n    \"BEARISH_ROUTER\"\n  ],\n  \"cited_memory_ids\": [\n    \"episode-000411\",\n    \"episode-000409\",\n    \"episode-000410\",\n    \"episode-000408\",\n    \"episode-000407\"\n  ]\n}",
+      "started_at": "2026-09-24T05:34:45.348901Z",
+      "state_index": 47,
+      "thinking_present": false,
+      "valid": true
+    },
+    {
+      "condition": "hidden",
+      "decision": {
+        "action": "CASH",
+        "cited_memory_ids": [],
+        "confidence": 0.9697094051762086,
+        "reason_codes": [
+          "DRAWDOWN_RISK",
+          "HIGH_VOLATILITY",
+          "BEARISH_ROUTER"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 1.8232960607856512,
+      "output_tokens": 69,
+      "prompt_tokens": 1169,
+      "raw_content": "{\n  \"action\": \"CASH\",\n  \"confidence\": 0.9697094051762086,\n  \"reason_codes\": [\"DRAWDOWN_RISK\", \"HIGH_VOLATILITY\", \"BEARISH_ROUTER\"],\n  \"cited_memory_ids\": []\n}",
+      "started_at": "2026-09-24T05:35:06.033589Z",
+      "state_index": 47,
+      "thinking_present": false,
+      "valid": true
+    },
+    {
+      "condition": "exposed",
+      "decision": {
+        "action": "CASH",
+        "cited_memory_ids": [
+          "episode-000529",
+          "episode-000530",
+          "episode-000172",
+          "episode-000139",
+          "episode-000496"
+        ],
+        "confidence": 0.999999998654752,
+        "reason_codes": [
+          "DRAWDOWN_RISK",
+          "HIGH_VOLATILITY",
+          "BEARISH_ROUTER"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 2.878176672384143,
+      "output_tokens": 132,
+      "prompt_tokens": 1947,
+      "raw_content": "{\n  \"action\": \"CASH\",\n  \"confidence\": 0.999999998654752,\n  \"reason_codes\": [\n    \"DRAWDOWN_RISK\",\n    \"HIGH_VOLATILITY\",\n    \"BEARISH_ROUTER\"\n  ],\n  \"cited_memory_ids\": [\n    \"episode-000529\",\n    \"episode-000530\",\n    \"episode-000172\",\n    \"episode-000139\",\n    \"episode-000496\"\n  ]\n}",
+      "started_at": "2026-09-24T05:35:07.857695Z",
+      "state_index": 166,
+      "thinking_present": false,
+      "valid": true
+    },
+    {
+      "condition": "hidden",
+      "decision": {
+        "action": "CASH",
+        "cited_memory_ids": [],
+        "confidence": 0.999999998654752,
+        "reason_codes": [
+          "DRAWDOWN_RISK",
+          "HIGH_VOLATILITY",
+          "BEARISH_ROUTER"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 1.8337129950523376,
+      "output_tokens": 68,
+      "prompt_tokens": 1172,
+      "raw_content": "{\n  \"action\": \"CASH\",\n  \"confidence\": 0.999999998654752,\n  \"reason_codes\": [\"DRAWDOWN_RISK\", \"HIGH_VOLATILITY\", \"BEARISH_ROUTER\"],\n  \"cited_memory_ids\": []\n}",
+      "started_at": "2026-09-24T05:35:10.736632Z",
+      "state_index": 166,
+      "thinking_present": false,
+      "valid": true
+    }
+  ],
+  "identity": {
+    "capabilities": [
+      "completion",
+      "tools"
+    ],
+    "details": {
+      "families": [
+        "qwen3moe"
+      ],
+      "family": "qwen3moe",
+      "format": "gguf",
+      "parameter_size": "30.5B",
+      "parent_model": "",
+      "quantization_level": "Q4_K_M"
+    },
+    "digest": "06c1097efce0431c2045fe7b2e5108366e43bee1b4603a7aded8f21689e90bca",
+    "modelfile_sha256": "102caff018f8c893613d1071ec874751668f7755bd9db2df33bc2c24a4fc5151",
+    "observed": "qwen3-coder:30b",
+    "requested": "qwen3-coder:30b",
+    "serving_metadata_sha256": "1d7a888d6311330e857c5d381df235a34565e9783eb26617a2c5ad062e0ba567",
+    "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315"
+  },
+  "model": "qwen3-coder:30b",
+  "think": null
+}

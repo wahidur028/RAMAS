@@ -1,0 +1,29 @@
+{
+  "completed_at": "2026-09-25T11:20:46.081405Z",
+  "invalid_or_missing": 5,
+  "mode": "extension",
+  "per_model": {
+    "gemma4:latest": {
+      "invalid": 0,
+      "latency_n": 7464,
+      "latency_sum": 16374.6563252341,
+      "mean_latency_seconds": 2.1938178356422964,
+      "recorded": 7464,
+      "remaining_calls": 0,
+      "valid": 7464
+    },
+    "qwen3-coder:30b": {
+      "invalid": 5,
+      "latency_n": 7459,
+      "latency_sum": 18083.986430944875,
+      "mean_latency_seconds": 2.4244518609659305,
+      "recorded": 7464,
+      "remaining_calls": 0,
+      "valid": 7459
+    }
+  },
+  "planned": 14928,
+  "recorded": 14928,
+  "status": "COMPLETE_WITH_INVALID_OR_MISSING",
+  "valid": 14923
+}

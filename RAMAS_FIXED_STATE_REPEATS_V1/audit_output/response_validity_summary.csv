@@ -1,0 +1,37 @@
+comparison,condition,scope,decisions,valid,invalid,valid_abstain,invalid_abstain
+"Original, adaptive",Exposed,full,1608,1608,0,735,0
+"Original, adaptive",Exposed,reporting,1244,1244,0,553,0
+"Original, adaptive",Hidden,full,1608,1608,0,652,0
+"Original, adaptive",Hidden,reporting,1244,1244,0,535,0
+"Original, fixed",Exposed,full,1608,1608,0,707,0
+"Original, fixed",Exposed,reporting,1244,1244,0,548,0
+"Original, fixed",Hidden,full,1608,1608,0,647,0
+"Original, fixed",Hidden,reporting,1244,1244,0,533,0
+"Independent rerun, fixed",Exposed,full,1608,1608,0,707,0
+"Independent rerun, fixed",Exposed,reporting,1244,1244,0,548,0
+"Independent rerun, fixed",Hidden,full,1608,1608,0,647,0
+"Independent rerun, fixed",Hidden,reporting,1244,1244,0,533,0
+"Factorial, adaptive, projection off",Exposed,full,1608,1608,0,715,0
+"Factorial, adaptive, projection off",Exposed,reporting,1244,1244,0,553,0
+"Factorial, adaptive, projection off",Hidden,full,1608,1608,0,647,0
+"Factorial, adaptive, projection off",Hidden,reporting,1244,1244,0,535,0
+"Factorial, adaptive, projection on",Exposed,full,1608,1608,0,708,0
+"Factorial, adaptive, projection on",Exposed,reporting,1244,1244,0,557,0
+"Factorial, adaptive, projection on",Hidden,full,1608,1608,0,657,0
+"Factorial, adaptive, projection on",Hidden,reporting,1244,1244,0,539,0
+"Factorial, fixed, projection off",Exposed,full,1608,1608,0,678,0
+"Factorial, fixed, projection off",Exposed,reporting,1244,1244,0,542,0
+"Factorial, fixed, projection off",Hidden,full,1608,1608,0,641,0
+"Factorial, fixed, projection off",Hidden,reporting,1244,1244,0,531,0
+"Factorial, fixed, projection on",Exposed,full,1608,1608,0,696,0
+"Factorial, fixed, projection on",Exposed,reporting,1244,1244,0,543,0
+"Factorial, fixed, projection on",Hidden,full,1608,1608,0,652,0
+"Factorial, fixed, projection on",Hidden,reporting,1244,1244,0,537,0
+Fixed-state diagnostic,Exposed,full,1608,1608,0,839,0
+Fixed-state diagnostic,Exposed,reporting,1244,1244,0,634,0
+Fixed-state diagnostic,Hidden,full,1608,1608,0,683,0
+Fixed-state diagnostic,Hidden,reporting,1244,1244,0,556,0
+"Action-balanced, fixed",Exposed,full,1608,1608,0,710,0
+"Action-balanced, fixed",Exposed,reporting,1244,1244,0,559,0
+"Action-balanced, fixed",Hidden,full,1608,1608,0,647,0
+"Action-balanced, fixed",Hidden,reporting,1244,1244,0,533,0

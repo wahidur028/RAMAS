@@ -1,0 +1,20 @@
+{
+  "closed_loop_comparisons": 8,
+  "closed_loop_intervals_spanning_zero": 8,
+  "closed_loop_mean_valid_abstention_difference_pp": 1.276125401929261,
+  "closed_loop_abstention_difference_range_pp": [
+    0.48231511254019366,
+    2.0900321543408373
+  ],
+  "closed_loop_mean_exposure_difference_pp": -0.08438344632699353,
+  "closed_loop_exposure_difference_range_pp": [
+    -0.2136602965885187,
+    -0.040192926045016064
+  ],
+  "fixed_state_valid_abstention_difference_pp": 6.270096463022512,
+  "fixed_state_mean_exposure_difference_pp": -0.20900321543408357,
+  "all_nine_higher_abstention": true,
+  "all_nine_lower_mean_exposure": true,
+  "maximum_reproduced_point_or_CI_error_bps": 1.0380585280245214e-14,
+  "interpretation": "descriptive comparison averages, not independent replicates or a pooled effect test"
+}

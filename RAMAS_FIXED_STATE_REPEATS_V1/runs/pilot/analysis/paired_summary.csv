@@ -1,0 +1,17 @@
+model,comparison,repeat_a,repeat_b,scope,regime,eligible_states,omitted_invalid_or_missing_pairs,valid_pairs,advice_disagreements,desired_disagreements,execution_disagreements,advice_disagreement_rate,execution_disagreement_rate,conditional_transmission_rate,desired_merges,projection_merges,abstention_difference_pp,exposure_difference_pp
+llama3.3:70b,between_contexts,1,1,available_valid_pairs,all,12,0,12,1,1,1,0.08333333333333333,0.08333333333333333,1.0,0,0,8.333333333333334,-0.4166666666666666
+llama3.3:70b,between_contexts,1,1,available_valid_pairs,bear,4,0,4,0,0,0,0.0,0.0,,0,0,0.0,0.0
+llama3.3:70b,between_contexts,1,1,available_valid_pairs,bull,4,0,4,1,1,1,0.25,0.25,1.0,0,0,25.0,-1.2499999999999998
+llama3.3:70b,between_contexts,1,1,available_valid_pairs,mix,4,0,4,0,0,0,0.0,0.0,,0,0,0.0,0.0
+llama3.3:70b,between_contexts,1,1,all_responses_valid_states,all,12,0,12,1,1,1,0.08333333333333333,0.08333333333333333,1.0,0,0,8.333333333333334,-0.4166666666666666
+llama3.3:70b,between_contexts,1,1,all_responses_valid_states,bear,4,0,4,0,0,0,0.0,0.0,,0,0,0.0,0.0
+llama3.3:70b,between_contexts,1,1,all_responses_valid_states,bull,4,0,4,1,1,1,0.25,0.25,1.0,0,0,25.0,-1.2499999999999998
+llama3.3:70b,between_contexts,1,1,all_responses_valid_states,mix,4,0,4,0,0,0,0.0,0.0,,0,0,0.0,0.0
+qwen3:8b,between_contexts,1,1,available_valid_pairs,all,12,0,12,1,1,0,0.08333333333333333,0.0,0.0,0,1,-8.333333333333334,0.0
+qwen3:8b,between_contexts,1,1,available_valid_pairs,bear,4,0,4,1,1,0,0.25,0.0,0.0,0,1,-25.0,0.0
+qwen3:8b,between_contexts,1,1,available_valid_pairs,bull,4,0,4,0,0,0,0.0,0.0,,0,0,0.0,0.0
+qwen3:8b,between_contexts,1,1,available_valid_pairs,mix,4,0,4,0,0,0,0.0,0.0,,0,0,0.0,0.0
+qwen3:8b,between_contexts,1,1,all_responses_valid_states,all,12,0,12,1,1,0,0.08333333333333333,0.0,0.0,0,1,-8.333333333333334,0.0
+qwen3:8b,between_contexts,1,1,all_responses_valid_states,bear,4,0,4,1,1,0,0.25,0.0,0.0,0,1,-25.0,0.0
+qwen3:8b,between_contexts,1,1,all_responses_valid_states,bull,4,0,4,0,0,0,0.0,0.0,,0,0,0.0,0.0
+qwen3:8b,between_contexts,1,1,all_responses_valid_states,mix,4,0,4,0,0,0,0.0,0.0,,0,0,0.0,0.0

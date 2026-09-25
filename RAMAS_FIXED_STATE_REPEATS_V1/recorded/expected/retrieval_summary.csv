@@ -1,0 +1,3 @@
+cohort,dates,eligible_actions_0,eligible_actions_1,eligible_actions_2,eligible_actions_3,eligible_multiple,filtered_actions_0,filtered_actions_1,filtered_actions_2,filtered_actions_3,filtered_multiple,retrieved_actions_0,retrieved_actions_1,retrieved_actions_2,retrieved_actions_3,retrieved_multiple,retrieved_multiple_given_filtered_multiple,conditional_percent
+adaptive_memory,1244,0,0,0,1244,1244,0,811,433,0,433,0,1076,168,0,168,168,38.79907621247113
+fixed_memory,1244,0,0,0,1244,1244,0,856,388,0,388,0,1107,137,0,137,137,35.30927835051546

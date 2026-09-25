@@ -1,0 +1,5 @@
+authority,window_selection,pairs,state_matches,retrieved_context_present,confidence_changed,reason_labels_changed,citations_changed,advice_changed
+Adaptive,return_date,1244,1236,1244,432,512,665,32
+Adaptive,decision_date,1243,1235,1243,432,512,664,32
+Fixed,return_date,1244,1231,1244,426,532,674,33
+Fixed,decision_date,1243,1230,1243,426,532,673,33

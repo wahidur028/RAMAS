@@ -1,0 +1,31 @@
+{
+  "at": "2026-09-25T11:20:46.070523Z",
+  "estimated_remaining_hours_from_observed_latency": 0.0,
+  "per_model": {
+    "gemma4:latest": {
+      "consecutive_invalid": 0,
+      "invalid": 0,
+      "latency_n": 7464,
+      "latency_sum": 16374.6563252341,
+      "mean_latency_seconds": 2.1938178356422964,
+      "recorded": 7464,
+      "remaining_calls": 0,
+      "valid": 7464
+    },
+    "qwen3-coder:30b": {
+      "consecutive_invalid": 0,
+      "invalid": 5,
+      "latency_n": 7459,
+      "latency_sum": 18083.986430944875,
+      "mean_latency_seconds": 2.4244518609659305,
+      "recorded": 7464,
+      "remaining_calls": 0,
+      "valid": 7459
+    }
+  },
+  "planned": 14928,
+  "recorded": 14928,
+  "remaining": 0,
+  "started_at": "2026-09-25T01:43:39.763647Z",
+  "valid": 14923
+}

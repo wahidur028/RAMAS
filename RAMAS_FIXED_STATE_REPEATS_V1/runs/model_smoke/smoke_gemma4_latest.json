@@ -1,0 +1,134 @@
+{
+  "at": "2026-09-24T05:34:28.383646Z",
+  "calls": [
+    {
+      "condition": "exposed",
+      "decision": {
+        "action": "CASH",
+        "cited_memory_ids": [
+          "episode-000411",
+          "episode-000409",
+          "episode-000410",
+          "episode-000408",
+          "episode-000407"
+        ],
+        "confidence": 0.95,
+        "reason_codes": [
+          "DRAWDOWN_RISK",
+          "BEARISH_ROUTER",
+          "MEMORY_SUPPORT"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 10.180147903040051,
+      "output_tokens": 100,
+      "prompt_tokens": 2025,
+      "raw_content": "{\"action\": \"CASH\", \"confidence\": 0.95, \"reason_codes\": [\"DRAWDOWN_RISK\", \"BEARISH_ROUTER\", \"MEMORY_SUPPORT\"], \"cited_memory_ids\": [\"episode-000411\", \"episode-000409\", \"episode-000410\", \"episode-000408\", \"episode-000407\"]}",
+      "started_at": "2026-09-24T05:34:28.845872Z",
+      "state_index": 47,
+      "thinking_present": false,
+      "valid": true
+    },
+    {
+      "condition": "hidden",
+      "decision": {
+        "action": "CASH",
+        "cited_memory_ids": [],
+        "confidence": 0.95,
+        "reason_codes": [
+          "DRAWDOWN_RISK",
+          "BEARISH_ROUTER"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 1.7312115617096424,
+      "output_tokens": 47,
+      "prompt_tokens": 1215,
+      "raw_content": "{\"action\": \"CASH\", \"confidence\": 0.95, \"reason_codes\": [\"DRAWDOWN_RISK\", \"BEARISH_ROUTER\"], \"cited_memory_ids\": []}",
+      "started_at": "2026-09-24T05:34:39.026778Z",
+      "state_index": 47,
+      "thinking_present": false,
+      "valid": true
+    },
+    {
+      "condition": "exposed",
+      "decision": {
+        "action": "CASH",
+        "cited_memory_ids": [
+          "episode-000529",
+          "episode-000530",
+          "episode-000172",
+          "episode-000139",
+          "episode-000496"
+        ],
+        "confidence": 0.95,
+        "reason_codes": [
+          "DRAWDOWN_RISK",
+          "BEARISH_ROUTER",
+          "NEGATIVE_MOMENTUM"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 2.684439493343234,
+      "output_tokens": 103,
+      "prompt_tokens": 2028,
+      "raw_content": "{\"action\": \"CASH\", \"confidence\": 0.95, \"reason_codes\": [\"DRAWDOWN_RISK\", \"BEARISH_ROUTER\", \"NEGATIVE_MOMENTUM\"], \"cited_memory_ids\": [\"episode-000529\", \"episode-000530\", \"episode-000172\", \"episode-000139\", \"episode-000496\"]}",
+      "started_at": "2026-09-24T05:34:40.758795Z",
+      "state_index": 166,
+      "thinking_present": false,
+      "valid": true
+    },
+    {
+      "condition": "hidden",
+      "decision": {
+        "action": "CASH",
+        "cited_memory_ids": [],
+        "confidence": 1.0,
+        "reason_codes": [
+          "DRAWDOWN_RISK",
+          "BEARISH_ROUTER"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 1.7455834802240133,
+      "output_tokens": 46,
+      "prompt_tokens": 1218,
+      "raw_content": "{\"action\": \"CASH\", \"confidence\": 1.0, \"reason_codes\": [\"DRAWDOWN_RISK\", \"BEARISH_ROUTER\"], \"cited_memory_ids\": []}",
+      "started_at": "2026-09-24T05:34:43.443588Z",
+      "state_index": 166,
+      "thinking_present": false,
+      "valid": true
+    }
+  ],
+  "identity": {
+    "capabilities": [
+      "completion",
+      "vision",
+      "audio",
+      "tools",
+      "thinking"
+    ],
+    "details": {
+      "families": [
+        "gemma4"
+      ],
+      "family": "gemma4",
+      "format": "gguf",
+      "parameter_size": "8.0B",
+      "parent_model": "",
+      "quantization_level": "Q4_K_M"
+    },
+    "digest": "c6eb396dbd5992bbe3f5cdb947e8bbc0ee413d7c17e2beaae69f5d569cf982eb",
+    "modelfile_sha256": "7d4c7892c295c30d928e63d6d5e1a383ed61b5a1d45c991b67acd5f4ae99488e",
+    "observed": "gemma4:latest",
+    "requested": "gemma4:latest",
+    "serving_metadata_sha256": "9d79225e94d5aecc53ce984375e5b6c6b6cf87b0e33cea6dd0e02a74de42753e",
+    "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315"
+  },
+  "model": "gemma4:latest",
+  "think": false
+}

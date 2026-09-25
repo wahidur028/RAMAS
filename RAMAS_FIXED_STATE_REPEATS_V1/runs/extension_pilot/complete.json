@@ -1,0 +1,38 @@
+{
+  "completed_at": "2026-09-25T01:16:59.396329Z",
+  "invalid_or_missing": 1,
+  "mode": "pilot",
+  "per_model": {
+    "deepseek-r1:8b": {
+      "invalid": 1,
+      "latency_n": 23,
+      "latency_sum": 46.79344651475549,
+      "mean_latency_seconds": 2.0344976745545864,
+      "recorded": 24,
+      "remaining_calls": 0,
+      "valid": 23
+    },
+    "gemma4:latest": {
+      "invalid": 0,
+      "latency_n": 24,
+      "latency_sum": 60.761048678308725,
+      "mean_latency_seconds": 2.531710361596197,
+      "recorded": 24,
+      "remaining_calls": 0,
+      "valid": 24
+    },
+    "qwen3-coder:30b": {
+      "invalid": 0,
+      "latency_n": 24,
+      "latency_sum": 74.48350466415286,
+      "mean_latency_seconds": 3.1034793610063693,
+      "recorded": 24,
+      "remaining_calls": 0,
+      "valid": 24
+    }
+  },
+  "planned": 72,
+  "recorded": 72,
+  "status": "COMPLETE_WITH_INVALID_OR_MISSING",
+  "valid": 71
+}

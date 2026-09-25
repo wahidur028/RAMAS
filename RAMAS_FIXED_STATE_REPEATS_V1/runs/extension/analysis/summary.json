@@ -1,0 +1,41 @@
+{
+  "all_valid": false,
+  "call_completion": true,
+  "complete_valid_states": {
+    "gemma4:latest": 1244,
+    "qwen3-coder:30b": 1242
+  },
+  "independent_observations": "states; repeated calls and pair combinations are dependent",
+  "inference": "descriptive repeat ranges only; no significance test or power claim",
+  "mode": "extension",
+  "model_family_effect_isolated": false,
+  "planned_calls": 14928,
+  "portfolio_returns_computed": false,
+  "prompt_length_matched": false,
+  "recorded_calls": 14928,
+  "secondary_equal_state_weighted_means": {
+    "gemma4:latest": {
+      "cross_all_nine_pairs_advice_disagreement": 0.0334941050375134,
+      "cross_all_nine_pairs_execution_disagreement": 0.01634512325830654,
+      "cross_minus_mean_within_advice_disagreement": 0.03188638799571276,
+      "cross_minus_mean_within_execution_disagreement": 0.015541264737406217,
+      "within_exposed_three_pairs_advice_disagreement": 0.0021436227224008574,
+      "within_exposed_three_pairs_execution_disagreement": 0.0010718113612004287,
+      "within_hidden_three_pairs_advice_disagreement": 0.0010718113612004287,
+      "within_hidden_three_pairs_execution_disagreement": 0.0005359056806002144
+    },
+    "qwen3-coder:30b": {
+      "cross_all_nine_pairs_advice_disagreement": 0.10368581141528001,
+      "cross_all_nine_pairs_execution_disagreement": 0.05689747718733226,
+      "cross_minus_mean_within_advice_disagreement": 0.09402397566648775,
+      "cross_minus_mean_within_execution_disagreement": 0.0512614063338701,
+      "within_exposed_three_pairs_advice_disagreement": 0.00322061191626409,
+      "within_exposed_three_pairs_execution_disagreement": 0.0010735373054213634,
+      "within_hidden_three_pairs_advice_disagreement": 0.01610305958132045,
+      "within_hidden_three_pairs_execution_disagreement": 0.010198604401502952
+    }
+  },
+  "semantic_content_isolated": false,
+  "valid_calls": 14923,
+  "zero_disagreement_transmission": "undefined, represented as null or an empty CSV cell"
+}

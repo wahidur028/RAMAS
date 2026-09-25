@@ -1,0 +1,650 @@
+[
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-qwen3-coder_30b-s0884-exposed",
+    "model": "qwen3-coder:30b",
+    "order": 1,
+    "repeat": 1,
+    "state_index": 884
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-qwen3-coder_30b-s0884-hidden",
+    "model": "qwen3-coder:30b",
+    "order": 2,
+    "repeat": 1,
+    "state_index": 884
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-qwen3-coder_30b-s0166-hidden",
+    "model": "qwen3-coder:30b",
+    "order": 3,
+    "repeat": 1,
+    "state_index": 166
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-qwen3-coder_30b-s0166-exposed",
+    "model": "qwen3-coder:30b",
+    "order": 4,
+    "repeat": 1,
+    "state_index": 166
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-qwen3-coder_30b-s0814-hidden",
+    "model": "qwen3-coder:30b",
+    "order": 5,
+    "repeat": 1,
+    "state_index": 814
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-qwen3-coder_30b-s0814-exposed",
+    "model": "qwen3-coder:30b",
+    "order": 6,
+    "repeat": 1,
+    "state_index": 814
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-qwen3-coder_30b-s0449-exposed",
+    "model": "qwen3-coder:30b",
+    "order": 7,
+    "repeat": 1,
+    "state_index": 449
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-qwen3-coder_30b-s0449-hidden",
+    "model": "qwen3-coder:30b",
+    "order": 8,
+    "repeat": 1,
+    "state_index": 449
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-qwen3-coder_30b-s0695-hidden",
+    "model": "qwen3-coder:30b",
+    "order": 9,
+    "repeat": 1,
+    "state_index": 695
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-qwen3-coder_30b-s0695-exposed",
+    "model": "qwen3-coder:30b",
+    "order": 10,
+    "repeat": 1,
+    "state_index": 695
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-qwen3-coder_30b-s1102-hidden",
+    "model": "qwen3-coder:30b",
+    "order": 11,
+    "repeat": 1,
+    "state_index": 1102
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-qwen3-coder_30b-s1102-exposed",
+    "model": "qwen3-coder:30b",
+    "order": 12,
+    "repeat": 1,
+    "state_index": 1102
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-qwen3-coder_30b-s0047-hidden",
+    "model": "qwen3-coder:30b",
+    "order": 13,
+    "repeat": 1,
+    "state_index": 47
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-qwen3-coder_30b-s0047-exposed",
+    "model": "qwen3-coder:30b",
+    "order": 14,
+    "repeat": 1,
+    "state_index": 47
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-qwen3-coder_30b-s0950-exposed",
+    "model": "qwen3-coder:30b",
+    "order": 15,
+    "repeat": 1,
+    "state_index": 950
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-qwen3-coder_30b-s0950-hidden",
+    "model": "qwen3-coder:30b",
+    "order": 16,
+    "repeat": 1,
+    "state_index": 950
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-qwen3-coder_30b-s1032-exposed",
+    "model": "qwen3-coder:30b",
+    "order": 17,
+    "repeat": 1,
+    "state_index": 1032
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-qwen3-coder_30b-s1032-hidden",
+    "model": "qwen3-coder:30b",
+    "order": 18,
+    "repeat": 1,
+    "state_index": 1032
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-qwen3-coder_30b-s0410-hidden",
+    "model": "qwen3-coder:30b",
+    "order": 19,
+    "repeat": 1,
+    "state_index": 410
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-qwen3-coder_30b-s0410-exposed",
+    "model": "qwen3-coder:30b",
+    "order": 20,
+    "repeat": 1,
+    "state_index": 410
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-qwen3-coder_30b-s0261-exposed",
+    "model": "qwen3-coder:30b",
+    "order": 21,
+    "repeat": 1,
+    "state_index": 261
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-qwen3-coder_30b-s0261-hidden",
+    "model": "qwen3-coder:30b",
+    "order": 22,
+    "repeat": 1,
+    "state_index": 261
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-qwen3-coder_30b-s0608-exposed",
+    "model": "qwen3-coder:30b",
+    "order": 23,
+    "repeat": 1,
+    "state_index": 608
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-qwen3-coder_30b-s0608-hidden",
+    "model": "qwen3-coder:30b",
+    "order": 24,
+    "repeat": 1,
+    "state_index": 608
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-deepseek-r1_8b-s0884-exposed",
+    "model": "deepseek-r1:8b",
+    "order": 25,
+    "repeat": 1,
+    "state_index": 884
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-deepseek-r1_8b-s0884-hidden",
+    "model": "deepseek-r1:8b",
+    "order": 26,
+    "repeat": 1,
+    "state_index": 884
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-deepseek-r1_8b-s0166-hidden",
+    "model": "deepseek-r1:8b",
+    "order": 27,
+    "repeat": 1,
+    "state_index": 166
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-deepseek-r1_8b-s0166-exposed",
+    "model": "deepseek-r1:8b",
+    "order": 28,
+    "repeat": 1,
+    "state_index": 166
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-deepseek-r1_8b-s0814-hidden",
+    "model": "deepseek-r1:8b",
+    "order": 29,
+    "repeat": 1,
+    "state_index": 814
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-deepseek-r1_8b-s0814-exposed",
+    "model": "deepseek-r1:8b",
+    "order": 30,
+    "repeat": 1,
+    "state_index": 814
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-deepseek-r1_8b-s0449-exposed",
+    "model": "deepseek-r1:8b",
+    "order": 31,
+    "repeat": 1,
+    "state_index": 449
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-deepseek-r1_8b-s0449-hidden",
+    "model": "deepseek-r1:8b",
+    "order": 32,
+    "repeat": 1,
+    "state_index": 449
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-deepseek-r1_8b-s0695-hidden",
+    "model": "deepseek-r1:8b",
+    "order": 33,
+    "repeat": 1,
+    "state_index": 695
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-deepseek-r1_8b-s0695-exposed",
+    "model": "deepseek-r1:8b",
+    "order": 34,
+    "repeat": 1,
+    "state_index": 695
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-deepseek-r1_8b-s1102-hidden",
+    "model": "deepseek-r1:8b",
+    "order": 35,
+    "repeat": 1,
+    "state_index": 1102
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-deepseek-r1_8b-s1102-exposed",
+    "model": "deepseek-r1:8b",
+    "order": 36,
+    "repeat": 1,
+    "state_index": 1102
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-deepseek-r1_8b-s0047-hidden",
+    "model": "deepseek-r1:8b",
+    "order": 37,
+    "repeat": 1,
+    "state_index": 47
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-deepseek-r1_8b-s0047-exposed",
+    "model": "deepseek-r1:8b",
+    "order": 38,
+    "repeat": 1,
+    "state_index": 47
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-deepseek-r1_8b-s0950-exposed",
+    "model": "deepseek-r1:8b",
+    "order": 39,
+    "repeat": 1,
+    "state_index": 950
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-deepseek-r1_8b-s0950-hidden",
+    "model": "deepseek-r1:8b",
+    "order": 40,
+    "repeat": 1,
+    "state_index": 950
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-deepseek-r1_8b-s1032-exposed",
+    "model": "deepseek-r1:8b",
+    "order": 41,
+    "repeat": 1,
+    "state_index": 1032
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-deepseek-r1_8b-s1032-hidden",
+    "model": "deepseek-r1:8b",
+    "order": 42,
+    "repeat": 1,
+    "state_index": 1032
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-deepseek-r1_8b-s0410-hidden",
+    "model": "deepseek-r1:8b",
+    "order": 43,
+    "repeat": 1,
+    "state_index": 410
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-deepseek-r1_8b-s0410-exposed",
+    "model": "deepseek-r1:8b",
+    "order": 44,
+    "repeat": 1,
+    "state_index": 410
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-deepseek-r1_8b-s0261-exposed",
+    "model": "deepseek-r1:8b",
+    "order": 45,
+    "repeat": 1,
+    "state_index": 261
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-deepseek-r1_8b-s0261-hidden",
+    "model": "deepseek-r1:8b",
+    "order": 46,
+    "repeat": 1,
+    "state_index": 261
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-deepseek-r1_8b-s0608-exposed",
+    "model": "deepseek-r1:8b",
+    "order": 47,
+    "repeat": 1,
+    "state_index": 608
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-deepseek-r1_8b-s0608-hidden",
+    "model": "deepseek-r1:8b",
+    "order": 48,
+    "repeat": 1,
+    "state_index": 608
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-gemma4_latest-s0884-exposed",
+    "model": "gemma4:latest",
+    "order": 49,
+    "repeat": 1,
+    "state_index": 884
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-gemma4_latest-s0884-hidden",
+    "model": "gemma4:latest",
+    "order": 50,
+    "repeat": 1,
+    "state_index": 884
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-gemma4_latest-s0166-hidden",
+    "model": "gemma4:latest",
+    "order": 51,
+    "repeat": 1,
+    "state_index": 166
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-gemma4_latest-s0166-exposed",
+    "model": "gemma4:latest",
+    "order": 52,
+    "repeat": 1,
+    "state_index": 166
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-gemma4_latest-s0814-hidden",
+    "model": "gemma4:latest",
+    "order": 53,
+    "repeat": 1,
+    "state_index": 814
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-gemma4_latest-s0814-exposed",
+    "model": "gemma4:latest",
+    "order": 54,
+    "repeat": 1,
+    "state_index": 814
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-gemma4_latest-s0449-exposed",
+    "model": "gemma4:latest",
+    "order": 55,
+    "repeat": 1,
+    "state_index": 449
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-gemma4_latest-s0449-hidden",
+    "model": "gemma4:latest",
+    "order": 56,
+    "repeat": 1,
+    "state_index": 449
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-gemma4_latest-s0695-hidden",
+    "model": "gemma4:latest",
+    "order": 57,
+    "repeat": 1,
+    "state_index": 695
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-gemma4_latest-s0695-exposed",
+    "model": "gemma4:latest",
+    "order": 58,
+    "repeat": 1,
+    "state_index": 695
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-gemma4_latest-s1102-hidden",
+    "model": "gemma4:latest",
+    "order": 59,
+    "repeat": 1,
+    "state_index": 1102
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-gemma4_latest-s1102-exposed",
+    "model": "gemma4:latest",
+    "order": 60,
+    "repeat": 1,
+    "state_index": 1102
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-gemma4_latest-s0047-hidden",
+    "model": "gemma4:latest",
+    "order": 61,
+    "repeat": 1,
+    "state_index": 47
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-gemma4_latest-s0047-exposed",
+    "model": "gemma4:latest",
+    "order": 62,
+    "repeat": 1,
+    "state_index": 47
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-gemma4_latest-s0950-exposed",
+    "model": "gemma4:latest",
+    "order": 63,
+    "repeat": 1,
+    "state_index": 950
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-gemma4_latest-s0950-hidden",
+    "model": "gemma4:latest",
+    "order": 64,
+    "repeat": 1,
+    "state_index": 950
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-gemma4_latest-s1032-exposed",
+    "model": "gemma4:latest",
+    "order": 65,
+    "repeat": 1,
+    "state_index": 1032
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-gemma4_latest-s1032-hidden",
+    "model": "gemma4:latest",
+    "order": 66,
+    "repeat": 1,
+    "state_index": 1032
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "hidden",
+    "key": "r1-gemma4_latest-s0410-hidden",
+    "model": "gemma4:latest",
+    "order": 67,
+    "repeat": 1,
+    "state_index": 410
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "hidden",
+    "key": "r1-gemma4_latest-s0410-exposed",
+    "model": "gemma4:latest",
+    "order": 68,
+    "repeat": 1,
+    "state_index": 410
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-gemma4_latest-s0261-exposed",
+    "model": "gemma4:latest",
+    "order": 69,
+    "repeat": 1,
+    "state_index": 261
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-gemma4_latest-s0261-hidden",
+    "model": "gemma4:latest",
+    "order": 70,
+    "repeat": 1,
+    "state_index": 261
+  },
+  {
+    "condition": "exposed",
+    "first_condition": "exposed",
+    "key": "r1-gemma4_latest-s0608-exposed",
+    "model": "gemma4:latest",
+    "order": 71,
+    "repeat": 1,
+    "state_index": 608
+  },
+  {
+    "condition": "hidden",
+    "first_condition": "exposed",
+    "key": "r1-gemma4_latest-s0608-hidden",
+    "model": "gemma4:latest",
+    "order": 72,
+    "repeat": 1,
+    "state_index": 608
+  }
+]

@@ -1,0 +1,116 @@
+{
+  "at": "2026-09-24T05:34:07.835215Z",
+  "calls": [
+    {
+      "condition": "exposed",
+      "decision": null,
+      "done_reason": "stop",
+      "error": "ContractError: response cites memory that was not shown",
+      "latency_seconds": 4.877382820472121,
+      "output_tokens": 132,
+      "prompt_tokens": 2144,
+      "raw_content": "{\"action\": \"CASH\", \"confidence\": 0.9697094051762086, \"reason_codes\": [\"BULLISH_ROUTER\", \"HIGH_VOLATILITY\", \"NEGATIVE_MOMENTUM\"],\"cited_memory_ids\": [\"episode-000411\", \"episode-000409\", \"episode-000410\", \"episode-000414\", \"episode-000415\"]}",
+      "started_at": "2026-09-24T05:34:07.895921Z",
+      "state_index": 47,
+      "thinking_present": false,
+      "valid": false
+    },
+    {
+      "condition": "hidden",
+      "decision": {
+        "action": "BTC",
+        "cited_memory_ids": [],
+        "confidence": 0.95,
+        "reason_codes": [
+          "BULLISH_ROUTER",
+          "POSITIVE_MOMENTUM"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 0.9724028203636408,
+      "output_tokens": 51,
+      "prompt_tokens": 1297,
+      "raw_content": "{\"action\": \"BTC\", \"confidence\": 0.95, \"reason_codes\": [\"BULLISH_ROUTER\", \"POSITIVE_MOMENTUM\"], \"cited_memory_ids\": []}",
+      "started_at": "2026-09-24T05:34:12.774084Z",
+      "state_index": 47,
+      "thinking_present": false,
+      "valid": true
+    },
+    {
+      "condition": "exposed",
+      "decision": {
+        "action": "CASH",
+        "cited_memory_ids": [
+          "episode-000529",
+          "episode-000530",
+          "episode-000172",
+          "episode-000139",
+          "episode-000496"
+        ],
+        "confidence": 0.999999998654752,
+        "reason_codes": [
+          "BULLISH_ROUTER",
+          "HIGH_VOLATILITY",
+          "NEGATIVE_MOMENTUM"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 2.403043320402503,
+      "output_tokens": 131,
+      "prompt_tokens": 2147,
+      "raw_content": "{\"action\": \"CASH\", \"confidence\": 0.999999998654752, \"reason_codes\": [\"BULLISH_ROUTER\", \"HIGH_VOLATILITY\", \"NEGATIVE_MOMENTUM\"],\"cited_memory_ids\": [\"episode-000529\", \"episode-000530\", \"episode-000172\", \"episode-000139\", \"episode-000496\"]}",
+      "started_at": "2026-09-24T05:34:13.747292Z",
+      "state_index": 166,
+      "thinking_present": false,
+      "valid": true
+    },
+    {
+      "condition": "hidden",
+      "decision": {
+        "action": "ABSTAIN",
+        "cited_memory_ids": [],
+        "confidence": 0.999999998654752,
+        "reason_codes": [
+          "BULLISH_ROUTER",
+          "HIGH_VOLATILITY"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 1.1601343676447868,
+      "output_tokens": 63,
+      "prompt_tokens": 1300,
+      "raw_content": "{\"action\": \"ABSTAIN\", \"confidence\": 0.999999998654752, \"reason_codes\": [\"BULLISH_ROUTER\", \"HIGH_VOLATILITY\"], \"cited_memory_ids\": []}",
+      "started_at": "2026-09-24T05:34:16.151097Z",
+      "state_index": 166,
+      "thinking_present": false,
+      "valid": true
+    }
+  ],
+  "identity": {
+    "capabilities": [
+      "completion",
+      "tools"
+    ],
+    "details": {
+      "families": [
+        "llama"
+      ],
+      "family": "llama",
+      "format": "gguf",
+      "parameter_size": "7.2B",
+      "parent_model": "",
+      "quantization_level": "Q4_0"
+    },
+    "digest": "f974a74358d62a017b37c6f424fcdf2744ca02926c4f952513ddf474b2fa5091",
+    "modelfile_sha256": "e31969acba0f120d479d311a765b8f92354741e9f1a12096d82d5047a3b3e32c",
+    "observed": "mistral:latest",
+    "requested": "mistral:latest",
+    "serving_metadata_sha256": "43a56cc6e460a95ee0cfa8b768d919182d55966b86827ad5654fda6d4c6d94a6",
+    "template_sha256": "491dfa501e59ed17239711477601bdc7f559de5407fbd4a2a79078b271045621"
+  },
+  "model": "mistral:latest",
+  "think": null
+}

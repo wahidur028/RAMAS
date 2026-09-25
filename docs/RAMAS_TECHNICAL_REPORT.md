@@ -4,8 +4,8 @@
 
 | | |
 |---|---|
-| Report version | 1.0, 2026-09-23 |
-| Covers | every RAMAS experiment from the Stage 5 lineage (2026-09-01) to Stage 8 (2026-09-22) and the Llama-70B evidence consolidation |
+| Report version | 1.1, 2026-09-25 (v1.0 of 2026-09-23 plus §6.12 / §7.9: the fixed-state repeated-serving experiment) |
+| Covers | every RAMAS experiment from the Stage 5 lineage (2026-09-01) to Stage 8 (2026-09-22), the Llama-70B evidence consolidation, and the fixed-state repeated-serving experiment (2026-09-24/25) |
 | Written for | the people writing the manuscript's Methods and Supplementary Material, and anyone who wants to inspect, re-analyse or re-run the work |
 | Paths | relative to the repository root unless they start with `/`. The pinned absolute root of the original machine is `/home/infonet/wahid/leader_router_fresh`; see §10.1 for how to satisfy it on another machine |
 | Numbers | every figure below is read from an archived artifact or recomputed from an archived daily ledger with the frozen metrics module. Where a number was recomputed for this report rather than read from a shipped file, the text says so |
@@ -44,6 +44,7 @@
 5. When memory *does* change a decision, most of the change is absorbed before execution: in the headline factorial pair, advice differed on 38 of 1,244 days, desired exposure on 37, executed exposure on 32; with fixed trust and the controller on, 18 of 30 differences merged at projection. Two independent runs of the identical no-memory configuration differed in the advisor's action on 2 of 1,608 days and in executed exposure on **none** (§7.4, §7.6).
 6. Memory has one consistent behavioural signature: in 9 of 9 pairs it makes the model abstain about 1.8 pp more often, hold ~0.1 pp less Bitcoin, and run ~0.05 pp lower annual volatility and ~0.006 pp smaller 95% tail loss — negligible in size, no Sharpe improvement, and usually more turnover and fees (§7.3).
 7. In a fresh-seed 2×2×2 factorial, the main effects on 2022–2025 net return were advisor **+6.64 pp**, controller **+3.65 pp**, adaptive-vs-fixed trust **+1.52 pp**, memory **+0.14 pp** — memory an order of magnitude below every other live component (§6.8; note the correction in §6.8.4).
+8. A reviewer-requested **fixed-state repeated-serving** test (§6.12) re-asked the 1,244 frozen post-2021 requests three times each, with the memory block shown or blanked, to Llama-3.3-70B and Qwen3-8B (and, as an extension, qwen3-coder-30B and gemma4-8B). Repeats of the identical request are near-deterministic for Llama and gemma4 (0–4 of 1,244 states differ) and noisier for the Qwen models (1.5–2.9%). Memory changes the vote on **2.4%** (Llama), 3.3% (gemma4), 10.4% (qwen3-coder), **15.3%** (Qwen3-8B) of states, of which 39–66% reach execution; the direction of the abstention shift is model-specific (+0.6 pp Llama, +1.0 gemma4, +9.0 qwen3-coder, **−9.2** Qwen3-8B); executed-exposure shifts are ≤ 0.29 pp in every model. In all four models the memory effect exceeds the serving noise. No portfolio result is computed from these one-step calls.
 
 **What this is not.** All results are retrospective, reused-history mechanism diagnostics on one asset and one model. 2024–2025 is not fresh out-of-sample; the regime posterior is a state estimate conditioned on prior-day information, not a validated next-day forecast; decisions use and fill at the same daily close. Every run records these as `claim_boundaries` and this report repeats them in §8.
 
@@ -307,6 +308,7 @@ Every completed run is listed. "Fresh calls" are model calls made in that run (e
 | 6 | 7 | `RAMAS_STAGE7_SEQUENTIAL_MEMORY_VALIDATION_V1` / `20260911T053155161422662Z` | 2026-09-11 17:58 | llama3.3:70b | 6,432 | closed-loop replication of the fixed-β pair + a state-controlled sensitivity pair | closed loop +0.0543 [−0.0256, +0.1521]; state-controlled **−0.1075 [−0.2335, −0.0042]** (no-memory higher) |
 | 7 | ISO | `RAMAS_FULL_PIPELINE_ISOLATION_V1` / `20260920T084300Z` | 2026-09-21 11:14 (llama cell) | llama3.3:70b, **seed 42**, neutral prompt | 12,864 | 2×2×2 factorial memory × trust × controller | main effects advisor +6.64, controller +3.65, trust +1.52, memory +0.14 pp; cross-model extension aborted fail-closed on glm-4.7-flash |
 | 8 | 8 | `RAMAS_STAGE8_CORRECTED_MEMORY_V1` / `20260922T014916Z` | 2026-09-22 07:49 | llama3.3:70b | 3,216 | repaired retrieval (+ new label), fixed β, controller on | retrieval contrast 13.5% → 98.3%; **−0.0123 bps/day [−0.0852, +0.0512]**; inconclusive |
+| 9 | FSR | `RAMAS_FIXED_STATE_REPEATS_V1` / `runs/main` (protocol v1), `runs/extension` (v1.1) | 2026-09-25 01:13 (main), 11:20 (ext.) | llama3.3:70b + qwen3:8b; ext.: qwen3-coder:30b + gemma4 | 14,928 + 14,928 (+48 +72 +48 pilots) | reviewer request: second model and repeated-serving variation on 1,244 frozen states, memory exposed vs hidden | complete; 14,919 + 14,923 valid; Llama near-deterministic, Qwen not; memory changes 2–15% of votes, direction of abstention shift model-specific; see §6.12 |
 | C | — | `RAMAS_LLAMA70B_EVIDENCE_CONSOLIDATION_V1` / `20260921T000000Z` | 2026-09-22 01:49 | none (read-only) | 0 | all 24 Llama-70B arms in one table; 8 contrasts; pooled effect; replication | bit-reproducible (7/7 outputs identical on re-run) |
 | — | — | `RAMAS_MEMORY_CAUSAL_EXPERIMENT` (SMOKE only, 2026-09-15) | — | — | 0 | frozen-state, same-prompt memory intervention (4,976 calls planned) | **designed and smoke-tested, never executed** |
 
@@ -581,6 +583,49 @@ None of these calls the model; all read archived ledgers or run tarballs.
 | — → `ramas_memory_call_schema_report.json`, `ramas_stage64_trace_schema.json`, `ramas_stage62_stage63_trace_inventory.json` | schema/inventory of the archived calls and traces | descriptive; use them to locate columns |
 | — → `RAMAS_STAGE6_1_BACK_CALCULATION.xlsx` | manual back-calculation of the Stage 6.1 accounting | reproduces the ledger by hand |
 
+### 6.12 Fixed-state repeated-serving experiment (reviewer request; 2026-09-24/25)
+
+- **Why.** A reviewer asked for a second model and for a measurement of how much separately served responses vary when the request is unchanged. The manuscript-revising AI supplied a package (`RAMAS_FIXED_STATE_REPEATS_V1/`, its `PROTOCOL.md` v1). The uploaded archive arrived truncated — its `runner.py` and tests never reached the server — so the runner was written here to that protocol and to the interface of the shipped `analyze.py`/`launch.sh` (`UPLOAD_TRUNCATION_NOTE.md`, `RUNNER_NOTES.md`; runner sha256 `3eb7c9ef9eab0985d4a0346c3d6a5afdc5780c1d2d46edcc2ac7e44f323b99f0`). All other package files (state banks, contracts, frozen controller, recorded ledgers) were verified byte-for-byte against this repository's archives before use.
+- **Design (frozen in `PROTOCOL.md`).** State anchor: the **1,244 post-2021 requests of the archived Stage 6.3 `fixed_memory` arm** (`data/fixed_memory_states.jsonl`, sha `96315c56…`; decision dates 2021-12-31 → 2025-05-27), i.e. the complete prompt payloads the model actually saw — numerical state, pre-trade holdings, β = 0.05, the three safe-exposure previews and the retrieved-memory block. Two conditions: **exposed** (payload byte-equal to the archive) and **hidden** (only `memory` replaced by `{"similar_completed_episodes": [], "summary": "NO_COMPLETED_SIMILAR_EPISODES"}`). Two models, `llama3.3:70b` (digest `a6eb4748…`) and `qwen3:8b` (digest `500a1f06…`, `think: false`); the neutral system prompt `569897b2…`; options temperature 0, top_p 1.0, seed 16061, num_ctx 8192, num_predict 512 — **the same seed on all three repeats**, so the repeats measure serving stability under a fixed recipe, not seed variability. Per repeat one shuffled state order shared by both models, exposed-first/hidden-first balanced 622/622, both conditions consecutive per state, models sequential (Llama/Qwen, Qwen/Llama, Llama/Qwen). 2 × 2 × 3 × 1,244 = **14,928 calls**, preceded by a 48-call pilot (12 states, four per regime). Every call is journalled with its full request, response, validation and checksum; invalid outputs are recorded, never resampled and never mapped to ABSTAIN; new actions are mapped to exposure through the archived previews (no controller re-run, **no portfolio compounding**). Identity (Ollama 0.23.0, digests, templates, parameters) is pinned in `contract.json` and re-checked at start, at every model change, every 100 calls and at completion.
+- **Runs** (all in `RAMAS_FIXED_STATE_REPEATS_V1/runs/`):
+
+| run | contract sha256 | calls | valid | notes |
+|---|---|---:|---:|---|
+| `pilot` | `8f222fe32a0bcf45d806c4c4412daf565d1d61df911fd840d6cc08b3871d5e12` | 48 | 48 | gate passed 2026-09-24T05:42Z |
+| `main` (protocol v1) | `e659939b8ed94f6c7f5ee0fa91cc6325ffff49a345dd9dbcd963c4496d89f164` | 14,928 | **14,919** | 2026-09-24T05:42Z → 2026-09-25T01:13Z; Llama 7,464/7,464 (7.3 s/call), Qwen 7,455/7,464 (2.1 s/call; 9 exposed-condition contract violations: 4 duplicate and 5 unseen memory citations) |
+| `extension_pilot` | `b127716c3a10b6c96a66341f13b899330ec703e7bfb54762b19f91e20f2a4c8d` | 72 | 71 | qwen3-coder:30b, deepseek-r1:8b, gemma4; one deepseek output truncated → all-valid gate failed, deepseek dropped |
+| `extension_pilot_2models` | `b15e2aa3a7005eb583a79001ac3ed0c603856f5faa7df007cf2c5e7116a9864d` | 48 | 48 | qwen3-coder:30b + gemma4 |
+| `extension` (v1.1) | `02a3b137ec72aedd86b7cc10bc2fd20dfcd03d8bad42b3c9cd6721d8d6b1eefe` | 14,928 | **14,923** | 2026-09-25T01:43Z → 11:20Z; gemma4 7,464/7,464 (2.2 s), qwen3-coder 7,459/7,464 (2.4 s; 5 unseen citations) |
+
+Exports: `runs/main_results.zip` `9fdc576f1c2a689cf5f28098cead8ede96603c743761d32bf933e9fc5f3a776a`, `runs/extension_results.zip` `3d0c20a575057c9bb8f6f7d182cf06809612d1aff5f40038b71aea697d8225ac`, `runs/pilot_results.zip` `ef276a1ce2a51ead6e07d61699466e69cee5cdd70fc5f2b0d04d48b371004c67` (not versioned; regenerate with `runner.py export`). Model smoke test of every other installed model (`runs/model_smoke/`): mistral cites unseen memory, glm-4.7-flash invents reason codes — both excluded.
+
+- **Results — serving stability** (within-condition disagreement between repeat pairs of the identical request; states with all responses valid):
+
+| model | condition | advice differs (of 1,244, per pair) | executed exposure differs |
+|---|---|---|---|
+| llama3.3:70b | exposed | 0, 0, 0 | 0, 0, 0 |
+| llama3.3:70b | hidden | 1, 1, 0 | 0, 0, 0 |
+| qwen3:8b | exposed | 21, 23, 18 | 11, 15, 8 |
+| qwen3:8b | hidden | 34, 34, 36 | 26, 26, 30 |
+| qwen3-coder:30b | exposed | 4, 3, 5 | 2, 1, 1 |
+| qwen3-coder:30b | hidden | 18, 20, 24 | 9, 14, 17 |
+| gemma4 | exposed | 2, 2, 4 | 1, 1, 2 |
+| gemma4 | hidden | 2, 2, 0 | 1, 1, 0 |
+
+- **Results — memory exposed vs hidden** (same repeat, same state; per repeat 1/2/3; abstention and exposure differences are exposed minus hidden):
+
+| model | advice differs | executed differs (transmission) | Δ abstention rate | Δ mean executed exposure | abstention rate exposed / hidden |
+|---|---|---|---|---|---|
+| llama3.3:70b | 31 / 30 / 30 (2.4%) | 12 / 12 / 12 (0.39–0.40) | **+0.56 / +0.64 / +0.64 pp** | −0.040 pp | 43.6% / 43.1% |
+| qwen3:8b | 195 / 186 / 190 (15.3%) | 128 / 119 / 125 (0.64–0.66) | **−8.6 / −9.5 / −9.4 pp** | +0.19 / +0.16 / +0.18 pp | 70.8% / 79.4% |
+| qwen3-coder:30b | 128 / 126 / 133 (10.4%) | 69 / 73 / 71 (0.53–0.58) | **+8.9 / +8.9 / +9.3 pp** | −0.28 / −0.29 / −0.29 pp | 38.9% / 29.9% |
+| gemma4 | 41 / 43 / 41 (3.3%) | 21 / 21 / 19 (0.46–0.51) | **+1.05 pp** (all repeats) | −0.084 / −0.084 / −0.076 pp | 42.0% / 40.9% |
+
+Cross-context minus within-context disagreement, equal-state-weighted (the protocol's descriptive contrast of memory effect over serving noise): Llama 0.024 advice / 0.010 executed; Qwen3-8B 0.131 / 0.084; qwen3-coder 0.094 / 0.051; gemma4 0.032 / 0.016 — positive for every model. By regime (repeat 1, Llama): every difference falls in `bull` (22 advice → 12 executed) or `bear` (9 → 0); none in `mix`; Qwen3-8B likewise 0 differences in `mix` (bear 85 → 36, bull 110 → 92).
+
+- **Reading.** (1) Llama's decisions are reproducible to the call under this serving recipe — the earlier closed-loop findings (Stage 6.3 33 → 13, Stage 7 35 → 11, here 30–31 → 12 on the same states) are not serving noise. (2) The memory block changes a minority of votes in every model, and β = 0.05 plus the 0.05 grid absorb 34–61% of those changes before execution, in all four models. (3) *Whether* memory makes a model more or less cautious is model-specific: three models abstain more with memory, Qwen3-8B abstains markedly less; the executed-exposure consequence stays below 0.3 pp everywhere. (4) The smaller/MoE models are less deterministic at temperature 0 than the 70B dense model — a practical caveat for any single-run LLM-agent evaluation. **Boundaries** (from the protocol): one-step diagnostic on recorded states, no portfolio or return claim, hidden = episode list *and* summary removed (prompt length also changes), the episodes shown to the non-Llama models come from Llama's own history, three repeats with one seed are a stability check not a variance estimate, and model sizes differ so this compares deployed configurations, not architectures.
+- **Run / inspect** (`RAMAS_FIXED_STATE_REPEATS_V1/`): `runner.py check` → `runner.py preflight --output runs/preflight` → `bash launch.sh pilot runs/pilot` → `bash launch.sh run runs/main runs/pilot` (or the resume-safe `launch_chain.sh` / `launch_extension.sh`); watch with `bash monitor.sh -f`; results in `runs/<run>/{contract.json,calls/*.json,progress.json,complete.json,analysis/*.csv,analysis/summary.json}`; `runner.py analyze|export --output runs/<run>`; `python -m unittest discover -s tests -v` (7 tests, no model calls). Requires the pinned interpreter and a local Ollama serving the pinned digests.
+
 ---
 
 ## 7. Consolidated results
@@ -719,6 +764,15 @@ Advisor **+6.64 pp**, controller **+3.65 pp**, adaptive trust **+1.52 pp**, memo
 - **The controller costs the core a little return and buys a little drawdown**: core alone 60.05% (on) vs 60.49% (off) with MDD 38.2% vs 36.9%; but with the advisor present the controller *adds* +3.65 pp (factorial), because it merges away the advisor's more erratic votes.
 - **Retrieval variant that beat the main method**: `llama_memory_pooled` (no regime prefilter) is the only Stage 6.4 interval that excludes zero (+0.83 pp over `adaptive_memory`), which pointed to the prefilter; Stage 8 removed it and found nothing.
 
+### 7.9 Fixed-state repeated-serving check (§6.12) beside the closed-loop record
+
+| quantity | closed-loop record (Llama, Stages 6.3 / 7 / 8) | fixed-state, Llama | fixed-state, other models |
+|---|---|---|---|
+| days/states on which memory changes the vote | 33 / 35 / 42 of 1,244 | 30–31 of 1,244 (three repeats) | Qwen3-8B 186–195; qwen3-coder 126–133; gemma4 41–43 |
+| … of which reach the executed exposure | 13 / 11 / 24 | 12 / 12 / 12 | 119–128; 69–73; 19–21 |
+| abstention with memory | +1.2 to +2.1 pp | +0.6 pp | +9.0 pp; **−9.2 pp** (Qwen3-8B); +1.0 pp |
+| repeat-to-repeat disagreement of the identical request | (not measured) | 0–1 of 1,244 | 18–36 (Qwen3-8B), 3–24 (qwen3-coder), 0–4 (gemma4) |
+
 ---
 
 ## 8. Observations, interpretation and claim boundaries
@@ -747,7 +801,7 @@ The memory retrieves by the router's own state features and stores single-day ou
 | `corrected_label_validated_as_improving_decisions` | false | Stage 8 does not validate the new label; its motivation is withdrawn |
 | `continuous_learning_established` | false | every run |
 | `economic_superiority_claim` | false | every run |
-| model generality | not established | one model completed; §6.8 |
+| model generality | partly addressed | the fixed-state check (§6.12) ran Qwen3-8B, qwen3-coder-30B and gemma4-8B on the same 1,244 states (one-step, no portfolio); the closed-loop portfolio evidence remains Llama-only |
 
 ### 8.4 Must not be claimed
 

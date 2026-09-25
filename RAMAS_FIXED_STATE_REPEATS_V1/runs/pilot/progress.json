@@ -1,0 +1,31 @@
+{
+  "at": "2026-09-24T05:42:03.380313Z",
+  "estimated_remaining_hours_from_observed_latency": 0.0,
+  "per_model": {
+    "llama3.3:70b": {
+      "consecutive_invalid": 0,
+      "invalid": 0,
+      "latency_n": 24,
+      "latency_sum": 186.90775708854198,
+      "mean_latency_seconds": 7.787823212022583,
+      "recorded": 24,
+      "remaining_calls": 0,
+      "valid": 24
+    },
+    "qwen3:8b": {
+      "consecutive_invalid": 0,
+      "invalid": 0,
+      "latency_n": 24,
+      "latency_sum": 55.741514613851905,
+      "mean_latency_seconds": 2.322563108910496,
+      "recorded": 24,
+      "remaining_calls": 0,
+      "valid": 24
+    }
+  },
+  "planned": 48,
+  "recorded": 48,
+  "remaining": 0,
+  "started_at": "2026-09-24T05:37:59.151715Z",
+  "valid": 48
+}

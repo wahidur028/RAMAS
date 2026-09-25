@@ -1,0 +1,81 @@
+[2026-09-24T05:42:50Z] chain start; extension models: qwen3-coder:30b,deepseek-r1:8b,gemma4:latest
+PILOT_PASS 48 valid of 48
+[2026-09-24T05:42:51Z] main run starting (log: runs/main/server.log)
+[2026-09-25T01:13:37Z] main run exited rc=0
+{
+  "contract": {
+    "created_at": "2026-09-24T05:42:51.683511Z",
+    "mode": "run",
+    "models": [
+      "llama3.3:70b",
+      "qwen3:8b"
+    ],
+    "planned_calls": 14928
+  },
+  "progress": {
+    "at": "2026-09-25T01:13:37.311033Z",
+    "estimated_remaining_hours_from_observed_latency": 0.0,
+    "per_model": {
+      "llama3.3:70b": {
+        "consecutive_invalid": 0,
+        "invalid": 0,
+        "latency_n": 7464,
+        "latency_sum": 54587.92720233463,
+        "mean_latency_seconds": 7.313495069980523,
+        "recorded": 7464,
+        "remaining_calls": 0,
+        "valid": 7464
+      },
+      "qwen3:8b": {
+        "consecutive_invalid": 0,
+        "invalid": 9,
+        "latency_n": 7455,
+        "latency_sum": 15499.572309779003,
+        "mean_latency_seconds": 2.0790841461809526,
+        "recorded": 7464,
+        "remaining_calls": 0,
+        "valid": 7455
+      }
+    },
+    "planned": 14928,
+    "recorded": 14928,
+    "remaining": 0,
+    "valid": 14919
+  },
+  "complete": {
+    "mode": "run",
+    "per_model": {
+      "llama3.3:70b": {
+        "invalid": 0,
+        "latency_n": 7464,
+        "latency_sum": 54587.92720233463,
+        "mean_latency_seconds": 7.313495069980523,
+        "recorded": 7464,
+        "remaining_calls": 0,
+        "valid": 7464
+      },
+      "qwen3:8b": {
+        "invalid": 9,
+        "latency_n": 7455,
+        "latency_sum": 15499.572309779003,
+        "mean_latency_seconds": 2.0790841461809526,
+        "recorded": 7464,
+        "remaining_calls": 0,
+        "valid": 7455
+      }
+    },
+    "planned": 14928,
+    "recorded": 14928,
+    "status": "COMPLETE_WITH_INVALID_OR_MISSING",
+    "valid": 14919
+  },
+  "recorded_calls_on_disk": 14928,
+  "pending_markers": 0
+}
+[2026-09-25T01:13:41Z] main analysis written
+{"export": "/home/infonet/wahid/leader_router_fresh/RAMAS_FIXED_STATE_REPEATS_V1/runs/main_results.zip", "sha256": "9fdc576f1c2a689cf5f28098cead8ede96603c743761d32bf933e9fc5f3a776a"}
+[2026-09-25T01:13:45Z] main exported
+[2026-09-25T01:13:45Z] extension pilot starting for qwen3-coder:30b,deepseek-r1:8b,gemma4:latest
+[2026-09-25T01:16:59Z] extension pilot exited rc=0
+[2026-09-25T01:16:59Z] extension pilot did not pass; extension run skipped
+[2026-09-25T01:16:59Z] chain end

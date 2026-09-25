@@ -1,0 +1,132 @@
+{
+  "at": "2026-09-24T05:33:54.419156Z",
+  "calls": [
+    {
+      "condition": "exposed",
+      "decision": {
+        "action": "CASH",
+        "cited_memory_ids": [
+          "episode-000407",
+          "episode-000408",
+          "episode-000409",
+          "episode-000410",
+          "episode-000411"
+        ],
+        "confidence": 0.9697094051762086,
+        "reason_codes": [
+          "HIGH_VOLATILITY",
+          "DRAWDOWN_RISK",
+          "HIGH_VOLATILITY"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 7.923644479364157,
+      "output_tokens": 119,
+      "prompt_tokens": 1952,
+      "raw_content": "{\n  \"action\": \"CASH\",\n  \"confidence\": 0.9697094051762086,\n  \"reason_codes\": [\"HIGH_VOLATILITY\", \"DRAWDOWN_RISK\", \"HIGH_VOLATILITY\"],\n  \"cited_memory_ids\": [\"episode-000407\", \"episode-000408\", \"episode-000409\", \"episode-000410\", \"episode-000411\"]\n}",
+      "started_at": "2026-09-24T05:33:54.617235Z",
+      "state_index": 47,
+      "thinking_present": false,
+      "valid": true
+    },
+    {
+      "condition": "hidden",
+      "decision": {
+        "action": "ABSTAIN",
+        "cited_memory_ids": [],
+        "confidence": 0.9697,
+        "reason_codes": [
+          "BEARISH_ROUTER",
+          "HIGH_VOLATILITY"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 1.309594638645649,
+      "output_tokens": 46,
+      "prompt_tokens": 1177,
+      "raw_content": "{\"action\": \"ABSTAIN\", \"confidence\": 0.9697, \"reason_codes\": [\"BEARISH_ROUTER\", \"HIGH_VOLATILITY\"], \"cited_memory_ids\": []}",
+      "started_at": "2026-09-24T05:34:02.541678Z",
+      "state_index": 47,
+      "thinking_present": false,
+      "valid": true
+    },
+    {
+      "condition": "exposed",
+      "decision": {
+        "action": "ABSTAIN",
+        "cited_memory_ids": [
+          "episode-000529",
+          "episode-000530",
+          "episode-000172",
+          "episode-000139",
+          "episode-000496"
+        ],
+        "confidence": 0.999999998654752,
+        "reason_codes": [
+          "BEARISH_ROUTER",
+          "HIGH_VOLATILITY",
+          "DRAWDOWN_RISK"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 2.6844203285872936,
+      "output_tokens": 120,
+      "prompt_tokens": 1955,
+      "raw_content": "{\n  \"action\": \"ABSTAIN\",\n  \"confidence\": 0.999999998654752,\n  \"reason_codes\": [\"BEARISH_ROUTER\", \"HIGH_VOLATILITY\", \"DRAWDOWN_RISK\"],\n  \"cited_memory_ids\": [\"episode-000529\", \"episode-000530\", \"episode-000172\", \"episode-000139\", \"episode-000496\"]\n}",
+      "started_at": "2026-09-24T05:34:03.852139Z",
+      "state_index": 166,
+      "thinking_present": false,
+      "valid": true
+    },
+    {
+      "condition": "hidden",
+      "decision": {
+        "action": "ABSTAIN",
+        "cited_memory_ids": [],
+        "confidence": 0.999,
+        "reason_codes": [
+          "BEARISH_ROUTER",
+          "HIGH_VOLATILITY"
+        ]
+      },
+      "done_reason": "stop",
+      "error": null,
+      "latency_seconds": 1.2926805317401886,
+      "output_tokens": 46,
+      "prompt_tokens": 1180,
+      "raw_content": "{\"action\": \"ABSTAIN\", \"confidence\": 0.999, \"reason_codes\": [\"BEARISH_ROUTER\", \"HIGH_VOLATILITY\"], \"cited_memory_ids\": []}",
+      "started_at": "2026-09-24T05:34:06.537322Z",
+      "state_index": 166,
+      "thinking_present": false,
+      "valid": true
+    }
+  ],
+  "identity": {
+    "capabilities": [
+      "completion",
+      "tools",
+      "thinking"
+    ],
+    "details": {
+      "families": [
+        "qwen3"
+      ],
+      "family": "qwen3",
+      "format": "gguf",
+      "parameter_size": "8.2B",
+      "parent_model": "",
+      "quantization_level": "Q4_K_M"
+    },
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "modelfile_sha256": "93b51718e7e1670e6702e9db492a2d195c6db50314fb978e19a802b53e1f7fc6",
+    "observed": "qwen3:8b",
+    "requested": "qwen3:8b",
+    "serving_metadata_sha256": "6e42e748229dfd026129a2ed4718f9942ae5400656aa3c2675d648cb92cd60b4",
+    "template_sha256": "ae370d884f108d16e7cc8fd5259ebc5773a0afa6e078b11f4ed7e39a27e0dfc4"
+  },
+  "model": "qwen3:8b",
+  "think": false
+}

@@ -1,0 +1,150 @@
+{
+  "claim_boundaries": {
+    "fresh_out_of_sample": false,
+    "model_family_effect_isolated": false,
+    "portfolio_performance": false,
+    "repeats_are_independent_seeds": false,
+    "semantic_content_isolated_from_prompt_length": false
+  },
+  "conditions": [
+    "exposed",
+    "hidden"
+  ],
+  "created_at": "2026-09-24T05:37:59.151715Z",
+  "identity": {
+    "hardware": {
+      "gpus": [
+        "NVIDIA TITAN RTX, 24576 MiB, 535.161.07",
+        "NVIDIA TITAN RTX, 24576 MiB, 535.161.07"
+      ],
+      "host": "infonet",
+      "platform": "Linux-6.5.0-25-generic-x86_64-with-glibc2.35",
+      "python": "3.11.9"
+    },
+    "serving": {
+      "endpoint": "http://127.0.0.1:11434",
+      "models": {
+        "llama3.3:70b": {
+          "capabilities": [
+            "completion",
+            "tools"
+          ],
+          "details": {
+            "families": [
+              "llama"
+            ],
+            "family": "llama",
+            "format": "gguf",
+            "parameter_size": "70.6B",
+            "parent_model": "",
+            "quantization_level": "Q4_K_M"
+          },
+          "digest": "a6eb4748fd2990ad2952b2335a95a7f952d1a06119a0aa6a2df6cd052a93a3fa",
+          "modelfile_sorted_lines_sha256": "e913ad80c421b9eadf3a82e31842c8af3bce629f972f989f03a4d575090cede6",
+          "observed": "llama3.3:70b",
+          "parameters_sorted_lines": "stop                           \"<|end_header_id|>\"\nstop                           \"<|eot_id|>\"\nstop                           \"<|start_header_id|>\"",
+          "requested": "llama3.3:70b",
+          "serving_metadata_sha256": "1a5551df7f36ee1d1fa1d740d6f199ea7ee1edb81d5935328e4d791d6acec306",
+          "template_sha256": "948af2743fc78a328dcb3b0f5a31b3d75f415840fdb699e8b1235978392ecf85"
+        },
+        "qwen3:8b": {
+          "capabilities": [
+            "completion",
+            "tools",
+            "thinking"
+          ],
+          "details": {
+            "families": [
+              "qwen3"
+            ],
+            "family": "qwen3",
+            "format": "gguf",
+            "parameter_size": "8.2B",
+            "parent_model": "",
+            "quantization_level": "Q4_K_M"
+          },
+          "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+          "modelfile_sorted_lines_sha256": "6a3bb937fcca72008c41316ed3dcd09ab7c521c1f0b037667ab7923c4eea60aa",
+          "observed": "qwen3:8b",
+          "parameters_sorted_lines": "repeat_penalty                 1\nstop                           \"<|im_end|>\"\nstop                           \"<|im_start|>\"\ntemperature                    0.6\ntop_k                          20\ntop_p                          0.95",
+          "requested": "qwen3:8b",
+          "serving_metadata_sha256": "7b1c59ba6590520a6ad88c3a2ccef82b5e676c03849c429996d74362b8a159cd",
+          "template_sha256": "ae370d884f108d16e7cc8fd5259ebc5773a0afa6e078b11f4ed7e39a27e0dfc4"
+        }
+      },
+      "ollama_version": "0.23.0"
+    }
+  },
+  "identity_check_every_calls": 100,
+  "indices": [
+    47,
+    166,
+    261,
+    410,
+    449,
+    608,
+    695,
+    814,
+    884,
+    950,
+    1032,
+    1102
+  ],
+  "inputs": {
+    "agent_config_sha256": "dace37cf72659b667a917b671fcab75ddcee0307da054e5434044c2199203e34",
+    "bank_file": "fixed_memory_states.jsonl",
+    "bank_first_decision_date": "2021-12-31",
+    "bank_first_return_date": "2022-01-01",
+    "bank_last_decision_date": "2025-05-27",
+    "bank_last_return_date": "2025-05-28",
+    "bank_rows": 1244,
+    "bank_sha256": "96315c56e3f8a582b2f64d03a5b8bc2b2700fd1758e56acf263cb479c7a5a168",
+    "hidden_memory": {
+      "similar_completed_episodes": [],
+      "summary": "NO_COMPLETED_SIMILAR_EPISODES"
+    },
+    "system_prompt_mode": "model_neutralized_frozen_v1",
+    "system_prompt_sha256": "569897b2f09b09acda6d3b52645904f7eb7a179bb3751c46b79d51f091c8aedd"
+  },
+  "mode": "pilot",
+  "model_order_by_repeat": {
+    "1": [
+      "llama3.3:70b",
+      "qwen3:8b"
+    ]
+  },
+  "models": [
+    "llama3.3:70b",
+    "qwen3:8b"
+  ],
+  "options": {
+    "num_ctx": 8192,
+    "num_predict": 512,
+    "seed": 16061,
+    "temperature": 0.0,
+    "top_p": 1.0
+  },
+  "pause_rules": {
+    "max_consecutive_invalid_per_model": 3,
+    "min_valid_rate_after_calls": [
+      0.98,
+      50
+    ]
+  },
+  "pilot_reference": null,
+  "planned_calls": 48,
+  "protocol_version": "fixed_state_repeats_v1",
+  "repeats": 1,
+  "runner": {
+    "file": "runner.py",
+    "origin": "written on the experiment server; the archive's runner was not received",
+    "sha256": "3eb7c9ef9eab0985d4a0346c3d6a5afdc5780c1d2d46edcc2ac7e44f323b99f0"
+  },
+  "schedule_seed": 16061,
+  "schedule_sha256": "5d478968a9ecdc6325faa572352299ddab70651e3bb99c13ec4f8a2bcd1f4f82",
+  "think": {
+    "llama3.3:70b": null,
+    "qwen3:8b": false
+  },
+  "timeout_seconds": 900
+}

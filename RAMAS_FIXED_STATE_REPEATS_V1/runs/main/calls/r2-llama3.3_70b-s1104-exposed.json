@@ -1,0 +1,118 @@
+{
+  "condition": "exposed",
+  "decision": {
+    "action": "ABSTAIN",
+    "cited_memory_ids": [],
+    "confidence": 0.5,
+    "reason_codes": [
+      "INSUFFICIENT_EVIDENCE"
+    ]
+  },
+  "decision_date": "2025-01-08",
+  "error": null,
+  "finished_at": "2026-09-24T14:11:21.731909Z",
+  "first_condition": "exposed",
+  "hard_regime": "bull",
+  "identity_check_sha256": "e652da2f32b0f5c96b5384e31a104885fea5a0c1fafa59167124fb50543cc275",
+  "key": "r2-llama3.3_70b-s1104-exposed",
+  "latency_seconds": 6.280661640688777,
+  "model": "llama3.3:70b",
+  "order": 7723,
+  "payload_sha256": "9084505d0270cdad6e48b35ff5d312d66946c4697a76b38712770584fa3f9db4",
+  "provider_response": {
+    "created_at": "2026-09-24T14:11:21.730852979Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 37,
+    "eval_duration": 2762379107,
+    "load_duration": 222087855,
+    "message": {
+      "content": "{\"action\": \"ABSTAIN\", \"confidence\": 0.5, \"reason_codes\": [\"INSUFFICIENT_EVIDENCE\"], \"cited_memory_ids\": []}",
+      "role": "assistant"
+    },
+    "model": "llama3.3:70b",
+    "prompt_eval_count": 1393,
+    "prompt_eval_duration": 2644623292,
+    "total_duration": 6278678451
+  },
+  "raw_content": "{\"action\": \"ABSTAIN\", \"confidence\": 0.5, \"reason_codes\": [\"INSUFFICIENT_EVIDENCE\"], \"cited_memory_ids\": []}",
+  "record_sha256": "57a243ddd426b8d5588fea6f1be553ed961de1c5764048f1f9f66150388b2fe4",
+  "repeat": 2,
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "enum": [
+            "BTC",
+            "CASH",
+            "ABSTAIN"
+          ],
+          "type": "string"
+        },
+        "cited_memory_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "reason_codes": {
+          "items": {
+            "enum": [
+              "BULLISH_ROUTER",
+              "BEARISH_ROUTER",
+              "MIXED_OR_UNCERTAIN",
+              "POSITIVE_MOMENTUM",
+              "NEGATIVE_MOMENTUM",
+              "HIGH_VOLATILITY",
+              "DRAWDOWN_RISK",
+              "TRANSITION_RISK",
+              "MEMORY_SUPPORT",
+              "MEMORY_WARNING",
+              "INSUFFICIENT_EVIDENCE"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "action",
+        "confidence",
+        "reason_codes",
+        "cited_memory_ids"
+      ],
+      "type": "object"
+    },
+    "messages": [
+      {
+        "content": "You are the bounded language-model expert inside a risk-controlled Bitcoin allocation research system.\nYou are not the router, risk layer, or full portfolio manager. Choose exactly one signal: BTC, CASH, or ABSTAIN.\n\nUse only evidence in the request. BTC means evidence supports more Bitcoin exposure. CASH means evidence supports less Bitcoin exposure. ABSTAIN means evidence is conflicting, weak, missing, or too uncertain. Never invent memory IDs. The external system blends your signal with the unchanged RAMAS exposure using a small regime-specific trust beta, then applies the unchanged risk layer.\n\nFor task_type=semantic_contract_test, follow this exact precedence:\n1. If max router probability < 0.50 or router_entropy >= 0.90, choose ABSTAIN.\n2. Else if prob_bear >= 0.75 or drawdown_90 <= -0.25, choose CASH.\n3. Else if prob_bull >= 0.75, realized_vol_30 <= 0.80, and return_30 > 0, choose BTC.\n4. Otherwise choose ABSTAIN.\n\nFor task_type=historical_development_decision, weigh the full router probabilities, causal OHLCV-derived features, transition risk, the safe exposure previews, and only completed memory episodes. Favor ABSTAIN when the evidence conflicts. Do not treat a remembered episode as a rule merely because it is similar.\n\nReturn exactly one JSON object with keys action, confidence, reason_codes, cited_memory_ids. Do not add prose or markdown.",
+        "role": "system"
+      },
+      {
+        "content": "{\"constraints\": {\"allowed_actions\": [\"BTC\", \"CASH\", \"ABSTAIN\"], \"invalid_or_failed_response\": \"ABSTAIN_TO_PRE_AGENT_RAMOE\", \"leverage\": false, \"shorting\": false}, \"memory\": {\"similar_completed_episodes\": [{\"action\": \"ABSTAIN\", \"asset_return\": -0.0320605284950689, \"confidence\": 0.5, \"decision_date\": \"2024-04-23\", \"distance\": 0.07958764254939121, \"episode_id\": \"episode-001209\", \"hard_regime\": \"bull\", \"shadow_log_advantage_vs_ramoe\": -3.469446951953614e-17}, {\"action\": \"ABSTAIN\", \"asset_return\": -0.0222307306561132, \"confidence\": 0.5, \"decision_date\": \"2023-05-05\", \"distance\": 0.10793071905740001, \"episode_id\": \"episode-000855\", \"hard_regime\": \"bull\", \"shadow_log_advantage_vs_ramoe\": -0.0002491412633964518}, {\"action\": \"ABSTAIN\", \"asset_return\": -0.0473463056244513, \"confidence\": 0.5, \"decision_date\": \"2023-03-02\", \"distance\": 0.11676417970683638, \"episode_id\": \"episode-000791\", \"hard_regime\": \"bull\", \"shadow_log_advantage_vs_ramoe\": -9.367506770274758e-17}, {\"action\": \"ABSTAIN\", \"asset_return\": -0.0265366862739578, \"confidence\": 0.5, \"decision_date\": \"2023-05-07\", \"distance\": 0.13913987150042825, \"episode_id\": \"episode-000857\", \"hard_regime\": \"bull\", \"shadow_log_advantage_vs_ramoe\": -0.0002934704598531804}, {\"action\": \"ABSTAIN\", \"asset_return\": 0.0083789790450075, \"confidence\": 0.5, \"decision_date\": \"2024-12-30\", \"distance\": 0.1406835676992799, \"episode_id\": \"episode-001460\", \"hard_regime\": \"bull\", \"shadow_log_advantage_vs_ramoe\": 2.6020852139652106e-17}], \"summary\": {\"ABSTAIN\": {\"count\": 5, \"mean_log_advantage_vs_ramoe\": -0.0001085223446499469, \"positive_fraction\": 0.2}}}, \"objective\": \"add incremental risk-adjusted value over the pre-agent RAMoE control after costs\", \"safe_exposure_previews\": {\"ABSTAIN\": {\"ambiguity_cvar\": 0.023533093848997513, \"blended_desired_exposure\": 0.4287796336825732, \"risk_limited_exposure\": 0.45, \"turnover\": 0.004798995455991051}, \"BTC\": {\"ambiguity_cvar\": 0.023533093848997513, \"blended_desired_exposure\": 0.45734065199844454, \"risk_limited_exposure\": 0.45, \"turnover\": 0.004798995455991051}, \"CASH\": {\"ambiguity_cvar\": 0.020958395901074792, \"blended_desired_exposure\": 0.40734065199844455, \"risk_limited_exposure\": 0.4, \"turnover\": 0.04520100454400894}}, \"state\": {\"base_ramoe_desired_exposure\": 0.4287796336825732, \"decision_date\": \"2025-01-08\", \"drawdown_90\": -0.10431896316995926, \"hard_regime\": \"bull\", \"llama_trust_beta\": 0.05, \"pretrade_exposure\": 0.44520100454400896, \"prob_bear\": 7.985310265469138e-06, \"prob_bull\": 0.5481264837901648, \"prob_mix\": 0.4518655308995697, \"realized_vol_30\": 0.470672026128578, \"return_1\": -0.019222158716927118, \"return_30\": -0.023549857538152308, \"return_7\": 0.005355318622422667, \"return_90\": 0.5761370908644776, \"router_confidence\": 0.5481264837901648, \"router_entropy\": 0.6267935142051781, \"router_transition_l1\": 0.39650381528188616, \"target_return_date\": \"2025-01-09\"}, \"task_type\": \"historical_development_decision\"}",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.3:70b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 512,
+      "seed": 16061,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "stream": false
+  },
+  "request_sha256": "58ddc65cc0a11be16c9fa44ea9b6fc3e82a397eb8ac552580a2706b4abe62b30",
+  "started_at": "2026-09-24T14:11:15.450428Z",
+  "state_index": 1104,
+  "transport_outcome_unknown": false,
+  "valid": true
+}

@@ -1,0 +1,71 @@
+{
+  "at": "2026-09-24T05:35:39.662961Z",
+  "models": {
+    "deepseek-r1:8b": {
+      "calls": 4,
+      "digest": "6995872bfe4c521a67b32da386cd21d5c6e819b6e0d62f79f64ec83be99f5763",
+      "errors": [],
+      "estimated_hours_for_7464_calls": 5.628456926445167,
+      "mean_latency_seconds": 2.7146898359060287,
+      "status": "PASS",
+      "think": false,
+      "valid": 4
+    },
+    "gemma4:latest": {
+      "calls": 4,
+      "digest": "c6eb396dbd5992bbe3f5cdb947e8bbc0ee413d7c17e2beaae69f5d569cf982eb",
+      "errors": [],
+      "estimated_hours_for_7464_calls": 8.470283230527615,
+      "mean_latency_seconds": 4.085345609579235,
+      "status": "PASS",
+      "think": false,
+      "valid": 4
+    },
+    "glm-4.7-flash:latest": {
+      "calls": 4,
+      "digest": "d1a8a26252f18b34301218d22abd2620a65b85ba4b78987842eb157e01321222",
+      "errors": [
+        "ContractError: reason_codes contain an unknown value",
+        "ContractError: response is not JSON: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "estimated_hours_for_7464_calls": 13.898461619991188,
+      "mean_latency_seconds": 6.703438080381602,
+      "status": "FAIL",
+      "think": false,
+      "valid": 0
+    },
+    "mistral:latest": {
+      "calls": 4,
+      "digest": "f974a74358d62a017b37c6f424fcdf2744ca02926c4f952513ddf474b2fa5091",
+      "errors": [
+        "ContractError: response cites memory that was not shown"
+      ],
+      "estimated_hours_for_7464_calls": 4.879052658804382,
+      "mean_latency_seconds": 2.353240832220763,
+      "status": "FAIL",
+      "think": null,
+      "valid": 3
+    },
+    "qwen3-coder:30b": {
+      "calls": 4,
+      "digest": "06c1097efce0431c2045fe7b2e5108366e43bee1b4603a7aded8f21689e90bca",
+      "errors": [],
+      "estimated_hours_for_7464_calls": 14.108575162626803,
+      "mean_latency_seconds": 6.804779017344117,
+      "status": "PASS",
+      "think": null,
+      "valid": 4
+    },
+    "qwen3:8b": {
+      "calls": 4,
+      "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+      "errors": [],
+      "estimated_hours_for_7464_calls": 6.847359555438161,
+      "mean_latency_seconds": 3.302584994584322,
+      "status": "PASS",
+      "think": false,
+      "valid": 4
+    }
+  },
+  "states_per_condition": 2
+}

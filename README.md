@@ -25,6 +25,7 @@ decisions, and whether the changes reach the executed portfolio.
 | `RAMAS_FULL_PIPELINE_ISOLATION_V1/` | the 2×2×2 factorial (memory × trust authority × controller) orchestrator |
 | `RAMAS_STAGE8_CORRECTED_MEMORY_V1/` | the corrected-retrieval experiment (balanced per-action retrieval) |
 | `RAMAS_LLAMA70B_EVIDENCE_CONSOLIDATION_V1/` | consolidates every Llama-70B arm; bootstraps every memory contrast |
+| `RAMAS_FIXED_STATE_REPEATS_V1/` | the fixed-state repeated-serving experiment (reviewer request): 1,244 frozen post-2021 requests, memory exposed vs hidden, three repeats, Llama-3.3-70B + Qwen3-8B (`runs/main`) and qwen3-coder-30B + gemma4 (`runs/extension`), with every call record; the archive arrived truncated so `runner.py`/tests were written on the server (`UPLOAD_TRUNCATION_NOTE.md`, `RUNNER_NOTES.md`) |
 | `RAMAS/code/` | completed code packages for Stages 5.2 – 7 |
 | `RAMAS/scripts/`, `RAMAS/results/` | one-off analyses (no-controller counterfactual, advisor ablations) and their outputs |
 | `EXPERIMENT_BRANCHES/RAMAS_*/`, `EXPERIMENT_BRANCHES/RAMOE_STAGE5_*/` | every run: contracts, source/clock audits, per-arm `DAILY_LEDGER.csv`, `episodes.json`, `trust_events.json`, `RUN_COMPLETE.json`, and the full per-call LLM journals under `calls/` |
@@ -47,6 +48,7 @@ included; their `.sha256` sidecars are, so identities can still be checked.
 | 2×2×2 factorial, 8 Llama arms + 2 numerical controls | `EXPERIMENT_BRANCHES/RAMAS_FULL_PIPELINE_ISOLATION_V1/artifacts/20260920T084300Z/cells/llama3.3_70b__seed_42/arms/*/DAILY_LEDGER.csv` |
 | corrected-retrieval experiment (Stage 8) | `EXPERIMENT_BRANCHES/RAMAS_STAGE8_CORRECTED_MEMORY_V1/artifacts/20260922T014916Z/{COMPARISONS.json,arms/*/DAILY_LEDGER.csv}` |
 | all Llama-70B memory contrasts, pooled | `EXPERIMENT_BRANCHES/RAMAS_LLAMA70B_EVIDENCE_CONSOLIDATION_V1/20260921T000000Z/{MEMORY_CONTRASTS.csv,POOLED_MEMORY_EFFECT.json,REPLICATION_TRANSMISSION.json}` |
+| fixed-state repeated-serving check (4 models × exposed/hidden × 3 repeats) | `RAMAS_FIXED_STATE_REPEATS_V1/runs/{main,extension}/analysis/{repeat_ranges.csv,paired_summary.csv,validity_and_distributions.csv}` |
 | retrieval-collapse measurement | recompute from `…/RAMAS_STAGE6_4_COMPONENT_SUITE_V1/artifacts/…/arms/llama_memory_current_year/calls/*.json` (`request.memory.summary`) |
 
 Conventions: net return after 10-bps proportional trading costs; annualization

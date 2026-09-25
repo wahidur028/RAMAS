@@ -1,0 +1,29 @@
+{
+  "status": "LOCAL_SOFTWARE_AND_RECORDED_EVIDENCE_CHECKS_PASSED",
+  "date": "2026-09-24",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "live_model_calls": 0,
+  "local_software_tests_passed": 7,
+  "tests": [
+    "complete balanced schedule and request identity",
+    "only retrieval payload changed",
+    "validity versus invalid/truncated outputs",
+    "undefined zero-denominator transmission",
+    "response checksum tampering detection",
+    "interruption and resume without resampling",
+    "within-repeat versus between-context analysis"
+  ],
+  "original_response_records_revalidated": 6432,
+  "reporting_pairs_per_principal_comparison": 1244,
+  "recorded_controller_projections_reproduced": 37320,
+  "maximum_preview_residual": 9.020562075079397e-17,
+  "closed_loop_outcome_intervals_reproduced": 8,
+  "maximum_outcome_point_or_CI_residual_bps": 1.0380585280245214e-14,
+  "live_server_preflight": "not run here",
+  "live_pilot": "not run here",
+  "new_empirical_model_results": "not available",
+  "remaining_raw_validity_provenance": "nonprincipal journals and original independent-rerun contract requested",
+  "no_manuscript_edits": true
+}

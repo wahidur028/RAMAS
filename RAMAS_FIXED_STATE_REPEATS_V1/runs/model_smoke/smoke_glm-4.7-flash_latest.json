@@ -1,0 +1,86 @@
+{
+  "at": "2026-09-24T05:35:12.574501Z",
+  "calls": [
+    {
+      "condition": "exposed",
+      "decision": null,
+      "done_reason": "stop",
+      "error": "ContractError: reason_codes contain an unknown value",
+      "latency_seconds": 20.90452939644456,
+      "output_tokens": 109,
+      "prompt_tokens": 1592,
+      "raw_content": "{\"action\": \"CASH\", \"confidence\": 0.9697094051762086, \"reason_codes\": [\"PROB_BEAR_HIGH\", \"DRAWDOWN_90_LOW\", \"HARD_REGIME_BEAR\", \"ROUTER_CONFIDENCE_HIGH\", \"SIMILAR_EPISODES_CASH\"], \"cited_memory_ids\": [\"episode-000411\", \"episode-000409\", \"episode-000410\", \"episode-000408\", \"episode-000407\"]}",
+      "started_at": "2026-09-24T05:35:12.842689Z",
+      "state_index": 47,
+      "thinking_present": false,
+      "valid": false
+    },
+    {
+      "condition": "hidden",
+      "decision": null,
+      "done_reason": "stop",
+      "error": "ContractError: response is not JSON: Expecting value: line 1 column 1 (char 0)",
+      "latency_seconds": 1.7366065960377455,
+      "output_tokens": 69,
+      "prompt_tokens": 988,
+      "raw_content": "```json\n{\n  \"action\": \"CASH\",\n  \"confidence\": 0.9697094051762086,\n  \"reason_codes\": [\"PROB_BEAR_HIGH\", \"DRAWDOWN_90_LOW\", \"ROUTER_CONFIDENCE_HIGH\"],\n  \"cited_memory_ids\": []\n}\n```",
+      "started_at": "2026-09-24T05:35:33.748014Z",
+      "state_index": 47,
+      "thinking_present": false,
+      "valid": false
+    },
+    {
+      "condition": "exposed",
+      "decision": null,
+      "done_reason": "stop",
+      "error": "ContractError: reason_codes contain an unknown value",
+      "latency_seconds": 2.666547941043973,
+      "output_tokens": 107,
+      "prompt_tokens": 1585,
+      "raw_content": "{\n  \"action\": \"CASH\",\n  \"confidence\": 0.999999998654752,\n  \"reason_codes\": [\"HARD_REGIME_BEAR\", \"ROUTER_CONFIDENCE_HIGH\", \"DRAWDOWN_90_CRITICAL\", \"HISTORICAL_EPISODE_SIMILARITY\"],\n  \"cited_memory_ids\": [\"episode-000529\", \"episode-000530\", \"episode-000172\", \"episode-000139\", \"episode-000496\"]\n}",
+      "started_at": "2026-09-24T05:35:35.485465Z",
+      "state_index": 166,
+      "thinking_present": false,
+      "valid": false
+    },
+    {
+      "condition": "hidden",
+      "decision": null,
+      "done_reason": "stop",
+      "error": "ContractError: reason_codes contain an unknown value",
+      "latency_seconds": 1.5060683880001307,
+      "output_tokens": 56,
+      "prompt_tokens": 991,
+      "raw_content": "{\"action\": \"CASH\", \"confidence\": 0.999999998654752, \"reason_codes\": [\"DRAWDOWN_90_BELOW_THRESHOLD\", \"PROB_BEAR_HIGH\", \"RETURN_NEGATIVE\"], \"cited_memory_ids\": []}",
+      "started_at": "2026-09-24T05:35:38.152797Z",
+      "state_index": 166,
+      "thinking_present": false,
+      "valid": false
+    }
+  ],
+  "identity": {
+    "capabilities": [
+      "completion",
+      "tools",
+      "thinking"
+    ],
+    "details": {
+      "families": [
+        "glm4moelite"
+      ],
+      "family": "glm4moelite",
+      "format": "gguf",
+      "parameter_size": "29.9B",
+      "parent_model": "",
+      "quantization_level": "Q4_K_M"
+    },
+    "digest": "d1a8a26252f18b34301218d22abd2620a65b85ba4b78987842eb157e01321222",
+    "modelfile_sha256": "92cb59f25208ce83bf389f55ad9cb3bb0f03be28187b3af109c6e6b7909fb725",
+    "observed": "glm-4.7-flash:latest",
+    "requested": "glm-4.7-flash:latest",
+    "serving_metadata_sha256": "263d161fd660905c43399d079eb4cba4b2881b88a1de999266f2ac5b460e0da8",
+    "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315"
+  },
+  "model": "glm-4.7-flash:latest",
+  "think": false
+}
